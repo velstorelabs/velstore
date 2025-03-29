@@ -9,6 +9,7 @@ use Yajra\DataTables\DataTables;
 use App\Repositories\Admin\Product\ProductRepository;
 use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
+use App\Models\ProductVariant;
 
 
 class ProductService
@@ -51,9 +52,9 @@ class ProductService
             ->make(true);             
     }
 
-    public function store(array $translations, array $data)
+    public function store($translations, $data, array $variants = [])
     {
-    $data = Arr::add($data, 'slug', $this->createSlug($data['name']));  
+   /* $data = Arr::add($data, 'slug', $this->createSlug($data['name']));  
     $product = $this->productRepository->store($data);
 
     foreach ($translations as $languageCode => $translation) {
@@ -61,6 +62,22 @@ class ProductService
             'product_id' => $product->id,
             'locale' => $languageCode,  
             'language_code' => $languageCode,  
+            'name' => $translation['name'],
+            'description' => $translation['description'] ?? null,
+        ]);
+    }
+
+    return $product;*/
+
+    $data = Arr::add($data, 'slug', $this->createSlug($data['name']));
+
+    $product = $this->productRepository->store($translations, $data, $variants); // ✅ Now passing a proper array
+
+    foreach ($translations as $languageCode => $translation) {
+        ProductTranslation::create([
+            'product_id' => $product->id,
+            'locale' => $languageCode,
+            'language_code' => $languageCode,
             'name' => $translation['name'],
             'description' => $translation['description'] ?? null,
         ]);
@@ -108,13 +125,24 @@ class ProductService
 
     private function createSlug($slug)
     {
-        $slug = Str::slug($slug);
+       /* $slug = Str::slug($slug);
         $counter = 1;
         while (Product::where('slug', $slug)->exists()) {
             $slug = $slugBase . '-' . $counter;
             $counter++;
         }
 
+        return $slug;*/
+
+        $slug = Str::slug($slug);
+        $slugBase = $slug; // ✅ Define $slugBase before using it
+        $counter = 1;
+    
+        while (Product::where('slug', $slug)->exists()) {
+            $slug = $slugBase . '-' . $counter;
+            $counter++;
+        }
+    
         return $slug;
     }
 }

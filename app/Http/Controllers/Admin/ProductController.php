@@ -42,8 +42,8 @@ class ProductController extends Controller
     }
 
     public function create()
-    {
-        $categories = Category::all();  
+    {   
+      /*  $categories = Category::all();  
 
         $categories = collect($categories); 
 
@@ -58,13 +58,31 @@ class ProductController extends Controller
             return $category;
         });
   
-        return view('admin.products.create', compact('categories'));
+        return view('admin.products.create', compact('categories'));*/
+
+        $locale = app()->getLocale(); // Get the current language
+
+    // Fetch categories with translations
+    $categories = Category::with('translations')->get()->map(function ($category) use ($locale) {
+        $translation = $category->translations->firstWhere('language_code', $locale);
+        $category->name = $translation ? $translation->name : 'No Name Available';
+        return $category;
+    });
+
+    // Fetch products with translations
+    $products = Product::with('translations')->get()->map(function ($product) use ($locale) {
+        $translation = $product->translations->firstWhere('language_code', $locale);
+        $product->name = $translation ? $translation->name : 'No Name Available';
+        return $product;
+    });
+
+    return view('admin.products.create', compact('categories', 'products'));
 
     }
 
     public function store(Request $request)
-    {         
-        $request->validate([
+    {          
+       /* $request->validate([
             'category_id' => 'required|exists:categories,id',
             'price' => 'required|numeric',
             'stock' => 'required|integer',
@@ -91,6 +109,54 @@ class ProductController extends Controller
             return redirect()->back()->withErrors($result)->withInput();
         }
 
+        return redirect()->route('admin.products.index')->with('success', __('cms.products.created')); */
+
+        $validated = $request->validate([
+            'category_id' => 'required|exists:categories,id',
+            'price' => 'required|numeric',
+            'stock' => 'required|integer',
+            'currency' => 'required|string',
+            'translations' => 'required|array', 
+            'translations.*.name' => 'required|string|max:255', 
+            'translations.*.description' => 'nullable|string',
+            'variants' => 'nullable|array',
+            'variants.*.name' => 'required_with:variants|string',
+            'variants.*.value' => 'required_with:variants|string',
+            'variants.*.price' => 'required_with:variants|numeric',
+            'variants.*.discount_price' => 'nullable|numeric',
+            'variants.*.stock' => 'required_with:variants|integer',
+            'variants.*.SKU' => 'required_with:variants|string|unique:product_variants,SKU',
+            'variants.*.weight' => 'nullable|string',
+            'variants.*.dimensions' => 'nullable|string',
+        ]);
+    
+        // ✅ Ensure Product Name is Set
+        $translations = $request->input('translations');
+        $productData = $request->except(['translations', 'variants']);
+    
+        $defaultLang = 'en';
+        $productData['name'] = $translations[$defaultLang]['name'] ?? array_values($translations)[0]['name'] ?? null;
+    
+        if (!$productData['name']) {
+            return redirect()->back()->withErrors(['translations' => 'At least one translation must have a name.'])->withInput();
+        }
+    
+        // ✅ Ensure Product ID Exists
+        $product_id = $request->input('product_id');
+        if (!$product_id) {
+            return redirect()->back()->withErrors(['product_id' => 'Product is required.'])->withInput();
+        }
+    
+        // ✅ Fetch Variants Data
+        $variants = $request->input('variants', []); 
+    
+        // ✅ Store Product and Variants using Service
+        $result = $this->productService->store($translations, $productData, $variants);
+    
+        if ($result instanceof \Illuminate\Support\MessageBag) {
+            return redirect()->back()->withErrors($result)->withInput();
+        }
+    
         return redirect()->route('admin.products.index')->with('success', __('cms.products.created'));
        
     }

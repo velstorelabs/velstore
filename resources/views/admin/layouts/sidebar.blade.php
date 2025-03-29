@@ -120,7 +120,7 @@
                     @if(isset($menu) && $menu)
                     <li><a class="nav-link {{ Route::currentRouteName() == 'admin.menu.items.create' ? 'active' : '' }}" href="{{ route('admin.menus.items.create', $menu) }}">{{ __('cms.sidebar.menu_items.add_new') }}</a></li>
                     <li><a class="nav-link {{ Route::currentRouteName() == 'admin.menus.item.index' ? 'active' : '' }}" href="{{ route('admin.menus.item.index') }}">{{ __('cms.sidebar.menu_items.list') }}</a></li>
-                    @endif
+                    @endif 
                 </ul>
             </div>
         </li>                       

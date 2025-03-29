@@ -9,6 +9,7 @@ use App\Models\ProductImage;
 use Illuminate\Support\Str;
 use App\Models\StoreSetting;
 use App\Models\Shop;
+use App\Models\ProductVariant;
 
 class ProductRepository implements ProductRepositoryInterface
 {
@@ -30,9 +31,9 @@ class ProductRepository implements ProductRepositoryInterface
         return Product::findOrFail($id);
     }
 
-    public function store($data)
+    public function store(array $translations, array $data, array $variants = [])
     {
-        $sku = $data['SKU'];
+       /* $sku = $data['SKU'];
         $skuCounter = 1;
         
         while (Product::where('SKU', $sku)->exists()) {
@@ -76,6 +77,73 @@ class ProductRepository implements ProductRepositoryInterface
             $productImage->save();
         }
 
+        return $product; */
+
+        $sku = $data['SKU'];
+        $skuCounter = 1;
+        
+        while (Product::where('SKU', $sku)->exists()) {
+            $sku = $data['SKU'] . '-' . $skuCounter;
+            $skuCounter++;
+        }
+    
+        $defaultCurrencyCode = getWebConfig('default_currency', 'USD');
+    
+        $shop = Shop::where('vendor_id', 1)->first();
+    
+        if (!$shop) {
+            throw new Exception('No shop found for this vendor.');
+        }
+    
+        $product = Product::create([
+            'vendor_id' => 1,
+            'shop_id' => $shop->id, 
+            'category_id' => $data['category_id'],
+            'price' => currency_to_usd($data['price'], $defaultCurrencyCode),
+            'stock' => $data['stock'],
+            'status' => $data['status'] ?? true,
+            'slug' => $data['slug'],
+            'currency' => $data['currency'],
+            'SKU' => $sku,
+            'weight' => $data['weight'],
+            'dimensions' => $data['dimensions'],
+            'product_type' => $data['product_type'],
+        ]);
+    
+        // Upload Product Image
+        if (isset($data['product_image_url']) && $data['product_image_url'] instanceof \Illuminate\Http\UploadedFile) {
+            $imagePath = $this->imageService->uploadImage($data['product_image_url'], 'products'); 
+            
+            $productImage = new ProductImage([
+                'name' => basename($imagePath), 
+                'image_url' => $imagePath,                
+                'product_id' => $product->id, 
+                'type' => $data['image_type'] ?? 'thumb',
+            ]);
+            
+            $productImage->save();
+        }
+    
+        // Store Variants (if available)
+        if (!empty($variants)) {
+            foreach ($variants as $variant) {
+                $variantSlug = strtolower(str_replace(' ', '-', $variant['name'] . '-' . $variant['value']));
+    
+                ProductVariant::create([
+                    'product_id' => $product->id,
+                    'variant_slug' => $variantSlug,
+                    'name' => $variant['name'],
+                    'value' => $variant['value'],
+                    'price' => currency_to_usd($variant['price'], $defaultCurrencyCode),
+                    'discount_price' => $variant['discount_price'] ?? null,
+                    'stock' => $variant['stock'],
+                    'SKU' => $variant['SKU'],
+                    'weight' => $variant['weight'] ?? null,
+                    'dimensions' => $variant['dimensions'] ?? null,
+                ]);
+            }
+        }
+    
         return $product; 
 
 

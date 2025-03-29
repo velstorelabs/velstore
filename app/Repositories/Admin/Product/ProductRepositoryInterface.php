@@ -7,7 +7,7 @@ interface ProductRepositoryInterface
 {
     public function all();
     public function find($id);
-    public function store(array $data);
+    public function store(array $translations, array $data, array $variants = []);
     public function update($id, array $data);
     public function destroy($id);
 }

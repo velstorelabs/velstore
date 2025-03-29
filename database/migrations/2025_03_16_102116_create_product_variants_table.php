@@ -13,16 +13,16 @@ return new class extends Migration
     {
         Schema::create('product_variants', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('product_id');  // Foreign key to products table
-            $table->string('variant_slug')->unique();  // A unique identifier for the variant
-            $table->string('name');  // Name of the variant, e.g. 'Large', 'Red', etc.
-            $table->string('value');  // Value of the variant, e.g. 'Red', 'M', etc.
-            $table->decimal('price', 10, 2);  // Price of the variant
-            $table->decimal('discount_price', 10, 2)->nullable();  // Discounted price of the variant
-            $table->integer('stock')->default(0);  // Stock quantity for the variant
-            $table->string('SKU')->unique();  // SKU for the variant
-            $table->string('weight')->nullable();  // Weight specific to the variant
-            $table->string('dimensions')->nullable();  // Dimensions specific to the variant
+            $table->unsignedBigInteger('product_id');  
+            $table->string('variant_slug')->unique(); 
+            $table->string('name'); 
+            $table->string('value'); 
+            $table->decimal('price', 10, 2);  
+            $table->decimal('discount_price', 10, 2)->nullable(); 
+            $table->integer('stock')->default(0); 
+            $table->string('SKU')->unique();  
+            $table->string('weight')->nullable();  
+            $table->string('dimensions')->nullable(); 
             $table->timestamps();
             
             // Foreign key constraint

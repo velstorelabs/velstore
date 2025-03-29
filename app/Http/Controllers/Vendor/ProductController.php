@@ -12,6 +12,8 @@ use App\Http\Controllers\Controller;
 use App\Services\Vendor\ProductService;
 use App\Services\Admin\CategoryService;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class ProductController extends Controller
 {
@@ -36,7 +38,7 @@ class ProductController extends Controller
         } catch (\Exception $e) {
             \Log::error("Error fetching product data: " . $e->getMessage());
             return response()->json(['error' => 'An error occurred while fetching product data.'], 500);
-        }
+        } 
     }
 
     public function create()

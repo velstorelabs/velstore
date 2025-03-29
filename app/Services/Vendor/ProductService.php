@@ -8,6 +8,7 @@ use Yajra\DataTables\DataTables;
 use App\Repositories\Vendor\Product\ProductRepository;
 use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
 
 class ProductService
 {
@@ -20,8 +21,7 @@ class ProductService
 
     public function getProductsForDataTable($request)
     {
-       
-         $products = Product::with('translations')->get();
+         $products = Product::with('translations')->get(); 
 
         return DataTables::of($products)
             ->addColumn('name', function ($product) {    

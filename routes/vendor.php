@@ -19,5 +19,5 @@ Route::prefix('vendor')->group(function () {
         Route::post('vendor/products/updateStatus', [ProductController::class, 'updateStatus'])->name('vendor.products.updateStatus');
         Route::resource('social-media-links', SocialMediaLinkController::class)->names('vendor.social-media-links');
         Route::post('social-media-links/data', [SocialMediaLinkController::class, 'getData'])->name('vendor.social-media-links.data');
-    });
+    }); 
 });

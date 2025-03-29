@@ -154,6 +154,53 @@
                         </div>
                     </div>
                 </div>
+
+
+                 <!-- Product Selection -->
+        <div class="mb-3">
+            <label for="product_id" class="form-label">Select Product:</label>
+            <select name="product_id" id="product_id" class="form-control" required>
+                <option value="">Choose Product</option>
+                @foreach($products as $product)
+                    <option value="{{ $product->id }}">{{ $product->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <!-- Variants Section -->
+        <div id="variant-container">
+            <div class="variant-group mb-3">
+                <label>Variant Name:</label>
+                <input type="text" name="variants[0][name]" class="form-control" required>
+                
+                <label>Variant Value:</label>
+                <input type="text" name="variants[0][value]" class="form-control" required>
+
+                <label>Price:</label>
+                <input type="number" name="variants[0][price]" class="form-control" required>
+
+                <label>Discount Price:</label>
+                <input type="number" name="variants[0][discount_price]" class="form-control">
+
+                <label>Stock:</label>
+                <input type="number" name="variants[0][stock]" class="form-control" required>
+
+                <label>SKU:</label>
+                <input type="text" name="variants[0][SKU]" class="form-control" required>
+
+                <label>Weight:</label>
+                <input type="text" name="variants[0][weight]" class="form-control">
+
+                <label>Dimensions:</label>
+                <input type="text" name="variants[0][dimensions]" class="form-control">
+
+                <button type="button" class="btn btn-danger remove-variant">Remove</button>
+            </div>
+        </div>
+
+        <button type="button" id="add-variant" class="btn btn-primary">Add Variant</button>
+
+
                 <div class="col-md-12 text-start">
                     <button type="submit" class="mt-3 btn btn-primary">{{ __('cms.products.save') }}</button>
                 </div>
@@ -161,8 +208,53 @@
         </div>
     </div>
 @endsection
-
 @section('js')
+
+<script>
+    let variantIndex = 1;
+
+    document.getElementById('add-variant').addEventListener('click', function() {
+        let container = document.getElementById('variant-container');
+        let newVariant = document.createElement('div');
+        newVariant.classList.add('variant-group', 'mb-3');
+        newVariant.innerHTML = `
+            <label>Variant Name:</label>
+            <input type="text" name="variants[${variantIndex}][name]" class="form-control" required>
+
+            <label>Variant Value:</label>
+            <input type="text" name="variants[${variantIndex}][value]" class="form-control" required>
+
+            <label>Price:</label>
+            <input type="number" name="variants[${variantIndex}][price]" class="form-control" required>
+
+            <label>Discount Price:</label>
+            <input type="number" name="variants[${variantIndex}][discount_price]" class="form-control">
+
+            <label>Stock:</label>
+            <input type="number" name="variants[${variantIndex}][stock]" class="form-control" required>
+
+            <label>SKU:</label>
+            <input type="text" name="variants[${variantIndex}][SKU]" class="form-control" required>
+
+            <label>Weight:</label>
+            <input type="text" name="variants[${variantIndex}][weight]" class="form-control">
+
+            <label>Dimensions:</label>
+            <input type="text" name="variants[${variantIndex}][dimensions]" class="form-control">
+
+            <button type="button" class="btn btn-danger remove-variant">Remove</button>
+        `;
+        container.appendChild(newVariant);
+        variantIndex++;
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('remove-variant')) {
+            event.target.parentElement.remove();
+        }
+    });
+</script>
+
 <script>
     document.getElementById('product_image_file').addEventListener('change', function(event) {
         var file = event.target.files[0];
