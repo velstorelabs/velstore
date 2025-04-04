@@ -67,7 +67,7 @@
             processing: true,
             serverSide: true,
             ajax: {
-                url: "{{ route('categories.data') }}",
+                url: "{{ route('admin.categories.data') }}",
                 type: 'POST',
                 data: function(d) {
                     d._token = "{{ csrf_token() }}";
