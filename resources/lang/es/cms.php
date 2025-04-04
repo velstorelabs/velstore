@@ -488,6 +488,31 @@ return [
         'error' => 'Error',
     ],
 
+    'customers' => [
+        'title_manage' => 'Lista de Clientes',
+
+        'id' => 'ID',
+        'name' => 'Nombre',
+        'email' => 'Correo Electrónico',
+        'phone' => 'Teléfono',
+        'address' => 'Dirección',
+        'status' => 'Estado',
+        'actions' => 'Acciones',
+
+        'confirm_delete' => 'Confirmar Eliminación',
+        'delete_message' => '¿Está seguro de que desea eliminar este cliente?',
+        'delete' => 'Eliminar',
+        'cancel' => 'Cancelar',
+
+        'success_create' => '¡Cliente creado con éxito!',
+        'success_update' => '¡Cliente actualizado con éxito!',
+        'success_delete' => '¡Cliente eliminado con éxito!',
+        'error_delete' => '¡Error al eliminar el cliente! Por favor, inténtelo de nuevo.',
+
+        'success' => 'Éxito',
+        'error' => 'Error',
+    ],
+
 
 ];
 

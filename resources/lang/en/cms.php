@@ -490,7 +490,30 @@ return [
         'error' => 'Error',
     ],
 
+    'customers' => [
+        'title_manage' => 'Customer List',
 
+        'id' => 'ID',
+        'name' => 'Name',
+        'email' => 'Email',
+        'phone' => 'Phone',
+        'address' => 'Address',
+        'status' => 'Status',
+        'actions' => 'Actions',
+
+        'confirm_delete' => 'Confirm Delete',
+        'delete_message' => 'Are you sure you want to delete this customer?',
+        'delete' => 'Delete',
+        'cancel' => 'Cancel',
+
+        'success_create' => 'Customer created successfully!',
+        'success_update' => 'Customer updated successfully!',
+        'success_delete' => 'Customer deleted successfully!',
+        'error_delete' => 'Error deleting customer! Please try again.',
+
+        'success' => 'Success',
+        'error' => 'Error',
+    ],
 
 ];
 

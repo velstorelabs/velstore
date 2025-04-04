@@ -490,6 +490,32 @@ return [
         'error' => 'Hata',
     ],
 
+    'customers' => [
+        'title_manage' => 'Müşteri Listesi',
+
+        'id' => 'ID',
+        'name' => 'İsim',
+        'email' => 'E-posta',
+        'phone' => 'Telefon',
+        'address' => 'Adres',
+        'status' => 'Durum',
+        'actions' => 'İşlemler',
+
+        'confirm_delete' => 'Silme Onayı',
+        'delete_message' => 'Bu müşteriyi silmek istediğinizden emin misiniz?',
+        'delete' => 'Sil',
+        'cancel' => 'İptal',
+
+        'success_create' => 'Müşteri başarıyla oluşturuldu!',
+        'success_update' => 'Müşteri başarıyla güncellendi!',
+        'success_delete' => 'Müşteri başarıyla silindi!',
+        'error_delete' => 'Müşteri silinirken hata oluştu! Lütfen tekrar deneyin.',
+
+        'success' => 'Başarı',
+        'error' => 'Hata',
+    ],
+
+
 
 ];
 

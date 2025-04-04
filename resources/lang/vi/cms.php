@@ -517,6 +517,32 @@ return [
         'error' => 'Lỗi',
     ],
 
+    'customers' => [
+        'title_manage' => 'Danh sách khách hàng',
+
+        'id' => 'ID',
+        'name' => 'Tên',
+        'email' => 'Email',
+        'phone' => 'Số điện thoại',
+        'address' => 'Địa chỉ',
+        'status' => 'Trạng thái',
+        'actions' => 'Hành động',
+
+        'confirm_delete' => 'Xác nhận xóa',
+        'delete_message' => 'Bạn có chắc chắn muốn xóa khách hàng này?',
+        'delete' => 'Xóa',
+        'cancel' => 'Hủy',
+
+        'success_create' => 'Khách hàng đã được tạo thành công!',
+        'success_update' => 'Khách hàng đã được cập nhật thành công!',
+        'success_delete' => 'Khách hàng đã được xóa thành công!',
+        'error_delete' => 'Lỗi khi xóa khách hàng! Vui lòng thử lại.',
+
+        'success' => 'Thành công',
+        'error' => 'Lỗi',
+    ],
+
+
 
 
 ];

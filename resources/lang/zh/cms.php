@@ -491,6 +491,32 @@ return [
         'error' => '错误',
     ],
 
+    'customers' => [
+        'title_manage' => '客户列表',
+
+        'id' => 'ID',
+        'name' => '姓名',
+        'email' => '电子邮件',
+        'phone' => '电话',
+        'address' => '地址',
+        'status' => '状态',
+        'actions' => '操作',
+
+        'confirm_delete' => '确认删除',
+        'delete_message' => '您确定要删除此客户吗？',
+        'delete' => '删除',
+        'cancel' => '取消',
+
+        'success_create' => '客户创建成功！',
+        'success_update' => '客户更新成功！',
+        'success_delete' => '客户删除成功！',
+        'error_delete' => '删除客户时出错！请再试一次。',
+
+        'success' => '成功',
+        'error' => '错误',
+    ],
+
+
 
 ];
 

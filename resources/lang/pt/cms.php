@@ -511,6 +511,31 @@ return [
         'error' => 'Erro',
     ],
 
+    'customers' => [
+        'title_manage' => 'Lista de Clientes',
+
+        'id' => 'ID',
+        'name' => 'Nome',
+        'email' => 'E-mail',
+        'phone' => 'Telefone',
+        'address' => 'Endereço',
+        'status' => 'Status',
+        'actions' => 'Ações',
+
+        'confirm_delete' => 'Confirmar Exclusão',
+        'delete_message' => 'Tem certeza de que deseja excluir este cliente?',
+        'delete' => 'Excluir',
+        'cancel' => 'Cancelar',
+
+        'success_create' => 'Cliente criado com sucesso!',
+        'success_update' => 'Cliente atualizado com sucesso!',
+        'success_delete' => 'Cliente excluído com sucesso!',
+        'error_delete' => 'Erro ao excluir cliente! Tente novamente.',
+
+        'success' => 'Sucesso',
+        'error' => 'Erro',
+    ],
+
 
 
 ];

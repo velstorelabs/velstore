@@ -489,6 +489,31 @@ return [
         'error' => 'Kesalahan',
     ],
 
+    'customers' => [
+        'title_manage' => 'Daftar Pelanggan',
+
+        'id' => 'ID',
+        'name' => 'Nama',
+        'email' => 'Email',
+        'phone' => 'Telepon',
+        'address' => 'Alamat',
+        'status' => 'Status',
+        'actions' => 'Aksi',
+
+        'confirm_delete' => 'Konfirmasi Hapus',
+        'delete_message' => 'Apakah Anda yakin ingin menghapus pelanggan ini?',
+        'delete' => 'Hapus',
+        'cancel' => 'Batal',
+
+        'success_create' => 'Pelanggan berhasil dibuat!',
+        'success_update' => 'Pelanggan berhasil diperbarui!',
+        'success_delete' => 'Pelanggan berhasil dihapus!',
+        'error_delete' => 'Terjadi kesalahan saat menghapus pelanggan! Silakan coba lagi.',
+
+        'success' => 'Sukses',
+        'error' => 'Kesalahan',
+    ],
+
 
 
 ];

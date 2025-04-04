@@ -501,6 +501,30 @@ return [
     'error' => 'Fehler',
 ],
 
+'customers' => [
+    'title_manage' => 'Kundenliste',
+
+    'id' => 'ID',
+    'name' => 'Name',
+    'email' => 'E-Mail',
+    'phone' => 'Telefon',
+    'address' => 'Adresse',
+    'status' => 'Status',
+    'actions' => 'Aktionen',
+
+    'confirm_delete' => 'Löschen bestätigen',
+    'delete_message' => 'Sind Sie sicher, dass Sie diesen Kunden löschen möchten?',
+    'delete' => 'Löschen',
+    'cancel' => 'Abbrechen',
+
+    'success_create' => 'Kunde erfolgreich erstellt!',
+    'success_update' => 'Kunde erfolgreich aktualisiert!',
+    'success_delete' => 'Kunde erfolgreich gelöscht!',
+    'error_delete' => 'Fehler beim Löschen des Kunden! Bitte versuchen Sie es erneut.',
+
+    'success' => 'Erfolg',
+    'error' => 'Fehler',
+],
 
 
 ];

@@ -489,6 +489,30 @@ return [
         'error' => '오류',
     ],
 
+    'customers' => [
+        'title_manage' => '고객 목록',
+
+        'id' => 'ID',
+        'name' => '이름',
+        'email' => '이메일',
+        'phone' => '전화번호',
+        'address' => '주소',
+        'status' => '상태',
+        'actions' => '작업',
+
+        'confirm_delete' => '삭제 확인',
+        'delete_message' => '이 고객을 정말로 삭제하시겠습니까?',
+        'delete' => '삭제',
+        'cancel' => '취소',
+
+        'success_create' => '고객이 성공적으로 생성되었습니다!',
+        'success_update' => '고객이 성공적으로 업데이트되었습니다!',
+        'success_delete' => '고객이 성공적으로 삭제되었습니다!',
+        'error_delete' => '고객 삭제 중 오류가 발생했습니다! 다시 시도해 주세요.',
+
+        'success' => '성공',
+        'error' => '오류',
+    ],
 
 
 

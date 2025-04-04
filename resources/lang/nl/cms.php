@@ -486,6 +486,30 @@ return [
         'error' => 'Fout',
     ],
 
+    'customers' => [
+        'title_manage' => 'Klantenlijst',
+
+        'id' => 'ID',
+        'name' => 'Naam',
+        'email' => 'E-mail',
+        'phone' => 'Telefoon',
+        'address' => 'Adres',
+        'status' => 'Status',
+        'actions' => 'Acties',
+
+        'confirm_delete' => 'Bevestig verwijderen',
+        'delete_message' => 'Weet je zeker dat je deze klant wilt verwijderen?',
+        'delete' => 'Verwijderen',
+        'cancel' => 'Annuleren',
+
+        'success_create' => 'Klant succesvol aangemaakt!',
+        'success_update' => 'Klant succesvol bijgewerkt!',
+        'success_delete' => 'Klant succesvol verwijderd!',
+        'error_delete' => 'Fout bij het verwijderen van de klant! Probeer het opnieuw.',
+
+        'success' => 'Succes',
+        'error' => 'Fout',
+    ],
 
 
 ];

@@ -486,6 +486,32 @@ return [
         'error' => 'Erreur',
     ],
 
+    'customers' => [
+        'title_manage' => 'Liste des clients',
+
+        'id' => 'ID',
+        'name' => 'Nom',
+        'email' => 'Email',
+        'phone' => 'Téléphone',
+        'address' => 'Adresse',
+        'status' => 'Statut',
+        'actions' => 'Actions',
+
+        'confirm_delete' => 'Confirmer la suppression',
+        'delete_message' => 'Êtes-vous sûr de vouloir supprimer ce client ?',
+        'delete' => 'Supprimer',
+        'cancel' => 'Annuler',
+
+        'success_create' => 'Client créé avec succès !',
+        'success_update' => 'Client mis à jour avec succès !',
+        'success_delete' => 'Client supprimé avec succès !',
+        'error_delete' => 'Erreur lors de la suppression du client ! Veuillez réessayer.',
+
+        'success' => 'Succès',
+        'error' => 'Erreur',
+    ],
+
+
 
 
 ];

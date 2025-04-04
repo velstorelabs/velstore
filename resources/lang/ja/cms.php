@@ -488,6 +488,31 @@ return [
         'error' => 'エラー',
     ],
 
+    'customers' => [
+        'title_manage' => '顧客リスト',
+
+        'id' => 'ID',
+        'name' => '名前',
+        'email' => 'メール',
+        'phone' => '電話番号',
+        'address' => '住所',
+        'status' => 'ステータス',
+        'actions' => '操作',
+
+        'confirm_delete' => '削除の確認',
+        'delete_message' => 'この顧客を本当に削除しますか？',
+        'delete' => '削除',
+        'cancel' => 'キャンセル',
+
+        'success_create' => '顧客が正常に作成されました！',
+        'success_update' => '顧客が正常に更新されました！',
+        'success_delete' => '顧客が正常に削除されました！',
+        'error_delete' => '顧客の削除中にエラーが発生しました！もう一度お試しください。',
+
+        'success' => '成功',
+        'error' => 'エラー',
+    ],
+
 
 
 ];

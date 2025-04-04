@@ -113,7 +113,7 @@ public function destroy(Customer $customer)
         try {
             $customer->delete();
 
-            return response()->json(['success' => true, 'message' => 'Customer has been successfully deleted.']);
+            return response()->json(['success' => true, 'message' => __('cms.customers.success_delete')]);
         } catch (\Exception $e) {
             return response()->json(['success' => false, 'message' => 'There was an error deleting the customer. Please try again.']);
         }

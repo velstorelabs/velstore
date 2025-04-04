@@ -15,7 +15,7 @@
     <!-- Title Card -->
     <div class="card mt-4">
         <div class="card-header card-header-bg text-white d-flex justify-content-between align-items-center">
-            <h6>Customer List</h6>
+            <h6>{{ __('cms.customers.title_manage') }}</h6>
         </div>
     </div>
 
@@ -29,13 +29,13 @@
             <table id="customers-table" class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th>Status</th>
-                        <th>Actions</th>
+                        <th>{{ __('cms.customers.id') }}</th>
+                        <th>{{ __('cms.customers.name') }}</th>
+                        <th>{{ __('cms.customers.email') }}</th>
+                        <th>{{ __('cms.customers.phone') }}</th>
+                        <th>{{ __('cms.customers.address') }}</th>
+                        <th>{{ __('cms.customers.status') }}</th>
+                        <th>{{ __('cms.customers.actions') }}</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
@@ -49,13 +49,13 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteCustomerModalLabel">Confirm Delete</h5>
+                <h5 class="modal-title" id="deleteCustomerModalLabel">{{ __('cms.customers.confirm_delete') }}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">Are you sure you want to delete this customer?</div>
+            <div class="modal-body">{{ __('cms.customers.delete_message') }}</div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-danger" id="confirmDeleteCustomer">Delete</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('cms.customers.cancel') }}</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteCustomer">{{ __('cms.customers.delete') }}</button>
             </div>
         </div>
     </div>
@@ -77,7 +77,7 @@
 
 @if (session('success'))
 <script>
-    toastr.success("{{ session('success') }}", "Success", {
+    toastr.success("{{ session('success') }}", "{{ __('cms.customers.success') }}", {
         closeButton: true,
         progressBar: true,
         positionClass: "toast-top-right",
