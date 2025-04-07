@@ -27,14 +27,15 @@ class MenuItemController extends Controller
             $menuItems = $this->menuItemService->getAllMenuItems();
         return datatables()->of($menuItems)
             ->addColumn('action', function ($menuItems) {
-                return view('admin.menus.index', compact('menuItems'));
+                return view('cms.admin.menus.index', compact('menuItems'));
             })
             ->make(true);
     } 
 
     public function index()
     {
-        return view('admin.menu_items.index');
+        $menu = Menu::first(); 
+        return view('cms.admin.menu_items.index', compact('menu'));
     }
 
     public function create($menuId)
@@ -44,7 +45,7 @@ class MenuItemController extends Controller
         $menus = Menu::all(); 
         $languages = Language::where('active', 1)->get();
 
-        return view('admin.menu_items.create', compact('menu', 'menus', 'languages'));
+        return view('cms.admin.menu_items.create', compact('menu', 'menus', 'languages'));
     }
 
 
@@ -76,7 +77,7 @@ class MenuItemController extends Controller
         $menuItem = MenuItem::with(['menu', 'translations'])->findOrFail($id);
         $menus = Menu::with('menuItems.translations')->get();
         $languages = Language::where('active', 1)->get();
-        return view('admin.menu_items.edit', compact('menuItem', 'menus', 'languages'));
+        return view('cms.admin.menu_items.edit', compact('menuItem', 'menus', 'languages'));
     }
 
     public function update(Request $request, $id)

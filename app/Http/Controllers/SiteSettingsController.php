@@ -10,12 +10,12 @@ class SiteSettingsController extends Controller
     
     public function index()
     {
-        return view('admin.site-settings.index'); 
+        return view('cms.admin.site-settings.index'); 
     }    
      public function edit()
      {
          $settings = SiteSetting::first();
-         return view('admin.site-settings.edit', compact('settings'));
+         return view('cms.admin.site-settings.edit', compact('settings'));
      }
  
      public function update(Request $request)

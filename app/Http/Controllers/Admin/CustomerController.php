@@ -16,7 +16,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        return view('admin.customers.create');
+        return view('cms.admin.customers.create');
     }
 
     /**
@@ -51,7 +51,7 @@ class CustomerController extends Controller
     public function index()
     {
         $customers = Customer::latest()->paginate(10);
-        return view('admin.customers.index', compact('customers'));
+        return view('cms.admin.customers.index', compact('customers'));
     }
 
         
@@ -77,7 +77,7 @@ class CustomerController extends Controller
      */
     public function edit(Customer $customer)
     {
-        return view('admin.customers.edit', compact('customer'));
+        return view('cms.admin.customers.edit', compact('customer'));
     }
 
     /**

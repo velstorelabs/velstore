@@ -36,7 +36,7 @@ class ProductController extends Controller
 
     public function index()
     {
-        return view('admin.products.index');
+        return view('cms.admin.products.index');
     }
 
     public function getProducts(Request $request)
@@ -58,8 +58,10 @@ class ProductController extends Controller
         $brands = Brand::with('translation')->get();
         
         $attributes = Attribute::with('values.translations')->get();
+
+        $activeLanguages = Language::where('active', 1)->get();
   
-        return view('admin.products.create', compact('categories', 'brands', 'attributes'));
+        return view('cms.admin.products.create', compact('categories', 'brands', 'attributes', 'activeLanguages'));
 
     }
 
@@ -248,7 +250,7 @@ class ProductController extends Controller
 
         $languages = Language::active()->get();
 
-        return view('admin.products.edit', compact('product', 'categories', 'languages', 'imageUrl'));
+        return view('cms.admin.products.edit', compact('product', 'categories', 'languages', 'imageUrl'));
     }
     
     public function update(Request $request, $id)

@@ -20,7 +20,7 @@ class BrandController extends Controller
 
     public function index()
     {
-        return view('admin.brands.index');
+        return view('cms.admin.brands.index');
     }
 
     public function getData(Request $request)
@@ -35,13 +35,14 @@ class BrandController extends Controller
     
     public function create()
     {
-        return view('admin.brands.create');
+        $activeLanguages = Language::where('active', 1)->get();
+        return view('cms.admin.brands.create', compact('activeLanguages'));
     }
 
     public function store(Request $request)
     {        
         $request->validate([
-            'logo_url' => 'nullable|file|image|mimes:jpeg,png,jpg,gif,svg|max:10000', // Validation for the logo file
+            'logo_url' => 'nullable|file|image|mimes:jpeg,png,jpg,gif,svg|max:10000', 
         ]);
     
         $result = $this->brandService->store($request->all());
@@ -55,13 +56,11 @@ class BrandController extends Controller
     }
 
     public function edit($id)
-    {
-            
-        $brand = Brand::with('translations')->findOrFail($id);
-        
-        $languages = Language::active()->get();
+    {      
+        $brand = Brand::findOrFail($id);
 
-        return view('admin.brands.edit', compact('brand', 'languages'));
+        $activeLanguages = Language::where('active', 1)->get();
+        return view('cms.admin.brands.edit', compact('brand', 'activeLanguages'));
     }
 
     public function update(Request $request, $id)
@@ -100,7 +99,6 @@ class BrandController extends Controller
 
     public function updateStatus(Request $request)
     {
-        // Validate the incoming request
         $request->validate([
             'id' => 'required|exists:brands,id', 
             'status' => 'required|boolean', 

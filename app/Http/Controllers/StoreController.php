@@ -35,6 +35,6 @@ class StoreController extends Controller
         ->take(10)
         ->get();
 
-        return view('themes.xylo.home', compact('banners', 'categories', 'products',));
+        return view('cms.themes.xylo.home', compact('banners', 'categories', 'products',));
     }
 }

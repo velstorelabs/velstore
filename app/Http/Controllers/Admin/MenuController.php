@@ -21,7 +21,7 @@ class MenuController extends Controller
 
     public function index(Request $request)
     {
-        return view('admin.menus.index');
+        return view('cms.admin.menus.index');
     }
 
     public function getData(Request $request)
@@ -46,7 +46,7 @@ class MenuController extends Controller
     {
         $languages = Language::all();
         $menus = $this->menuService->getAllMenus();  
-        return view('admin.menus.create', compact('languages', 'menus'));
+        return view('cms.admin.menus.create', compact('languages', 'menus'));
     }
 
     public function store(Request $request)
@@ -69,7 +69,7 @@ class MenuController extends Controller
     public function edit($id)
     {
         $menu = $this->menuService->getMenuById($id);  
-        return view('admin.menus.edit', compact('menu'));
+        return view('cms.admin.menus.edit', compact('menu'));
     }
 
     public function update(Request $request, $id)

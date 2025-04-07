@@ -22,7 +22,7 @@ class AttributeController extends Controller
     public function index()
     {
         $attributes = $this->attributeService->getAllAttributes();
-        return view('admin.attributes.index', compact('attributes'));
+        return view('cms.admin.attributes.index', compact('attributes'));
     }
 
     public function getAttributesData(Request $request)
@@ -48,7 +48,7 @@ class AttributeController extends Controller
     public function create()
     {
         $languages = Language::active()->get();
-        return view('admin.attributes.create', compact('languages'));
+        return view('cms.admin.attributes.create', compact('languages'));
     }
 
     public function store(Request $request)
@@ -70,7 +70,7 @@ class AttributeController extends Controller
         $attribute = $this->attributeService->getAttributeById($attribute->id);
         $languages = Language::active()->get();
 
-        return view('admin.attributes.edit', compact('attribute', 'languages'));
+        return view('cms.admin.attributes.edit', compact('attribute', 'languages'));
     }
 
     public function update(Request $request, Attribute $attribute)

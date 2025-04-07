@@ -22,7 +22,7 @@ class SocialMediaLinkController extends Controller
     public function index()
     {
         $socialMediaLinks = $this->socialMediaLinkService->getAllSocialMediaLinks();
-        return view('admin.social-media-links.index', compact('socialMediaLinks'));
+        return view('cms.admin.social-media-links.index', compact('socialMediaLinks'));
        
     }
 
@@ -49,7 +49,7 @@ class SocialMediaLinkController extends Controller
     public function create()
     {
        $languages = Language::where('active', 1)->get();
-        return view('admin.social-media-links.create', compact('languages'));
+        return view('cms.admin.social-media-links.create', compact('languages'));
     }
 
     public function store(Request $request)
@@ -71,7 +71,7 @@ class SocialMediaLinkController extends Controller
         $socialMediaLink = $this->socialMediaLinkService->getAllSocialMediaLinks()->find($id);
         $languages = Language::where('active', 1)->get();
         $translations = $socialMediaLink->translations->keyBy('language_code');
-        return view('admin.social-media-links.edit', compact('socialMediaLink', 'languages', 'translations'));
+        return view('cms.admin.social-media-links.edit', compact('socialMediaLink', 'languages', 'translations'));
     }
 
     public function update(Request $request, $id)

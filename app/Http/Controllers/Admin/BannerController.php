@@ -24,7 +24,7 @@ class BannerController extends Controller
     public function index(Request $request)
     {
         $banners = $this->bannerService->getAllBanners();  
-        return view('admin.banners.index', compact('banners'));
+        return view('cms.admin.banners.index', compact('banners'));
 
     }
 
@@ -64,7 +64,7 @@ class BannerController extends Controller
         
        $languages = Language::where('active', 1)->get();
 
-        return view('admin.banners.create', compact('languages'));
+        return view('cms.admin.banners.create', compact('languages'));
     }
 
     public function store(Request $request)
@@ -83,7 +83,7 @@ class BannerController extends Controller
                                          ->get()
                                          ->keyBy('language_code');
 
-        return view('admin.banners.edit', compact('banner', 'languages', 'translations'));
+        return view('cms.admin.banners.edit', compact('banner', 'languages', 'translations'));
     }
 
     public function update(Request $request, $id)

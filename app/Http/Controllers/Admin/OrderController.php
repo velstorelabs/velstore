@@ -13,7 +13,7 @@ class OrderController extends Controller
     {
         $orders = Order::all();
 
-        return view('admin.orders.index', compact('orders'));
+        return view('cms.admin.orders.index', compact('orders'));
     }
 
     public function getData(Request $request)

@@ -24,7 +24,7 @@ class CategoryController extends Controller
     public function index()
     {
        
-        return view('admin.categories.index');
+        return view('cms.admin.categories.index');
     }
 
      
@@ -42,8 +42,9 @@ class CategoryController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {
-        return view('admin.categories.create');
+    {      
+       $activeLanguages = Language::where('active', 1)->get();
+       return view('cms.admin.categories.create', compact('activeLanguages'));
     }
 
     public function store(Request $request )
@@ -86,7 +87,7 @@ class CategoryController extends Controller
 
         $activeLanguages = Language::where('active', true)->get();
 
-        return view('admin.categories.edit', compact('category', 'activeLanguages'));
+        return view('cms.admin.categories.edit', compact('category', 'activeLanguages'));
 
     }
 

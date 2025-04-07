@@ -11,7 +11,7 @@ class ProductReviewController extends Controller
 {
     public function index(Request $request)
     {  
-        return view('admin.reviews.index');
+        return view('cms.admin.reviews.index');
     }
 
     public function getData()
@@ -45,12 +45,12 @@ class ProductReviewController extends Controller
 
     public function show(ProductReview $review)
     {
-        return view('admin.reviews.show', compact('review'));
+        return view('cms.admin.reviews.show', compact('review'));
     }
 
     public function edit(ProductReview $review)
     {
-        return view('admin.reviews.edit', compact('review'));
+        return view('cms.admin.reviews.edit', compact('review'));
     }
 
     public function update(Request $request, ProductReview $review)
