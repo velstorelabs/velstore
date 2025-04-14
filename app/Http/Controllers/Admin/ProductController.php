@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Services\Admin\ProductService;
 use App\Services\Admin\CategoryService;
-use Illuminate\Support\Facades\Validator;
 use App\Models\Brand;
 use App\Models\Attribute;
 use Illuminate\Support\Facades\DB;
@@ -20,6 +19,8 @@ use App\Models\ProductVariantTranslation;
 use App\Models\ProductAttributeValue;
 use App\Models\AttributeValue;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Facades\Storage;
+
 
 
 class ProductController extends Controller
@@ -41,7 +42,7 @@ class ProductController extends Controller
     }
 
     public function getProducts(Request $request)
-    {
+    {         
         try {
             return $this->productService->getProductsForDataTable($request);
         } catch (\Exception $e) {
@@ -66,38 +67,6 @@ class ProductController extends Controller
 
 
 
-    /*public function store(Request $request)
-    {         
-        $request->validate([
-            'category_id' => 'required|exists:categories,id',
-            'price' => 'required|numeric',
-            'stock' => 'required|integer',
-            'translations' => 'required|array', 
-            'translations.*.name' => 'required|string|max:255', 
-            'translations.*.description' => 'nullable|string', 
-        ]);
-
-        $translations = $request->input('translations');
-        $productData = $request->except('translations'); 
-
-        if (isset($translations['en']['name'])) {
-            $productData['name'] = $translations['en']['name'];  
-        }
-
-        if (!$request->has('currency')) {
-            return redirect()->back()->withErrors(['currency' => 'Currency is required.'])->withInput();
-        }
-    
-
-        $result = $this->productService->store($translations, $productData);
-
-        if ($result instanceof \Illuminate\Support\MessageBag) {
-            return redirect()->back()->withErrors($result)->withInput();
-        }
-
-        return redirect()->route('admin.products.index')->with('success', __('cms.products.created'));
-       
-    }*/
 
     public function store(Request $request)
     {
@@ -228,61 +197,180 @@ class ProductController extends Controller
     }
 
 
-
     public function edit($id)
     {
-        $product = Product::with('translations', 'images')->findOrFail($id);
-        
-        $image = $product->images->first();
-        $imageUrl = $image ? $image->image_url : '';
-        
-        $categories = Category::all();  
-        $categories = collect($categories)->map(function ($category) {
-            if (isset($category->translations) && $category->translations instanceof \Illuminate\Database\Eloquent\Collection) {
-                $translation = $category->translations->firstWhere('language_code', 'en');
-                $category->name = $translation ? $translation->name : 'No Name Available';
-            } else {
-                $category->name = 'No Name Available';
-            }
-            return $category;
-        });
-
-        $languages = Language::active()->get();
-
-        return view('admin.products.edit', compact('product', 'categories', 'languages', 'imageUrl'));
+        $product = Product::with([
+            'translations',
+            'images',
+            'attributeValues.attribute', 
+            'variants.translations',
+            'variants.images'
+        ])->findOrFail($id);
+    
+        $categories = Category::with('translation')->get();
+        $brands = Brand::with('translation')->get();
+        $attributes = Attribute::with(['values.translations'])->get();
+        $activeLanguages = Language::where('active', 1)->get();
+    
+        return view('admin.products.edit', compact(
+            'product', 'categories', 'brands', 'attributes', 'activeLanguages'
+        ));
     }
     
+
+    
+
     public function update(Request $request, $id)
-    {                 
+    {        
+       
+        // Validate the incoming request data
         $request->validate([
-            'category_id' => 'required|exists:categories,id',
-            'price' => 'required|numeric',
-            'stock' => 'required|integer',
             'translations' => 'required|array',
-            'translations.*.name' => 'required|string|max:255',
+            'translations.*.name' => 'required|string',
             'translations.*.description' => 'nullable|string',
+            'slug' => 'required|string|unique:products,slug,' . $id,
+            'category_id' => 'required|exists:categories,id',
+            'brand_id' => 'nullable|exists:brands,id',
+            'product_type' => 'required|in:simple,variable',
+            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'attributes' => 'nullable|array',
+            'attributes.*' => 'nullable|exists:attribute_values,id',
+
+            // Variant validations
+            'variants' => 'nullable|array',
+            'variants.*.translations.*.name' => 'required_with:variants|string',
+            'variants.*.price' => 'required_with:variants|numeric|min:0',
+            'variants.*.stock' => 'required_with:variants|integer|min:0',
+            'variants.*.sku' => 'required|string',
+            'variants.*.barcode' => 'nullable|string',
+            'variants.*.weight' => 'nullable|numeric',
+            'variants.*.dimensions' => 'nullable|string',
+            'variants.*.is_primary' => 'boolean',
+            'variants.*.images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $translations = $request->input('translations');
-        $productData = $request->except('translations'); 
+        DB::beginTransaction();
 
-        if (isset($translations['en']['name'])) {
-            $productData['name'] = $translations['en']['name']; 
+        try {
+            // Find the Product to update
+            $product = Product::findOrFail($id);
+            $product->slug = $request->slug;
+            $product->category_id = $request->category_id;
+            $product->brand_id = $request->brand_id;
+            $product->product_type = $request->product_type;
+            $product->save();
+
+            // Update Translations
+            foreach ($request->translations as $language_code => $translation) {
+                $productTranslation = ProductTranslation::where('product_id', $product->id)
+                                                        ->where('language_code', $language_code)
+                                                        ->first();
+
+                if ($productTranslation) {
+                    $productTranslation->name = $translation['name'];
+                    $productTranslation->description = $translation['description'] ?? null;
+                    $productTranslation->save();
+                } else {
+                    ProductTranslation::create([
+                        'product_id' => $product->id,
+                        'language_code' => $language_code,
+                        'name' => $translation['name'],
+                        'description' => $translation['description'] ?? null,
+                    ]);
+                }
+            }
+
+             // Update Product Images
+        if ($request->hasFile('images')) {
+            $existingImages = ProductImage::where('product_id', $product->id)->get();
+            foreach ($existingImages as $image) {
+                Storage::disk('public')->delete($image->image_url);
+                $image->delete();
+            }
+
+            // Store new images
+            foreach ($request->file('images') as $image) {
+                $imagePath = $image->store('product_images', 'public');
+                ProductImage::create([
+                    'name' => $image->getClientOriginalName(),
+                    'image_url' => $imagePath,
+                    'type' => 'thumb', 
+                    'product_id' => $product->id,
+                ]);
+            }
         }
+            // Update Attributes
+            if ($request->has('attributes')) {
+                $attributes = $request->get('attributes');
+                foreach ($attributes as $attribute_id => $attribute_value_id) {
+                    if (!empty($attribute_value_id)) {
+                        $existingAttribute = ProductAttributeValue::where('product_id', $product->id)
+                                                                ->where('attribute_value_id', $attribute_value_id)
+                                                                ->first();
 
-        if (!$request->has('currency')) {
-            return redirect()->back()->withErrors(['currency' => 'Currency is required.'])->withInput();
-        }
+                        if (!$existingAttribute) {
+                            ProductAttributeValue::create([
+                                'product_id' => $product->id,
+                                'attribute_value_id' => $attribute_value_id,
+                            ]);
+                        }
+                    }
+                }
+            }
 
-        $result = $this->productService->update($id, $productData, $translations);
+            // Update Variants if Product is Variable
+            if ($request->product_type === 'variable' && isset($request->variants)) {
+                // Delete old variants if necessary
+                ProductVariant::where('product_id', $product->id)->delete();
 
-        if ($result instanceof \Illuminate\Support\MessageBag) {
-            return redirect()->back()->withErrors($result)->withInput();
-        }
+                foreach ($request->variants as $variantData) {
+                    $variant = ProductVariant::create([
+                        'product_id' => $product->id,
+                        'variant_slug' => \Str::slug($variantData['translations']['en']['name'] ?? uniqid()),
+                        'price' => $variantData['price'],
+                        'discount_price' => $variantData['discount_price'] ?? null,
+                        'stock' => $variantData['stock'],
+                        'SKU' => $variantData['sku'],
+                        'barcode' => $variantData['barcode'] ?? null,
+                        'weight' => $variantData['weight'] ?? null,
+                        'dimensions' => $variantData['dimensions'] ?? null,
+                        'is_primary' => isset($variantData['is_primary']) ? (bool)$variantData['is_primary'] : false,
+                    ]);
 
-        return redirect()->route('admin.products.index')->with('success', __('cms.products.updated'));   
+                    // Store Variant Translations
+                    foreach ($variantData['translations'] as $language_code => $variantTranslation) {
+                        ProductVariantTranslation::create([
+                            'product_variant_id' => $variant->id,
+                            'language_code' => $language_code,
+                            'name' => $variantTranslation['name'],
+                        ]);
+                    }
+
+                    // Store Variant Images
+                    if (isset($variantData['images'])) {
+                        foreach ($variantData['images'] as $variantImage) {
+                            $imagePath = $variantImage->store('variant_images', 'public');
+                            ProductImage::create([
+                                'name' => $variantImage->getClientOriginalName(),
+                                'image_url' => $imagePath,
+                                'type' => 'thumb', // Default type
+                                'product_id' => $product->id,
+                                'variant_id' => $variant->id,
+                            ]);
+                        }
+                    }
+                }
+            }
+
+            DB::commit();
+            return redirect()->route('admin.products.index')->with('success', 'Product updated successfully!');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return back()->withErrors(['error' => 'Something went wrong: ' . $e->getMessage()]);
+        } 
     }
 
+    
     public function destroy($id)
     {
        

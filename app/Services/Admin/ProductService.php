@@ -35,7 +35,10 @@ class ProductService
                 return $translation ? $translation->description : 'No description available';
             })
             ->addColumn('price', function ($product) {
-                return $product->price ? '$' . number_format($product->price, 2) : 'No price available';
+                return isset($product->price) ? '$' . number_format($product->price, 2) : 'N/A';
+            })
+            ->addColumn('stock', function ($product) {
+                return isset($product->stock) ? $product->stock : 'N/A';
             })
             ->addColumn('action', function ($product) {
             

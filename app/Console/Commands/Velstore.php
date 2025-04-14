@@ -30,7 +30,7 @@ class Velstore extends Command
     public function handle()
     {
         $this->info('Running composer dump-autoload...');
-        exec('composer dump-autoload');
+        exec('composer dump-autoload'); 
 
         $this->info('Running migrations...');
         $this->call('migrate');
