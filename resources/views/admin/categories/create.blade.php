@@ -93,6 +93,7 @@
 @endsection
 
 @section('js')
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
 <script>
     function previewImage(input, langCode) {
         var file = input.files[0];
@@ -111,16 +112,6 @@
         }
     }
 
-    document.querySelectorAll('.ck-editor-multi-languages').forEach((element) => {
-        ClassicEditor
-            .create(element)
-            .catch(error => {
-                console.error(error);
-            });
-    });
-</script>
-<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
-<script>
     document.querySelectorAll('.ck-editor-multi-languages').forEach((element) => {
         ClassicEditor
             .create(element)
