@@ -14,8 +14,8 @@ Route::prefix('vendor')->group(function () {
     Route::middleware('auth.vendor')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('vendor.dashboard');
         Route::resource('products', ProductController::class)->names('vendor.products');
-        Route::post('products/data', [ProductController::class, 'getProducts'])->name('products.data');
-        Route::post('vendor/products/updateStatus', [ProductController::class, 'updateStatus'])->name('vendor.products.updateStatus');
+        Route::post('products/data', [ProductController::class, 'getProducts'])->name('vendor.products.data');
+        Route::post('products/updateStatus', [ProductController::class, 'updateStatus'])->name('vendor.products.updateStatus');
         Route::resource('social-media-links', SocialMediaLinkController::class)->names('vendor.social-media-links');
         Route::post('social-media-links/data', [SocialMediaLinkController::class, 'getData'])->name('vendor.social-media-links.data');
     });
