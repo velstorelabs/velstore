@@ -39,6 +39,12 @@ Route::get('/login', function () {
     return view('admin.auth.login');
 });
 
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/vendor/logout', [LoginController::class, 'logout'])->name('vendor.logout');
+Route::post('/customer/logout', [LoginController::class, 'logout'])->name('customer.logout');
+
 Auth::routes();
 
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {

@@ -51,21 +51,22 @@
                 </ul>
             </div>
             <div class="dropdown">
-                <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
-                    <img src="https://via.placeholder.com/40" class="rounded-circle" alt="Profile">
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li>
-                        <form id="admin-logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                        <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('admin-logout-form').submit();">
-                            Logout
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
+                <img src="https://via.placeholder.com/40" class="rounded-circle" alt="Profile">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                    <form id="admin-logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                    <a class="dropdown-item" href="#"
+                    onclick="event.preventDefault(); document.getElementById('admin-logout-form').submit();">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
         </nav>
         <div class="container mt-4">
             @yield('content')

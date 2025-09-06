@@ -26,15 +26,44 @@ class LoginController extends Controller
             return redirect()->intended(route('xylo.home'));
         }
 
+        if (Auth::guard('vendor')->attempt($credentials, $request->filled('remember'))) {
+            $request->session()->regenerate();
+
+            return redirect()->intended(route('vendor.dashboard'));
+        }
+
+        if (Auth::guard('web')->attempt($credentials, $request->filled('remember'))) {
+            $request->session()->regenerate();
+
+            return redirect()->intended(route('admin.dashboard'));
+        }
+
         return back()->withErrors(['email' => 'Invalid credentials.'])->onlyInput('email');
     }
 
     public function logout(Request $request)
     {
-        Auth::guard('customer')->logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
+        if ($request->routeIs('customer.logout')) {
+            Auth::guard('customer')->logout();
+            $request->session()->regenerateToken();
 
-        return redirect()->route('themes.xylo.auth.login');
+            return redirect()->route('xylo.home');
+        }
+
+        if ($request->routeIs('vendor.logout')) {
+            Auth::guard('vendor')->logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+
+            return redirect()->route('vendor.login');
+        }
+
+        if ($request->routeIs('logout')) {
+            Auth::guard('web')->logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+
+            return redirect()->route('login');
+        }
     }
 }

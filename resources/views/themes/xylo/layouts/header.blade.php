@@ -79,21 +79,21 @@
                     <i class="fa-regular fa-user"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end p-2">
-                    @guest
-                        <li><a class="dropdown-item" href="{{ route('customer.login') }}">Sign In</a></li>
-                        <li><a class="dropdown-item" href="{{ route('customer.register') }}">Sign Up</a></li>
-                    @else
-                        <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
-                        <li><a class="dropdown-item" href="{{ route('orders') }}">Orders</a></li>
+                    @if(Auth::guard('customer')->check())
                         <li>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            <a class="dropdown-item" href="#"
+                            onclick="event.preventDefault(); document.getElementById('logout-form-customer').submit();">
+                                Logout
+                            </a>
+                            <form id="logout-form-customer" action="{{ route('customer.logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
                         </li>
-                    @endguest
-                </ul>   
+                    @else
+                        <li><a class="dropdown-item" href="{{ route('customer.login') }}">Sign In</a></li>
+                        <li><a class="dropdown-item" href="{{ route('customer.register') }}">Sign Up</a></li>
+                    @endif
+                </ul>
 
                 <!-- Cart Icon -->
                 <a href="{{ route('cart.view') }}" class="text-dark position-relative homepage-icon">
