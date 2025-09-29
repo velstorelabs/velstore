@@ -78,11 +78,12 @@
                 </div>
             </div>
 
-            {{-- Vendor --}}
+           {{-- Vendor --}}
             <div class="row mt-4">
                 <div class="col-md-6">
                     <label class="form-label">{{ __('cms.products.vendor') }}</label>
-                    <select name="vendor_id" class="form-control" required>
+                    <select name="vendor_id" 
+                            class="form-control @error('vendor_id') is-invalid @enderror">
                         <option value="">{{ __('cms.products.select_vendor') }}</option>
                         @foreach($vendors as $vendor)
                             <option value="{{ $vendor->id }}" {{ old('vendor_id') == $vendor->id ? 'selected' : '' }}>
@@ -90,6 +91,9 @@
                             </option>
                         @endforeach
                     </select>
+                    @error('vendor_id')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
             </div>
 
