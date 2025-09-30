@@ -40,26 +40,15 @@ class CategoryController extends Controller
             'translations' => 'required|array',
         ];
 
-        $messages = [];
-
         foreach ($request->input('translations', []) as $lang => $data) {
             $rules["translations.$lang.name"] = 'required|string|max:255';
             $rules["translations.$lang.description"] = 'required|string|min:5';
             $rules["translations.$lang.image"] = 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048';
-
-            $langMessages = __('validation.categories.translations');
-
-            foreach ($langMessages as $field => $rulesArray) {
-                foreach ($rulesArray as $rule => $message) {
-                    $messages["translations.$lang.$field.$rule"] = str_replace('en', $lang, $message);
-                }
-            }
         }
 
-        $request->validate($rules, $messages);
+        $request->validate($rules);
 
-        $translations = $request->all()['translations'];
-
+        $translations = $request->input('translations');
         foreach ($translations as $languageCode => $translation) {
             if ($request->hasFile("translations.$languageCode.image")) {
                 $translations[$languageCode]['image'] = $request->file("translations.$languageCode.image");
