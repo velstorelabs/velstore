@@ -9,7 +9,7 @@ return [
     */
 
     'required' => 'O campo :attribute é obrigatório.',
-    'string' => 'O campo :attribute deve ser uma sequência de caracteres.',
+    'string' => 'O campo :attribute deve ser uma string.',
     'max' => 'O campo :attribute não pode ter mais de :max caracteres.',
     'min' => 'O campo :attribute deve ter pelo menos :min caracteres.',
     'image' => 'O campo :attribute deve ser uma imagem.',
@@ -24,8 +24,8 @@ return [
     | Custom Attributes
     |--------------------------------------------------------------------------
     |
-    | Aqui definimos nomes personalizados de atributos.
-    | Isso torna as mensagens de validação mais legíveis.
+    | Here we define custom attribute names for multiple languages.
+    | This way validation messages are more readable.
     |
     */
 
@@ -33,22 +33,30 @@ return [
 
         // Vendor fields
         'name' => 'Nome',
-        'email' => 'E-mail',
+        'email' => 'Email',
         'password' => 'Senha',
         'password_confirmation' => 'Confirmação de senha',
         'phone' => 'Número de telefone',
         'status' => 'Status',
 
+        // Social links
+        'type' => 'Tipo de plataforma',
+        'platform' => 'Nome da plataforma',
+        'link' => 'Link da plataforma',
+
+        // Menu fields
+        'title' => 'Título do menu',
+
         // Dynamic variants
         'variants.*.name' => 'Nome da variante',
         'variants.*.price' => 'Preço da variante',
-        'variants.*.discount_price' => 'Preço promocional da variante',
+        'variants.*.discount_price' => 'Preço com desconto da variante',
         'variants.*.stock' => 'Estoque da variante',
         'variants.*.SKU' => 'SKU da variante',
         'variants.*.barcode' => 'Código de barras da variante',
         'variants.*.weight' => 'Peso da variante',
         'variants.*.dimensions' => 'Dimensões da variante',
-        'variants.*.language_code' => 'Código do idioma da variante',
+        'variants.*.language_code' => 'Código de idioma da variante',
         'variants.*.size_id' => 'Tamanho da variante',
         'variants.*.color_id' => 'Cor da variante',
 
@@ -58,152 +66,228 @@ return [
         'translations.en.name' => 'Nome (Inglês)',
         'translations.en.description' => 'Descrição (Inglês)',
         'translations.en.image' => 'Imagem (Inglês)',
+        'translations.en.title' => 'Título (Inglês)',
+        'translations.en.content' => 'Conteúdo (Inglês)',
         'languages.en.title' => 'Título do banner (Inglês)',
         'languages.en.description' => 'Descrição do banner (Inglês)',
         'languages.en.image' => 'Imagem do banner (Inglês)',
+        'languages.en.name' => 'Nome da plataforma (Inglês)',
+        'title.en' => 'Título (Inglês)',
 
         // Arabic
         'translations.ar.name' => 'Nome (Árabe)',
         'translations.ar.description' => 'Descrição (Árabe)',
         'translations.ar.image' => 'Imagem (Árabe)',
+        'translations.ar.title' => 'Título (Árabe)',
+        'translations.ar.content' => 'Conteúdo (Árabe)',
         'languages.ar.title' => 'Título do banner (Árabe)',
         'languages.ar.description' => 'Descrição do banner (Árabe)',
         'languages.ar.image' => 'Imagem do banner (Árabe)',
+        'languages.ar.name' => 'Nome da plataforma (Árabe)',
+        'title.ar' => 'Título (Árabe)',
 
         // German
         'translations.de.name' => 'Nome (Alemão)',
         'translations.de.description' => 'Descrição (Alemão)',
         'translations.de.image' => 'Imagem (Alemão)',
+        'translations.de.title' => 'Título (Alemão)',
+        'translations.de.content' => 'Conteúdo (Alemão)',
         'languages.de.title' => 'Título do banner (Alemão)',
         'languages.de.description' => 'Descrição do banner (Alemão)',
         'languages.de.image' => 'Imagem do banner (Alemão)',
+        'languages.de.name' => 'Nome da plataforma (Alemão)',
+        'title.de' => 'Título (Alemão)',
 
         // Spanish
         'translations.es.name' => 'Nome (Espanhol)',
         'translations.es.description' => 'Descrição (Espanhol)',
         'translations.es.image' => 'Imagem (Espanhol)',
+        'translations.es.title' => 'Título (Espanhol)',
+        'translations.es.content' => 'Conteúdo (Espanhol)',
         'languages.es.title' => 'Título do banner (Espanhol)',
         'languages.es.description' => 'Descrição do banner (Espanhol)',
         'languages.es.image' => 'Imagem do banner (Espanhol)',
+        'languages.es.name' => 'Nome da plataforma (Espanhol)',
+        'title.es' => 'Título (Espanhol)',
 
         // Persian
         'translations.fa.name' => 'Nome (Persa)',
         'translations.fa.description' => 'Descrição (Persa)',
         'translations.fa.image' => 'Imagem (Persa)',
+        'translations.fa.title' => 'Título (Persa)',
+        'translations.fa.content' => 'Conteúdo (Persa)',
         'languages.fa.title' => 'Título do banner (Persa)',
         'languages.fa.description' => 'Descrição do banner (Persa)',
         'languages.fa.image' => 'Imagem do banner (Persa)',
+        'languages.fa.name' => 'Nome da plataforma (Persa)',
+        'title.fa' => 'Título (Persa)',
 
         // French
         'translations.fr.name' => 'Nome (Francês)',
         'translations.fr.description' => 'Descrição (Francês)',
         'translations.fr.image' => 'Imagem (Francês)',
+        'translations.fr.title' => 'Título (Francês)',
+        'translations.fr.content' => 'Conteúdo (Francês)',
         'languages.fr.title' => 'Título do banner (Francês)',
         'languages.fr.description' => 'Descrição do banner (Francês)',
         'languages.fr.image' => 'Imagem do banner (Francês)',
+        'languages.fr.name' => 'Nome da plataforma (Francês)',
+        'title.fr' => 'Título (Francês)',
 
         // Hindi
         'translations.hi.name' => 'Nome (Hindi)',
         'translations.hi.description' => 'Descrição (Hindi)',
         'translations.hi.image' => 'Imagem (Hindi)',
+        'translations.hi.title' => 'Título (Hindi)',
+        'translations.hi.content' => 'Conteúdo (Hindi)',
         'languages.hi.title' => 'Título do banner (Hindi)',
         'languages.hi.description' => 'Descrição do banner (Hindi)',
         'languages.hi.image' => 'Imagem do banner (Hindi)',
+        'languages.hi.name' => 'Nome da plataforma (Hindi)',
+        'title.hi' => 'Título (Hindi)',
 
         // Indonesian
         'translations.id.name' => 'Nome (Indonésio)',
         'translations.id.description' => 'Descrição (Indonésio)',
         'translations.id.image' => 'Imagem (Indonésio)',
+        'translations.id.title' => 'Título (Indonésio)',
+        'translations.id.content' => 'Conteúdo (Indonésio)',
         'languages.id.title' => 'Título do banner (Indonésio)',
         'languages.id.description' => 'Descrição do banner (Indonésio)',
         'languages.id.image' => 'Imagem do banner (Indonésio)',
+        'languages.id.name' => 'Nome da plataforma (Indonésio)',
+        'title.id' => 'Título (Indonésio)',
 
         // Italian
         'translations.it.name' => 'Nome (Italiano)',
         'translations.it.description' => 'Descrição (Italiano)',
         'translations.it.image' => 'Imagem (Italiano)',
+        'translations.it.title' => 'Título (Italiano)',
+        'translations.it.content' => 'Conteúdo (Italiano)',
         'languages.it.title' => 'Título do banner (Italiano)',
         'languages.it.description' => 'Descrição do banner (Italiano)',
         'languages.it.image' => 'Imagem do banner (Italiano)',
+        'languages.it.name' => 'Nome da plataforma (Italiano)',
+        'title.it' => 'Título (Italiano)',
 
         // Japanese
         'translations.ja.name' => 'Nome (Japonês)',
         'translations.ja.description' => 'Descrição (Japonês)',
         'translations.ja.image' => 'Imagem (Japonês)',
+        'translations.ja.title' => 'Título (Japonês)',
+        'translations.ja.content' => 'Conteúdo (Japonês)',
         'languages.ja.title' => 'Título do banner (Japonês)',
         'languages.ja.description' => 'Descrição do banner (Japonês)',
         'languages.ja.image' => 'Imagem do banner (Japonês)',
+        'languages.ja.name' => 'Nome da plataforma (Japonês)',
+        'title.ja' => 'Título (Japonês)',
 
         // Korean
         'translations.ko.name' => 'Nome (Coreano)',
         'translations.ko.description' => 'Descrição (Coreano)',
         'translations.ko.image' => 'Imagem (Coreano)',
+        'translations.ko.title' => 'Título (Coreano)',
+        'translations.ko.content' => 'Conteúdo (Coreano)',
         'languages.ko.title' => 'Título do banner (Coreano)',
         'languages.ko.description' => 'Descrição do banner (Coreano)',
         'languages.ko.image' => 'Imagem do banner (Coreano)',
+        'languages.ko.name' => 'Nome da plataforma (Coreano)',
+        'title.ko' => 'Título (Coreano)',
 
         // Dutch
         'translations.nl.name' => 'Nome (Holandês)',
         'translations.nl.description' => 'Descrição (Holandês)',
         'translations.nl.image' => 'Imagem (Holandês)',
+        'translations.nl.title' => 'Título (Holandês)',
+        'translations.nl.content' => 'Conteúdo (Holandês)',
         'languages.nl.title' => 'Título do banner (Holandês)',
         'languages.nl.description' => 'Descrição do banner (Holandês)',
         'languages.nl.image' => 'Imagem do banner (Holandês)',
+        'languages.nl.name' => 'Nome da plataforma (Holandês)',
+        'title.nl' => 'Título (Holandês)',
 
         // Polish
         'translations.pl.name' => 'Nome (Polonês)',
         'translations.pl.description' => 'Descrição (Polonês)',
         'translations.pl.image' => 'Imagem (Polonês)',
+        'translations.pl.title' => 'Título (Polonês)',
+        'translations.pl.content' => 'Conteúdo (Polonês)',
         'languages.pl.title' => 'Título do banner (Polonês)',
         'languages.pl.description' => 'Descrição do banner (Polonês)',
         'languages.pl.image' => 'Imagem do banner (Polonês)',
+        'languages.pl.name' => 'Nome da plataforma (Polonês)',
+        'title.pl' => 'Título (Polonês)',
 
         // Portuguese
         'translations.pt.name' => 'Nome (Português)',
         'translations.pt.description' => 'Descrição (Português)',
         'translations.pt.image' => 'Imagem (Português)',
+        'translations.pt.title' => 'Título (Português)',
+        'translations.pt.content' => 'Conteúdo (Português)',
         'languages.pt.title' => 'Título do banner (Português)',
         'languages.pt.description' => 'Descrição do banner (Português)',
         'languages.pt.image' => 'Imagem do banner (Português)',
+        'languages.pt.name' => 'Nome da plataforma (Português)',
+        'title.pt' => 'Título (Português)',
 
         // Russian
         'translations.ru.name' => 'Nome (Russo)',
         'translations.ru.description' => 'Descrição (Russo)',
         'translations.ru.image' => 'Imagem (Russo)',
+        'translations.ru.title' => 'Título (Russo)',
+        'translations.ru.content' => 'Conteúdo (Russo)',
         'languages.ru.title' => 'Título do banner (Russo)',
         'languages.ru.description' => 'Descrição do banner (Russo)',
         'languages.ru.image' => 'Imagem do banner (Russo)',
+        'languages.ru.name' => 'Nome da plataforma (Russo)',
+        'title.ru' => 'Título (Russo)',
 
         // Thai
         'translations.th.name' => 'Nome (Tailandês)',
         'translations.th.description' => 'Descrição (Tailandês)',
         'translations.th.image' => 'Imagem (Tailandês)',
+        'translations.th.title' => 'Título (Tailandês)',
+        'translations.th.content' => 'Conteúdo (Tailandês)',
         'languages.th.title' => 'Título do banner (Tailandês)',
         'languages.th.description' => 'Descrição do banner (Tailandês)',
         'languages.th.image' => 'Imagem do banner (Tailandês)',
+        'languages.th.name' => 'Nome da plataforma (Tailandês)',
+        'title.th' => 'Título (Tailandês)',
 
         // Turkish
         'translations.tr.name' => 'Nome (Turco)',
         'translations.tr.description' => 'Descrição (Turco)',
         'translations.tr.image' => 'Imagem (Turco)',
+        'translations.tr.title' => 'Título (Turco)',
+        'translations.tr.content' => 'Conteúdo (Turco)',
         'languages.tr.title' => 'Título do banner (Turco)',
         'languages.tr.description' => 'Descrição do banner (Turco)',
         'languages.tr.image' => 'Imagem do banner (Turco)',
+        'languages.tr.name' => 'Nome da plataforma (Turco)',
+        'title.tr' => 'Título (Turco)',
 
         // Vietnamese
         'translations.vi.name' => 'Nome (Vietnamita)',
         'translations.vi.description' => 'Descrição (Vietnamita)',
         'translations.vi.image' => 'Imagem (Vietnamita)',
+        'translations.vi.title' => 'Título (Vietnamita)',
+        'translations.vi.content' => 'Conteúdo (Vietnamita)',
         'languages.vi.title' => 'Título do banner (Vietnamita)',
         'languages.vi.description' => 'Descrição do banner (Vietnamita)',
         'languages.vi.image' => 'Imagem do banner (Vietnamita)',
+        'languages.vi.name' => 'Nome da plataforma (Vietnamita)',
+        'title.vi' => 'Título (Vietnamita)',
 
         // Chinese
         'translations.zh.name' => 'Nome (Chinês)',
         'translations.zh.description' => 'Descrição (Chinês)',
         'translations.zh.image' => 'Imagem (Chinês)',
+        'translations.zh.title' => 'Título (Chinês)',
+        'translations.zh.content' => 'Conteúdo (Chinês)',
         'languages.zh.title' => 'Título do banner (Chinês)',
         'languages.zh.description' => 'Descrição do banner (Chinês)',
         'languages.zh.image' => 'Imagem do banner (Chinês)',
+        'languages.zh.name' => 'Nome da plataforma (Chinês)',
+        'title.zh' => 'Título (Chinês)',
     ],
 ];
