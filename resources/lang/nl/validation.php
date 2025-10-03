@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => 'Menu Titel',
+        'order_number' => 'Ordernummer',
 
         // Dynamic variants
         'variants.*.name' => 'Variant Naam',
@@ -59,6 +60,149 @@ return [
         'variants.*.language_code' => 'Variant Taalcode',
         'variants.*.size_id' => 'Variant Maat',
         'variants.*.color_id' => 'Variant Kleur',
+
+        // Attribute name
+        'name' => 'Attribuutnaam',
+
+        // Attribute values
+        'values.*' => 'Attribuutwaarde',
+        ...array_combine(
+            array_map(fn ($i) => "values.$i", range(0, 49)),
+            array_map(fn ($i) => "Attribuutwaarde $i", range(0, 49))
+        ),
+
+        // Attribute value translations (English)
+        'translations.en.*' => 'Waarde (Engels)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.en.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Engels) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Arabic)
+        'translations.ar.*' => 'Waarde (Arabisch)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ar.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Arabisch) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (German)
+        'translations.de.*' => 'Waarde (Duits)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.de.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Duits) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Spanish)
+        'translations.es.*' => 'Waarde (Spaans)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.es.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Spaans) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Persian)
+        'translations.fa.*' => 'Waarde (Perzisch)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.fa.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Perzisch) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (French)
+        'translations.fr.*' => 'Waarde (Frans)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.fr.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Frans) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Hindi)
+        'translations.hi.*' => 'Waarde (Hindi)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.hi.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Hindi) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Indonesian)
+        'translations.id.*' => 'Waarde (Indonesisch)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.id.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Indonesisch) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Italian)
+        'translations.it.*' => 'Waarde (Italiaans)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.it.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Italiaans) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Japanese)
+        'translations.ja.*' => 'Waarde (Japans)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ja.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Japans) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Korean)
+        'translations.ko.*' => 'Waarde (Koreaans)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ko.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Koreaans) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Dutch)
+        'translations.nl.*' => 'Waarde (Nederlands)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.nl.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Nederlands) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Polish)
+        'translations.pl.*' => 'Waarde (Pools)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.pl.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Pools) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Portuguese)
+        'translations.pt.*' => 'Waarde (Portugees)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.pt.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Portugees) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Russian)
+        'translations.ru.*' => 'Waarde (Russisch)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ru.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Russisch) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Thai)
+        'translations.th.*' => 'Waarde (Thais)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.th.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Thais) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Turkish)
+        'translations.tr.*' => 'Waarde (Turks)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.tr.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Turks) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Vietnamese)
+        'translations.vi.*' => 'Waarde (Vietnamees)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.vi.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Vietnamees) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Chinese)
+        'translations.zh.*' => 'Waarde (Chinees)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.zh.$i", range(0, 49)),
+            array_map(fn ($i) => "Waarde (Chinees) $i", range(0, 49))
+        ),
 
         // Translations for all supported languages
 

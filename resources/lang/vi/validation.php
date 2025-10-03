@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => 'Tiêu đề menu',
+        'order_number' => 'Số đơn hàng',
 
         // Dynamic variants
         'variants.*.name' => 'Tên biến thể',
@@ -59,6 +60,149 @@ return [
         'variants.*.language_code' => 'Mã ngôn ngữ biến thể',
         'variants.*.size_id' => 'Kích thước biến thể',
         'variants.*.color_id' => 'Màu sắc biến thể',
+
+        // Attribute name
+        'name' => 'Tên thuộc tính',
+
+        // Attribute values
+        'values.*' => 'Giá trị thuộc tính',
+        ...array_combine(
+            array_map(fn ($i) => "values.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị thuộc tính $i", range(0, 49))
+        ),
+
+        // Attribute value translations (English)
+        'translations.en.*' => 'Giá trị (Tiếng Anh)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.en.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Anh) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Arabic)
+        'translations.ar.*' => 'Giá trị (Tiếng Ả Rập)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ar.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Ả Rập) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (German)
+        'translations.de.*' => 'Giá trị (Tiếng Đức)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.de.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Đức) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Spanish)
+        'translations.es.*' => 'Giá trị (Tiếng Tây Ban Nha)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.es.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Tây Ban Nha) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Persian)
+        'translations.fa.*' => 'Giá trị (Tiếng Ba Tư)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.fa.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Ba Tư) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (French)
+        'translations.fr.*' => 'Giá trị (Tiếng Pháp)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.fr.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Pháp) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Hindi)
+        'translations.hi.*' => 'Giá trị (Tiếng Hindi)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.hi.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Hindi) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Indonesian)
+        'translations.id.*' => 'Giá trị (Tiếng Indonesia)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.id.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Indonesia) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Italian)
+        'translations.it.*' => 'Giá trị (Tiếng Ý)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.it.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Ý) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Japanese)
+        'translations.ja.*' => 'Giá trị (Tiếng Nhật)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ja.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Nhật) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Korean)
+        'translations.ko.*' => 'Giá trị (Tiếng Hàn)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ko.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Hàn) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Dutch)
+        'translations.nl.*' => 'Giá trị (Tiếng Hà Lan)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.nl.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Hà Lan) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Polish)
+        'translations.pl.*' => 'Giá trị (Tiếng Ba Lan)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.pl.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Ba Lan) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Portuguese)
+        'translations.pt.*' => 'Giá trị (Tiếng Bồ Đào Nha)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.pt.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Bồ Đào Nha) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Russian)
+        'translations.ru.*' => 'Giá trị (Tiếng Nga)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ru.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Nga) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Thai)
+        'translations.th.*' => 'Giá trị (Tiếng Thái)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.th.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Thái) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Turkish)
+        'translations.tr.*' => 'Giá trị (Tiếng Thổ Nhĩ Kỳ)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.tr.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Thổ Nhĩ Kỳ) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Vietnamese)
+        'translations.vi.*' => 'Giá trị (Tiếng Việt)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.vi.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Việt) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Chinese)
+        'translations.zh.*' => 'Giá trị (Tiếng Trung)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.zh.$i", range(0, 49)),
+            array_map(fn ($i) => "Giá trị (Tiếng Trung) $i", range(0, 49))
+        ),
 
         // Translations for all supported languages
 

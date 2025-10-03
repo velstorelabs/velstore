@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => 'Tytuł menu',
+        'order_number' => 'Numer zamówienia',
 
         // Dynamic variants
         'variants.*.name' => 'Nazwa wariantu',
@@ -59,6 +60,149 @@ return [
         'variants.*.language_code' => 'Kod języka wariantu',
         'variants.*.size_id' => 'Rozmiar wariantu',
         'variants.*.color_id' => 'Kolor wariantu',
+
+        // Attribute name
+        'name' => 'Nazwa atrybutu',
+
+        // Attribute values
+        'values.*' => 'Wartość atrybutu',
+        ...array_combine(
+            array_map(fn ($i) => "values.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość atrybutu $i", range(0, 49))
+        ),
+
+        // Attribute value translations (English)
+        'translations.en.*' => 'Wartość (Angielski)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.en.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Angielski) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Arabic)
+        'translations.ar.*' => 'Wartość (Arabski)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ar.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Arabski) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (German)
+        'translations.de.*' => 'Wartość (Niemiecki)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.de.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Niemiecki) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Spanish)
+        'translations.es.*' => 'Wartość (Hiszpański)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.es.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Hiszpański) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Persian)
+        'translations.fa.*' => 'Wartość (Perski)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.fa.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Perski) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (French)
+        'translations.fr.*' => 'Wartość (Francuski)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.fr.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Francuski) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Hindi)
+        'translations.hi.*' => 'Wartość (Hindi)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.hi.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Hindi) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Indonesian)
+        'translations.id.*' => 'Wartość (Indonezyjski)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.id.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Indonezyjski) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Italian)
+        'translations.it.*' => 'Wartość (Włoski)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.it.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Włoski) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Japanese)
+        'translations.ja.*' => 'Wartość (Japoński)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ja.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Japoński) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Korean)
+        'translations.ko.*' => 'Wartość (Koreański)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ko.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Koreański) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Dutch)
+        'translations.nl.*' => 'Wartość (Niderlandzki)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.nl.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Niderlandzki) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Polish)
+        'translations.pl.*' => 'Wartość (Polski)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.pl.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Polski) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Portuguese)
+        'translations.pt.*' => 'Wartość (Portugalski)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.pt.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Portugalski) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Russian)
+        'translations.ru.*' => 'Wartość (Rosyjski)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ru.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Rosyjski) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Thai)
+        'translations.th.*' => 'Wartość (Tajski)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.th.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Tajski) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Turkish)
+        'translations.tr.*' => 'Wartość (Turecki)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.tr.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Turecki) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Vietnamese)
+        'translations.vi.*' => 'Wartość (Wietnamski)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.vi.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Wietnamski) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Chinese)
+        'translations.zh.*' => 'Wartość (Chiński)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.zh.$i", range(0, 49)),
+            array_map(fn ($i) => "Wartość (Chiński) $i", range(0, 49))
+        ),
 
         // Translations for all supported languages
 

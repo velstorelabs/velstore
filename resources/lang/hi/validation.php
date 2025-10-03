@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => 'मेनू शीर्षक',
+        'order_number' => 'ऑर्डर नंबर',
 
         // Dynamic variants
         'variants.*.name' => 'वेरिएंट नाम',
@@ -59,6 +60,149 @@ return [
         'variants.*.language_code' => 'वेरिएंट भाषा कोड',
         'variants.*.size_id' => 'वेरिएंट आकार',
         'variants.*.color_id' => 'वेरिएंट रंग',
+
+        // Attribute name
+        'name' => 'विशेषता का नाम',
+
+        // Attribute values
+        'values.*' => 'विशेषता का मान',
+        ...array_combine(
+            array_map(fn ($i) => "values.$i", range(0, 49)),
+            array_map(fn ($i) => "विशेषता का मान $i", range(0, 49))
+        ),
+
+        // Attribute value translations (English)
+        'translations.en.*' => 'मान (अंग्रेज़ी)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.en.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (अंग्रेज़ी) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Arabic)
+        'translations.ar.*' => 'मान (अरबी)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ar.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (अरबी) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (German)
+        'translations.de.*' => 'मान (जर्मन)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.de.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (जर्मन) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Spanish)
+        'translations.es.*' => 'मान (स्पेनिश)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.es.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (स्पेनिश) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Persian)
+        'translations.fa.*' => 'मान (फारसी)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.fa.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (फारसी) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (French)
+        'translations.fr.*' => 'मान (फ्रेंच)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.fr.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (फ्रेंच) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Hindi)
+        'translations.hi.*' => 'मान (हिंदी)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.hi.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (हिंदी) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Indonesian)
+        'translations.id.*' => 'मान (इंडोनेशियाई)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.id.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (इंडोनेशियाई) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Italian)
+        'translations.it.*' => 'मान (इतालवी)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.it.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (इतालवी) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Japanese)
+        'translations.ja.*' => 'मान (जापानी)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ja.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (जापानी) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Korean)
+        'translations.ko.*' => 'मान (कोरियाई)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ko.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (कोरियाई) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Dutch)
+        'translations.nl.*' => 'मान (डच)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.nl.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (डच) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Polish)
+        'translations.pl.*' => 'मान (पोलिश)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.pl.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (पोलिश) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Portuguese)
+        'translations.pt.*' => 'मान (पुर्तगाली)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.pt.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (पुर्तगाली) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Russian)
+        'translations.ru.*' => 'मान (रूसी)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ru.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (रूसी) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Thai)
+        'translations.th.*' => 'मान (थाई)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.th.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (थाई) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Turkish)
+        'translations.tr.*' => 'मान (तुर्की)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.tr.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (तुर्की) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Vietnamese)
+        'translations.vi.*' => 'मान (वियतनामी)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.vi.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (वियतनामी) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Chinese)
+        'translations.zh.*' => 'मान (चीनी)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.zh.$i", range(0, 49)),
+            array_map(fn ($i) => "मान (चीनी) $i", range(0, 49))
+        ),
 
         // Translations for all supported languages
 

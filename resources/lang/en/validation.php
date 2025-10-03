@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => 'Menu Title',
+        'order_number' => 'Order Number',
 
         // Dynamic variants
         'variants.*.name' => 'Variant Name',
@@ -59,6 +60,149 @@ return [
         'variants.*.language_code' => 'Variant Language Code',
         'variants.*.size_id' => 'Variant Size',
         'variants.*.color_id' => 'Variant Color',
+
+        // Attribute name
+        'name' => 'Attribute Name',
+
+        // Attribute values
+        'values.*' => 'Attribute Value',
+        ...array_combine(
+            array_map(fn ($i) => "values.$i", range(0, 49)),
+            array_map(fn ($i) => "Attribute Value $i", range(0, 49))
+        ),
+
+        // Attribute value translations (English)
+        'translations.en.*' => 'Value (English)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.en.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (English) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Arabic)
+        'translations.ar.*' => 'Value (Arabic)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ar.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Arabic) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (German)
+        'translations.de.*' => 'Value (German)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.de.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (German) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Spanish)
+        'translations.es.*' => 'Value (Spanish)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.es.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Spanish) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Persian)
+        'translations.fa.*' => 'Value (Persian)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.fa.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Persian) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (French)
+        'translations.fr.*' => 'Value (French)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.fr.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (French) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Hindi)
+        'translations.hi.*' => 'Value (Hindi)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.hi.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Hindi) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Indonesian)
+        'translations.id.*' => 'Value (Indonesian)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.id.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Indonesian) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Italian)
+        'translations.it.*' => 'Value (Italian)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.it.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Italian) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Japanese)
+        'translations.ja.*' => 'Value (Japanese)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ja.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Japanese) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Korean)
+        'translations.ko.*' => 'Value (Korean)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ko.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Korean) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Dutch)
+        'translations.nl.*' => 'Value (Dutch)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.nl.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Dutch) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Polish)
+        'translations.pl.*' => 'Value (Polish)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.pl.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Polish) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Portuguese)
+        'translations.pt.*' => 'Value (Portuguese)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.pt.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Portuguese) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Russian)
+        'translations.ru.*' => 'Value (Russian)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.ru.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Russian) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Thai)
+        'translations.th.*' => 'Value (Thai)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.th.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Thai) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Turkish)
+        'translations.tr.*' => 'Value (Turkish)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.tr.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Turkish) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Vietnamese)
+        'translations.vi.*' => 'Value (Vietnamese)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.vi.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Vietnamese) $i", range(0, 49))
+        ),
+
+        // Attribute value translations (Chinese)
+        'translations.zh.*' => 'Value (Chinese)',
+        ...array_combine(
+            array_map(fn ($i) => "translations.zh.$i", range(0, 49)),
+            array_map(fn ($i) => "Value (Chinese) $i", range(0, 49))
+        ),
 
         // Translations for all supported languages
 
