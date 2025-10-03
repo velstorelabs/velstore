@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => '메뉴 제목',
+        'order_number' => '주문 번호',
 
         // Dynamic variants
         'variants.*.name' => '옵션 이름',

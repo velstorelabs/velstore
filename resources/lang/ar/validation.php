@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => 'عنوان القائمة',
+        'order_number' => 'رقم الطلب',
 
         // Dynamic variants
         'variants.*.name' => 'اسم المتغير',

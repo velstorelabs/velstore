@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => '菜单标题',
+        'order_number' => '订单号',
 
         // Dynamic variants
         'variants.*.name' => '变体名称',

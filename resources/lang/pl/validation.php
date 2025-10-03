@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => 'Tytuł menu',
+        'order_number' => 'Numer zamówienia',
 
         // Dynamic variants
         'variants.*.name' => 'Nazwa wariantu',

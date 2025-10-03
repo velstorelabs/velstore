@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => 'ชื่อเมนู',
+        'order_number' => 'หมายเลขคำสั่งซื้อ',
 
         // Dynamic variants
         'variants.*.name' => 'ชื่อวาเรียนท์',

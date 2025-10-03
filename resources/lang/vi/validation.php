@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => 'Tiêu đề menu',
+        'order_number' => 'Số đơn hàng',
 
         // Dynamic variants
         'variants.*.name' => 'Tên biến thể',

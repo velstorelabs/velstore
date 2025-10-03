@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => 'メニュータイトル',
+        'order_number' => '注文番号',
 
         // Dynamic variants
         'variants.*.name' => 'バリアント名',

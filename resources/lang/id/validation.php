@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => 'Judul Menu',
+        'order_number' => 'Nomor Pesanan',
 
         // Dynamic variants
         'variants.*.name' => 'Nama Varian',

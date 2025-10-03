@@ -46,6 +46,7 @@ return [
 
         // Menu fields
         'title' => 'عنوان منو',
+        'order_number' => 'شماره سفارش',
 
         // Dynamic variants
         'variants.*.name' => 'نام واریانت',
