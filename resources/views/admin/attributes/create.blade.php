@@ -44,7 +44,11 @@
                             </div>
                         @endforeach
                     </div>
-                    <button type="button" id="add-value" class="btn btn-primary mt-2">{{ __('cms.attributes.add_value') }}</button>
+                    <button type="button" id="add-value" 
+                            class="btn btn-light rounded-circle shadow-sm border d-flex align-items-center justify-content-center"
+                            style="width:48px; height:48px;">
+                        <i class="fa-solid fa-plus text-primary fs-5"></i>
+                    </button>
                 </div>
 
                 <!-- Translations Section -->
