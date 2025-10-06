@@ -18,16 +18,33 @@ return [
     'numeric' => 'Das Feld :attribute muss eine Zahl sein.',
     'integer' => 'Das Feld :attribute muss eine Ganzzahl sein.',
     'lte' => 'Das Feld :attribute muss kleiner oder gleich :value sein.',
+    'regex' => 'Das Format von :attribute ist ungültig.',
+    'confirmed' => 'Die Bestätigung von :attribute stimmt nicht überein.',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Attributes
-    |--------------------------------------------------------------------------
-    |
-    | Hier definieren wir benutzerdefinierte Attributnamen für mehrere Sprachen.
-    | Dadurch werden Validierungsnachrichten lesbarer.
-    |
-    */
+    'password' => [
+        'letters' => ':attribute muss mindestens einen Buchstaben enthalten.',
+        'mixed' => ':attribute muss sowohl Groß- als auch Kleinbuchstaben enthalten.',
+        'numbers' => ':attribute muss mindestens eine Zahl enthalten.',
+        'symbols' => ':attribute muss mindestens ein Sonderzeichen enthalten.',
+        'uncompromised' => ':attribute wurde in einem Datenleck gefunden. Bitte wählen Sie ein anderes :attribute.',
+    ],
+
+    'custom' => [
+        'password' => [
+            'confirmed' => 'Die Passwortbestätigung stimmt nicht überein.',
+            'min' => 'Das Passwort muss mindestens :min Zeichen lang sein.',
+            'symbols' => 'Das Passwort muss mindestens ein Sonderzeichen enthalten.',
+        ],
+        'phone' => [
+            'regex' => 'Die Telefonnummer darf nur Zahlen, Leerzeichen, Bindestriche und ein optionales + enthalten.',
+        ],
+        'email' => [
+            'unique' => 'Diese E-Mail-Adresse ist bereits registriert.',
+        ],
+        'status' => [
+            'in' => 'Der ausgewählte Status ist ungültig.',
+        ],
+    ],
 
     'attributes' => [
 

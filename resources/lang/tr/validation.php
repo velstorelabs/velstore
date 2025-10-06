@@ -18,16 +18,33 @@ return [
     'numeric' => ':attribute bir sayı olmalıdır.',
     'integer' => ':attribute bir tam sayı olmalıdır.',
     'lte' => ':attribute :value değerinden küçük veya eşit olmalıdır.',
+    'regex' => ':attribute biçimi geçersiz.',
+    'confirmed' => ':attribute onayı eşleşmiyor.',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Attributes
-    |--------------------------------------------------------------------------
-    |
-    | Here we define custom attribute names for multiple languages.
-    | This way validation messages are more readable.
-    |
-    */
+    'password' => [
+        'letters' => ':attribute en az bir harf içermelidir.',
+        'mixed' => ':attribute hem büyük hem de küçük harf içermelidir.',
+        'numbers' => ':attribute en az bir rakam içermelidir.',
+        'symbols' => ':attribute en az bir sembol içermelidir.',
+        'uncompromised' => ':attribute bir veri ihlalinde bulunmuştur. Lütfen farklı bir :attribute seçin.',
+    ],
+
+    'custom' => [
+        'password' => [
+            'confirmed' => 'Şifre onayı eşleşmiyor.',
+            'min' => 'Şifre en az :min karakter olmalıdır.',
+            'symbols' => 'Şifre en az bir sembol içermelidir.',
+        ],
+        'phone' => [
+            'regex' => 'Telefon numarası yalnızca rakamlar, boşluklar, tireler ve isteğe bağlı + işareti içerebilir.',
+        ],
+        'email' => [
+            'unique' => 'Bu e-posta zaten kayıtlı.',
+        ],
+        'status' => [
+            'in' => 'Seçilen durum geçersiz.',
+        ],
+    ],
 
     'attributes' => [
 

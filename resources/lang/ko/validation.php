@@ -18,16 +18,33 @@ return [
     'numeric' => ':attribute 는 숫자여야 합니다.',
     'integer' => ':attribute 는 정수여야 합니다.',
     'lte' => ':attribute 는 :value 이하이어야 합니다.',
+    'regex' => ':attribute 형식이 올바르지 않습니다.',
+    'confirmed' => ':attribute 확인이 일치하지 않습니다.',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Attributes
-    |--------------------------------------------------------------------------
-    |
-    | Here we define custom attribute names for multiple languages.
-    | This way validation messages are more readable.
-    |
-    */
+    'password' => [
+        'letters' => ':attribute에는 최소한 하나의 문자가 포함되어야 합니다.',
+        'mixed' => ':attribute에는 대문자와 소문자가 모두 포함되어야 합니다.',
+        'numbers' => ':attribute에는 최소한 하나의 숫자가 포함되어야 합니다.',
+        'symbols' => ':attribute에는 최소한 하나의 기호가 포함되어야 합니다.',
+        'uncompromised' => ':attribute가 데이터 유출에서 발견되었습니다. 다른 :attribute를 선택하세요.',
+    ],
+
+    'custom' => [
+        'password' => [
+            'confirmed' => '비밀번호 확인이 일치하지 않습니다.',
+            'min' => '비밀번호는 최소 :min자 이상이어야 합니다.',
+            'symbols' => '비밀번호에는 최소한 하나의 기호가 포함되어야 합니다.',
+        ],
+        'phone' => [
+            'regex' => '전화번호에는 숫자, 공백, 대시 및 선택적 + 기호만 포함할 수 있습니다.',
+        ],
+        'email' => [
+            'unique' => '이 이메일은 이미 등록되어 있습니다.',
+        ],
+        'status' => [
+            'in' => '선택한 상태가 유효하지 않습니다.',
+        ],
+    ],
 
     'attributes' => [
 

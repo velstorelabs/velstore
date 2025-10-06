@@ -41,14 +41,10 @@ class VendorController extends Controller
             'password' => [
                 'required',
                 'confirmed',
-                Password::min(8)
-                    ->symbols(),
+                Password::min(8)->symbols(),
             ],
             'phone' => ['nullable', 'string', 'max:20', 'regex:/^\+?[0-9\s\-]+$/'],
             'status' => ['required', 'in:active,inactive,banned'],
-        ], [
-            'password.confirmed' => 'Password confirmation does not match.',
-            'phone.regex' => 'Phone number can only contain numbers, spaces, dashes and optional +.',
         ]);
 
         Vendor::create([

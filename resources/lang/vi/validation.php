@@ -18,16 +18,33 @@ return [
     'numeric' => ':attribute phải là một số.',
     'integer' => ':attribute phải là một số nguyên.',
     'lte' => ':attribute phải nhỏ hơn hoặc bằng :value.',
+    'regex' => 'Định dạng của :attribute không hợp lệ.',
+    'confirmed' => 'Xác nhận :attribute không khớp.',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Attributes
-    |--------------------------------------------------------------------------
-    |
-    | Here we define custom attribute names for multiple languages.
-    | This way validation messages are more readable.
-    |
-    */
+    'password' => [
+        'letters' => ':attribute phải chứa ít nhất một chữ cái.',
+        'mixed' => ':attribute phải chứa cả chữ hoa và chữ thường.',
+        'numbers' => ':attribute phải chứa ít nhất một chữ số.',
+        'symbols' => ':attribute phải chứa ít nhất một ký hiệu.',
+        'uncompromised' => ':attribute đã xuất hiện trong một vụ rò rỉ dữ liệu. Vui lòng chọn :attribute khác.',
+    ],
+
+    'custom' => [
+        'password' => [
+            'confirmed' => 'Xác nhận mật khẩu không khớp.',
+            'min' => 'Mật khẩu phải có ít nhất :min ký tự.',
+            'symbols' => 'Mật khẩu phải chứa ít nhất một ký hiệu.',
+        ],
+        'phone' => [
+            'regex' => 'Số điện thoại chỉ được chứa số, khoảng trắng, dấu gạch ngang và dấu + tùy chọn.',
+        ],
+        'email' => [
+            'unique' => 'Email này đã được đăng ký.',
+        ],
+        'status' => [
+            'in' => 'Trạng thái được chọn không hợp lệ.',
+        ],
+    ],
 
     'attributes' => [
 

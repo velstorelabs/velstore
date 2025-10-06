@@ -18,16 +18,33 @@ return [
     'numeric' => ':attribute 必须是数字。',
     'integer' => ':attribute 必须是整数。',
     'lte' => ':attribute 必须小于或等于 :value。',
+    'regex' => ':attribute 格式无效。',
+    'confirmed' => ':attribute 确认不匹配。',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Attributes
-    |--------------------------------------------------------------------------
-    |
-    | Here we define custom attribute names for multiple languages.
-    | This way validation messages are more readable.
-    |
-    */
+    'password' => [
+        'letters' => ':attribute 必须至少包含一个字母。',
+        'mixed' => ':attribute 必须同时包含大写和小写字母。',
+        'numbers' => ':attribute 必须至少包含一个数字。',
+        'symbols' => ':attribute 必须至少包含一个符号。',
+        'uncompromised' => ':attribute 已在数据泄露中出现。请使用不同的 :attribute。',
+    ],
+
+    'custom' => [
+        'password' => [
+            'confirmed' => '密码确认不匹配。',
+            'min' => '密码长度至少为 :min 个字符。',
+            'symbols' => '密码必须至少包含一个符号。',
+        ],
+        'phone' => [
+            'regex' => '电话号码只能包含数字、空格、短横线和可选的 + 号。',
+        ],
+        'email' => [
+            'unique' => '此电子邮件已被注册。',
+        ],
+        'status' => [
+            'in' => '所选状态无效。',
+        ],
+    ],
 
     'attributes' => [
 
