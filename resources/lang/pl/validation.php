@@ -18,16 +18,33 @@ return [
     'numeric' => 'Pole :attribute musi być liczbą.',
     'integer' => 'Pole :attribute musi być liczbą całkowitą.',
     'lte' => 'Pole :attribute musi być mniejsze lub równe :value.',
+    'regex' => 'Format pola :attribute jest nieprawidłowy.',
+    'confirmed' => 'Potwierdzenie pola :attribute nie pasuje.',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Attributes
-    |--------------------------------------------------------------------------
-    |
-    | Here we define custom attribute names for multiple languages.
-    | This way validation messages are more readable.
-    |
-    */
+    'password' => [
+        'letters' => ':attribute musi zawierać co najmniej jedną literę.',
+        'mixed' => ':attribute musi zawierać zarówno wielkie, jak i małe litery.',
+        'numbers' => ':attribute musi zawierać co najmniej jedną cyfrę.',
+        'symbols' => ':attribute musi zawierać co najmniej jeden symbol.',
+        'uncompromised' => ':attribute pojawiło się w wycieku danych. Wybierz inne :attribute.',
+    ],
+
+    'custom' => [
+        'password' => [
+            'confirmed' => 'Potwierdzenie hasła nie pasuje.',
+            'min' => 'Hasło musi mieć co najmniej :min znaków.',
+            'symbols' => 'Hasło musi zawierać co najmniej jeden symbol.',
+        ],
+        'phone' => [
+            'regex' => 'Numer telefonu może zawierać tylko cyfry, spacje, myślniki i opcjonalny znak +.',
+        ],
+        'email' => [
+            'unique' => 'Ten adres e-mail jest już zarejestrowany.',
+        ],
+        'status' => [
+            'in' => 'Wybrany status jest nieprawidłowy.',
+        ],
+    ],
 
     'attributes' => [
 

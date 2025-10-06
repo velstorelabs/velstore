@@ -18,16 +18,33 @@ return [
     'numeric' => ':attribute harus berupa angka.',
     'integer' => ':attribute harus berupa bilangan bulat.',
     'lte' => ':attribute harus kurang dari atau sama dengan :value.',
+    'regex' => 'Format :attribute tidak valid.',
+    'confirmed' => 'Konfirmasi :attribute tidak cocok.',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Attributes
-    |--------------------------------------------------------------------------
-    |
-    | Here we define custom attribute names for multiple languages.
-    | This way validation messages are more readable.
-    |
-    */
+    'password' => [
+        'letters' => ':attribute harus berisi setidaknya satu huruf.',
+        'mixed' => ':attribute harus berisi huruf besar dan huruf kecil.',
+        'numbers' => ':attribute harus berisi setidaknya satu angka.',
+        'symbols' => ':attribute harus berisi setidaknya satu simbol.',
+        'uncompromised' => ':attribute ditemukan dalam kebocoran data. Silakan pilih :attribute yang berbeda.',
+    ],
+
+    'custom' => [
+        'password' => [
+            'confirmed' => 'Konfirmasi kata sandi tidak cocok.',
+            'min' => 'Kata sandi harus terdiri dari minimal :min karakter.',
+            'symbols' => 'Kata sandi harus berisi setidaknya satu simbol.',
+        ],
+        'phone' => [
+            'regex' => 'Nomor telepon hanya boleh berisi angka, spasi, tanda hubung, dan tanda + opsional.',
+        ],
+        'email' => [
+            'unique' => 'Email ini sudah terdaftar.',
+        ],
+        'status' => [
+            'in' => 'Status yang dipilih tidak valid.',
+        ],
+    ],
 
     'attributes' => [
 

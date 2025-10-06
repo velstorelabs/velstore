@@ -18,16 +18,33 @@ return [
     'numeric' => 'Het :attribute moet een getal zijn.',
     'integer' => 'Het :attribute moet een geheel getal zijn.',
     'lte' => 'Het :attribute moet kleiner dan of gelijk aan :value zijn.',
+    'regex' => 'De indeling van :attribute is ongeldig.',
+    'confirmed' => 'De bevestiging van :attribute komt niet overeen.',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Attributes
-    |--------------------------------------------------------------------------
-    |
-    | Here we define custom attribute names for multiple languages.
-    | This way validation messages are more readable.
-    |
-    */
+    'password' => [
+        'letters' => ':attribute moet ten minste één letter bevatten.',
+        'mixed' => ':attribute moet zowel hoofdletters als kleine letters bevatten.',
+        'numbers' => ':attribute moet ten minste één cijfer bevatten.',
+        'symbols' => ':attribute moet ten minste één symbool bevatten.',
+        'uncompromised' => ':attribute is gevonden in een datalek. Kies een ander :attribute.',
+    ],
+
+    'custom' => [
+        'password' => [
+            'confirmed' => 'Wachtwoordbevestiging komt niet overeen.',
+            'min' => 'Het wachtwoord moet minimaal :min tekens lang zijn.',
+            'symbols' => 'Het wachtwoord moet ten minste één symbool bevatten.',
+        ],
+        'phone' => [
+            'regex' => 'Telefoonnummer mag alleen cijfers, spaties, streepjes en een optioneel + teken bevatten.',
+        ],
+        'email' => [
+            'unique' => 'Dit e-mailadres is al geregistreerd.',
+        ],
+        'status' => [
+            'in' => 'De geselecteerde status is ongeldig.',
+        ],
+    ],
 
     'attributes' => [
 

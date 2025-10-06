@@ -18,16 +18,33 @@ return [
     'numeric' => ':attribute एक संख्या होनी चाहिए।',
     'integer' => ':attribute एक पूर्णांक होना चाहिए।',
     'lte' => ':attribute :value के बराबर या उससे कम होना चाहिए।',
+    'regex' => ':attribute का प्रारूप अमान्य है।',
+    'confirmed' => ':attribute की पुष्टि मेल नहीं खाती।',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Attributes
-    |--------------------------------------------------------------------------
-    |
-    | Here we define custom attribute names for multiple languages.
-    | This way validation messages are more readable.
-    |
-    */
+    'password' => [
+        'letters' => ':attribute में कम से कम एक अक्षर होना चाहिए।',
+        'mixed' => ':attribute में बड़े और छोटे दोनों अक्षर होने चाहिए।',
+        'numbers' => ':attribute में कम से कम एक संख्या होनी चाहिए।',
+        'symbols' => ':attribute में कम से कम एक प्रतीक होना चाहिए।',
+        'uncompromised' => ':attribute डेटा लीक में पाया गया है। कृपया एक अलग :attribute चुनें।',
+    ],
+
+    'custom' => [
+        'password' => [
+            'confirmed' => 'पासवर्ड की पुष्टि मेल नहीं खाती।',
+            'min' => 'पासवर्ड कम से कम :min अक्षरों का होना चाहिए।',
+            'symbols' => 'पासवर्ड में कम से कम एक प्रतीक होना चाहिए।',
+        ],
+        'phone' => [
+            'regex' => 'फोन नंबर में केवल अंक, रिक्त स्थान, डैश और वैकल्पिक + चिन्ह हो सकता है।',
+        ],
+        'email' => [
+            'unique' => 'यह ईमेल पहले से पंजीकृत है।',
+        ],
+        'status' => [
+            'in' => 'चयनित स्थिति अमान्य है।',
+        ],
+    ],
 
     'attributes' => [
 

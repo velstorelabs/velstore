@@ -18,16 +18,33 @@ return [
     'numeric' => 'The :attribute must be a number.',
     'integer' => 'The :attribute must be an integer.',
     'lte' => 'The :attribute must be less than or equal to :value.',
+    'regex' => 'The :attribute format is invalid.',
+    'confirmed' => 'The :attribute confirmation does not match.',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Attributes
-    |--------------------------------------------------------------------------
-    |
-    | Here we define custom attribute names for multiple languages.
-    | This way validation messages are more readable.
-    |
-    */
+    'password' => [
+        'letters' => 'The :attribute must contain at least one letter.',
+        'mixed' => 'The :attribute must contain both uppercase and lowercase letters.',
+        'numbers' => 'The :attribute must contain at least one number.',
+        'symbols' => 'The :attribute must contain at least one symbol.',
+        'uncompromised' => 'The :attribute has appeared in a data leak. Please choose a different :attribute.',
+    ],
+
+    'custom' => [
+        'password' => [
+            'confirmed' => 'Password confirmation does not match.',
+            'min' => 'Password must be at least :min characters long.',
+            'symbols' => 'Password must contain at least one symbol.',
+        ],
+        'phone' => [
+            'regex' => 'Phone number can only contain numbers, spaces, dashes, and an optional + sign.',
+        ],
+        'email' => [
+            'unique' => 'This email is already registered.',
+        ],
+        'status' => [
+            'in' => 'The selected status is invalid.',
+        ],
+    ],
 
     'attributes' => [
 
