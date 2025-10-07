@@ -426,7 +426,7 @@ return [
         'color' => 'Cor',
         'images' => 'Imagens do Produto',
         'is_primary' => 'Variante Principal',
-        'variant_name_en' => 'Nome da Variante (EN)',
+        'variant_name_en' => 'Nome da Variante',
         'attributes' => 'Atributos',
         'attribute_values' => 'Valores dos Atributos',
         'variants' => 'Variantes',

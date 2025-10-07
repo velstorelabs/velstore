@@ -426,7 +426,7 @@ return [
         'color' => 'Цвет',
         'images' => 'Изображения товара',
         'is_primary' => 'Основной вариант',
-        'variant_name_en' => 'Название варианта (EN)',
+        'variant_name_en' => 'Название варианта',
         'attributes' => 'Атрибуты',
         'attribute_values' => 'Значения атрибутов',
         'variants' => 'Варианты',

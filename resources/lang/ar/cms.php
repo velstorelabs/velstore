@@ -427,7 +427,7 @@ return [
         'color' => 'اللون',
         'images' => 'صور المنتج',
         'is_primary' => 'المتغير الأساسي',
-        'variant_name_en' => 'اسم المتغير (إنجليزي)',
+        'variant_name_en' => 'اسم المتغير',
         'attributes' => 'السمات',
         'attribute_values' => 'قيم السمات',
         'variants' => 'المتغيرات',

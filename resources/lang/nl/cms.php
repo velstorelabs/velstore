@@ -425,7 +425,7 @@ return [
         'color' => 'Kleur',
         'images' => 'Productafbeeldingen',
         'is_primary' => 'Primaire variant',
-        'variant_name_en' => 'Variantnaam (EN)',
+        'variant_name_en' => 'Variantnaam',
         'attributes' => 'Eigenschappen',
         'attribute_values' => 'Eigenschapswaarden',
         'variants' => 'Varianten',

@@ -426,7 +426,7 @@ return [
         'color' => 'रंग',
         'images' => 'प्रोडक्ट चित्र',
         'is_primary' => 'प्राथमिक वेरिएंट',
-        'variant_name_en' => 'वेरिएंट नाम (EN)',
+        'variant_name_en' => 'वेरिएंट नाम',
         'attributes' => 'गुण',
         'attribute_values' => 'गुण मान',
         'variants' => 'वेरिएंट्स',

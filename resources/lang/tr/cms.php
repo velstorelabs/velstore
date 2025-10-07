@@ -426,7 +426,7 @@ return [
         'color' => 'Renk',
         'images' => 'Ürün Resimleri',
         'is_primary' => 'Ana Seçenek',
-        'variant_name_en' => 'Varyant Adı (EN)',
+        'variant_name_en' => 'Varyant Adı',
         'attributes' => 'Özellikler',
         'attribute_values' => 'Özellik Değerleri',
         'variants' => 'Varyantlar',

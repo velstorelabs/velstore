@@ -426,7 +426,7 @@ return [
         'color' => 'Warna',
         'images' => 'Gambar Produk',
         'is_primary' => 'Varian Utama',
-        'variant_name_en' => 'Nama Varian (EN)',
+        'variant_name_en' => 'Nama Varian',
         'attributes' => 'Atribut',
         'attribute_values' => 'Nilai Atribut',
         'variants' => 'Varian',
