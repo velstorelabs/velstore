@@ -426,7 +426,7 @@ return [
         'color' => '색상',
         'images' => '상품 이미지',
         'is_primary' => '기본 옵션',
-        'variant_name_en' => '옵션명 (영문)',
+        'variant_name_en' => '옵션명',
         'attributes' => '속성',
         'attribute_values' => '속성 값',
         'variants' => '옵션',

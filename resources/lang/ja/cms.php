@@ -426,7 +426,7 @@ return [
         'color' => '色',
         'images' => '商品画像',
         'is_primary' => 'メインバリエーション',
-        'variant_name_en' => 'バリエーション名（英語）',
+        'variant_name_en' => 'バリエーション名',
         'attributes' => '属性',
         'attribute_values' => '属性値',
         'variants' => 'バリエーション',

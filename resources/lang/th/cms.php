@@ -426,7 +426,7 @@ return [
         'color' => 'สี',
         'images' => 'รูปภาพสินค้า',
         'is_primary' => 'ตัวเลือกหลัก',
-        'variant_name_en' => 'ชื่อรุ่น (EN)',
+        'variant_name_en' => 'ชื่อรุ่น',
         'attributes' => 'คุณลักษณะ',
         'attribute_values' => 'ค่าคุณลักษณะ',
         'variants' => 'ตัวเลือกสินค้า',

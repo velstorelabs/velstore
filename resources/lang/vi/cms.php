@@ -454,7 +454,7 @@ return [
         'color' => 'Màu Sắc',
         'images' => 'Hình Ảnh Sản Phẩm',
         'is_primary' => 'Biến Thể Chính',
-        'variant_name_en' => 'Tên Biến Thể (EN)',
+        'variant_name_en' => 'Tên Biến Thể',
         'attributes' => 'Thuộc Tính',
         'attribute_values' => 'Giá Trị Thuộc Tính',
         'variants' => 'Biến Thể',

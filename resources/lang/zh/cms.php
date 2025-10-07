@@ -426,7 +426,7 @@ return [
         'color' => '颜色',
         'images' => '产品图片',
         'is_primary' => '主变体',
-        'variant_name_en' => '变体名称（EN）',
+        'variant_name_en' => '变体名称',
         'attributes' => '属性',
         'attribute_values' => '属性值',
         'variants' => '变体',

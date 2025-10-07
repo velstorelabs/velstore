@@ -426,7 +426,7 @@ return [
         'color' => 'رنگ',
         'images' => 'تصاویر محصول',
         'is_primary' => 'نوع اصلی',
-        'variant_name_en' => 'نام نوع (EN)',
+        'variant_name_en' => 'نام نوع',
         'attributes' => 'ویژگی‌ها',
         'attribute_values' => 'مقادیر ویژگی',
         'variants' => 'انواع',
