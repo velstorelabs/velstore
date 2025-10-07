@@ -259,8 +259,19 @@ $(document).ready(function () {
 <script>
 let selectedFiles = [];
 
+@if (session()->has('_old_input'))
+    window.addEventListener('load', () => {
+        const oldFiles = sessionStorage.getItem('vendor_product_temp_images');
+        if (oldFiles) {
+            selectedFiles = JSON.parse(oldFiles).map(b64 => dataURLtoFile(b64.data, b64.name));
+            refreshPreview(document.getElementById('productImages'));
+        }
+    });
+@endif
+
 function previewMultipleImages(input) {
     const files = Array.from(input.files);
+
     files.forEach(file => {
         const uniqueId = file.name + '_' + file.size;
         if (!selectedFiles.some(f => f.uniqueId === uniqueId)) {
@@ -269,6 +280,10 @@ function previewMultipleImages(input) {
         }
     });
 
+    refreshPreview(input);
+}
+
+function refreshPreview(input) {
     const previewContainer = document.getElementById('productImagesPreview');
     previewContainer.innerHTML = '';
 
@@ -290,7 +305,7 @@ function previewMultipleImages(input) {
             removeBtn.onclick = function() {
                 selectedFiles = selectedFiles.filter(f => f.uniqueId !== file.uniqueId);
                 updateFileInput(input);
-                previewMultipleImages(input);
+                refreshPreview(input);
             };
 
             wrapper.appendChild(img);
@@ -301,12 +316,35 @@ function previewMultipleImages(input) {
     });
 
     updateFileInput(input);
+    saveTempImages();
 }
 
 function updateFileInput(input) {
     const dataTransfer = new DataTransfer();
     selectedFiles.forEach(file => dataTransfer.items.add(file));
     input.files = dataTransfer.files;
+}
+
+function saveTempImages() {
+    const readers = selectedFiles.map(file => new Promise(resolve => {
+        const reader = new FileReader();
+        reader.onload = e => resolve({ name: file.name, data: e.target.result });
+        reader.readAsDataURL(file);
+    }));
+
+    Promise.all(readers).then(results => {
+        sessionStorage.setItem('vendor_product_temp_images', JSON.stringify(results));
+    });
+}
+
+function dataURLtoFile(dataurl, filename) {
+    const arr = dataurl.split(','),
+          mime = arr[0].match(/:(.*?);/)[1],
+          bstr = atob(arr[1]),
+          n = bstr.length,
+          u8arr = new Uint8Array(n);
+    for (let i = 0; i < n; i++) u8arr[i] = bstr.charCodeAt(i);
+    return new File([u8arr], filename, {type:mime});
 }
 </script>
 
