@@ -79,10 +79,17 @@
             {{-- Variants --}}
             <div id="variants-wrapper" class="mt-3"></div>
             <div class="d-flex gap-2 mt-3">
-                <button type="button" class="btn btn-sm btn-primary" id="add-variant-btn">{{ __('cms.products.add_variant') }}</button>
-                <button type="button" class="btn btn-sm btn-danger" id="remove-variant-btn" disabled>{{ __('cms.products.remove_variant') ?? 'Remove Variant' }}</button>
+                 <button type="button" id="add-variant-btn"
+                    class="btn btn-light rounded-circle shadow-sm border d-flex align-items-center justify-content-center"
+                    style="width:48px; height:48px;">
+                    <i class="fa-solid fa-plus text-primary fs-5"></i>
+                </button>
+                <button type="button" id="remove-variant-btn"
+                    class="btn btn-light rounded-circle shadow-sm border d-flex align-items-center justify-content-center"
+                    style="width:48px; height:48px;" disabled>
+                    <i class="fa-solid fa-trash fs-5 text-danger"></i>
+                </button>
             </div>
-
             <template id="variant-template">
                 <div class="card p-3 mt-3 variant-item border rounded" data-index="__INDEX__">
                     <h5>{{ __('cms.products.variants') }} <span class="variant-number">__INDEX__</span></h5>
