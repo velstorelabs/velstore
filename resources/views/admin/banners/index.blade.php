@@ -162,7 +162,7 @@
                     success: function(response) {
                         if (response.success) {
                             $('#banners-table').DataTable().ajax.reload();
-                            toastr.error(response.message, "Deleted", {
+                            toastr.error(response.message, "{{ __('cms.banners.success') }}", {
                                 closeButton: true,
                                 progressBar: true,
                                 positionClass: "toast-top-right",

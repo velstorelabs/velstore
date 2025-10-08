@@ -128,7 +128,7 @@ function deleteSocialMediaLink(id) {
                     if (response.success) {
                         // Reload the datatable and show success message
                         $('#social-media-links-table').DataTable().ajax.reload();
-                        toastr.error(response.message, "Success", {
+                        toastr.error(response.message, "{{ __('cms.social_media_links.success') }}", {
                             closeButton: true,
                             progressBar: true,
                             positionClass: "toast-top-right",

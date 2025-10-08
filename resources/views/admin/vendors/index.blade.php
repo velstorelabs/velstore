@@ -121,7 +121,7 @@ function deleteVendor(id) {
                 success: function(response) {
                     if (response.success) {
                         $('#vendors-table').DataTable().ajax.reload();
-                        toastr.error(response.message, "Deleted", {
+                        toastr.error(response.message, "{{ __('cms.vendors.success') }}", {
                             closeButton: true,
                             progressBar: true,
                             positionClass: "toast-top-right",

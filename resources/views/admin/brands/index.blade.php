@@ -181,7 +181,7 @@
                             $('#brands-table').DataTable().ajax.reload();
                             console.log(response.message);
 
-                            toastr.error(response.message, "Deleted", {
+                            toastr.error(response.message, "{{ __('cms.brands.success') }}", {
                                 closeButton: true,
                                 progressBar: true,
                                 positionClass: "toast-top-right",

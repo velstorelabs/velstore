@@ -128,7 +128,7 @@ function deleteMenuItem(id) {
                         $('#menu-items-table').DataTable().ajax.reload();
 
                         // Show success message via toastr
-                        toastr.error(response.message, "Success", {
+                        toastr.error(response.message, "{{ __('cms.menu_items.success') }}", {
                             closeButton: true,
                             progressBar: true,
                             positionClass: "toast-top-right",

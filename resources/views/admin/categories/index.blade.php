@@ -156,7 +156,7 @@
                     success: function(response) {
                         if (response.success) {
                             $('#categories-table').DataTable().ajax.reload();
-                            toastr.error(response.message, "Success", {
+                            toastr.error(response.message, "{{ __('cms.categories.success') }}", {
                                 closeButton: true,
                                 progressBar: true,
                                 positionClass: "toast-top-right",
