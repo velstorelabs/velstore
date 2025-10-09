@@ -102,7 +102,7 @@ $(document).ready(function() {
             success: function(response) {
                 table.ajax.reload();
                 $('#deletePageModal').modal('hide');
-                toastr.success(response.message || "{{ __('cms.pages.toastr_success') }}");
+                toastr.error(response.message || "{{ __('cms.pages.toastr_success') }}");
             },
             error: function() {
                 toastr.error("{{ __('cms.pages.toastr_error') }}");

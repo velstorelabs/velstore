@@ -117,7 +117,7 @@
                 success: function(response) {
                     if (response.success) {
                         $('#attributes-table').DataTable().ajax.reload();
-                        toastr.error(response.message, "Success", {
+                        toastr.error(response.message, "{{ __('cms.attributes.success') }}", {
                             closeButton: true,
                             progressBar: true,
                             positionClass: "toast-top-right",

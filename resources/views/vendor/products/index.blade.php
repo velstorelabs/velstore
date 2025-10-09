@@ -50,6 +50,17 @@
     $datatableLang = __('cms.datatables');
 @endphp
 
+@if (session('success'))
+<script>
+    toastr.success("{{ session('success') }}", "{{ __('cms.products.success') }}", {
+        closeButton: true,
+        progressBar: true,
+        positionClass: "toast-top-right",
+        timeOut: 5000
+    });
+</script>
+@endif
+
 <script>
     $(document).ready(function () {
         const table = $('#products-table').DataTable({
