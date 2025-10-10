@@ -40,4 +40,43 @@ return [
         'cart_success' => 'محصول با موفقیت به سبد خرید اضافه شد.',
         'cart_update_error' => 'امکان به‌روزرسانی سبد خرید وجود ندارد. لطفاً دوباره تلاش کنید.',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'صفحه اصلی',
+        'breadcrumb_cart' => 'سبد خرید',
+
+        // Cart messages
+        'empty_cart' => 'سبد خرید شما خالی است.',
+        'continue_shopping' => 'ادامه خرید',
+        'update_cart' => 'به‌روزرسانی سبد خرید',
+
+        // Table headings
+        'product' => 'محصول',
+        'price' => 'قیمت',
+        'quantity' => 'تعداد',
+        'subtotal' => 'جمع جزء',
+
+        // Cart totals section
+        'cart_totals' => 'جمع کل سبد خرید',
+        'subtotal_label' => 'جمع جزء',
+        'discount_label' => 'تخفیف',
+        'total_label' => 'جمع کل',
+        'proceed_to_checkout' => 'ادامه به پرداخت',
+
+        // Coupon section
+        'coupon_heading' => 'کد تخفیف',
+        'coupon_placeholder' => 'کد تخفیف را وارد کنید',
+        'apply_coupon' => 'اعمال کد تخفیف',
+        'remove_coupon' => 'حذف کد تخفیف',
+
+        // Toast messages
+        'coupon_applied' => 'کد تخفیف با موفقیت اعمال شد!',
+        'coupon_removed' => 'کد تخفیف با موفقیت حذف شد!',
+        'cart_updated' => 'سبد خرید با موفقیت به‌روزرسانی شد!',
+        'item_removed' => 'محصول از سبد خرید حذف شد.',
+        'error_occurred' => 'مشکلی پیش آمد. لطفاً دوباره تلاش کنید.',
+        'product_removed' => 'محصول از سبد خرید حذف شد.',
+    ],
 ];

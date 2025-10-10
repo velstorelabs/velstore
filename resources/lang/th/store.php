@@ -40,4 +40,43 @@ return [
         'cart_success' => 'เพิ่มสินค้าในตะกร้าสำเร็จแล้ว',
         'cart_update_error' => 'ไม่สามารถอัปเดตตะกร้าได้ กรุณาลองใหม่อีกครั้ง',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'หน้าแรก',
+        'breadcrumb_cart' => 'รถเข็นสินค้า',
+
+        // Cart messages
+        'empty_cart' => 'รถเข็นสินค้าของคุณว่างเปล่า',
+        'continue_shopping' => 'ช้อปปิ้งต่อ',
+        'update_cart' => 'อัปเดตรถเข็นสินค้า',
+
+        // Table headings
+        'product' => 'สินค้า',
+        'price' => 'ราคา',
+        'quantity' => 'จำนวน',
+        'subtotal' => 'ยอดรวมย่อย',
+
+        // Cart totals section
+        'cart_totals' => 'ยอดรวมรถเข็นสินค้า',
+        'subtotal_label' => 'ยอดรวมย่อย',
+        'discount_label' => 'ส่วนลด',
+        'total_label' => 'ยอดรวมทั้งหมด',
+        'proceed_to_checkout' => 'ไปที่ชำระเงิน',
+
+        // Coupon section
+        'coupon_heading' => 'คูปอง',
+        'coupon_placeholder' => 'รหัสคูปอง',
+        'apply_coupon' => 'ใช้คูปอง',
+        'remove_coupon' => 'ลบคูปอง',
+
+        // Toast messages
+        'coupon_applied' => 'ใช้คูปองเรียบร้อยแล้ว!',
+        'coupon_removed' => 'ลบคูปองเรียบร้อยแล้ว!',
+        'cart_updated' => 'อัปเดตรถเข็นเรียบร้อยแล้ว!',
+        'item_removed' => 'นำสินค้าออกจากรถเข็นแล้ว.',
+        'error_occurred' => 'เกิดข้อผิดพลาด โปรดลองอีกครั้ง.',
+        'product_removed' => 'นำสินค้าออกจากรถเข็นแล้ว.',
+    ],
 ];

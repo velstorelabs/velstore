@@ -34,7 +34,7 @@
             </div>
             <div class="col-md-6 pro-textarea">
                 @if ($inStock)
-                    <div id="product-stock" class="mb-2 mt-3 btnss">IN STOCK</div>
+                    <div id="product-stock" class="mb-2 mt-3 btnss">{{ __('store.product_detail.in_stock') }}</div>
                 @else
                     <div id="product-stock" class="mb-2 mt-3 btnss text-danger">OUT OF STOCK</div>
                 @endif

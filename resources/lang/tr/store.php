@@ -40,4 +40,43 @@ return [
         'cart_success' => 'Ürün başarıyla sepete eklendi.',
         'cart_update_error' => 'Sepet güncellenemedi. Lütfen tekrar deneyin.',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Ana Sayfa',
+        'breadcrumb_cart' => 'Sepet',
+
+        // Cart messages
+        'empty_cart' => 'Sepetiniz boş.',
+        'continue_shopping' => 'Alışverişe devam et',
+        'update_cart' => 'Sepeti güncelle',
+
+        // Table headings
+        'product' => 'Ürün',
+        'price' => 'Fiyat',
+        'quantity' => 'Adet',
+        'subtotal' => 'Ara toplam',
+
+        // Cart totals section
+        'cart_totals' => 'Sepet toplamı',
+        'subtotal_label' => 'Ara toplam',
+        'discount_label' => 'İndirim',
+        'total_label' => 'Toplam',
+        'proceed_to_checkout' => 'Ödemeye geç',
+
+        // Coupon section
+        'coupon_heading' => 'Kupon',
+        'coupon_placeholder' => 'Kupon kodu',
+        'apply_coupon' => 'Kuponu uygula',
+        'remove_coupon' => 'Kuponu kaldır',
+
+        // Toast messages
+        'coupon_applied' => 'Kupon başarıyla uygulandı!',
+        'coupon_removed' => 'Kupon başarıyla kaldırıldı!',
+        'cart_updated' => 'Sepet başarıyla güncellendi!',
+        'item_removed' => 'Ürün sepetten kaldırıldı.',
+        'error_occurred' => 'Bir hata oluştu. Lütfen tekrar deneyin.',
+        'product_removed' => 'Ürün sepetten kaldırıldı.',
+    ],
 ];

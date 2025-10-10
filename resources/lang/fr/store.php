@@ -40,4 +40,43 @@ return [
         'cart_success' => 'Produit ajouté au panier avec succès.',
         'cart_update_error' => 'Impossible de mettre à jour le panier. Veuillez réessayer.',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Accueil',
+        'breadcrumb_cart' => 'Panier',
+
+        // Cart messages
+        'empty_cart' => 'Votre panier est vide.',
+        'continue_shopping' => 'Continuer vos achats',
+        'update_cart' => 'Mettre à jour le panier',
+
+        // Table headings
+        'product' => 'Produit',
+        'price' => 'Prix',
+        'quantity' => 'Quantité',
+        'subtotal' => 'Sous-total',
+
+        // Cart totals section
+        'cart_totals' => 'Total du panier',
+        'subtotal_label' => 'Sous-total',
+        'discount_label' => 'Remise',
+        'total_label' => 'Total',
+        'proceed_to_checkout' => 'Passer à la caisse',
+
+        // Coupon section
+        'coupon_heading' => 'Code promo',
+        'coupon_placeholder' => 'Code promo',
+        'apply_coupon' => 'Appliquer le code promo',
+        'remove_coupon' => 'Supprimer le code promo',
+
+        // Toast messages
+        'coupon_applied' => 'Code promo appliqué avec succès !',
+        'coupon_removed' => 'Code promo supprimé avec succès !',
+        'cart_updated' => 'Panier mis à jour avec succès !',
+        'item_removed' => 'Article supprimé du panier.',
+        'error_occurred' => 'Une erreur est survenue. Veuillez réessayer.',
+        'product_removed' => 'Produit supprimé du panier.',
+    ],
 ];

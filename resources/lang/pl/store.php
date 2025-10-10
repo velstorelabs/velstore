@@ -39,4 +39,43 @@ return [
         'cart_success' => 'Produkt został pomyślnie dodany do koszyka.',
         'cart_update_error' => 'Nie udało się zaktualizować koszyka. Spróbuj ponownie.',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Strona główna',
+        'breadcrumb_cart' => 'Koszyk',
+
+        // Cart messages
+        'empty_cart' => 'Twój koszyk jest pusty.',
+        'continue_shopping' => 'Kontynuuj zakupy',
+        'update_cart' => 'Zaktualizuj koszyk',
+
+        // Table headings
+        'product' => 'Produkt',
+        'price' => 'Cena',
+        'quantity' => 'Ilość',
+        'subtotal' => 'Suma częściowa',
+
+        // Cart totals section
+        'cart_totals' => 'Podsumowanie koszyka',
+        'subtotal_label' => 'Suma częściowa',
+        'discount_label' => 'Zniżka',
+        'total_label' => 'Łącznie',
+        'proceed_to_checkout' => 'Przejdź do kasy',
+
+        // Coupon section
+        'coupon_heading' => 'Kupon rabatowy',
+        'coupon_placeholder' => 'Kod kuponu',
+        'apply_coupon' => 'Zastosuj kupon',
+        'remove_coupon' => 'Usuń kupon',
+
+        // Toast messages
+        'coupon_applied' => 'Kupon został pomyślnie zastosowany!',
+        'coupon_removed' => 'Kupon został pomyślnie usunięty!',
+        'cart_updated' => 'Koszyk został pomyślnie zaktualizowany!',
+        'item_removed' => 'Produkt został usunięty z koszyka.',
+        'error_occurred' => 'Wystąpił błąd. Spróbuj ponownie.',
+        'product_removed' => 'Produkt został usunięty z koszyka.',
+    ],
 ];
