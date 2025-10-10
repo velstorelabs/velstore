@@ -40,4 +40,43 @@ return [
         'cart_success' => 'Товар успешно добавлен в корзину.',
         'cart_update_error' => 'Не удалось обновить корзину. Пожалуйста, попробуйте снова.',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Главная',
+        'breadcrumb_cart' => 'Корзина',
+
+        // Cart messages
+        'empty_cart' => 'Ваша корзина пуста.',
+        'continue_shopping' => 'Продолжить покупки',
+        'update_cart' => 'Обновить корзину',
+
+        // Table headings
+        'product' => 'Товар',
+        'price' => 'Цена',
+        'quantity' => 'Количество',
+        'subtotal' => 'Промежуточный итог',
+
+        // Cart totals section
+        'cart_totals' => 'Итог корзины',
+        'subtotal_label' => 'Промежуточный итог',
+        'discount_label' => 'Скидка',
+        'total_label' => 'Итого',
+        'proceed_to_checkout' => 'Перейти к оформлению',
+
+        // Coupon section
+        'coupon_heading' => 'Купон',
+        'coupon_placeholder' => 'Код купона',
+        'apply_coupon' => 'Применить купон',
+        'remove_coupon' => 'Удалить купон',
+
+        // Toast messages
+        'coupon_applied' => 'Купон успешно применён!',
+        'coupon_removed' => 'Купон успешно удалён!',
+        'cart_updated' => 'Корзина успешно обновлена!',
+        'item_removed' => 'Товар удалён из корзины.',
+        'error_occurred' => 'Произошла ошибка. Пожалуйста, попробуйте ещё раз.',
+        'product_removed' => 'Товар удалён из корзины.',
+    ],
 ];

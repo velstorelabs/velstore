@@ -40,4 +40,43 @@ return [
         'cart_success' => 'Product succesvol toegevoegd aan de winkelwagen.',
         'cart_update_error' => 'Kan de winkelwagen niet bijwerken. Probeer het opnieuw.',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Home',
+        'breadcrumb_cart' => 'Winkelwagen',
+
+        // Cart messages
+        'empty_cart' => 'Je winkelwagen is leeg.',
+        'continue_shopping' => 'Doorgaan met winkelen',
+        'update_cart' => 'Winkelwagen bijwerken',
+
+        // Table headings
+        'product' => 'Product',
+        'price' => 'Prijs',
+        'quantity' => 'Aantal',
+        'subtotal' => 'Subtotaal',
+
+        // Cart totals section
+        'cart_totals' => 'Winkelwagen totaal',
+        'subtotal_label' => 'Subtotaal',
+        'discount_label' => 'Korting',
+        'total_label' => 'Totaal',
+        'proceed_to_checkout' => 'Afrekenen',
+
+        // Coupon section
+        'coupon_heading' => 'Kortingscode',
+        'coupon_placeholder' => 'Voer kortingscode in',
+        'apply_coupon' => 'Kortingscode toepassen',
+        'remove_coupon' => 'Kortingscode verwijderen',
+
+        // Toast messages
+        'coupon_applied' => 'Kortingscode succesvol toegepast!',
+        'coupon_removed' => 'Kortingscode succesvol verwijderd!',
+        'cart_updated' => 'Winkelwagen succesvol bijgewerkt!',
+        'item_removed' => 'Artikel verwijderd uit winkelwagen.',
+        'error_occurred' => 'Er is iets misgegaan. Probeer het opnieuw.',
+        'product_removed' => 'Product verwijderd uit winkelwagen.',
+    ],
 ];

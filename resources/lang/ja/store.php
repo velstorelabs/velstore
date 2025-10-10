@@ -40,4 +40,43 @@ return [
         'cart_success' => '商品がカートに追加されました。',
         'cart_update_error' => 'カートを更新できませんでした。もう一度お試しください。',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'ホーム',
+        'breadcrumb_cart' => 'カート',
+
+        // Cart messages
+        'empty_cart' => 'カートは空です。',
+        'continue_shopping' => '買い物を続ける',
+        'update_cart' => 'カートを更新',
+
+        // Table headings
+        'product' => '商品',
+        'price' => '価格',
+        'quantity' => '数量',
+        'subtotal' => '小計',
+
+        // Cart totals section
+        'cart_totals' => 'カートの合計',
+        'subtotal_label' => '小計',
+        'discount_label' => '割引',
+        'total_label' => '合計',
+        'proceed_to_checkout' => 'レジに進む',
+
+        // Coupon section
+        'coupon_heading' => 'クーポン',
+        'coupon_placeholder' => 'クーポンコード',
+        'apply_coupon' => 'クーポンを適用',
+        'remove_coupon' => 'クーポンを削除',
+
+        // Toast messages
+        'coupon_applied' => 'クーポンが正常に適用されました！',
+        'coupon_removed' => 'クーポンが正常に削除されました！',
+        'cart_updated' => 'カートが正常に更新されました！',
+        'item_removed' => 'カートから商品が削除されました。',
+        'error_occurred' => 'エラーが発生しました。もう一度お試しください。',
+        'product_removed' => 'カートから商品が削除されました。',
+    ],
 ];

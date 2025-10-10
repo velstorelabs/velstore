@@ -69,7 +69,7 @@ class ProductController extends Controller
             ->first();
 
         if ($variant) {
-            $stockStatus = $variant->stock > 0 ? 'IN STOCK' : 'OUT OF STOCK';
+            $stockStatus = $variant->stock > 0 ? __('store.product_detail.in_stock') : 'OUT OF STOCK';
             $isOutOfStock = $variant->stock <= 0;
 
             return response()->json([

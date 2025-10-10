@@ -40,4 +40,43 @@ return [
         'cart_success' => 'Produk berhasil ditambahkan ke keranjang.',
         'cart_update_error' => 'Keranjang tidak dapat diperbarui. Silakan coba lagi.',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Beranda',
+        'breadcrumb_cart' => 'Keranjang',
+
+        // Cart messages
+        'empty_cart' => 'Keranjang belanja Anda kosong.',
+        'continue_shopping' => 'Lanjutkan Belanja',
+        'update_cart' => 'Perbarui Keranjang',
+
+        // Table headings
+        'product' => 'Produk',
+        'price' => 'Harga',
+        'quantity' => 'Kuantitas',
+        'subtotal' => 'Subtotal',
+
+        // Cart totals section
+        'cart_totals' => 'Total Keranjang',
+        'subtotal_label' => 'Subtotal',
+        'discount_label' => 'Diskon',
+        'total_label' => 'Total',
+        'proceed_to_checkout' => 'Lanjut ke Pembayaran',
+
+        // Coupon section
+        'coupon_heading' => 'Kupon',
+        'coupon_placeholder' => 'Kode Kupon',
+        'apply_coupon' => 'Terapkan Kupon',
+        'remove_coupon' => 'Hapus Kupon',
+
+        // Toast messages
+        'coupon_applied' => 'Kupon berhasil diterapkan!',
+        'coupon_removed' => 'Kupon berhasil dihapus!',
+        'cart_updated' => 'Keranjang berhasil diperbarui!',
+        'item_removed' => 'Item dihapus dari keranjang.',
+        'error_occurred' => 'Terjadi kesalahan. Silakan coba lagi.',
+        'product_removed' => 'Produk dihapus dari keranjang.',
+    ],
 ];

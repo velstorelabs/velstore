@@ -40,4 +40,43 @@ return [
         'cart_success' => 'تمت إضافة المنتج إلى السلة بنجاح.',
         'cart_update_error' => 'تعذر تحديث السلة. يرجى المحاولة مرة أخرى.',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'الصفحة الرئيسية',
+        'breadcrumb_cart' => 'عربة التسوق',
+
+        // Cart messages
+        'empty_cart' => 'سلة التسوق فارغة.',
+        'continue_shopping' => 'متابعة التسوق',
+        'update_cart' => 'تحديث السلة',
+
+        // Table headings
+        'product' => 'المنتج',
+        'price' => 'السعر',
+        'quantity' => 'الكمية',
+        'subtotal' => 'المجموع الفرعي',
+
+        // Cart totals section
+        'cart_totals' => 'إجمالي السلة',
+        'subtotal_label' => 'المجموع الفرعي',
+        'discount_label' => 'الخصم',
+        'total_label' => 'الإجمالي',
+        'proceed_to_checkout' => 'إتمام الشراء',
+
+        // Coupon section
+        'coupon_heading' => 'قسيمة الخصم',
+        'coupon_placeholder' => 'رمز القسيمة',
+        'apply_coupon' => 'تطبيق القسيمة',
+        'remove_coupon' => 'إزالة القسيمة',
+
+        // Toast messages
+        'coupon_applied' => 'تم تطبيق القسيمة بنجاح!',
+        'coupon_removed' => 'تمت إزالة القسيمة بنجاح!',
+        'cart_updated' => 'تم تحديث السلة بنجاح!',
+        'item_removed' => 'تمت إزالة العنصر من السلة.',
+        'error_occurred' => 'حدث خطأ ما. يرجى المحاولة مرة أخرى.',
+        'product_removed' => 'تمت إزالة المنتج من السلة.',
+    ],
 ];

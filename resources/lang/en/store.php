@@ -40,4 +40,43 @@ return [
         'cart_success' => 'Product added to cart successfully.',
         'cart_update_error' => 'Could not update cart. Please try again.',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Home',
+        'breadcrumb_cart' => 'Cart',
+
+        // Cart messages
+        'empty_cart' => 'Your cart is empty.',
+        'continue_shopping' => 'Continue Shopping',
+        'update_cart' => 'Update cart',
+
+        // Table headings
+        'product' => 'Product',
+        'price' => 'Price',
+        'quantity' => 'Quantity',
+        'subtotal' => 'Subtotal',
+
+        // Cart totals section
+        'cart_totals' => 'Cart totals',
+        'subtotal_label' => 'Subtotal',
+        'discount_label' => 'Discount',
+        'total_label' => 'Total',
+        'proceed_to_checkout' => 'Proceed to checkout',
+
+        // Coupon section
+        'coupon_heading' => 'Coupon',
+        'coupon_placeholder' => 'Coupon code',
+        'apply_coupon' => 'Apply Coupon',
+        'remove_coupon' => 'Remove Coupon',
+
+        // Toast messages
+        'coupon_applied' => 'Coupon applied successfully!',
+        'coupon_removed' => 'Coupon removed successfully!',
+        'cart_updated' => 'Cart updated successfully!',
+        'item_removed' => 'Item removed from cart.',
+        'error_occurred' => 'Something went wrong. Please try again.',
+        'product_removed' => 'Product removed from cart.',
+    ],
 ];

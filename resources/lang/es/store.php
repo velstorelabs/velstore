@@ -40,4 +40,43 @@ return [
         'cart_success' => 'Producto añadido al carrito con éxito.',
         'cart_update_error' => 'No se pudo actualizar el carrito. Por favor, inténtalo de nuevo.',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Inicio',
+        'breadcrumb_cart' => 'Carrito',
+
+        // Cart messages
+        'empty_cart' => 'Tu carrito está vacío.',
+        'continue_shopping' => 'Seguir comprando',
+        'update_cart' => 'Actualizar carrito',
+
+        // Table headings
+        'product' => 'Producto',
+        'price' => 'Precio',
+        'quantity' => 'Cantidad',
+        'subtotal' => 'Subtotal',
+
+        // Cart totals section
+        'cart_totals' => 'Totales del carrito',
+        'subtotal_label' => 'Subtotal',
+        'discount_label' => 'Descuento',
+        'total_label' => 'Total',
+        'proceed_to_checkout' => 'Proceder al pago',
+
+        // Coupon section
+        'coupon_heading' => 'Cupón',
+        'coupon_placeholder' => 'Código del cupón',
+        'apply_coupon' => 'Aplicar cupón',
+        'remove_coupon' => 'Eliminar cupón',
+
+        // Toast messages
+        'coupon_applied' => '¡Cupón aplicado con éxito!',
+        'coupon_removed' => '¡Cupón eliminado con éxito!',
+        'cart_updated' => '¡Carrito actualizado con éxito!',
+        'item_removed' => 'Artículo eliminado del carrito.',
+        'error_occurred' => 'Ocurrió un error. Por favor, inténtalo de nuevo.',
+        'product_removed' => 'Producto eliminado del carrito.',
+    ],
 ];

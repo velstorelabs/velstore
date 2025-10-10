@@ -40,4 +40,43 @@ return [
         'cart_success' => 'उत्पाद सफलतापूर्वक कार्ट में जोड़ा गया।',
         'cart_update_error' => 'कार्ट अपडेट नहीं किया जा सका। कृपया पुनः प्रयास करें।',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'मुख्य पृष्ठ',
+        'breadcrumb_cart' => 'कार्ट',
+
+        // Cart messages
+        'empty_cart' => 'आपकी कार्ट खाली है।',
+        'continue_shopping' => 'खरीदारी जारी रखें',
+        'update_cart' => 'कार्ट अपडेट करें',
+
+        // Table headings
+        'product' => 'उत्पाद',
+        'price' => 'कीमत',
+        'quantity' => 'मात्रा',
+        'subtotal' => 'उप-योग',
+
+        // Cart totals section
+        'cart_totals' => 'कार्ट का कुल योग',
+        'subtotal_label' => 'उप-योग',
+        'discount_label' => 'छूट',
+        'total_label' => 'कुल',
+        'proceed_to_checkout' => 'चेकआउट के लिए आगे बढ़ें',
+
+        // Coupon section
+        'coupon_heading' => 'कूपन',
+        'coupon_placeholder' => 'कूपन कोड',
+        'apply_coupon' => 'कूपन लागू करें',
+        'remove_coupon' => 'कूपन हटाएं',
+
+        // Toast messages
+        'coupon_applied' => 'कूपन सफलतापूर्वक लागू किया गया!',
+        'coupon_removed' => 'कूपन सफलतापूर्वक हटाया गया!',
+        'cart_updated' => 'कार्ट सफलतापूर्वक अपडेट की गई!',
+        'item_removed' => 'कार्ट से आइटम हटा दिया गया।',
+        'error_occurred' => 'कुछ गलत हो गया। कृपया पुनः प्रयास करें।',
+        'product_removed' => 'कार्ट से उत्पाद हटा दिया गया।',
+    ],
 ];

@@ -40,4 +40,43 @@ return [
         'cart_success' => 'Sản phẩm đã được thêm vào giỏ hàng thành công.',
         'cart_update_error' => 'Không thể cập nhật giỏ hàng. Vui lòng thử lại.',
     ],
+
+    'cart' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Trang chủ',
+        'breadcrumb_cart' => 'Giỏ hàng',
+
+        // Cart messages
+        'empty_cart' => 'Giỏ hàng của bạn đang trống.',
+        'continue_shopping' => 'Tiếp tục mua sắm',
+        'update_cart' => 'Cập nhật giỏ hàng',
+
+        // Table headings
+        'product' => 'Sản phẩm',
+        'price' => 'Giá',
+        'quantity' => 'Số lượng',
+        'subtotal' => 'Tạm tính',
+
+        // Cart totals section
+        'cart_totals' => 'Tổng giỏ hàng',
+        'subtotal_label' => 'Tạm tính',
+        'discount_label' => 'Giảm giá',
+        'total_label' => 'Tổng cộng',
+        'proceed_to_checkout' => 'Tiến hành thanh toán',
+
+        // Coupon section
+        'coupon_heading' => 'Mã giảm giá',
+        'coupon_placeholder' => 'Nhập mã giảm giá',
+        'apply_coupon' => 'Áp dụng mã',
+        'remove_coupon' => 'Xóa mã giảm giá',
+
+        // Toast messages
+        'coupon_applied' => 'Áp dụng mã giảm giá thành công!',
+        'coupon_removed' => 'Xóa mã giảm giá thành công!',
+        'cart_updated' => 'Cập nhật giỏ hàng thành công!',
+        'item_removed' => 'Sản phẩm đã được xóa khỏi giỏ hàng.',
+        'error_occurred' => 'Đã xảy ra lỗi. Vui lòng thử lại.',
+        'product_removed' => 'Sản phẩm đã được xóa khỏi giỏ hàng.',
+    ],
 ];
