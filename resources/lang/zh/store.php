@@ -79,4 +79,52 @@ return [
         'error_occurred' => '发生错误，请重试。',
         'product_removed' => '商品已从购物车中移除。',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => '首页',
+        'breadcrumb_category' => '耳机',
+        'breadcrumb_checkout' => '结账',
+
+        // Section titles
+        'shipping_information' => '收货信息',
+        'contact_information' => '联系信息',
+        'payment_method' => '付款方式',
+        'order_summary' => '订单摘要',
+
+        // Shipping form placeholders
+        'first_name' => '名字',
+        'last_name' => '姓氏',
+        'address' => '地址',
+        'suite' => '套房/楼层',
+        'select_country' => '选择国家',
+        'city' => '城市',
+        'select_state' => '选择省/州',
+        'zipcode' => '邮政编码',
+        'use_as_billing' => '用作账单地址',
+
+        // Contact form placeholders
+        'email' => '电子邮件',
+        'phone' => '电话',
+
+        // Payment
+        'select_payment' => '选择付款方式',
+        'stripe' => 'Stripe',
+        'paypal' => 'PayPal',
+
+        // Summary labels
+        'subtotal' => '小计',
+        'shipping' => '运费',
+        'shipping_info' => '输入您的地址以查看运费',
+        'total' => '总计',
+        'proceed' => '继续',
+        'place_order' => '下订单',
+
+        // Toast / messages
+        'order_success' => '您的订单已成功提交！',
+        'order_failed' => '出现错误，请重试。',
+        'payment_required' => '请在继续之前选择一种付款方式。',
+        'paypal_instructions' => '请使用 PayPal 按钮完成付款。',
+    ],
 ];

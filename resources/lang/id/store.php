@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'Terjadi kesalahan. Silakan coba lagi.',
         'product_removed' => 'Produk dihapus dari keranjang.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Beranda',
+        'breadcrumb_category' => 'Headphone',
+        'breadcrumb_checkout' => 'Checkout',
+
+        // Section titles
+        'shipping_information' => 'Informasi Pengiriman',
+        'contact_information' => 'Informasi Kontak',
+        'payment_method' => 'Metode Pembayaran',
+        'order_summary' => 'Ringkasan Pesanan',
+
+        // Shipping form placeholders
+        'first_name' => 'Nama Depan',
+        'last_name' => 'Nama Belakang',
+        'address' => 'Alamat',
+        'suite' => 'Suite / Lantai',
+        'select_country' => 'Pilih Negara',
+        'city' => 'Kota',
+        'select_state' => 'Pilih Provinsi',
+        'zipcode' => 'Kode Pos',
+        'use_as_billing' => 'Gunakan sebagai alamat penagihan',
+
+        // Contact form placeholders
+        'email' => 'Email',
+        'phone' => 'Telepon',
+
+        // Payment
+        'select_payment' => 'Pilih metode pembayaran',
+        'stripe' => 'Stripe',
+        'paypal' => 'PayPal',
+
+        // Summary labels
+        'subtotal' => 'Subtotal',
+        'shipping' => 'Pengiriman',
+        'shipping_info' => 'Masukkan alamat Anda untuk melihat ongkos kirim',
+        'total' => 'Total',
+        'proceed' => 'Lanjutkan',
+        'place_order' => 'Lakukan Pemesanan',
+
+        // Toast / messages
+        'order_success' => 'Pesanan Anda berhasil dilakukan!',
+        'order_failed' => 'Terjadi kesalahan. Silakan coba lagi.',
+        'payment_required' => 'Silakan pilih metode pembayaran sebelum melanjutkan.',
+        'paypal_instructions' => 'Silakan selesaikan pembayaran menggunakan tombol PayPal.',
+    ],
 ];

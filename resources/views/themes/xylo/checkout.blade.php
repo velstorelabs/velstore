@@ -9,8 +9,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="breadcrumbs">
-                        <a href="#">Home Page</a> <i class="fa fa-angle-right"></i> <a href="#">Headphone</a> <i
-                            class="fa fa-angle-right"></i> checkout
+                        <a href="#">{{ __('store.checkout.breadcrumb_home') }}</a> <i class="fa fa-angle-right"></i> <a href="#">{{ __('store.checkout.breadcrumb_category') }}</a> <i
+                            class="fa fa-angle-right"></i>{{ __('store.checkout.breadcrumb_checkout') }}
                     </div>
                 </div>
             </div>
@@ -27,25 +27,25 @@
 
                         <!-- Shipping Information -->
                         <div class="shipping_info">
-                            <h3 class="cart-heading">Shipping Information</h3>
+                            <h3 class="cart-heading">{{ __('store.checkout.shipping_information') }}</h3>
                             <div class="row">
                                 <div class="col-md-6 mt-3">
-                                    <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
+                                    <input type="text" name="first_name" class="form-control" placeholder="{{ __('store.checkout.first_name') }}" required>
                                 </div>
                                 <div class="col-md-6 mt-3">
-                                    <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
+                                    <input type="text" name="last_name" class="form-control" placeholder="{{ __('store.checkout.last_name') }}" required>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 mt-3">
-                                    <input type="text" name="address" class="form-control" placeholder="Address" required>
+                                    <input type="text" name="address" class="form-control" placeholder="{{ __('store.checkout.address') }}" required>
                                 </div>
                                 <div class="col-md-6 mt-3">
-                                    <input type="text" name="suite" class="form-control" placeholder="Suit/Floor">
+                                    <input type="text" name="suite" class="form-control" placeholder="{{ __('store.checkout.suite') }}">
                                 </div>
                                 <div class="col-md-6 mt-3">
                                     <select name="country" class="form-select" required>
-                                        <option value="">Select Country</option>
+                                        <option value="">{{ __('store.checkout.select_country') }}</option>
                                         <option value="1">United States</option>
                                         <!-- Dynamically populate -->
                                     </select>
@@ -53,42 +53,42 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mt-3">
-                                    <input type="text" name="city" class="form-control" placeholder="City" required>
+                                    <input type="text" name="city" class="form-control" placeholder="{{ __('store.checkout.city') }}" required>
                                 </div>
                                 <div class="col-md-3 mt-3">
                                     <select name="state" class="form-select" required>
-                                        <option value="">Select State</option>
+                                        <option value="">{{ __('store.checkout.select_state') }}</option>
                                         <option value="1">New York</option>
                                         <!-- Dynamically populate -->
                                     </select>
                                 </div>
                                 <div class="col-md-3 mt-3">
-                                    <input type="text" name="zipcode" class="form-control" placeholder="Zipcode" required>
+                                    <input type="text" name="zipcode" class="form-control" placeholder="{{ __('store.checkout.zipcode') }}" required>
                                 </div>
                             </div>
                             <div class="mt-3">
                                 <label>
-                                    <input type="checkbox" name="use_as_billing" value="1" checked> Use as billing
+                                    <input type="checkbox" name="use_as_billing" value="1" checked>{{ __('store.checkout.use_as_billing') }}
                                 </label>
                             </div>
                         </div>
 
                         <!-- Contact Information -->
                         <div class="shipping_info">
-                            <h3 class="cart-heading mt-5">Contact Information</h3>
+                            <h3 class="cart-heading mt-5">{{ __('store.checkout.contact_information') }}</h3>
                             <div class="row">
                                 <div class="col-md-6 mt-3">
-                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                    <input type="email" name="email" class="form-control" placeholder="{{ __('store.checkout.email') }}" required>
                                 </div>
                                 <div class="col-md-6 mt-3">
-                                    <input type="text" name="phone" class="form-control" placeholder="Phone" required>
+                                    <input type="text" name="phone" class="form-control" placeholder="{{ __('store.checkout.phone') }}" required>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Payment Method -->
                         <div class="shipping_info mt-5">
-                            <h3 class="cart-heading">Payment Method</h3>
+                            <h3 class="cart-heading">{{ __('store.checkout.payment_method') }}</h3>
 
                             @foreach($paymentGateways as $gateway)
                                 <div class="form-check mt-2">
@@ -114,30 +114,30 @@
 
                         <!-- Submit Button -->
                         <div class="mt-4">
-                            <button type="submit" id="place-order" class="btn btn-primary w-100">Place Order</button>
+                            <button type="submit" id="place-order" class="btn btn-primary w-100">{{ __('store.checkout.place_order') }}</button>
                         </div>
                     </form>
                 </div>
 
                 <div class="col-md-5 mt-5 mt-md-0">
                     <div class="cart-box">
-                        <h3 class="cart-heading">Order summary</h3>
+                        <h3 class="cart-heading">{{ __('store.checkout.order_summary') }}</h3>
 
                         <div class="row border-bottom pb-2 mb-2 mt-4">
-                            <div class="col-6 col-md-4">Subtotal</div>
+                            <div class="col-6 col-md-4">{{ __('store.checkout.subtotal') }}</div>
                             <div class="col-6 col-md-8 text-end">${{ number_format($subtotal, 2) }}</div>
                         </div>
                         <div class="row border-bottom pb-2 mb-2">
-                            <div class="col-4 col-md-4">Shipping</div>
-                            <div class="col-8 col-md-8 text-end"><small>Enter you address to view shipping</small></div>
+                            <div class="col-4 col-md-4">{{ __('store.checkout.shipping') }}</div>
+                            <div class="col-8 col-md-8 text-end"><small>{{ __('store.checkout.shipping_info') }}</small></div>
                         </div>
                         <div class="row border-bottom pb-2 mb-2">   
-                            <div class="col-6 col-md-4">Total</div>
+                            <div class="col-6 col-md-4">{{ __('store.checkout.total') }}</div>
                             <div class="col-6 col-md-8 text-end"><span>${{ number_format($total, 2) }}</span></div>
                         </div>
 
                         <div class="mt-4">
-                            <a href="#" class="read-more d-block text-center">Proceed </a>
+                            <a href="#" class="read-more d-block text-center">{{ __('store.checkout.proceed') }}</a>
                         </div>
                     </div>
 

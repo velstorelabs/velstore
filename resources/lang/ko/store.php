@@ -79,4 +79,52 @@ return [
         'error_occurred' => '문제가 발생했습니다. 다시 시도해주세요.',
         'product_removed' => '상품이 장바구니에서 제거되었습니다.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => '홈 페이지',
+        'breadcrumb_category' => '헤드폰',
+        'breadcrumb_checkout' => '결제하기',
+
+        // Section titles
+        'shipping_information' => '배송 정보',
+        'contact_information' => '연락처 정보',
+        'payment_method' => '결제 방법',
+        'order_summary' => '주문 요약',
+
+        // Shipping form placeholders
+        'first_name' => '이름',
+        'last_name' => '성',
+        'address' => '주소',
+        'suite' => '호수/층',
+        'select_country' => '국가 선택',
+        'city' => '도시',
+        'select_state' => '주 선택',
+        'zipcode' => '우편번호',
+        'use_as_billing' => '결제 주소로 사용',
+
+        // Contact form placeholders
+        'email' => '이메일',
+        'phone' => '전화번호',
+
+        // Payment
+        'select_payment' => '결제 방법을 선택하세요',
+        'stripe' => '스트라이프',
+        'paypal' => '페이팔',
+
+        // Summary labels
+        'subtotal' => '소계',
+        'shipping' => '배송비',
+        'shipping_info' => '배송비를 확인하려면 주소를 입력하세요',
+        'total' => '총합',
+        'proceed' => '계속하기',
+        'place_order' => '주문하기',
+
+        // Toast / messages
+        'order_success' => '주문이 성공적으로 완료되었습니다!',
+        'order_failed' => '문제가 발생했습니다. 다시 시도해주세요.',
+        'payment_required' => '계속하기 전에 결제 방법을 선택하세요.',
+        'paypal_instructions' => 'PayPal 버튼을 사용하여 결제를 완료하세요.',
+    ],
 ];

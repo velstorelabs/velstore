@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'Etwas ist schiefgelaufen. Bitte versuche es erneut.',
         'product_removed' => 'Produkt aus dem Warenkorb entfernt.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Startseite',
+        'breadcrumb_category' => 'Kopfhörer',
+        'breadcrumb_checkout' => 'Zur Kasse',
+
+        // Section titles
+        'shipping_information' => 'Versandinformationen',
+        'contact_information' => 'Kontaktinformationen',
+        'payment_method' => 'Zahlungsmethode',
+        'order_summary' => 'Bestellübersicht',
+
+        // Shipping form placeholders
+        'first_name' => 'Vorname',
+        'last_name' => 'Nachname',
+        'address' => 'Adresse',
+        'suite' => 'Wohnung/Etage',
+        'select_country' => 'Land auswählen',
+        'city' => 'Stadt',
+        'select_state' => 'Bundesland auswählen',
+        'zipcode' => 'Postleitzahl',
+        'use_as_billing' => 'Als Rechnungsadresse verwenden',
+
+        // Contact form placeholders
+        'email' => 'E-Mail',
+        'phone' => 'Telefon',
+
+        // Payment
+        'select_payment' => 'Zahlungsmethode auswählen',
+        'stripe' => 'Stripe',
+        'paypal' => 'PayPal',
+
+        // Summary labels
+        'subtotal' => 'Zwischensumme',
+        'shipping' => 'Versand',
+        'shipping_info' => 'Geben Sie Ihre Adresse ein, um den Versand anzuzeigen',
+        'total' => 'Gesamtsumme',
+        'proceed' => 'Weiter',
+        'place_order' => 'Bestellung aufgeben',
+
+        // Toast / messages
+        'order_success' => 'Ihre Bestellung wurde erfolgreich aufgegeben!',
+        'order_failed' => 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.',
+        'payment_required' => 'Bitte wählen Sie eine Zahlungsmethode, bevor Sie fortfahren.',
+        'paypal_instructions' => 'Bitte schließen Sie die Zahlung über die PayPal-Schaltfläche ab.',
+    ],
 ];

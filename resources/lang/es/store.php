@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'Ocurrió un error. Por favor, inténtalo de nuevo.',
         'product_removed' => 'Producto eliminado del carrito.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Página principal',
+        'breadcrumb_category' => 'Auriculares',
+        'breadcrumb_checkout' => 'Finalizar compra',
+
+        // Section titles
+        'shipping_information' => 'Información de envío',
+        'contact_information' => 'Información de contacto',
+        'payment_method' => 'Método de pago',
+        'order_summary' => 'Resumen del pedido',
+
+        // Shipping form placeholders
+        'first_name' => 'Nombre',
+        'last_name' => 'Apellido',
+        'address' => 'Dirección',
+        'suite' => 'Apartamento / Piso',
+        'select_country' => 'Seleccionar país',
+        'city' => 'Ciudad',
+        'select_state' => 'Seleccionar estado',
+        'zipcode' => 'Código postal',
+        'use_as_billing' => 'Usar como dirección de facturación',
+
+        // Contact form placeholders
+        'email' => 'Correo electrónico',
+        'phone' => 'Teléfono',
+
+        // Payment
+        'select_payment' => 'Seleccione un método de pago',
+        'stripe' => 'Stripe',
+        'paypal' => 'PayPal',
+
+        // Summary labels
+        'subtotal' => 'Subtotal',
+        'shipping' => 'Envío',
+        'shipping_info' => 'Ingrese su dirección para ver el envío',
+        'total' => 'Total',
+        'proceed' => 'Continuar',
+        'place_order' => 'Realizar pedido',
+
+        // Toast / messages
+        'order_success' => '¡Tu pedido se ha realizado con éxito!',
+        'order_failed' => 'Algo salió mal. Por favor, inténtalo de nuevo.',
+        'payment_required' => 'Por favor, selecciona un método de pago antes de continuar.',
+        'paypal_instructions' => 'Por favor, completa el pago utilizando el botón de PayPal.',
+    ],
 ];

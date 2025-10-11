@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'حدث خطأ ما. يرجى المحاولة مرة أخرى.',
         'product_removed' => 'تمت إزالة المنتج من السلة.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'الصفحة الرئيسية',
+        'breadcrumb_category' => 'سماعة الرأس',
+        'breadcrumb_checkout' => 'إتمام الطلب',
+
+        // Section titles
+        'shipping_information' => 'معلومات الشحن',
+        'contact_information' => 'معلومات الاتصال',
+        'payment_method' => 'طريقة الدفع',
+        'order_summary' => 'ملخص الطلب',
+
+        // Shipping form placeholders
+        'first_name' => 'الاسم الأول',
+        'last_name' => 'اسم العائلة',
+        'address' => 'العنوان',
+        'suite' => 'الشقة / الطابق',
+        'select_country' => 'اختر الدولة',
+        'city' => 'المدينة',
+        'select_state' => 'اختر الولاية',
+        'zipcode' => 'الرمز البريدي',
+        'use_as_billing' => 'استخدام كعنوان الفاتورة',
+
+        // Contact form placeholders
+        'email' => 'البريد الإلكتروني',
+        'phone' => 'رقم الهاتف',
+
+        // Payment
+        'select_payment' => 'اختر طريقة الدفع',
+        'stripe' => 'سترايب',
+        'paypal' => 'باي بال',
+
+        // Summary labels
+        'subtotal' => 'المجموع الفرعي',
+        'shipping' => 'الشحن',
+        'shipping_info' => 'أدخل عنوانك لعرض تكلفة الشحن',
+        'total' => 'الإجمالي',
+        'proceed' => 'متابعة',
+        'place_order' => 'تأكيد الطلب',
+
+        // Toast / messages
+        'order_success' => 'تم إرسال طلبك بنجاح!',
+        'order_failed' => 'حدث خطأ ما. يرجى المحاولة مرة أخرى.',
+        'payment_required' => 'يرجى اختيار طريقة الدفع قبل المتابعة.',
+        'paypal_instructions' => 'يرجى إتمام الدفع باستخدام زر باي بال.',
+    ],
 ];

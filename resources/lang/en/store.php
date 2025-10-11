@@ -79,4 +79,53 @@ return [
         'error_occurred' => 'Something went wrong. Please try again.',
         'product_removed' => 'Product removed from cart.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Home Page',
+        'breadcrumb_category' => 'Headphone',
+        'breadcrumb_checkout' => 'Checkout',
+
+        // Section titles
+        'shipping_information' => 'Shipping Information',
+        'contact_information' => 'Contact Information',
+        'payment_method' => 'Payment Method',
+        'order_summary' => 'Order Summary',
+
+        // Shipping form placeholders
+        'first_name' => 'First Name',
+        'last_name' => 'Last Name',
+        'address' => 'Address',
+        'suite' => 'Suit/Floor',
+        'select_country' => 'Select Country',
+        'city' => 'City',
+        'select_state' => 'Select State',
+        'zipcode' => 'Zipcode',
+        'use_as_billing' => 'Use as billing',
+
+        // Contact form placeholders
+        'email' => 'Email',
+        'phone' => 'Phone',
+
+        // Payment
+        'select_payment' => 'Select a payment method',
+        'stripe' => 'Stripe',
+        'paypal' => 'PayPal',
+
+        // Summary labels
+        'subtotal' => 'Subtotal',
+        'shipping' => 'Shipping',
+        'shipping_info' => 'Enter your address to view shipping',
+        'total' => 'Total',
+        'proceed' => 'Proceed',
+        'place_order' => 'Place Order',
+
+        // Toast / messages
+        'order_success' => 'Your order has been placed successfully!',
+        'order_failed' => 'Something went wrong. Please try again.',
+        'payment_required' => 'Please select a payment method before continuing.',
+        'paypal_instructions' => 'Please complete payment using the PayPal button.',
+
+    ],
 ];

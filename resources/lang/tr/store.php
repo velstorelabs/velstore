@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'Bir hata oluştu. Lütfen tekrar deneyin.',
         'product_removed' => 'Ürün sepetten kaldırıldı.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Ana Sayfa',
+        'breadcrumb_category' => 'Kulaklık',
+        'breadcrumb_checkout' => 'Ödeme',
+
+        // Section titles
+        'shipping_information' => 'Kargo Bilgileri',
+        'contact_information' => 'İletişim Bilgileri',
+        'payment_method' => 'Ödeme Yöntemi',
+        'order_summary' => 'Sipariş Özeti',
+
+        // Shipping form placeholders
+        'first_name' => 'Ad',
+        'last_name' => 'Soyad',
+        'address' => 'Adres',
+        'suite' => 'Daire/Kat',
+        'select_country' => 'Ülke Seçin',
+        'city' => 'Şehir',
+        'select_state' => 'Eyalet/İl Seçin',
+        'zipcode' => 'Posta Kodu',
+        'use_as_billing' => 'Fatura adresi olarak kullan',
+
+        // Contact form placeholders
+        'email' => 'E-posta',
+        'phone' => 'Telefon',
+
+        // Payment
+        'select_payment' => 'Bir ödeme yöntemi seçin',
+        'stripe' => 'Stripe',
+        'paypal' => 'PayPal',
+
+        // Summary labels
+        'subtotal' => 'Ara Toplam',
+        'shipping' => 'Kargo',
+        'shipping_info' => 'Kargo ücretini görmek için adresinizi girin',
+        'total' => 'Toplam',
+        'proceed' => 'Devam Et',
+        'place_order' => 'Siparişi Tamamla',
+
+        // Toast / messages
+        'order_success' => 'Siparişiniz başarıyla oluşturuldu!',
+        'order_failed' => 'Bir hata oluştu. Lütfen tekrar deneyin.',
+        'payment_required' => 'Devam etmeden önce bir ödeme yöntemi seçin.',
+        'paypal_instructions' => 'Lütfen PayPal butonunu kullanarak ödemeyi tamamlayın.',
+    ],
 ];

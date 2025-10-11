@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'Произошла ошибка. Пожалуйста, попробуйте ещё раз.',
         'product_removed' => 'Товар удалён из корзины.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Главная страница',
+        'breadcrumb_category' => 'Наушники',
+        'breadcrumb_checkout' => 'Оформление заказа',
+
+        // Section titles
+        'shipping_information' => 'Информация о доставке',
+        'contact_information' => 'Контактная информация',
+        'payment_method' => 'Способ оплаты',
+        'order_summary' => 'Сводка заказа',
+
+        // Shipping form placeholders
+        'first_name' => 'Имя',
+        'last_name' => 'Фамилия',
+        'address' => 'Адрес',
+        'suite' => 'Квартира/Этаж',
+        'select_country' => 'Выберите страну',
+        'city' => 'Город',
+        'select_state' => 'Выберите штат/регион',
+        'zipcode' => 'Почтовый индекс',
+        'use_as_billing' => 'Использовать как платежный адрес',
+
+        // Contact form placeholders
+        'email' => 'Электронная почта',
+        'phone' => 'Телефон',
+
+        // Payment
+        'select_payment' => 'Выберите способ оплаты',
+        'stripe' => 'Stripe',
+        'paypal' => 'PayPal',
+
+        // Summary labels
+        'subtotal' => 'Промежуточный итог',
+        'shipping' => 'Доставка',
+        'shipping_info' => 'Введите свой адрес, чтобы увидеть стоимость доставки',
+        'total' => 'Итого',
+        'proceed' => 'Продолжить',
+        'place_order' => 'Разместить заказ',
+
+        // Toast / messages
+        'order_success' => 'Ваш заказ успешно оформлен!',
+        'order_failed' => 'Что-то пошло не так. Пожалуйста, попробуйте еще раз.',
+        'payment_required' => 'Пожалуйста, выберите способ оплаты перед продолжением.',
+        'paypal_instructions' => 'Пожалуйста, завершите оплату с помощью кнопки PayPal.',
+    ],
 ];
