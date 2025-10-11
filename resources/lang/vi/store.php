@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'Đã xảy ra lỗi. Vui lòng thử lại.',
         'product_removed' => 'Sản phẩm đã được xóa khỏi giỏ hàng.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Trang chủ',
+        'breadcrumb_category' => 'Tai nghe',
+        'breadcrumb_checkout' => 'Thanh toán',
+
+        // Section titles
+        'shipping_information' => 'Thông tin giao hàng',
+        'contact_information' => 'Thông tin liên hệ',
+        'payment_method' => 'Phương thức thanh toán',
+        'order_summary' => 'Tóm tắt đơn hàng',
+
+        // Shipping form placeholders
+        'first_name' => 'Họ',
+        'last_name' => 'Tên',
+        'address' => 'Địa chỉ',
+        'suite' => 'Căn hộ/Tầng',
+        'select_country' => 'Chọn quốc gia',
+        'city' => 'Thành phố',
+        'select_state' => 'Chọn tiểu bang/tỉnh',
+        'zipcode' => 'Mã bưu điện',
+        'use_as_billing' => 'Sử dụng làm địa chỉ thanh toán',
+
+        // Contact form placeholders
+        'email' => 'Email',
+        'phone' => 'Số điện thoại',
+
+        // Payment
+        'select_payment' => 'Chọn phương thức thanh toán',
+        'stripe' => 'Stripe',
+        'paypal' => 'PayPal',
+
+        // Summary labels
+        'subtotal' => 'Tạm tính',
+        'shipping' => 'Phí vận chuyển',
+        'shipping_info' => 'Nhập địa chỉ của bạn để xem phí vận chuyển',
+        'total' => 'Tổng cộng',
+        'proceed' => 'Tiếp tục',
+        'place_order' => 'Đặt hàng',
+
+        // Toast / messages
+        'order_success' => 'Đơn hàng của bạn đã được đặt thành công!',
+        'order_failed' => 'Đã xảy ra lỗi. Vui lòng thử lại.',
+        'payment_required' => 'Vui lòng chọn phương thức thanh toán trước khi tiếp tục.',
+        'paypal_instructions' => 'Vui lòng hoàn tất thanh toán bằng nút PayPal.',
+    ],
 ];

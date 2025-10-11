@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'เกิดข้อผิดพลาด โปรดลองอีกครั้ง.',
         'product_removed' => 'นำสินค้าออกจากรถเข็นแล้ว.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'หน้าหลัก',
+        'breadcrumb_category' => 'หูฟัง',
+        'breadcrumb_checkout' => 'ชำระเงิน',
+
+        // Section titles
+        'shipping_information' => 'ข้อมูลการจัดส่ง',
+        'contact_information' => 'ข้อมูลการติดต่อ',
+        'payment_method' => 'วิธีการชำระเงิน',
+        'order_summary' => 'สรุปคำสั่งซื้อ',
+
+        // Shipping form placeholders
+        'first_name' => 'ชื่อจริง',
+        'last_name' => 'นามสกุล',
+        'address' => 'ที่อยู่',
+        'suite' => 'ห้อง/ชั้น',
+        'select_country' => 'เลือกประเทศ',
+        'city' => 'เมือง',
+        'select_state' => 'เลือกจังหวัด/รัฐ',
+        'zipcode' => 'รหัสไปรษณีย์',
+        'use_as_billing' => 'ใช้เป็นที่อยู่สำหรับเรียกเก็บเงิน',
+
+        // Contact form placeholders
+        'email' => 'อีเมล',
+        'phone' => 'เบอร์โทรศัพท์',
+
+        // Payment
+        'select_payment' => 'เลือกวิธีการชำระเงิน',
+        'stripe' => 'Stripe',
+        'paypal' => 'PayPal',
+
+        // Summary labels
+        'subtotal' => 'ยอดรวมย่อย',
+        'shipping' => 'การจัดส่ง',
+        'shipping_info' => 'กรอกที่อยู่ของคุณเพื่อดูค่าจัดส่ง',
+        'total' => 'รวมทั้งหมด',
+        'proceed' => 'ดำเนินการต่อ',
+        'place_order' => 'ยืนยันคำสั่งซื้อ',
+
+        // Toast / messages
+        'order_success' => 'คำสั่งซื้อของคุณเสร็จสมบูรณ์!',
+        'order_failed' => 'เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง',
+        'payment_required' => 'กรุณาเลือกวิธีการชำระเงินก่อนดำเนินการต่อ',
+        'paypal_instructions' => 'กรุณาชำระเงินโดยใช้ปุ่ม PayPal ด้านล่าง',
+    ],
 ];

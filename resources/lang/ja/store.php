@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'エラーが発生しました。もう一度お試しください。',
         'product_removed' => 'カートから商品が削除されました。',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'ホームページ',
+        'breadcrumb_category' => 'ヘッドフォン',
+        'breadcrumb_checkout' => 'チェックアウト',
+
+        // Section titles
+        'shipping_information' => '配送情報',
+        'contact_information' => '連絡先情報',
+        'payment_method' => 'お支払い方法',
+        'order_summary' => '注文概要',
+
+        // Shipping form placeholders
+        'first_name' => '名',
+        'last_name' => '姓',
+        'address' => '住所',
+        'suite' => 'スイート/階',
+        'select_country' => '国を選択',
+        'city' => '市区町村',
+        'select_state' => '州を選択',
+        'zipcode' => '郵便番号',
+        'use_as_billing' => '請求先として使用',
+
+        // Contact form placeholders
+        'email' => 'メールアドレス',
+        'phone' => '電話番号',
+
+        // Payment
+        'select_payment' => 'お支払い方法を選択',
+        'stripe' => 'ストライプ',
+        'paypal' => 'ペイパル',
+
+        // Summary labels
+        'subtotal' => '小計',
+        'shipping' => '配送',
+        'shipping_info' => '住所を入力して配送情報を表示',
+        'total' => '合計',
+        'proceed' => '続行',
+        'place_order' => '注文を確定する',
+
+        // Toast / messages
+        'order_success' => 'ご注文が正常に完了しました！',
+        'order_failed' => '問題が発生しました。もう一度お試しください。',
+        'payment_required' => '続行する前にお支払い方法を選択してください。',
+        'paypal_instructions' => 'PayPalボタンを使用して支払いを完了してください。',
+    ],
 ];

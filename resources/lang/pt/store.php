@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'Ocorreu um erro. Tente novamente.',
         'product_removed' => 'Produto removido do carrinho.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Página Inicial',
+        'breadcrumb_category' => 'Fones de Ouvido',
+        'breadcrumb_checkout' => 'Finalizar Compra',
+
+        // Section titles
+        'shipping_information' => 'Informações de Envio',
+        'contact_information' => 'Informações de Contato',
+        'payment_method' => 'Método de Pagamento',
+        'order_summary' => 'Resumo do Pedido',
+
+        // Shipping form placeholders
+        'first_name' => 'Nome',
+        'last_name' => 'Sobrenome',
+        'address' => 'Endereço',
+        'suite' => 'Apartamento/Andar',
+        'select_country' => 'Selecione o País',
+        'city' => 'Cidade',
+        'select_state' => 'Selecione o Estado',
+        'zipcode' => 'CEP',
+        'use_as_billing' => 'Usar como endereço de cobrança',
+
+        // Contact form placeholders
+        'email' => 'E-mail',
+        'phone' => 'Telefone',
+
+        // Payment
+        'select_payment' => 'Selecione um método de pagamento',
+        'stripe' => 'Stripe',
+        'paypal' => 'PayPal',
+
+        // Summary labels
+        'subtotal' => 'Subtotal',
+        'shipping' => 'Envio',
+        'shipping_info' => 'Insira seu endereço para ver o frete',
+        'total' => 'Total',
+        'proceed' => 'Continuar',
+        'place_order' => 'Finalizar Pedido',
+
+        // Toast / messages
+        'order_success' => 'Seu pedido foi realizado com sucesso!',
+        'order_failed' => 'Algo deu errado. Por favor, tente novamente.',
+        'payment_required' => 'Selecione um método de pagamento antes de continuar.',
+        'paypal_instructions' => 'Conclua o pagamento usando o botão do PayPal.',
+    ],
 ];

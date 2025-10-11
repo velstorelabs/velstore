@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'कुछ गलत हो गया। कृपया पुनः प्रयास करें।',
         'product_removed' => 'कार्ट से उत्पाद हटा दिया गया।',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'मुख्य पृष्ठ',
+        'breadcrumb_category' => 'हेडफ़ोन',
+        'breadcrumb_checkout' => 'चेकआउट',
+
+        // Section titles
+        'shipping_information' => 'शिपिंग जानकारी',
+        'contact_information' => 'संपर्क जानकारी',
+        'payment_method' => 'भुगतान विधि',
+        'order_summary' => 'ऑर्डर सारांश',
+
+        // Shipping form placeholders
+        'first_name' => 'पहला नाम',
+        'last_name' => 'अंतिम नाम',
+        'address' => 'पता',
+        'suite' => 'सुइट / फ़्लोर',
+        'select_country' => 'देश चुनें',
+        'city' => 'शहर',
+        'select_state' => 'राज्य चुनें',
+        'zipcode' => 'पिन कोड',
+        'use_as_billing' => 'बिलिंग के रूप में उपयोग करें',
+
+        // Contact form placeholders
+        'email' => 'ईमेल',
+        'phone' => 'फ़ोन',
+
+        // Payment
+        'select_payment' => 'भुगतान विधि चुनें',
+        'stripe' => 'स्ट्राइप',
+        'paypal' => 'पेपाल',
+
+        // Summary labels
+        'subtotal' => 'उप-योग',
+        'shipping' => 'शिपिंग',
+        'shipping_info' => 'शिपिंग देखने के लिए अपना पता दर्ज करें',
+        'total' => 'कुल',
+        'proceed' => 'आगे बढ़ें',
+        'place_order' => 'ऑर्डर करें',
+
+        // Toast / messages
+        'order_success' => 'आपका ऑर्डर सफलतापूर्वक कर दिया गया है!',
+        'order_failed' => 'कुछ गलत हो गया। कृपया पुनः प्रयास करें।',
+        'payment_required' => 'कृपया आगे बढ़ने से पहले भुगतान विधि चुनें।',
+        'paypal_instructions' => 'कृपया पेपाल बटन का उपयोग करके भुगतान पूरा करें।',
+    ],
 ];

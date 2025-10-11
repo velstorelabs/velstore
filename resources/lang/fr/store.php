@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'Une erreur est survenue. Veuillez réessayer.',
         'product_removed' => 'Produit supprimé du panier.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Page d’accueil',
+        'breadcrumb_category' => 'Casque audio',
+        'breadcrumb_checkout' => 'Paiement',
+
+        // Section titles
+        'shipping_information' => 'Informations de livraison',
+        'contact_information' => 'Informations de contact',
+        'payment_method' => 'Méthode de paiement',
+        'order_summary' => 'Récapitulatif de la commande',
+
+        // Shipping form placeholders
+        'first_name' => 'Prénom',
+        'last_name' => 'Nom de famille',
+        'address' => 'Adresse',
+        'suite' => 'Appartement / Étage',
+        'select_country' => 'Sélectionnez un pays',
+        'city' => 'Ville',
+        'select_state' => 'Sélectionnez une région',
+        'zipcode' => 'Code postal',
+        'use_as_billing' => 'Utiliser comme adresse de facturation',
+
+        // Contact form placeholders
+        'email' => 'E-mail',
+        'phone' => 'Téléphone',
+
+        // Payment
+        'select_payment' => 'Sélectionnez une méthode de paiement',
+        'stripe' => 'Stripe',
+        'paypal' => 'PayPal',
+
+        // Summary labels
+        'subtotal' => 'Sous-total',
+        'shipping' => 'Livraison',
+        'shipping_info' => 'Entrez votre adresse pour voir les frais de livraison',
+        'total' => 'Total',
+        'proceed' => 'Continuer',
+        'place_order' => 'Passer la commande',
+
+        // Toast / messages
+        'order_success' => 'Votre commande a été passée avec succès !',
+        'order_failed' => 'Une erreur s’est produite. Veuillez réessayer.',
+        'payment_required' => 'Veuillez sélectionner une méthode de paiement avant de continuer.',
+        'paypal_instructions' => 'Veuillez effectuer le paiement à l’aide du bouton PayPal.',
+    ],
 ];

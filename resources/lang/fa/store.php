@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'مشکلی پیش آمد. لطفاً دوباره تلاش کنید.',
         'product_removed' => 'محصول از سبد خرید حذف شد.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'صفحه اصلی',
+        'breadcrumb_category' => 'هدفون',
+        'breadcrumb_checkout' => 'تسویه حساب',
+
+        // Section titles
+        'shipping_information' => 'اطلاعات ارسال',
+        'contact_information' => 'اطلاعات تماس',
+        'payment_method' => 'روش پرداخت',
+        'order_summary' => 'خلاصه سفارش',
+
+        // Shipping form placeholders
+        'first_name' => 'نام',
+        'last_name' => 'نام خانوادگی',
+        'address' => 'آدرس',
+        'suite' => 'واحد / طبقه',
+        'select_country' => 'انتخاب کشور',
+        'city' => 'شهر',
+        'select_state' => 'انتخاب استان',
+        'zipcode' => 'کد پستی',
+        'use_as_billing' => 'استفاده به عنوان آدرس صورتحساب',
+
+        // Contact form placeholders
+        'email' => 'ایمیل',
+        'phone' => 'شماره تلفن',
+
+        // Payment
+        'select_payment' => 'روش پرداخت را انتخاب کنید',
+        'stripe' => 'استرایپ',
+        'paypal' => 'پی‌پال',
+
+        // Summary labels
+        'subtotal' => 'جمع جزء',
+        'shipping' => 'هزینه ارسال',
+        'shipping_info' => 'برای مشاهده هزینه ارسال، آدرس خود را وارد کنید',
+        'total' => 'جمع کل',
+        'proceed' => 'ادامه',
+        'place_order' => 'ثبت سفارش',
+
+        // Toast / messages
+        'order_success' => 'سفارش شما با موفقیت ثبت شد!',
+        'order_failed' => 'خطایی رخ داد. لطفاً دوباره تلاش کنید.',
+        'payment_required' => 'لطفاً قبل از ادامه، روش پرداخت را انتخاب کنید.',
+        'paypal_instructions' => 'لطفاً پرداخت خود را با استفاده از دکمه پی‌پال تکمیل کنید.',
+    ],
 ];

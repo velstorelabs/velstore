@@ -79,4 +79,52 @@ return [
         'error_occurred' => 'Er is iets misgegaan. Probeer het opnieuw.',
         'product_removed' => 'Product verwijderd uit winkelwagen.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Startpagina',
+        'breadcrumb_category' => 'Koptelefoon',
+        'breadcrumb_checkout' => 'Afrekenen',
+
+        // Section titles
+        'shipping_information' => 'Verzendinformatie',
+        'contact_information' => 'Contactinformatie',
+        'payment_method' => 'Betaalmethode',
+        'order_summary' => 'Besteloverzicht',
+
+        // Shipping form placeholders
+        'first_name' => 'Voornaam',
+        'last_name' => 'Achternaam',
+        'address' => 'Adres',
+        'suite' => 'Appartement/Verdieping',
+        'select_country' => 'Selecteer land',
+        'city' => 'Stad',
+        'select_state' => 'Selecteer provincie',
+        'zipcode' => 'Postcode',
+        'use_as_billing' => 'Gebruik als factuuradres',
+
+        // Contact form placeholders
+        'email' => 'E-mail',
+        'phone' => 'Telefoonnummer',
+
+        // Payment
+        'select_payment' => 'Selecteer een betaalmethode',
+        'stripe' => 'Stripe',
+        'paypal' => 'PayPal',
+
+        // Summary labels
+        'subtotal' => 'Subtotaal',
+        'shipping' => 'Verzending',
+        'shipping_info' => 'Voer uw adres in om de verzendkosten te bekijken',
+        'total' => 'Totaal',
+        'proceed' => 'Doorgaan',
+        'place_order' => 'Bestelling plaatsen',
+
+        // Toast / messages
+        'order_success' => 'Uw bestelling is succesvol geplaatst!',
+        'order_failed' => 'Er is iets misgegaan. Probeer het opnieuw.',
+        'payment_required' => 'Selecteer een betaalmethode voordat u doorgaat.',
+        'paypal_instructions' => 'Voltooi de betaling met de PayPal-knop.',
+    ],
 ];

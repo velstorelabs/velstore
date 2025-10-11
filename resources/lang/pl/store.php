@@ -78,4 +78,52 @@ return [
         'error_occurred' => 'Wystąpił błąd. Spróbuj ponownie.',
         'product_removed' => 'Produkt został usunięty z koszyka.',
     ],
+
+    'checkout' => [
+
+        // Breadcrumb
+        'breadcrumb_home' => 'Strona główna',
+        'breadcrumb_category' => 'Słuchawki',
+        'breadcrumb_checkout' => 'Zamówienie',
+
+        // Section titles
+        'shipping_information' => 'Informacje o wysyłce',
+        'contact_information' => 'Dane kontaktowe',
+        'payment_method' => 'Metoda płatności',
+        'order_summary' => 'Podsumowanie zamówienia',
+
+        // Shipping form placeholders
+        'first_name' => 'Imię',
+        'last_name' => 'Nazwisko',
+        'address' => 'Adres',
+        'suite' => 'Mieszkanie/Piętro',
+        'select_country' => 'Wybierz kraj',
+        'city' => 'Miasto',
+        'select_state' => 'Wybierz województwo',
+        'zipcode' => 'Kod pocztowy',
+        'use_as_billing' => 'Użyj jako adres rozliczeniowy',
+
+        // Contact form placeholders
+        'email' => 'Adres e-mail',
+        'phone' => 'Telefon',
+
+        // Payment
+        'select_payment' => 'Wybierz metodę płatności',
+        'stripe' => 'Stripe',
+        'paypal' => 'PayPal',
+
+        // Summary labels
+        'subtotal' => 'Suma częściowa',
+        'shipping' => 'Wysyłka',
+        'shipping_info' => 'Wprowadź adres, aby zobaczyć koszt wysyłki',
+        'total' => 'Razem',
+        'proceed' => 'Kontynuuj',
+        'place_order' => 'Złóż zamówienie',
+
+        // Toast / messages
+        'order_success' => 'Twoje zamówienie zostało pomyślnie złożone!',
+        'order_failed' => 'Coś poszło nie tak. Spróbuj ponownie.',
+        'payment_required' => 'Wybierz metodę płatności przed kontynuowaniem.',
+        'paypal_instructions' => 'Dokończ płatność za pomocą przycisku PayPal.',
+    ],
 ];
