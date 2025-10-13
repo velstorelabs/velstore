@@ -18,6 +18,7 @@
             <thead>
                 <tr>
                     <th>Order ID</th>
+                    <th>Customer</th>
                     <th>Order Date</th>
                     <th>Status</th>
                     <th>Total Price</th>
@@ -49,6 +50,7 @@ $(function () {
         },
         columns: [
             { data: 'id', name: 'id' },
+            { data: 'customer', name: 'customer', orderable: false, searchable: false },
             { data: 'order_date', name: 'order_date', orderable: false, searchable: false },
             { data: 'status', name: 'status' },
             { data: 'total_price', name: 'total_price', orderable: false, searchable: false },

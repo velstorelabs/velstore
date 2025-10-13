@@ -19,23 +19,26 @@ class OrderController extends Controller
     {
         $vendorId = Auth::guard('vendor')->id();
 
-        $query = Order::whereHas('items', function ($q) use ($vendorId) {
+        $query = Order::whereHas('details.product', function ($q) use ($vendorId) {
             $q->where('vendor_id', $vendorId);
         })
-            ->with('items')
+            ->with(['details.product', 'customer'])
             ->latest();
 
         return DataTables::of($query)
             ->addIndexColumn()
-            ->addColumn('order_date', function (Order $order) {
-                return $order->created_at?->format('Y-m-d H:i');
+            ->addColumn('customer', function (Order $order) {
+                if ($order->customer) {
+                    return $order->customer->name.' ('.$order->customer->email.')';
+                } elseif ($order->guest_email) {
+                    return $order->guest_email.' (Guest)';
+                }
+
+                return 'N/A';
             })
-            ->addColumn('total_price', function (Order $order) {
-                return number_format((float) $order->total_amount, 2);
-            })
-            ->editColumn('status', function (Order $order) {
-                return ucfirst($order->status);
-            })
+            ->addColumn('order_date', fn (Order $order) => $order->created_at?->format('Y-m-d H:i'))
+            ->addColumn('total_price', fn (Order $order) => number_format((float) $order->total_amount, 2))
+            ->editColumn('status', fn (Order $order) => ucfirst($order->status))
             ->addColumn('action', function (Order $order) {
                 return '
                     <form action="'.route('vendor.orders.destroy', $order->id).'" method="POST" class="d-inline delete-order-form">
@@ -43,7 +46,7 @@ class OrderController extends Controller
                         '.method_field('DELETE').'
                         <button type="submit" class="btn btn-danger btn-sm"
                             onclick="return confirm(\'Are you sure you want to delete this order?\')">
-                            Delete
+                            <i class="fa-solid fa-trash"></i> Delete
                         </button>
                     </form>
                 ';
@@ -57,7 +60,7 @@ class OrderController extends Controller
     {
         $vendorId = Auth::guard('vendor')->id();
 
-        $order = Order::whereHas('items', function ($q) use ($vendorId) {
+        $order = Order::whereHas('details.product', function ($q) use ($vendorId) {
             $q->where('vendor_id', $vendorId);
         })->findOrFail($id);
 

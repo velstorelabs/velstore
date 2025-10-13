@@ -15,6 +15,7 @@
             <thead>
                 <tr>
                     <th>{{ __('cms.orders.id') }}</th>
+                     <th>Customer</th>
                     <th>{{ __('cms.orders.order_date') }}</th>
                     <th>{{ __('cms.orders.status') }}</th>
                     <th>{{ __('cms.orders.total_price') }}</th>
@@ -88,6 +89,7 @@ $(document).ready(function () {
         },
         columns: [
             { data: 'id', name: 'id' },
+            { data: 'customer', name: 'customer', orderable: false, searchable: true },
             { data: 'order_date', name: 'order_date', orderable: false, searchable: false },
             { data: 'status', name: 'status' },
             { data: 'total_price', name: 'total_price', orderable: false, searchable: false },
