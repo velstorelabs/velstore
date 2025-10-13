@@ -144,7 +144,11 @@
                 @endforeach
             </div>
 
-            <button type="button" class="btn btn-sm btn-primary mt-3" id="add-variant-btn">{{ __('cms.products.add_variant') }}</button>                                  
+           <button type="button" id="add-variant-btn"
+                class="btn btn-light rounded-circle shadow-sm border d-flex align-items-center justify-content-center mt-3"
+                style="width:48px; height:48px;" title="{{ __('cms.products.add_variant') }}">
+                <i class="fa-solid fa-plus text-primary fs-5"></i>
+           </button>
 
             {{-- Images --}}
             <div class="mt-3">
