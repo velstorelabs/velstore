@@ -73,7 +73,7 @@
                 @foreach ($product->variants as $index => $variant)
                 <div class="variant-item mt-4" id="variant_{{ $variant->id }}">
                     <h5>
-                        {{ __('cms.products.variants') }} {{ $index + 1 }}
+                        {{ __('cms.products.variants') }} {{ $index + 0 }}
                         <button type="button" class="btn btn-danger btn-sm float-end" onclick="removeVariant({{ $variant->id }})">
                             {{ __('cms.products.remove') }}
                         </button>
@@ -149,7 +149,11 @@
            
             </div>
 
-            <button type="button" class="btn btn-sm btn-primary mt-3" id="add-variant-btn">{{ __('cms.products.add_variant') }}</button>           
+           <button type="button" id="add-variant-btn"
+                class="btn btn-light rounded-circle shadow-sm border d-flex align-items-center justify-content-center mt-3"
+                style="width:48px; height:48px;" title="{{ __('cms.products.add_variant') }}">
+                <i class="fa-solid fa-plus text-primary fs-5"></i>
+            </button>
                        
             <div class="mt-3">
                 <label class="form-label">{{ __('cms.products.images') }}</label>

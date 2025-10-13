@@ -270,7 +270,11 @@ let selectedFiles = [];
     window.addEventListener('load', () => {
         const oldFiles = sessionStorage.getItem('vendor_product_temp_images');
         if (oldFiles) {
-            selectedFiles = JSON.parse(oldFiles).map(b64 => dataURLtoFile(b64.data, b64.name));
+            selectedFiles = JSON.parse(oldFiles).map(b64 => {
+                const file = dataURLtoFile(b64.data, b64.name);
+                file.uniqueId = b64.name + '_' + file.size; 
+                return file;
+            });
             refreshPreview(document.getElementById('productImages'));
         }
     });

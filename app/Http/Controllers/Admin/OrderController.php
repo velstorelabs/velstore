@@ -16,10 +16,17 @@ class OrderController extends Controller
 
     public function getData(Request $request)
     {
-        $query = Order::query()->latest();
+        $query = Order::query()->latest()->with('customer');
 
         return DataTables::of($query)
             ->addIndexColumn()
+            ->addColumn('customer', function (Order $order) {
+                if ($order->customer) {
+                    return $order->customer->name.' ('.$order->customer->email.')';
+                }
+
+                return $order->guest_email ?? 'Guest';
+            })
             ->addColumn('order_date', function (Order $order) {
                 return $order->created_at?->format('Y-m-d H:i');
             })
