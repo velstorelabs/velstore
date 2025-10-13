@@ -75,7 +75,7 @@
                     @endphp
                     <div class="border p-3 mb-3 variant-item">
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <strong>{{ __('cms.products.variant') }} #{{ $index + 1 }}</strong>
+                            <strong>{{ __('cms.products.variants') }} {{ $index + 0 }}</strong>
                             <button type="button" class="btn btn-danger btn-sm remove-variant-btn">{{ __('cms.products.remove') }}</button>
                         </div>
                         <div class="row">
@@ -184,7 +184,7 @@
 <template id="variant-template">
     <div class="border p-3 mb-3 variant-item">
         <div class="d-flex justify-content-between align-items-center mb-2">
-            <strong>{{ __('cms.products.variant') }}</strong>
+            <strong>{{ __('cms.products.variants') }}</strong>
             <button type="button" class="btn btn-danger btn-sm remove-variant-btn">{{ __('cms.products.remove') }}</button>
         </div>
         <div class="row">
@@ -247,8 +247,13 @@
     let variantIndex = {{ count($product->variants) }};
 
     $('#add-variant-btn').click(function () {
-        const template = $('#variant-template').html().replaceAll('__INDEX__', variantIndex);
-        $('#variants-wrapper').append(template);
+        const variantNumber = variantIndex + 0;
+        let template = $('#variant-template').html().replaceAll('__INDEX__', variantIndex);
+
+        const $template = $('<div>').html(template);
+        $template.find('strong').text("{{ __('cms.products.variants') }} " + variantNumber);
+
+        $('#variants-wrapper').append($template.html());
         variantIndex++;
     });
 
