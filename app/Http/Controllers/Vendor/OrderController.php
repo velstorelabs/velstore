@@ -60,16 +60,15 @@ class OrderController extends Controller
     {
         $vendorId = Auth::guard('vendor')->id();
 
-        $order = Order::whereHas('details.product', function ($q) use ($vendorId) {
-            $q->where('vendor_id', $vendorId);
+        $order = Order::whereHas('details.product', function ($query) use ($vendorId) {
+            $query->where('vendor_id', $vendorId);
         })->findOrFail($id);
 
         $order->delete();
 
-        if (request()->wantsJson()) {
-            return response()->json(['success' => true, 'message' => 'Order deleted successfully.']);
-        }
-
-        return redirect()->route('vendor.orders.index')->with('success', 'Order deleted successfully.');
+        return response()->json([
+            'success' => true,
+            'message' => 'Order deleted successfully.',
+        ]);
     }
 }
