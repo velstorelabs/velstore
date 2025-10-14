@@ -15,7 +15,7 @@
             <thead>
                 <tr>
                     <th>{{ __('cms.orders.id') }}</th>
-                     <th>Customer</th>
+                     <th>{{ __('cms.orders.customer') }}</th>
                     <th>{{ __('cms.orders.order_date') }}</th>
                     <th>{{ __('cms.orders.status') }}</th>
                     <th>{{ __('cms.orders.total_price') }}</th>

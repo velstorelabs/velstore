@@ -699,6 +699,7 @@ return [
         'status' => 'Статус',
         'total_price' => 'Общая стоимость',
         'action' => 'Действия',
+        'customer' => 'Клиент',
 
         // Delete Modal
         'delete_confirm_title' => 'Подтвердить удаление',

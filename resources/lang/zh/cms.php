@@ -701,6 +701,7 @@ return [
         'status' => '状态',
         'total_price' => '总价',
         'action' => '操作',
+        'customer' => '客户',
 
         // Delete Modal
         'delete_confirm_title' => '确认删除',

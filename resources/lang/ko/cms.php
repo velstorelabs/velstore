@@ -700,6 +700,7 @@ return [
         'status' => '상태',
         'total_price' => '총 금액',
         'action' => '작업',
+        'customer' => '고객',
 
         // Delete Modal
         'delete_confirm_title' => '삭제 확인',

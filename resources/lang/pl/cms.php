@@ -700,6 +700,7 @@ return [
         'status' => 'Status',
         'total_price' => 'Łączna cena',
         'action' => 'Akcje',
+        'customer' => 'Klient',
 
         // Delete Modal
         'delete_confirm_title' => 'Potwierdź usunięcie',

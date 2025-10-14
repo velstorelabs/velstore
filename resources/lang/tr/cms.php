@@ -701,6 +701,7 @@ return [
         'status' => 'Durum',
         'total_price' => 'Toplam Fiyat',
         'action' => 'İşlemler',
+        'customer' => 'Müşteri',
 
         // Delete Modal
         'delete_confirm_title' => 'Silme Onayı',

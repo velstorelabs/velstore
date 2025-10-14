@@ -702,6 +702,7 @@ return [
         'status' => 'Status',
         'total_price' => 'Total Harga',
         'action' => 'Aksi',
+        'customer' => 'Pelanggan',
 
         // Delete Modal
         'delete_confirm_title' => 'Konfirmasi Hapus',

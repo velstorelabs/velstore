@@ -701,6 +701,7 @@ return [
         'status' => 'الحالة',
         'total_price' => 'إجمالي السعر',
         'action' => 'الإجراءات',
+        'customer' => 'العميل',
 
         // Delete Modal
         'delete_confirm_title' => 'تأكيد الحذف',

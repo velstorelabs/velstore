@@ -699,6 +699,7 @@ return [
         'status' => 'Status',
         'total_price' => 'Totale prijs',
         'action' => 'Acties',
+        'customer' => 'Klant',
 
         // Delete Modal
         'delete_confirm_title' => 'Verwijder bevestigen',

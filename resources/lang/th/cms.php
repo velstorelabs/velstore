@@ -700,6 +700,7 @@ return [
         'status' => 'สถานะ',
         'total_price' => 'ราคารวม',
         'action' => 'การดำเนินการ',
+        'customer' => 'ลูกค้า',
 
         // Delete Modal
         'delete_confirm_title' => 'ยืนยันการลบ',

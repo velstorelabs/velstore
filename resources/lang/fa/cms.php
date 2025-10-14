@@ -700,6 +700,7 @@ return [
         'status' => 'وضعیت',
         'total_price' => 'مبلغ کل',
         'action' => 'عملیات',
+        'customer' => 'مشتری',
 
         // Delete Modal
         'delete_confirm_title' => 'تأیید حذف',

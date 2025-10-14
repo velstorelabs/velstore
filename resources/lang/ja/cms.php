@@ -699,6 +699,7 @@ return [
         'status' => 'ステータス',
         'total_price' => '合計金額',
         'action' => '操作',
+        'customer' => '顧客',
 
         // Delete Modal
         'delete_confirm_title' => '削除の確認',

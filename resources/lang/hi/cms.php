@@ -698,6 +698,7 @@ return [
         'status' => 'स्थिति',
         'total_price' => 'कुल कीमत',
         'action' => 'कार्रवाई',
+        'customer' => 'ग्राहक',
 
         // Delete Modal
         'delete_confirm_title' => 'हटाने की पुष्टि करें',
