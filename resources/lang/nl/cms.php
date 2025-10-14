@@ -699,6 +699,7 @@ return [
         'status' => 'Status',
         'total_price' => 'Totale prijs',
         'action' => 'Acties',
+        'customer' => 'Klant',
 
         // Delete Modal
         'delete_confirm_title' => 'Verwijder bevestigen',
@@ -710,6 +711,7 @@ return [
         'deleted_success' => 'Bestelling succesvol verwijderd.',
         'deleted_error' => 'Het verwijderen van de bestelling is mislukt.',
         'deleted' => 'Verwijderd',
+        'success' => 'Succes',
     ],
 
     'attributes' => [

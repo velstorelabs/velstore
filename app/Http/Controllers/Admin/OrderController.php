@@ -53,6 +53,6 @@ class OrderController extends Controller
         $order = Order::findOrFail($id);
         $order->delete();
 
-        return response()->json(['success' => true, 'message' => 'Order deleted successfully.']);
+        return response()->json(['success' => true, 'message' => __('cms.orders.deleted_success')]);
     }
 }

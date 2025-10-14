@@ -702,6 +702,7 @@ return [
         'status' => 'Status',
         'total_price' => 'Total Harga',
         'action' => 'Aksi',
+        'customer' => 'Pelanggan',
 
         // Delete Modal
         'delete_confirm_title' => 'Konfirmasi Hapus',
@@ -713,6 +714,7 @@ return [
         'deleted_success' => 'Pesanan berhasil dihapus.',
         'deleted_error' => 'Gagal menghapus pesanan.',
         'deleted' => 'Dihapus',
+        'success' => 'Sukses',
     ],
 
     'attributes' => [

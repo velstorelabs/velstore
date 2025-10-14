@@ -15,7 +15,7 @@
             <thead>
                 <tr>
                     <th>{{ __('cms.orders.id') }}</th>
-                     <th>Customer</th>
+                     <th>{{ __('cms.orders.customer') }}</th>
                     <th>{{ __('cms.orders.order_date') }}</th>
                     <th>{{ __('cms.orders.status') }}</th>
                     <th>{{ __('cms.orders.total_price') }}</th>
@@ -116,7 +116,7 @@ $(document).ready(function () {
             success: function(res) {
                 if(res.success) {
                     table.ajax.reload(null, false);
-                    toastr.error(res.message || 'Order deleted successfully', "Deleted", {
+                    toastr.error(res.message, "{{ __('cms.orders.success') }}", {
                         closeButton: true,
                         progressBar: true,
                         positionClass: "toast-top-right",

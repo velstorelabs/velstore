@@ -729,6 +729,7 @@ return [
         'status' => 'Trạng thái',
         'total_price' => 'Tổng giá',
         'action' => 'Hành động',
+        'customer' => 'Khách hàng',
 
         // Delete Modal
         'delete_confirm_title' => 'Xác nhận xóa',
@@ -740,6 +741,7 @@ return [
         'deleted_success' => 'Xóa đơn hàng thành công.',
         'deleted_error' => 'Xóa đơn hàng thất bại.',
         'deleted' => 'Đã xóa',
+        'success' => 'Thành Công',
     ],
 
     'attributes' => [

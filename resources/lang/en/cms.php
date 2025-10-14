@@ -700,6 +700,7 @@ return [
         'status' => 'Status',
         'total_price' => 'Total Price',
         'action' => 'Actions',
+        'customer' => 'Customer',
 
         // Delete Modal
         'delete_confirm_title' => 'Confirm Delete',
@@ -711,6 +712,7 @@ return [
         'deleted_success' => 'Order deleted successfully.',
         'deleted_error' => 'Failed to delete the order.',
         'deleted' => 'Deleted',
+        'success' => 'Success',
     ],
 
     'attributes' => [

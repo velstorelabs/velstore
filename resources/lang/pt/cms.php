@@ -700,6 +700,7 @@ return [
         'status' => 'Status',
         'total_price' => 'Preço Total',
         'action' => 'Ações',
+        'customer' => 'Cliente',
 
         // Delete Modal
         'delete_confirm_title' => 'Confirmar Exclusão',
@@ -711,6 +712,7 @@ return [
         'deleted_success' => 'Pedido excluído com sucesso.',
         'deleted_error' => 'Falha ao excluir o pedido.',
         'deleted' => 'Excluído',
+        'success' => 'Sucesso',
     ],
 
     'attributes' => [

@@ -699,6 +699,7 @@ return [
         'status' => 'Statut',
         'total_price' => 'Prix total',
         'action' => 'Actions',
+        'customer' => 'Client',
 
         // Delete Modal
         'delete_confirm_title' => 'Confirmer la suppression',
@@ -710,6 +711,7 @@ return [
         'deleted_success' => 'Commande supprimée avec succès.',
         'deleted_error' => 'Échec de la suppression de la commande.',
         'deleted' => 'Supprimée',
+        'success' => 'Succès',
     ],
 
     'attributes' => [

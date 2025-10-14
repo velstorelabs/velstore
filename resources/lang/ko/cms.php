@@ -700,6 +700,7 @@ return [
         'status' => '상태',
         'total_price' => '총 금액',
         'action' => '작업',
+        'customer' => '고객',
 
         // Delete Modal
         'delete_confirm_title' => '삭제 확인',
@@ -711,6 +712,7 @@ return [
         'deleted_success' => '주문이 성공적으로 삭제되었습니다.',
         'deleted_error' => '주문 삭제에 실패했습니다.',
         'deleted' => '삭제됨',
+        'success' => '성공',
     ],
 
     'attributes' => [

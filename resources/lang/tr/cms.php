@@ -701,6 +701,7 @@ return [
         'status' => 'Durum',
         'total_price' => 'Toplam Fiyat',
         'action' => 'İşlemler',
+        'customer' => 'Müşteri',
 
         // Delete Modal
         'delete_confirm_title' => 'Silme Onayı',
@@ -712,6 +713,7 @@ return [
         'deleted_success' => 'Sipariş başarıyla silindi.',
         'deleted_error' => 'Siparişi silme işlemi başarısız oldu.',
         'deleted' => 'Silindi',
+        'success' => 'Başarılı',
     ],
 
     'attributes' => [

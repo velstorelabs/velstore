@@ -700,6 +700,7 @@ return [
         'status' => 'وضعیت',
         'total_price' => 'مبلغ کل',
         'action' => 'عملیات',
+        'customer' => 'مشتری',
 
         // Delete Modal
         'delete_confirm_title' => 'تأیید حذف',
@@ -711,6 +712,7 @@ return [
         'deleted_success' => 'سفارش با موفقیت حذف شد.',
         'deleted_error' => 'حذف سفارش انجام نشد.',
         'deleted' => 'حذف شد',
+        'success' => 'موفقیت',
     ],
 
     'attributes' => [

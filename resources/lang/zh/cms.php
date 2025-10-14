@@ -701,6 +701,7 @@ return [
         'status' => '状态',
         'total_price' => '总价',
         'action' => '操作',
+        'customer' => '客户',
 
         // Delete Modal
         'delete_confirm_title' => '确认删除',
@@ -712,6 +713,7 @@ return [
         'deleted_success' => '订单删除成功。',
         'deleted_error' => '订单删除失败。',
         'deleted' => '已删除',
+        'success' => '成功',
     ],
 
     'attributes' => [

@@ -667,6 +667,7 @@ return [
         'status' => 'Estado',
         'total_price' => 'Precio Total',
         'action' => 'Acciones',
+        'customer' => 'Cliente',
 
         // Delete Modal
         'delete_confirm_title' => 'Confirmar Eliminación',
@@ -678,6 +679,7 @@ return [
         'deleted_success' => 'Pedido eliminado con éxito.',
         'deleted_error' => 'No se pudo eliminar el pedido.',
         'deleted' => 'Eliminado',
+        'success' => 'Éxito',
     ],
 
     'attributes' => [

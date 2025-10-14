@@ -698,6 +698,7 @@ return [
         'status' => 'स्थिति',
         'total_price' => 'कुल कीमत',
         'action' => 'कार्रवाई',
+        'customer' => 'ग्राहक',
 
         // Delete Modal
         'delete_confirm_title' => 'हटाने की पुष्टि करें',
@@ -709,6 +710,7 @@ return [
         'deleted_success' => 'ऑर्डर सफलतापूर्वक हटा दिया गया।',
         'deleted_error' => 'ऑर्डर हटाने में विफल।',
         'deleted' => 'हटा दिया गया',
+        'success' => 'सफलता',
     ],
 
     'attributes' => [

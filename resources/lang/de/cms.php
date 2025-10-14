@@ -714,6 +714,7 @@ return [
         'status' => 'Status',
         'total_price' => 'Gesamtpreis',
         'action' => 'Aktionen',
+        'customer' => 'Kunde',
 
         // Delete Modal
         'delete_confirm_title' => 'Löschen bestätigen',
@@ -725,6 +726,7 @@ return [
         'deleted_success' => 'Bestellung erfolgreich gelöscht.',
         'deleted_error' => 'Die Bestellung konnte nicht gelöscht werden.',
         'deleted' => 'Gelöscht',
+        'success' => 'Erfolg',
     ],
 
     'attributes' => [
