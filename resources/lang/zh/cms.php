@@ -713,6 +713,7 @@ return [
         'deleted_success' => '订单删除成功。',
         'deleted_error' => '订单删除失败。',
         'deleted' => '已删除',
+        'success' => '成功',
     ],
 
     'attributes' => [

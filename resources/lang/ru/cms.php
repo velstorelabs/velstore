@@ -711,6 +711,7 @@ return [
         'deleted_success' => 'Заказ успешно удален.',
         'deleted_error' => 'Не удалось удалить заказ.',
         'deleted' => 'Удалено',
+        'success' => 'Успех',
     ],
 
     'attributes' => [

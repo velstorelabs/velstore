@@ -713,6 +713,7 @@ return [
         'deleted_success' => 'Sipariş başarıyla silindi.',
         'deleted_error' => 'Siparişi silme işlemi başarısız oldu.',
         'deleted' => 'Silindi',
+        'success' => 'Başarılı',
     ],
 
     'attributes' => [

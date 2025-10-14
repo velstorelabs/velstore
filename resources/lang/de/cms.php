@@ -726,6 +726,7 @@ return [
         'deleted_success' => 'Bestellung erfolgreich gelöscht.',
         'deleted_error' => 'Die Bestellung konnte nicht gelöscht werden.',
         'deleted' => 'Gelöscht',
+        'success' => 'Erfolg',
     ],
 
     'attributes' => [

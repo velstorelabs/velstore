@@ -712,6 +712,7 @@ return [
         'deleted_success' => 'ลบคำสั่งซื้อสำเร็จแล้ว',
         'deleted_error' => 'ไม่สามารถลบคำสั่งซื้อได้',
         'deleted' => 'ถูกลบ',
+        'success' => 'สำเร็จ',
     ],
 
     'attributes' => [

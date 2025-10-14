@@ -710,6 +710,7 @@ return [
         'deleted_success' => 'ऑर्डर सफलतापूर्वक हटा दिया गया।',
         'deleted_error' => 'ऑर्डर हटाने में विफल।',
         'deleted' => 'हटा दिया गया',
+        'success' => 'सफलता',
     ],
 
     'attributes' => [

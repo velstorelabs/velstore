@@ -713,6 +713,7 @@ return [
         'deleted_success' => 'تم حذف الطلب بنجاح.',
         'deleted_error' => 'فشل في حذف الطلب.',
         'deleted' => 'تم الحذف',
+        'success' => 'نجاح',
     ],
 
     'attributes' => [

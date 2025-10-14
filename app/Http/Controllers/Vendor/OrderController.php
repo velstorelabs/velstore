@@ -68,7 +68,7 @@ class OrderController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => 'Order deleted successfully.',
+            'message' => __('cms.orders.deleted_success'),
         ]);
     }
 }

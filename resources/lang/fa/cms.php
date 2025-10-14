@@ -712,6 +712,7 @@ return [
         'deleted_success' => 'سفارش با موفقیت حذف شد.',
         'deleted_error' => 'حذف سفارش انجام نشد.',
         'deleted' => 'حذف شد',
+        'success' => 'موفقیت',
     ],
 
     'attributes' => [

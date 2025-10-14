@@ -741,6 +741,7 @@ return [
         'deleted_success' => 'Xóa đơn hàng thành công.',
         'deleted_error' => 'Xóa đơn hàng thất bại.',
         'deleted' => 'Đã xóa',
+        'success' => 'Thành Công',
     ],
 
     'attributes' => [

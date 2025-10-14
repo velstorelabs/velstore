@@ -711,6 +711,7 @@ return [
         'deleted_success' => 'Bestelling succesvol verwijderd.',
         'deleted_error' => 'Het verwijderen van de bestelling is mislukt.',
         'deleted' => 'Verwijderd',
+        'success' => 'Succes',
     ],
 
     'attributes' => [

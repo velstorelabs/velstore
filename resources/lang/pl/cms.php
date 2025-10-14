@@ -712,6 +712,7 @@ return [
         'deleted_success' => 'Zamówienie zostało pomyślnie usunięte.',
         'deleted_error' => 'Nie udało się usunąć zamówienia.',
         'deleted' => 'Usunięto',
+        'success' => 'Sukces',
     ],
 
     'attributes' => [

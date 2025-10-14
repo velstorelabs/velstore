@@ -714,6 +714,7 @@ return [
         'deleted_success' => 'Pesanan berhasil dihapus.',
         'deleted_error' => 'Gagal menghapus pesanan.',
         'deleted' => 'Dihapus',
+        'success' => 'Sukses',
     ],
 
     'attributes' => [

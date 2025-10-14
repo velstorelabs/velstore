@@ -116,7 +116,7 @@ $(document).ready(function () {
             success: function(res) {
                 if(res.success) {
                     table.ajax.reload(null, false);
-                    toastr.error(res.message || 'Order deleted successfully', "Deleted", {
+                    toastr.error(res.message, "{{ __('cms.orders.success') }}", {
                         closeButton: true,
                         progressBar: true,
                         positionClass: "toast-top-right",

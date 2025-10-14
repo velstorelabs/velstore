@@ -712,6 +712,7 @@ return [
         'deleted_success' => 'Pedido excluído com sucesso.',
         'deleted_error' => 'Falha ao excluir o pedido.',
         'deleted' => 'Excluído',
+        'success' => 'Sucesso',
     ],
 
     'attributes' => [

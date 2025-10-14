@@ -711,6 +711,7 @@ return [
         'deleted_success' => 'Commande supprimée avec succès.',
         'deleted_error' => 'Échec de la suppression de la commande.',
         'deleted' => 'Supprimée',
+        'success' => 'Succès',
     ],
 
     'attributes' => [

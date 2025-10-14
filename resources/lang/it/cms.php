@@ -711,6 +711,7 @@ return [
         'deleted_success' => 'Ordine eliminato con successo.',
         'deleted_error' => 'Impossibile eliminare l\'ordine.',
         'deleted' => 'Eliminato',
+        'success' => 'Successo',
     ],
 
     'attributes' => [

@@ -8,18 +8,18 @@
 @section('content')
 <div class="card mt-4">
     <div class="card-header card-header-bg text-white">
-        <h6>My Orders</h6>
+        <h6>{{ __('cms.orders.title') }}</h6>
     </div>
     <div class="card-body">
         <table id="orders-table" class="table table-bordered mt-4 w-100">
             <thead>
                 <tr>
-                    <th>Order ID</th>
-                    <th>Customer</th>
-                    <th>Order Date</th>
-                    <th>Status</th>
-                    <th>Total Price</th>
-                    <th>Actions</th>
+                    <th>{{ __('cms.orders.id') }}</th>
+                    <th>{{ __('cms.orders.customer') }}</th>
+                    <th>{{ __('cms.orders.order_date') }}</th>
+                    <th>{{ __('cms.orders.status') }}</th>
+                    <th>{{ __('cms.orders.total_price') }}</th>
+                    <th>{{ __('cms.orders.action') }}</th>
                 </tr>
             </thead>
         </table>
@@ -31,13 +31,13 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteOrderModalLabel">Confirm Delete</h5>
+                <h5 class="modal-title" id="deleteOrderModalLabel">{{ __('cms.orders.delete_confirm_title') }}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">Are you sure you want to delete this order?</div>
+            <div class="modal-body">{{ __('cms.orders.delete_confirm_message') }}</div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-danger" id="confirmDeleteOrder">Delete</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('cms.orders.delete_cancel') }}</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteOrder">{{ __('cms.orders.delete_button') }}</button>
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@
 
 @if (session('success'))
 <script>
-    toastr.success("{{ session('success') }}", "Success", {
+    toastr.success("{{ session('success') }}", "{{ __('cms.orders.success') }}", {
         closeButton: true,
         progressBar: true,
         positionClass: "toast-top-right",
@@ -112,7 +112,7 @@ function deleteOrder(id) {
                 success: function(response) {
                     if (response.success) {
                         $('#orders-table').DataTable().ajax.reload();
-                        toastr.error(response.message, "Success", {
+                        toastr.error(response.message, "{{ __('cms.orders.success') }}", {
                             closeButton: true,
                             progressBar: true,
                             positionClass: "toast-top-right",

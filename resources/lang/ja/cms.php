@@ -711,6 +711,7 @@ return [
         'deleted_success' => '注文は正常に削除されました。',
         'deleted_error' => '注文の削除に失敗しました。',
         'deleted' => '削除済み',
+        'success' => '成功',
     ],
 
     'attributes' => [
