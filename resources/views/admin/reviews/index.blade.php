@@ -84,8 +84,8 @@ $(document).ready(function() {
                 name: 'status',
                 render: function(data) {
                     return data === 'active' 
-                        ? '<span class="badge bg-success">{{ __('cms.product_reviews.active') }}</span>'
-                        : '<span class="badge bg-danger">{{ __('cms.product_reviews.inactive') }}</span>';
+                        ? '<span class="badge bg-success">active</span>'
+                        : '<span class="badge bg-danger">inactive</span>';
                 }
             },
             { 

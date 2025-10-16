@@ -16,25 +16,37 @@ class ProductReviewController extends Controller
 
     public function getData()
     {
-        $reviews = ProductReview::with(['product', 'customer']);
+        $reviews = ProductReview::with(['product.translations', 'customer']);
 
         return DataTables::of($reviews)
             ->addColumn('product_name', function ($review) {
-                return optional($review->product)->name ?? 'N/A';
+                $lang = app()->getLocale();
+                $product = $review->product;
+
+                if (! $product) {
+                    return 'N/A';
+                }
+
+                $translation = $product->translations->firstWhere('language_code', $lang);
+
+                return $translation?->name ?? $product->translations->first()?->name ?? 'N/A';
             })
             ->addColumn('customer_name', function ($review) {
                 return optional($review->customer)->name ?? 'Guest';
             })
             ->addColumn('status', function ($review) {
-                return $review->status == 1 ? '<span class="badge bg-success">Approved</span>'
-                                            : '<span class="badge bg-danger">Pending</span>';
+                return $review->status == 1
+                    ? '<span class="badge bg-success">Approved</span>'
+                    : '<span class="badge bg-danger">Pending</span>';
             })
             ->addColumn('action', function ($review) {
-                return '<a href="'.route('admin.reviews.show', $review->id).'" class="btn btn-sm btn-info">View</a>
-                        <form action="'.route('admin.reviews.destroy', $review->id).'" method="POST" style="display:inline-block;">
-                            '.csrf_field().method_field('DELETE').'
-                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm(\'Are you sure?\')">Delete</button>
-                        </form>';
+                return '
+                <a href="'.route('admin.reviews.show', $review->id).'" class="btn btn-sm btn-info">View</a>
+                <form action="'.route('admin.reviews.destroy', $review->id).'" method="POST" style="display:inline-block;">
+                    '.csrf_field().method_field('DELETE').'
+                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm(\'Are you sure?\')">Delete</button>
+                </form>
+            ';
             })
             ->rawColumns(['status', 'action'])
             ->make(true);
