@@ -74,8 +74,12 @@
                 <div class="variant-item mt-4" id="variant_{{ $variant->id }}">
                     <h5>
                         {{ __('cms.products.variants') }} {{ $index + 0 }}
-                        <button type="button" class="btn btn-danger btn-sm float-end" onclick="removeVariant({{ $variant->id }})">
-                            {{ __('cms.products.remove') }}
+                        <button type="button"
+                            class="btn btn-light rounded-circle shadow-sm border-0 d-flex align-items-center justify-content-center float-end remove-variant-btn"
+                            style="width:36px; height:36px;"
+                            onclick="removeVariant({{ $variant->id }})"
+                            title="{{ __('cms.products.remove_variant') }}">
+                            <i class="fa-solid fa-circle-xmark text-danger fs-6"></i>
                         </button>
                     </h5>           
                     <div class="row">
@@ -207,8 +211,12 @@
     <div class="variant-item mt-4" id="variant_new___INDEX__">
         <h5>
             {{ __('cms.products.variants') }} __INDEX__
-            <button type="button" class="btn btn-danger btn-sm float-end" onclick="this.closest('.variant-item').remove();">
-                {{ __('cms.products.remove') }}
+            <button type="button"
+                class="btn btn-light rounded-circle shadow-sm border-0 d-flex align-items-center justify-content-center float-end remove-variant-btn"
+                style="width:36px; height:36px;"
+                onclick="this.closest('.variant-item').remove();"
+                title="{{ __('cms.products.remove_variant') }}">
+                <i class="fa-solid fa-circle-xmark text-danger fs-6"></i>
             </button>
         </h5>
         <div class="row">
