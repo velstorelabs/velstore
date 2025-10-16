@@ -37,31 +37,44 @@
                     @enderror
                 </div>
 
-                <!-- Attribute Values -->
+                <!-- Dynamic Attribute Values -->
                 <div class="mb-3">
                     <label class="form-label">{{ __('cms.attributes.attribute_values') }}</label>
                     <div id="attribute-values-container">
-                        @foreach ($attribute->values as $value)
-                            <div class="input-group mb-2">
-                                <input type="text" 
-                                       name="values[]" 
-                                       value="{{ old('values.' . $loop->index, $value->value) }}" 
-                                       class="form-control">
-                                <button type="button" class="btn btn-danger remove-value">{{ __('cms.attributes.remove_value') }}</button>
+                        @foreach ($attribute->values as $index => $value)
+                            <div class="mb-2 value-group" style="position: relative;">
+                                <input type="text"
+                                    name="values[]"
+                                    class="form-control pe-5 @error('values.' . $index) is-invalid @enderror"
+                                    value="{{ old('values.' . $index, $value->value) }}"
+                                    placeholder="Enter value {{ $index }}">
+                                <button type="button"
+                                    class="btn btn-light rounded-circle shadow-sm border-0 d-flex align-items-center justify-content-center remove-value"
+                                    style="width:36px; height:36px; position:absolute; right:2px; top:50%; transform:translateY(-50%);"
+                                    title="{{ __('cms.attributes.remove_value') }}">
+                                    <i class="fa-solid fa-circle-xmark text-danger fs-6"></i>
+                                </button>
+                                @error('values.' . $index)
+                                    <div class="invalid-feedback d-block">{{ $message }}</div>
+                                @enderror
                             </div>
                         @endforeach
                     </div>
-                    <button type="button" id="add-value" class="btn btn-primary mt-2">{{ __('cms.attributes.add_value') }}</button>
+                    <button type="button" id="add-value" 
+                            class="btn btn-light rounded-circle shadow-sm border d-flex align-items-center justify-content-center"
+                            style="width:48px; height:48px;">
+                        <i class="fa-solid fa-plus text-primary fs-5"></i>
+                    </button>
                 </div>
 
-                <!-- Translations -->
+                <!-- Translations Section -->
                 <div class="mb-3">
                     <label class="form-label">{{ __('cms.attributes.translations') }}</label>
                     <ul class="nav nav-tabs" id="languageTabs" role="tablist">
                         @foreach ($languages as $language)
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link {{ $loop->first ? 'active' : '' }}" 
-                                        id="{{ $language->code }}-tab"
+                                        id="{{ $language->code }}-tab" 
                                         data-bs-toggle="tab" 
                                         data-bs-target="#{{ $language->code }}" 
                                         type="button">
@@ -70,112 +83,124 @@
                             </li>
                         @endforeach
                     </ul>
-
                     <div class="tab-content mt-3" id="languageTabContent">
                         @foreach ($languages as $language)
                             <div class="tab-pane fade show {{ $loop->first ? 'active' : '' }}" id="{{ $language->code }}">
                                 <div id="translation-container-{{ $language->code }}">
-                                    @foreach ($attribute->values as $valueIndex => $value)
+                                    @foreach ($attribute->values as $vIndex => $value)
                                         @php
-                                            $translation = $value->translations
-                                                ->where('language_code', $language->code)
-                                                ->first();
+                                            $translation = $value->translations->where('language_code', $language->code)->first();
                                         @endphp
                                         <div class="input-group mb-2 translation-group">
                                             <input type="text" 
                                                    name="translations[{{ $language->code }}][]" 
-                                                   value="{{ old('translations.' . $language->code . '.' . $valueIndex, optional($translation)->translated_value) }}" 
-                                                   class="form-control" 
-                                                   placeholder="Enter {{ $language->name }} value">
-                                            <button type="button" class="btn btn-danger remove-translation">{{ __('cms.attributes.remove_value') }}</button>
+                                                   class="form-control @error('translations.' . $language->code . '.' . $vIndex) is-invalid @enderror" 
+                                                   value="{{ old('translations.' . $language->code . '.' . $vIndex, optional($translation)->translated_value) }}" 
+                                                   placeholder="Enter {{ $language->name }} value {{ $vIndex }}">
+                                            @error('translations.' . $language->code . '.' . $vIndex)
+                                                <div class="invalid-feedback d-block">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     @endforeach
                                 </div>
-                                <button type="button" class="btn btn-secondary add-translation mt-2"
-                                        data-lang="{{ $language->code }}">
-                                    {{ __('cms.attributes.add_value_translation') }}
-                                </button>
                             </div>
                         @endforeach
                     </div>
                 </div>
 
-                <!-- Submit -->
+                <!-- Submit Button -->
                 <button type="submit" class="btn btn-success mt-3">{{ __('cms.attributes.update_attribute') }}</button>
             </form>
         </div>
     </div>
 </div>
+@endsection
 
+@section('js')
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    // Add new value
+    let removeText = "{{ __('cms.attributes.remove_value') }}";
+    let languages = @json($languages->pluck('code')->toArray());
+    let languageNames = @json($languages->pluck('name')->toArray());
+
+    function updatePlaceholders() {
+        let valueGroups = document.querySelectorAll("#attribute-values-container .value-group input");
+        valueGroups.forEach((input, i) => {
+            input.placeholder = "Enter value " + i;
+        });
+
+        languages.forEach((lang, index) => {
+            let translationInputs = document.querySelectorAll("#translation-container-" + lang + " .translation-group input");
+            translationInputs.forEach((input, i) => {
+                input.placeholder = "Enter " + languageNames[index] + " value " + i;
+            });
+        });
+    }
+
     document.getElementById("add-value").addEventListener("click", function () {
         let container = document.getElementById("attribute-values-container");
-        let newInputGroup = document.createElement("div");
-        newInputGroup.classList.add("input-group", "mb-2");
+        let newValueGroup = document.createElement("div");
+        newValueGroup.classList.add("mb-2", "value-group");
+        newValueGroup.style.position = "relative";
 
-        let input = document.createElement("input");
-        input.type = "text";
-        input.name = "values[]";
-        input.classList.add("form-control");
-        input.placeholder = "Enter value";
+        let valueInput = document.createElement("input");
+        valueInput.type = "text";
+        valueInput.name = "values[]";
+        valueInput.classList.add("form-control", "pe-5");
 
-        let removeBtn = document.createElement("button");
-        removeBtn.type = "button";
-        removeBtn.classList.add("btn", "btn-danger", "remove-value");
-        removeBtn.textContent = "Remove";
-        removeBtn.addEventListener("click", function () {
-            newInputGroup.remove();
-        });
+        let removeValueBtn = document.createElement("button");
+        removeValueBtn.type = "button";
+        removeValueBtn.classList.add(
+            "btn", "btn-light", "rounded-circle", "shadow-sm", "border-0",
+            "d-flex", "align-items-center", "justify-content-center", "remove-value"
+        );
+        removeValueBtn.style.width = "36px";
+        removeValueBtn.style.height = "36px";
+        removeValueBtn.style.position = "absolute";
+        removeValueBtn.style.right = "2px";
+        removeValueBtn.style.top = "50%";
+        removeValueBtn.style.transform = "translateY(-50%)";
+        removeValueBtn.title = removeText;
+        removeValueBtn.innerHTML = '<i class="fa-solid fa-circle-xmark text-danger fs-6"></i>';
 
-        newInputGroup.appendChild(input);
-        newInputGroup.appendChild(removeBtn);
-        container.appendChild(newInputGroup);
-    });
+        newValueGroup.appendChild(valueInput);
+        newValueGroup.appendChild(removeValueBtn);
+        container.appendChild(newValueGroup);
 
-    // Remove value
-    document.querySelectorAll(".remove-value").forEach(button => {
-        button.addEventListener("click", function () {
-            this.parentElement.remove();
-        });
-    });
-
-    // Add translation
-    document.querySelectorAll(".add-translation").forEach(button => {
-        button.addEventListener("click", function () {
-            let lang = this.dataset.lang;
-            let container = document.getElementById("translation-container-" + lang);
-
-            let newGroup = document.createElement("div");
-            newGroup.classList.add("input-group", "mb-2", "translation-group");
+        languages.forEach((lang, index) => {
+            let containerLang = document.getElementById("translation-container-" + lang);
+            let newTranslationGroup = document.createElement("div");
+            newTranslationGroup.classList.add("input-group", "mb-2", "translation-group");
 
             let input = document.createElement("input");
             input.type = "text";
-            input.name = "translations[" + lang + "][]";
+            input.name = `translations[${lang}][]`;
             input.classList.add("form-control");
-            input.placeholder = "Enter " + lang + " value";
 
-            let removeBtn = document.createElement("button");
-            removeBtn.type = "button";
-            removeBtn.classList.add("btn", "btn-danger", "remove-translation");
-            removeBtn.textContent = "Remove";
-            removeBtn.addEventListener("click", function () {
-                newGroup.remove();
+            newTranslationGroup.appendChild(input);
+            containerLang.appendChild(newTranslationGroup);
+        });
+
+        updatePlaceholders();
+    });
+
+    document.addEventListener("click", function(e) {
+       if (e.target.closest(".remove-value")) {
+            let valueGroup = e.target.closest(".value-group");
+            let index = Array.from(document.querySelectorAll("#attribute-values-container .value-group")).indexOf(valueGroup);
+
+            if(valueGroup) valueGroup.remove();
+
+            languages.forEach(lang => {
+                let translations = document.querySelectorAll("#translation-container-" + lang + " .translation-group");
+                if(translations[index]) translations[index].remove();
             });
 
-            newGroup.appendChild(input);
-            newGroup.appendChild(removeBtn);
-            container.appendChild(newGroup);
-        });
+            updatePlaceholders();
+        }
     });
 
-    // Remove translation
-    document.querySelectorAll(".remove-translation").forEach(button => {
-        button.addEventListener("click", function () {
-            this.parentElement.remove();
-        });
-    });
+    updatePlaceholders();
 });
 </script>
 @endsection
