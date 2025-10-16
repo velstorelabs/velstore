@@ -76,7 +76,13 @@
                     <div class="border p-3 mb-3 variant-item">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <strong>{{ __('cms.products.variants') }} {{ $index + 0 }}</strong>
-                            <button type="button" class="btn btn-danger btn-sm remove-variant-btn">{{ __('cms.products.remove') }}</button>
+                           <button type="button"
+                                class="btn btn-light rounded-circle shadow-sm border-0 d-flex align-items-center justify-content-center remove-variant-btn"
+                                style="width:36px; height:36px;"
+                                onclick="removeVariant({{ $variant->id }})"
+                                title="{{ __('cms.products.remove_variant') }}">
+                                <i class="fa-solid fa-circle-xmark text-danger fs-6"></i>
+                            </button>
                         </div>
                         <div class="row">
                             <div class="col-md-4">
@@ -189,7 +195,13 @@
     <div class="border p-3 mb-3 variant-item">
         <div class="d-flex justify-content-between align-items-center mb-2">
             <strong>{{ __('cms.products.variants') }}</strong>
-            <button type="button" class="btn btn-danger btn-sm remove-variant-btn">{{ __('cms.products.remove') }}</button>
+            <button type="button"
+                class="btn btn-light rounded-circle shadow-sm border-0 d-flex align-items-center justify-content-center remove-variant-btn"
+                style="width:36px; height:36px;"
+                onclick="this.closest('.variant-item').remove();"
+                title="{{ __('cms.products.remove_variant') }}">
+                <i class="fa-solid fa-circle-xmark text-danger fs-6"></i>
+            </button>
         </div>
         <div class="row">
             <div class="col-md-4">
