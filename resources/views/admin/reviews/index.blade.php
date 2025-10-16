@@ -93,10 +93,17 @@ $(document).ready(function() {
                 orderable: false,
                 searchable: false,
                 render: function(data, type, row) {
-                    return `<span class="border border-danger dt-trash rounded-3 d-inline-block" 
-                                onclick="deleteReview(${row.id})">
-                                <i class="bi bi-trash-fill text-danger"></i>
-                            </span>`;
+                    return `
+                        <span class="border border-info dt-view rounded-3 d-inline-block me-1">
+                            <a href="/admin/reviews/${row.id}" class="px-2">
+                                <i class="bi bi-eye-fill text-info"></i>
+                            </a>
+                        </span>
+                        <span class="border border-danger dt-trash rounded-3 d-inline-block" 
+                            onclick="deleteReview(${row.id})">
+                            <i class="bi bi-trash-fill text-danger"></i>
+                        </span>
+                    `;
                 }
             }
         ],
