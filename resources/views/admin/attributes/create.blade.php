@@ -30,14 +30,21 @@
                         @php
                             $oldValues = old('values', ['']); // at least 1 input
                         @endphp
-                        @foreach ($oldValues as $index => $val)
-                            <div class="input-group mb-2 value-group">
-                                <input type="text" 
-                                       name="values[]" 
-                                       class="form-control @error('values.' . $index) is-invalid @enderror" 
-                                       value="{{ $val }}" 
-                                       placeholder="Enter value {{ $index }}">
-                                <button type="button" class="btn btn-danger remove-value">{{ __('cms.attributes.remove_value') }}</button>
+                       @foreach ($oldValues as $index => $val)
+                            <div class="mb-2 value-group" style="position: relative;">
+                                <input type="text"
+                                    name="values[]"
+                                    class="form-control pe-5 @error('values.' . $index) is-invalid @enderror"
+                                    value="{{ $val }}"
+                                    placeholder="Enter value {{ $index }}">
+
+                                <button type="button"
+                                    class="btn btn-light rounded-circle shadow-sm border-0 d-flex align-items-center justify-content-center remove-value"
+                                    style="width:36px; height:36px; position:absolute; right:2px; top:50%; transform:translateY(-50%);"
+                                    title="{{ __('cms.attributes.remove_value') }}">
+                                    <i class="fa-solid fa-circle-xmark text-danger fs-6"></i>
+                                </button>
+
                                 @error('values.' . $index)
                                     <div class="invalid-feedback d-block">{{ $message }}</div>
                                 @enderror
@@ -142,17 +149,28 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("add-value").addEventListener("click", function () {
         let container = document.getElementById("attribute-values-container");
         let newValueGroup = document.createElement("div");
-        newValueGroup.classList.add("input-group", "mb-2", "value-group");
+        newValueGroup.classList.add("mb-2", "value-group");
+        newValueGroup.style.position = "relative";
 
         let valueInput = document.createElement("input");
         valueInput.type = "text";
         valueInput.name = "values[]";
-        valueInput.classList.add("form-control");
+        valueInput.classList.add("form-control", "pe-5");
 
         let removeValueBtn = document.createElement("button");
         removeValueBtn.type = "button";
-        removeValueBtn.classList.add("btn", "btn-danger", "remove-value");
-        removeValueBtn.textContent = removeText;
+        removeValueBtn.classList.add(
+            "btn", "btn-light", "rounded-circle", "shadow-sm", "border-0",
+            "d-flex", "align-items-center", "justify-content-center", "remove-value"
+        );
+        removeValueBtn.style.width = "36px";
+        removeValueBtn.style.height = "36px";
+        removeValueBtn.style.position = "absolute";
+        removeValueBtn.style.right = "2px";
+        removeValueBtn.style.top = "50%";
+        removeValueBtn.style.transform = "translateY(-50%)";
+        removeValueBtn.title = removeText;
+        removeValueBtn.innerHTML = '<i class="fa-solid fa-circle-xmark text-danger fs-6"></i>';
 
         newValueGroup.appendChild(valueInput);
         newValueGroup.appendChild(removeValueBtn);
@@ -176,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.addEventListener("click", function(e) {
-        if(e.target && e.target.classList.contains("remove-value")){
+       if (e.target.closest(".remove-value")) {
             let valueGroup = e.target.closest(".value-group");
             let index = Array.from(document.querySelectorAll("#attribute-values-container .value-group")).indexOf(valueGroup);
 
