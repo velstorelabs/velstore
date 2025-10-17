@@ -61,9 +61,11 @@ class ProductReviewController extends Controller
     {
         $vendorId = auth()->guard('vendor')->id();
 
-        if ($review->product->vendor_id !== $vendorId) {
+        if (! $review->product || $review->product->vendor_id !== $vendorId) {
             abort(403, 'Unauthorized access');
         }
+
+        $review->load(['product.translations', 'customer']);
 
         return view('vendor.reviews.show', compact('review'));
     }
