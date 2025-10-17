@@ -758,6 +758,9 @@ return [
         'rating' => 'Peringkat',
         'status' => 'Status',
         'actions' => 'Tindakan',
+        'review_details' => 'Detail ulasan',
+        'review' => 'Ulasan',
+        'back_button' => 'Kembali ke daftar',
 
         'confirm_delete' => 'Konfirmasi Penghapusan',
         'delete_message' => 'Apakah Anda yakin ingin menghapus ulasan produk ini?',

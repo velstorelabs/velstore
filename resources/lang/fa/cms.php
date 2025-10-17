@@ -756,6 +756,9 @@ return [
         'rating' => 'امتیاز',
         'status' => 'وضعیت',
         'actions' => 'عملیات',
+        'review_details' => 'جزئیات بررسی',
+        'review' => 'بررسی',
+        'back_button' => 'بازگشت به فهرست',
 
         'confirm_delete' => 'تأیید حذف',
         'delete_message' => 'آیا مطمئن هستید که می‌خواهید این نظر محصول را حذف کنید؟',

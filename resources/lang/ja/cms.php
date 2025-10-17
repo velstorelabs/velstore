@@ -755,6 +755,9 @@ return [
         'rating' => '評価',
         'status' => 'ステータス',
         'actions' => '操作',
+        'review_details' => 'レビューの詳細',
+        'review' => 'レビュー',
+        'back_button' => 'リストに戻る',
 
         'confirm_delete' => '削除の確認',
         'delete_message' => '本当にこの商品レビューを削除しますか？',

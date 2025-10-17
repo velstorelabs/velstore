@@ -756,6 +756,9 @@ return [
         'rating' => 'Rating',
         'status' => 'Status',
         'actions' => 'Actions',
+        'review_details' => 'Review Details',
+        'review' => 'Review',
+        'back_button' => 'Back to List',
 
         'confirm_delete' => 'Confirm Delete',
         'delete_message' => 'Are you sure you want to delete this product review?',

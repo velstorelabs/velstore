@@ -757,6 +757,9 @@ return [
         'rating' => 'التقييم',
         'status' => 'الحالة',
         'actions' => 'الإجراءات',
+        'review_details' => 'تفاصيل المراجعة',
+        'review' => 'مراجعة',
+        'back_button' => 'العودة إلى القائمة',
 
         'confirm_delete' => 'تأكيد الحذف',
         'delete_message' => 'هل أنت متأكد أنك تريد حذف مراجعة المنتج هذه؟',

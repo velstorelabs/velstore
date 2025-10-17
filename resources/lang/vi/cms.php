@@ -785,6 +785,9 @@ return [
         'rating' => 'Đánh giá',
         'status' => 'Trạng thái',
         'actions' => 'Hành động',
+        'review_details' => 'Chi tiết đánh giá',
+        'review' => 'Đánh giá',
+        'back_button' => 'Quay lại danh sách',
 
         'confirm_delete' => 'Xác nhận xóa',
         'delete_message' => 'Bạn có chắc chắn muốn xóa đánh giá sản phẩm này?',

@@ -757,6 +757,9 @@ return [
         'rating' => 'Puan',
         'status' => 'Durum',
         'actions' => 'İşlemler',
+        'review_details' => 'İnceleme detayları',
+        'review' => 'İnceleme',
+        'back_button' => 'Listeye geri dön',
 
         'confirm_delete' => 'Silme Onayı',
         'delete_message' => 'Bu ürün yorumunu silmek istediğinizden emin misiniz?',
