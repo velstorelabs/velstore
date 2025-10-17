@@ -770,6 +770,9 @@ return [
         'rating' => 'Bewertung',
         'status' => 'Status',
         'actions' => 'Aktionen',
+        'review_details' => 'Bewertungsdetails',
+        'review' => 'Bewertung',
+        'back_button' => 'Zurück zur Liste',
 
         'confirm_delete' => 'Löschen bestätigen',
         'delete_message' => 'Möchten Sie diese Produktbewertung wirklich löschen?',

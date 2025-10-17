@@ -757,6 +757,9 @@ return [
         'rating' => '评分',
         'status' => '状态',
         'actions' => '操作',
+        'review_details' => '评价详情',
+        'review' => '评价',
+        'back_button' => '返回列表',
 
         'confirm_delete' => '确认删除',
         'delete_message' => '您确定要删除此产品评论吗？',

@@ -755,6 +755,9 @@ return [
         'rating' => 'Valutazione',
         'status' => 'Stato',
         'actions' => 'Azioni',
+        'review_details' => 'Dettagli della recensione',
+        'review' => 'Recensione',
+        'back_button' => 'Torna alla lista',
 
         'confirm_delete' => 'Conferma Eliminazione',
         'delete_message' => 'Sei sicuro di voler eliminare questa recensione del prodotto?',

@@ -755,6 +755,9 @@ return [
         'rating' => 'Beoordeling',
         'status' => 'Status',
         'actions' => 'Acties',
+        'review_details' => 'Beoordelingsdetails',
+        'review' => 'Beoordeling',
+        'back_button' => 'Terug naar de lijst',
 
         'confirm_delete' => 'Verwijderen bevestigen',
         'delete_message' => 'Weet u zeker dat u deze productrecensie wilt verwijderen?',

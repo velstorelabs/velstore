@@ -756,6 +756,9 @@ return [
         'rating' => 'Ocena',
         'status' => 'Status',
         'actions' => 'Akcje',
+        'review_details' => 'Detalhes da avaliação',
+        'review' => 'Avaliação',
+        'back_button' => 'Voltar à lista',
 
         'confirm_delete' => 'Potwierdzenie usunięcia',
         'delete_message' => 'Czy na pewno chcesz usunąć tę opinię o produkcie?',

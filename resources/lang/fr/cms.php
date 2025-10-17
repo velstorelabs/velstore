@@ -755,6 +755,9 @@ return [
         'rating' => 'Note',
         'status' => 'Statut',
         'actions' => 'Actions',
+        'review_details' => 'Détails de l’avis',
+        'review' => 'Avis',
+        'back_button' => 'Retour à la liste',
 
         'confirm_delete' => 'Confirmer la suppression',
         'delete_message' => 'Êtes-vous sûr de vouloir supprimer cet avis sur le produit ?',

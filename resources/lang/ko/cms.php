@@ -756,6 +756,9 @@ return [
         'rating' => '평점',
         'status' => '상태',
         'actions' => '작업',
+        'review_details' => '리뷰 세부 정보',
+        'review' => '리뷰',
+        'back_button' => '목록으로 돌아가기',
 
         'confirm_delete' => '삭제 확인',
         'delete_message' => '이 상품 리뷰를 정말 삭제하시겠습니까?',

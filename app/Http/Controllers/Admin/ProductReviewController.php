@@ -54,6 +54,8 @@ class ProductReviewController extends Controller
 
     public function show(ProductReview $review)
     {
+        $review->load(['product.translations', 'customer']);
+
         return view('admin.reviews.show', compact('review'));
     }
 
