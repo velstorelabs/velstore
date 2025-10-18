@@ -135,5 +135,33 @@ function previewImage(input, langCode) {
 }
 
 </script>
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const editors = {};
 
+    document.querySelectorAll('textarea[name^="languages"]').forEach((el) => {
+        const id = el.getAttribute('name').replace(/[\[\]\.]/g, '_'); 
+        el.id = id;
+
+        ClassicEditor.create(el)
+            .then(editor => {
+                editors[id] = editor;
+            })
+            .catch(error => {
+                console.error('CKEditor initialization error:', error);
+            });
+    });
+
+    document.querySelector('form').addEventListener('submit', function () {
+        for (const id in editors) {
+            const editor = editors[id];
+            if (editor) {
+                const textarea = document.getElementById(id);
+                if (textarea) textarea.value = editor.getData();
+            }
+        }
+    });
+});
+</script>
 @endsection

@@ -24,14 +24,14 @@
         </li> 
         <li class="nav-item">
             <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#orderMenu" role="button" aria-expanded="false" aria-controls="orderMenu">
-                <span><i class="fas fa-shopping-cart me-2"></i> <span>Orders</span></span>
+                <span><i class="fas fa-shopping-cart me-2"></i> <span>{{ __('cms.sidebar.orders.title') }}</span></span>
                 <i class="fas fa-chevron-down"></i>
             </a>
             <div class="collapse {{ Route::is('vendor.orders.*') ? 'show' : '' }}" id="orderMenu">
                 <ul class="nav flex-column ms-3">
                     <li>
                         <a class="nav-link {{ Route::currentRouteName() == 'vendor.orders.index' ? 'active' : '' }}" href="{{ route('vendor.orders.index') }}">
-                            List
+                           {{ __('cms.sidebar.orders.list') }}
                         </a>
                     </li>
                 </ul>

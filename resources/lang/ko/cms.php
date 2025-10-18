@@ -82,6 +82,7 @@ return [
             'all_orders' => '전체 주문',
             'pending_orders' => '보류 중인 주문',
             'completed_orders' => '완료된 주문',
+            'list' => '목록',
         ],
         'pages' => [
             'title' => '페이지',

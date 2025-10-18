@@ -174,12 +174,16 @@
             @if ($product->images && $product->images->count())
                 <div class="row mt-3">
                     @foreach ($product->images as $image)
-                        <div class="col-md-3 mb-3" id="image_{{ $image->id }}">
-                            <div class="border p-2 text-center">
-                                <img src="{{ asset('storage/' . $image->image_url) }}" class="img-fluid" style="max-height: 150px;">
-                                <p class="small text-muted">{{ $image->name }}</p>
-                                <button type="button" class="btn btn-danger btn-sm" onclick="removeExistingImage({{ $image->id }})">
-                                    {{ __('cms.products.remove') }}
+                       <div class="col-md-3 mb-3 position-relative" id="image_{{ $image->id }}">
+                            <div class="border p-2 text-center position-relative" style="border-radius:8px;">
+                                <img src="{{ asset('storage/' . $image->image_url) }}" class="img-fluid" style="max-height:150px; border-radius:8px;">
+                                <p class="small text-muted mt-2">{{ $image->name }}</p>
+                                <button type="button"
+                                    class="btn btn-light rounded-circle shadow-sm border-0 d-flex align-items-center justify-content-center"
+                                    style="width:36px; height:36px; position:absolute; right:8px; top:8px;"
+                                    onclick="removeExistingImage({{ $image->id }})"
+                                    title="{{ __('cms.products.remove') }}">
+                                    <i class="fa-solid fa-circle-xmark text-danger fs-6"></i>
                                 </button>
                             </div>
                         </div>
@@ -290,11 +294,40 @@
         selectedFiles.forEach(file => {
             const reader = new FileReader();
             reader.onload = function(e) {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'position-relative d-inline-block m-1';
+                wrapper.style.border = '1px solid #ddd';
+                wrapper.style.borderRadius = '8px';
+                wrapper.style.padding = '4px';
+
                 const img = document.createElement('img');
                 img.src = e.target.result;
-                img.className = 'img-thumbnail m-1';
+                img.className = 'img-thumbnail';
                 img.style.maxWidth = '150px';
-                previewContainer.appendChild(img);
+                img.style.borderRadius = '8px';
+
+                const removeBtn = document.createElement('button');
+                removeBtn.type = 'button';
+                removeBtn.className = 'btn btn-light rounded-circle shadow-sm border-0 d-flex align-items-center justify-content-center';
+                removeBtn.style.width = '36px';
+                removeBtn.style.height = '36px';
+                removeBtn.style.position = 'absolute';
+                removeBtn.style.right = '6px';
+                removeBtn.style.top = '6px';
+                removeBtn.title = "{{ __('cms.products.remove') }}";
+                removeBtn.innerHTML = '<i class="fa-solid fa-circle-xmark text-danger fs-6"></i>';
+
+                removeBtn.onclick = function() {
+                    selectedFiles = selectedFiles.filter(f => f.name !== file.name || f.size !== file.size);
+                    wrapper.remove();
+                    const dataTransfer = new DataTransfer();
+                    selectedFiles.forEach(f => dataTransfer.items.add(f));
+                    input.files = dataTransfer.files;
+                };
+
+                wrapper.appendChild(img);
+                wrapper.appendChild(removeBtn);
+                previewContainer.appendChild(wrapper);
             };
             reader.readAsDataURL(file);
         });
@@ -303,6 +336,7 @@
         selectedFiles.forEach(file => dataTransfer.items.add(file));
         input.files = dataTransfer.files;
     }
+
 
     function removeExistingImage(imageId) {
         const imageDiv = document.getElementById('image_' + imageId);

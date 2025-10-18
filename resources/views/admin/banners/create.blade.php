@@ -56,8 +56,9 @@
 
                         {{-- Description --}}
                         <label class="form-label mt-2">{{ __('cms.banners.description') }} ({{ $language->code }})</label>
-                        <textarea name="languages[{{ $language->code }}][description]"
-                                class="form-control @error('languages.' . $language->code . '.description') is-invalid @enderror"
+                        <textarea id="description_{{ $language->code }}"
+                                name="languages[{{ $language->code }}][description]"
+                                class="form-control ck-editor-multi-languages @error('languages.' . $language->code . '.description') is-invalid @enderror"
                                 rows="3">{{ old('languages.' . $language->code . '.description') }}</textarea>
                         @error('languages.' . $language->code . '.description')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -205,6 +206,33 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
+});
+</script>
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+<script>
+const LANG_CODES = {!! json_encode($languages->pluck('code')) !!};
+const CKEDITORS = {};
+
+document.querySelectorAll('.ck-editor-multi-languages').forEach((el) => {
+    const id = el.id;
+    ClassicEditor.create(el)
+        .then(editor => {
+            CKEDITORS[id] = editor;
+        })
+        .catch(error => {
+            console.error('CKEditor init error', error);
+        });
+});
+
+document.getElementById('bannerForm').addEventListener('submit', function (e) {
+    for (const code of LANG_CODES) {
+        const textareaId = 'description_' + code;
+        const editor = CKEDITORS[textareaId];
+        if (editor) {
+            const textarea = document.getElementById(textareaId);
+            if (textarea) textarea.value = editor.getData();
+        }
+    }
 });
 </script>
 @endsection

@@ -81,6 +81,7 @@ return [
             'all_orders' => 'Todos os Pedidos',
             'pending_orders' => 'Pedidos Pendentes',
             'completed_orders' => 'Pedidos Concluídos',
+            'list' => 'Lista',
         ],
         'pages' => [
             'title' => 'Páginas',

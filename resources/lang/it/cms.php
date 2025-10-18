@@ -82,6 +82,7 @@ return [
             'all_orders' => 'Tutti gli Ordini',
             'pending_orders' => 'Ordini in Attesa',
             'completed_orders' => 'Ordini Completati',
+            'list' => 'Elenco',
         ],
         'pages' => [
             'title' => 'Pagine',

@@ -82,6 +82,7 @@ return [
             'all_orders' => 'Tất cả đơn hàng',
             'pending_orders' => 'Đơn hàng đang chờ',
             'completed_orders' => 'Đơn hàng đã hoàn thành',
+            'list' => 'Danh sách',
         ],
         'pages' => [
             'title' => 'Trang',

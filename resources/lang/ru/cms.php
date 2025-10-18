@@ -82,6 +82,7 @@ return [
             'all_orders' => 'Все заказы',
             'pending_orders' => 'Ожидающие заказы',
             'completed_orders' => 'Завершенные заказы',
+            'list' => 'Список',
         ],
         'pages' => [
             'title' => 'Страницы',

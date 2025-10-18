@@ -82,6 +82,7 @@ return [
             'all_orders' => 'جميع الطلبات',
             'pending_orders' => 'الطلبات المعلقة',
             'completed_orders' => 'الطلبات المكتملة',
+            'list' => 'قائمة',
         ],
         'pages' => [
             'title' => 'الصفحات',
