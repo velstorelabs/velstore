@@ -82,6 +82,7 @@ return [
             'all_orders' => 'Tüm Siparişler',
             'pending_orders' => 'Bekleyen Siparişler',
             'completed_orders' => 'Tamamlanan Siparişler',
+            'list' => 'Liste',
         ],
         'pages' => [
             'title' => 'Sayfalar',

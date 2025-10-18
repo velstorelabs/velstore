@@ -82,6 +82,7 @@ return [
             'all_orders' => 'All Orders',
             'pending_orders' => 'Pending Orders',
             'completed_orders' => 'Completed Orders',
+            'list' => 'List',
         ],
         'pages' => [
             'title' => 'Pages',

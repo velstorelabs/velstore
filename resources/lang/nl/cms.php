@@ -81,6 +81,7 @@ return [
             'all_orders' => 'Alle Bestellingen',
             'pending_orders' => 'In Behandeling',
             'completed_orders' => 'Voltooide Bestellingen',
+            'list' => 'Lijst',
         ],
         'pages' => [
             'title' => 'Pagina\'s',

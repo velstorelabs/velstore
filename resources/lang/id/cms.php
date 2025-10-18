@@ -82,6 +82,7 @@ return [
             'all_orders' => 'Semua Pesanan',
             'pending_orders' => 'Pesanan Tertunda',
             'completed_orders' => 'Pesanan Selesai',
+            'list' => 'Daftar',
         ],
         'pages' => [
             'title' => 'Halaman',

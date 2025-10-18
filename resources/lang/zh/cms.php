@@ -82,6 +82,7 @@ return [
             'all_orders' => '所有订单',
             'pending_orders' => '待处理订单',
             'completed_orders' => '已完成订单',
+            'list' => '列表',
         ],
         'pages' => [
             'title' => '页面',

@@ -82,6 +82,7 @@ return [
             'all_orders' => 'همه سفارشات',
             'pending_orders' => 'سفارشات در انتظار',
             'completed_orders' => 'سفارشات تکمیل شده',
+            'list' => 'لیست',
         ],
         'pages' => [
             'title' => 'صفحات',

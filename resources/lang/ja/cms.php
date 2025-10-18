@@ -82,6 +82,7 @@ return [
             'all_orders' => 'すべての注文',
             'pending_orders' => '保留中の注文',
             'completed_orders' => '完了した注文',
+            'list' => '一覧',
         ],
         'pages' => [
             'title' => 'ページ',
