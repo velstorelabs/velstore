@@ -334,10 +334,20 @@ function refreshPreview(input) {
             img.className = 'img-thumbnail';
             img.style.maxWidth = '150px';
 
-            const removeBtn = document.createElement('button');
+           const removeBtn = document.createElement('button');
             removeBtn.type = 'button';
-            removeBtn.innerHTML = '&times;';
-            removeBtn.className = 'btn btn-sm btn-danger position-absolute top-0 end-0';
+            removeBtn.className = 'btn btn-light rounded-circle shadow-sm border-0 position-absolute d-flex align-items-center justify-content-center';
+            removeBtn.style.width = '32px';
+            removeBtn.style.height = '32px';
+            removeBtn.style.top = '8px';
+            removeBtn.style.right = '8px';
+            removeBtn.style.opacity = '0.9';
+            removeBtn.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+            removeBtn.style.transition = 'all 0.2s ease';
+            removeBtn.innerHTML = '<i class="fa-solid fa-circle-xmark text-danger fs-6"></i>';
+            removeBtn.title = "{{ __('cms.products.remove') }}";
+            removeBtn.innerHTML = '<i class="fa-solid fa-circle-xmark text-danger fs-6"></i>';
+            removeBtn.title = "{{ __('cms.products.remove') }}";
             removeBtn.onclick = function() {
                 selectedFiles = selectedFiles.filter(f => f.uniqueId !== file.uniqueId);
                 updateFileInput(input);
