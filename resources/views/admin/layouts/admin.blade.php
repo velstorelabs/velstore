@@ -50,18 +50,28 @@
                     <li><a class="dropdown-item language-select" data-lang="zh" href="#"><img src="https://flagcdn.com/w40/cn.png" width="20">{{ __('cms.languages.chinese') }} </a></li>                    
                 </ul>
             </div>
-            <div class="dropdown">
+             <div class="dropdown">
                 <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
-                    <img src="https://via.placeholder.com/40" class="rounded-circle" alt="Profile">
+                    <img src="{{ auth()->user()->profile_image 
+                        ? asset('storage/' . auth()->user()->profile_image) 
+                        : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()->name) . '&background=0d6efd&color=fff&size=40' }}"
+                        class="rounded-circle" alt="Profile" width="40" height="40" style="object-fit:cover;">
                 </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 rounded-3">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" 
+                        href="{{ route('admin.profile.edit') }}">
+                            <i class="bi bi-person-circle me-2"></i> Profile
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
                     <li>
                         <form id="admin-logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
-                        <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('admin-logout-form').submit();">
-                            Logout
+                        <a class="dropdown-item d-flex align-items-center" href="#"
+                        onclick="event.preventDefault(); document.getElementById('admin-logout-form').submit();">
+                            <i class="bi bi-box-arrow-right me-2"></i> Logout
                         </a>
                     </li>
                 </ul>

@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\PaymentGatewayController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductReviewController;
 use App\Http\Controllers\Admin\ProductVariantController;
+use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\RefundController;
 use App\Http\Controllers\Admin\SocialMediaLinkController;
 use App\Http\Controllers\Admin\VendorController;
@@ -147,6 +148,10 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     /* Payment Gateways Configs */
     Route::get('payment_gateway_configs/getData', [PaymentGatewayConfigController::class, 'getData'])->name('payment_gateway_configs.getData');
     Route::resource('payment_gateway_configs', PaymentGatewayConfigController::class)->except(['show']);
+
+    /* Profile */
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 });
 
 Route::get('site-settings', [SiteSettingsController::class, 'index'])->name('site-settings.index');
