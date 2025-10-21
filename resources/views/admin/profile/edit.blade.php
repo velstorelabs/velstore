@@ -10,10 +10,6 @@
         </div>
 
         <div class="card-body bg-white p-3">
-            @if(session('success'))
-                <div class="alert alert-success py-1 px-2 small mb-2 text-center">{{ session('success') }}</div>
-            @endif
-
             <form method="POST" action="{{ route('admin.profile.update') }}" 
                   enctype="multipart/form-data" autocomplete="off">
                 @csrf
@@ -104,6 +100,16 @@
 </div>
 @endsection
 @section('js')
+@if (session('success'))
+<script>
+    toastr.success("{{ session('success') }}", "{{ __('cms.profile.success') }}", {
+        closeButton: true,
+        progressBar: true,
+        positionClass: "toast-top-right",
+        timeOut: 5000
+    });
+</script>
+@endif
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form[action="{{ route('admin.profile.update') }}"]');

@@ -105,6 +105,20 @@ return [
         ],
     ],
 
+    'profile' => [
+        'title' => 'Chỉnh sửa hồ sơ',
+        'choose_file' => 'Chọn tệp',
+        'name' => 'Tên',
+        'email' => 'Email',
+        'phone' => 'Điện thoại',
+        'current_password' => 'Mật khẩu hiện tại',
+        'new_password' => 'Mật khẩu mới',
+        'confirm_new_password' => 'Xác nhận mật khẩu mới',
+        'save' => 'Lưu',
+        'profile_updated' => 'Cập nhật hồ sơ thành công!',
+        'success' => 'Thành công',
+    ],
+
     'payment_gateways' => [
 
         // Page Titles

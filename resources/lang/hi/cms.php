@@ -105,6 +105,20 @@ return [
         ],
     ],
 
+    'profile' => [
+        'title' => 'प्रोफ़ाइल संपादित करें',
+        'choose_file' => 'फ़ाइल चुनें',
+        'name' => 'नाम',
+        'email' => 'ईमेल',
+        'phone' => 'फ़ोन',
+        'current_password' => 'वर्तमान पासवर्ड',
+        'new_password' => 'नया पासवर्ड',
+        'confirm_new_password' => 'नया पासवर्ड पुष्टि करें',
+        'save' => 'सहेजें',
+        'profile_updated' => 'प्रोफ़ाइल सफलतापूर्वक अपडेट की गई!',
+        'success' => 'सफलता',
+    ],
+
     'payment_gateways' => [
 
         // Page Titles

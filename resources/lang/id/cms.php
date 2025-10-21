@@ -105,6 +105,20 @@ return [
         ],
     ],
 
+    'profile' => [
+        'title' => 'Edit Profil',
+        'choose_file' => 'Pilih File',
+        'name' => 'Nama',
+        'email' => 'Email',
+        'phone' => 'Telepon',
+        'current_password' => 'Kata Sandi Saat Ini',
+        'new_password' => 'Kata Sandi Baru',
+        'confirm_new_password' => 'Konfirmasi Kata Sandi Baru',
+        'save' => 'Simpan',
+        'profile_updated' => 'Profil berhasil diperbarui!',
+        'success' => 'Berhasil',
+    ],
+
     'payment_gateways' => [
 
         // Page Titles

@@ -55,7 +55,12 @@
                     @php
                         $vendor = Auth::guard('vendor')->user();
                     @endphp
-                    <img src="{{ $vendor && $vendor->avatar ? asset('storage/' . $vendor->avatar)  : 'https://ui-avatars.com/api/?name=' . urlencode($vendor ? $vendor->name : 'V') . '&background=1976d2&color=fff&size=40' }}" class="rounded-circle" alt="Profile" style="width: 40px; height: 40px; object-fit: cover; border: 2px solid #e0e0e0;">
+                   <img src="{{ $vendor && $vendor->profile_image 
+                        ? asset('storage/' . $vendor->profile_image)  
+                        : 'https://ui-avatars.com/api/?name=' . urlencode($vendor ? $vendor->name : 'V') . '&background=1976d2&color=fff&size=40' }}" 
+                        class="rounded-circle" 
+                        alt="Profile" 
+                        style="width: 40px; height: 40px; object-fit: cover; border: 2px solid #e0e0e0;">
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li><a class="dropdown-item" href="{{ route('vendor.profile.edit') }}">Profile</a></li>

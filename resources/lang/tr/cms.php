@@ -105,6 +105,20 @@ return [
         ],
     ],
 
+    'profile' => [
+        'title' => 'Profili Düzenle',
+        'choose_file' => 'Dosya Seç',
+        'name' => 'Ad',
+        'email' => 'E-posta',
+        'phone' => 'Telefon',
+        'current_password' => 'Mevcut Şifre',
+        'new_password' => 'Yeni Şifre',
+        'confirm_new_password' => 'Yeni Şifreyi Onayla',
+        'save' => 'Kaydet',
+        'profile_updated' => 'Profil başarıyla güncellendi!',
+        'success' => 'Başarılı',
+    ],
+
     'payment_gateways' => [
 
         // Page Titles

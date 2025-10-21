@@ -40,6 +40,6 @@ class ProfileController extends Controller
 
         $admin->update($data);
 
-        return back()->with('success', 'Profile updated successfully.');
+        return back()->with('success', __('cms.profile.profile_updated'));
     }
 }

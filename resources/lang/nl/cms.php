@@ -104,6 +104,20 @@ return [
         ],
     ],
 
+    'profile' => [
+        'title' => 'Profiel bewerken',
+        'choose_file' => 'Bestand kiezen',
+        'name' => 'Naam',
+        'email' => 'E-mail',
+        'phone' => 'Telefoon',
+        'current_password' => 'Huidig wachtwoord',
+        'new_password' => 'Nieuw wachtwoord',
+        'confirm_new_password' => 'Nieuw wachtwoord bevestigen',
+        'save' => 'Opslaan',
+        'profile_updated' => 'Profiel succesvol bijgewerkt!',
+        'success' => 'Succes',
+    ],
+
     'payment_gateways' => [
 
         // Page Titles
