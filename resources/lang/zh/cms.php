@@ -105,6 +105,20 @@ return [
         ],
     ],
 
+    'profile' => [
+        'title' => '编辑资料',
+        'choose_file' => '选择文件',
+        'name' => '姓名',
+        'email' => '电子邮件',
+        'phone' => '电话',
+        'current_password' => '当前密码',
+        'new_password' => '新密码',
+        'confirm_new_password' => '确认新密码',
+        'save' => '保存',
+        'profile_updated' => '个人资料更新成功！',
+        'success' => '成功',
+    ],
+
     'payment_gateways' => [
 
         // Page Titles

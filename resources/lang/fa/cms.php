@@ -105,6 +105,20 @@ return [
         ],
     ],
 
+    'profile' => [
+        'title' => 'ویرایش پروفایل',
+        'choose_file' => 'انتخاب فایل',
+        'name' => 'نام',
+        'email' => 'ایمیل',
+        'phone' => 'تلفن',
+        'current_password' => 'رمز عبور فعلی',
+        'new_password' => 'رمز عبور جدید',
+        'confirm_new_password' => 'تأیید رمز عبور جدید',
+        'save' => 'ذخیره',
+        'profile_updated' => 'پروفایل با موفقیت به‌روزرسانی شد!',
+        'success' => 'موفقیت',
+    ],
+
     'payment_gateways' => [
 
         // Page Titles

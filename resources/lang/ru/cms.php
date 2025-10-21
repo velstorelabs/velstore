@@ -105,6 +105,20 @@ return [
         ],
     ],
 
+    'profile' => [
+        'title' => 'Редактировать профиль',
+        'choose_file' => 'Выбрать файл',
+        'name' => 'Имя',
+        'email' => 'Электронная почта',
+        'phone' => 'Телефон',
+        'current_password' => 'Текущий пароль',
+        'new_password' => 'Новый пароль',
+        'confirm_new_password' => 'Подтвердить новый пароль',
+        'save' => 'Сохранить',
+        'profile_updated' => 'Профиль успешно обновлён!',
+        'success' => 'Успех',
+    ],
+
     'payment_gateways' => [
 
         // Page Titles

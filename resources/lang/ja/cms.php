@@ -105,6 +105,20 @@ return [
         ],
     ],
 
+    'profile' => [
+        'title' => 'プロフィールを編集',
+        'choose_file' => 'ファイルを選択',
+        'name' => '名前',
+        'email' => 'メールアドレス',
+        'phone' => '電話番号',
+        'current_password' => '現在のパスワード',
+        'new_password' => '新しいパスワード',
+        'confirm_new_password' => '新しいパスワードを確認',
+        'save' => '保存',
+        'profile_updated' => 'プロフィールが正常に更新されました！',
+        'success' => '成功',
+    ],
+
     'payment_gateways' => [
 
         // Page Titles

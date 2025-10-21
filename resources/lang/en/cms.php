@@ -116,6 +116,7 @@ return [
         'confirm_new_password' => 'Confirm New Password',
         'save' => 'Save',
         'profile_updated' => 'Profile updated successfully!',
+        'success' => 'Success',
     ],
 
     'payment_gateways' => [

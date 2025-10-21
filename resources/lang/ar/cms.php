@@ -105,6 +105,20 @@ return [
         ],
     ],
 
+    'profile' => [
+        'title' => 'تعديل الملف الشخصي',
+        'choose_file' => 'اختر ملفًا',
+        'name' => 'الاسم',
+        'email' => 'البريد الإلكتروني',
+        'phone' => 'رقم الهاتف',
+        'current_password' => 'كلمة المرور الحالية',
+        'new_password' => 'كلمة المرور الجديدة',
+        'confirm_new_password' => 'تأكيد كلمة المرور الجديدة',
+        'save' => 'حفظ',
+        'profile_updated' => 'تم تحديث الملف الشخصي بنجاح!',
+        'success' => 'تم بنجاح',
+    ],
+
     'payment_gateways' => [
 
         // Page Titles

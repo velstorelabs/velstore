@@ -105,6 +105,20 @@ return [
         ],
     ],
 
+    'profile' => [
+        'title' => 'Editar perfil',
+        'choose_file' => 'Elegir archivo',
+        'name' => 'Nombre',
+        'email' => 'Correo electrónico',
+        'phone' => 'Teléfono',
+        'current_password' => 'Contraseña actual',
+        'new_password' => 'Nueva contraseña',
+        'confirm_new_password' => 'Confirmar nueva contraseña',
+        'save' => 'Guardar',
+        'profile_updated' => '¡Perfil actualizado con éxito!',
+        'success' => 'Éxito',
+    ],
+
     'payment_gateways' => [
 
         // Page Titles

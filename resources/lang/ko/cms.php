@@ -105,6 +105,20 @@ return [
         ],
     ],
 
+    'profile' => [
+        'title' => '프로필 수정',
+        'choose_file' => '파일 선택',
+        'name' => '이름',
+        'email' => '이메일',
+        'phone' => '전화번호',
+        'current_password' => '현재 비밀번호',
+        'new_password' => '새 비밀번호',
+        'confirm_new_password' => '새 비밀번호 확인',
+        'save' => '저장',
+        'profile_updated' => '프로필이 성공적으로 업데이트되었습니다!',
+        'success' => '성공',
+    ],
+
     'payment_gateways' => [
 
         // Page Titles
