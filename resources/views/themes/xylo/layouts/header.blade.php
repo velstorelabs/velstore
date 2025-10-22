@@ -74,15 +74,33 @@
                     <i class="fa-regular fa-heart"></i>
                 </a>
 
-                    <!-- Account Icon -->
+                 <!-- Account Icon -->
                 <a href="#" class="text-dark dropdown-toggle homepage-icon" data-bs-toggle="dropdown">
-                    <i class="fa-regular fa-user"></i>
+                    @auth('customer')
+                        @php
+                            $customer = Auth::guard('customer')->user();
+                        @endphp
+                        @if($customer->profile_image)
+                            <img src="{{ asset('storage/' . $customer->profile_image) }}" 
+                                alt="Profile" 
+                                class="rounded-circle" 
+                                style="width:32px; height:32px; object-fit:cover;">
+                        @else
+                            <img src="https://ui-avatars.com/api/?name={{ urlencode($customer->name) }}" 
+                                alt="Avatar" 
+                                class="rounded-circle" 
+                                style="width:32px; height:32px; object-fit:cover;">
+                        @endif
+                    @else
+                        <i class="fa-regular fa-user"></i>
+                    @endauth
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end p-2">
                     @guest('customer')
                         <li><a class="dropdown-item" href="{{ route('customer.login') }}">Sign In</a></li>
                         <li><a class="dropdown-item" href="{{ route('customer.register') }}">Sign Up</a></li>
-                    @elseauth('customer')
+                    @else
+                        <li><a class="dropdown-item" href="{{ route('customer.profile.edit') }}">My Profile</a></li>
                         <li>
                             <a class="dropdown-item" href="{{ route('customer.logout') }}"
                             onclick="event.preventDefault(); document.getElementById('customer-logout-form').submit();">

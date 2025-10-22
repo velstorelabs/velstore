@@ -8,6 +8,7 @@ use App\Http\Controllers\Store\Auth\ResetPasswordController;
 use App\Http\Controllers\Store\CartController;
 use App\Http\Controllers\Store\CheckoutController;
 use App\Http\Controllers\Store\CurrencyController;
+use App\Http\Controllers\Store\Customer\ProfileController;
 use App\Http\Controllers\Store\PaymentGateway\StripeController;
 use App\Http\Controllers\Store\ProductController;
 use App\Http\Controllers\Store\SearchController;
@@ -62,6 +63,10 @@ Route::prefix('customer')->name('customer.')->group(function () {
         Route::post('logout', [LoginController::class, 'logout'])->name('logout');
         Route::post('/wishlist', [WishlistController::class, 'store'])->name('wishlist.store');
         Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
+
+        //  Customer Profile Routes
+        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
     });
 });
 
