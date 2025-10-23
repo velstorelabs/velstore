@@ -27,6 +27,7 @@
             @vite(['resources/views/themes/xylo/css/custom.css'])
         @endif
     @yield('css')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>   
 </head>
 <body>
     @include('themes.xylo.layouts.header')
@@ -43,6 +44,7 @@
     @if (!App::environment('testing'))
         @vite(['resources/views/themes/xylo/js/main.js'])
     @endif
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     @yield('js')
     <script>
         $(document).ready(function () {
