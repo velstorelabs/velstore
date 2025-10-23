@@ -127,4 +127,19 @@ return [
         'payment_required' => 'Silakan pilih metode pembayaran sebelum melanjutkan.',
         'paypal_instructions' => 'Silakan selesaikan pembayaran menggunakan tombol PayPal.',
     ],
+
+    'profile' => [
+        'title' => 'Edit Profil',
+        'choose_file' => 'Pilih File',
+        'name' => 'Nama',
+        'email' => 'Email',
+        'phone' => 'Telepon',
+        'address' => 'Alamat',
+        'current_password' => 'Kata Sandi Saat Ini',
+        'new_password' => 'Kata Sandi Baru',
+        'confirm_new_password' => 'Konfirmasi Kata Sandi Baru',
+        'save' => 'Simpan',
+        'success' => 'Berhasil',
+        'profile_updated' => 'Profil berhasil diperbarui.',
+    ],
 ];

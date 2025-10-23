@@ -127,4 +127,19 @@ return [
         'payment_required' => 'กรุณาเลือกวิธีการชำระเงินก่อนดำเนินการต่อ',
         'paypal_instructions' => 'กรุณาชำระเงินโดยใช้ปุ่ม PayPal ด้านล่าง',
     ],
+
+    'profile' => [
+        'title' => 'แก้ไขโปรไฟล์',
+        'choose_file' => 'เลือกไฟล์',
+        'name' => 'ชื่อ',
+        'email' => 'อีเมล',
+        'phone' => 'โทรศัพท์',
+        'address' => 'ที่อยู่',
+        'current_password' => 'รหัสผ่านปัจจุบัน',
+        'new_password' => 'รหัสผ่านใหม่',
+        'confirm_new_password' => 'ยืนยันรหัสผ่านใหม่',
+        'save' => 'บันทึก',
+        'success' => 'สำเร็จ',
+        'profile_updated' => 'อัปเดตโปรไฟล์เรียบร้อยแล้ว',
+    ],
 ];

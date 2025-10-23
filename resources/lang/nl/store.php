@@ -127,4 +127,19 @@ return [
         'payment_required' => 'Selecteer een betaalmethode voordat u doorgaat.',
         'paypal_instructions' => 'Voltooi de betaling met de PayPal-knop.',
     ],
+
+    'profile' => [
+        'title' => 'Profiel bewerken',
+        'choose_file' => 'Bestand kiezen',
+        'name' => 'Naam',
+        'email' => 'E-mail',
+        'phone' => 'Telefoon',
+        'address' => 'Adres',
+        'current_password' => 'Huidig wachtwoord',
+        'new_password' => 'Nieuw wachtwoord',
+        'confirm_new_password' => 'Nieuw wachtwoord bevestigen',
+        'save' => 'Opslaan',
+        'success' => 'Succes',
+        'profile_updated' => 'Profiel is succesvol bijgewerkt.',
+    ],
 ];

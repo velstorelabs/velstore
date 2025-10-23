@@ -127,4 +127,19 @@ return [
         'payment_required' => 'Selecione um método de pagamento antes de continuar.',
         'paypal_instructions' => 'Conclua o pagamento usando o botão do PayPal.',
     ],
+
+    'profile' => [
+        'title' => 'Editar Perfil',
+        'choose_file' => 'Escolher arquivo',
+        'name' => 'Nome',
+        'email' => 'E-mail',
+        'phone' => 'Telefone',
+        'address' => 'Endereço',
+        'current_password' => 'Senha atual',
+        'new_password' => 'Nova senha',
+        'confirm_new_password' => 'Confirmar nova senha',
+        'save' => 'Salvar',
+        'success' => 'Sucesso',
+        'profile_updated' => 'Perfil atualizado com sucesso.',
+    ],
 ];

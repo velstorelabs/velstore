@@ -127,4 +127,19 @@ return [
         'payment_required' => '계속하기 전에 결제 방법을 선택하세요.',
         'paypal_instructions' => 'PayPal 버튼을 사용하여 결제를 완료하세요.',
     ],
+
+    'profile' => [
+        'title' => '프로필 수정',
+        'choose_file' => '파일 선택',
+        'name' => '이름',
+        'email' => '이메일',
+        'phone' => '전화번호',
+        'address' => '주소',
+        'current_password' => '현재 비밀번호',
+        'new_password' => '새 비밀번호',
+        'confirm_new_password' => '새 비밀번호 확인',
+        'save' => '저장',
+        'success' => '성공',
+        'profile_updated' => '프로필이 성공적으로 업데이트되었습니다.',
+    ],
 ];

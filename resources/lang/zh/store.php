@@ -127,4 +127,19 @@ return [
         'payment_required' => '请在继续之前选择一种付款方式。',
         'paypal_instructions' => '请使用 PayPal 按钮完成付款。',
     ],
+
+    'profile' => [
+        'title' => '编辑资料',
+        'choose_file' => '选择文件',
+        'name' => '姓名',
+        'email' => '电子邮箱',
+        'phone' => '电话',
+        'address' => '地址',
+        'current_password' => '当前密码',
+        'new_password' => '新密码',
+        'confirm_new_password' => '确认新密码',
+        'save' => '保存',
+        'success' => '成功',
+        'profile_updated' => '个人资料已成功更新。',
+    ],
 ];

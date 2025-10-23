@@ -127,4 +127,19 @@ return [
         'payment_required' => 'Devam etmeden önce bir ödeme yöntemi seçin.',
         'paypal_instructions' => 'Lütfen PayPal butonunu kullanarak ödemeyi tamamlayın.',
     ],
+
+    'profile' => [
+        'title' => 'Profili Düzenle',
+        'choose_file' => 'Dosya Seç',
+        'name' => 'Ad',
+        'email' => 'E-posta',
+        'phone' => 'Telefon',
+        'address' => 'Adres',
+        'current_password' => 'Mevcut Şifre',
+        'new_password' => 'Yeni Şifre',
+        'confirm_new_password' => 'Yeni Şifreyi Onayla',
+        'save' => 'Kaydet',
+        'success' => 'Başarılı',
+        'profile_updated' => 'Profil başarıyla güncellendi.',
+    ],
 ];

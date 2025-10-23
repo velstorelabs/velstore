@@ -128,4 +128,19 @@ return [
         'paypal_instructions' => 'Please complete payment using the PayPal button.',
 
     ],
+
+    'profile' => [
+        'title' => 'Edit Profile',
+        'choose_file' => 'Choose File',
+        'name' => 'Name',
+        'email' => 'Email',
+        'phone' => 'Phone',
+        'address' => 'Address',
+        'current_password' => 'Current Password',
+        'new_password' => 'New Password',
+        'confirm_new_password' => 'Confirm New Password',
+        'save' => 'Save',
+        'success' => 'Success',
+        'profile_updated' => 'profile updated successfully.',
+    ],
 ];
