@@ -127,4 +127,19 @@ return [
         'payment_required' => 'Vui lòng chọn phương thức thanh toán trước khi tiếp tục.',
         'paypal_instructions' => 'Vui lòng hoàn tất thanh toán bằng nút PayPal.',
     ],
+
+    'profile' => [
+        'title' => 'Chỉnh sửa hồ sơ',
+        'choose_file' => 'Chọn tệp',
+        'name' => 'Tên',
+        'email' => 'Email',
+        'phone' => 'Điện thoại',
+        'address' => 'Địa chỉ',
+        'current_password' => 'Mật khẩu hiện tại',
+        'new_password' => 'Mật khẩu mới',
+        'confirm_new_password' => 'Xác nhận mật khẩu mới',
+        'save' => 'Lưu',
+        'success' => 'Thành công',
+        'profile_updated' => 'Hồ sơ đã được cập nhật thành công.',
+    ],
 ];

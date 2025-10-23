@@ -39,6 +39,6 @@ class ProfileController extends Controller
 
         $customer->update($data);
 
-        return back()->with('success', 'Profile updated successfully.');
+        return back()->with('success', __('store.profile.profile_updated'));
     }
 }

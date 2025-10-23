@@ -126,4 +126,19 @@ return [
         'payment_required' => 'Wybierz metodę płatności przed kontynuowaniem.',
         'paypal_instructions' => 'Dokończ płatność za pomocą przycisku PayPal.',
     ],
+
+    'profile' => [
+        'title' => 'Edytuj profil',
+        'choose_file' => 'Wybierz plik',
+        'name' => 'Imię',
+        'email' => 'E-mail',
+        'phone' => 'Telefon',
+        'address' => 'Adres',
+        'current_password' => 'Aktualne hasło',
+        'new_password' => 'Nowe hasło',
+        'confirm_new_password' => 'Potwierdź nowe hasło',
+        'save' => 'Zapisz',
+        'success' => 'Sukces',
+        'profile_updated' => 'Profil został pomyślnie zaktualizowany.',
+    ],
 ];

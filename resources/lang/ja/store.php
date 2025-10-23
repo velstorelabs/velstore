@@ -127,4 +127,19 @@ return [
         'payment_required' => '続行する前にお支払い方法を選択してください。',
         'paypal_instructions' => 'PayPalボタンを使用して支払いを完了してください。',
     ],
+
+    'profile' => [
+        'title' => 'プロフィールを編集',
+        'choose_file' => 'ファイルを選択',
+        'name' => '名前',
+        'email' => 'メールアドレス',
+        'phone' => '電話番号',
+        'address' => '住所',
+        'current_password' => '現在のパスワード',
+        'new_password' => '新しいパスワード',
+        'confirm_new_password' => '新しいパスワードを確認',
+        'save' => '保存',
+        'success' => '成功',
+        'profile_updated' => 'プロフィールが正常に更新されました。',
+    ],
 ];
