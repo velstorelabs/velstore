@@ -20,6 +20,7 @@ return [
     'lte' => ':attribute deve essere minore o uguale a :value.',
     'regex' => 'Il formato di :attribute non è valido.',
     'confirmed' => 'La conferma di :attribute non corrisponde.',
+    'incorrect_current_password' => 'La password corrente non è corretta.',
 
     'password' => [
         'letters' => ':attribute deve contenere almeno una lettera.',
@@ -47,6 +48,10 @@ return [
     ],
 
     'attributes' => [
+
+        // Admin profile
+        'current_password' => 'Password Corrente',
+        'profile_image' => 'Immagine del Profilo',
 
         // Vendor fields
         'name' => 'Nome',

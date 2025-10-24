@@ -20,6 +20,7 @@ return [
     'lte' => 'Het :attribute moet kleiner dan of gelijk aan :value zijn.',
     'regex' => 'De indeling van :attribute is ongeldig.',
     'confirmed' => 'De bevestiging van :attribute komt niet overeen.',
+    'incorrect_current_password' => 'Het huidige wachtwoord is onjuist.',
 
     'password' => [
         'letters' => ':attribute moet ten minste één letter bevatten.',
@@ -47,6 +48,10 @@ return [
     ],
 
     'attributes' => [
+
+        // Admin profile
+        'current_password' => 'Huidig wachtwoord',
+        'profile_image' => 'Profielfoto',
 
         // Vendor fields
         'name' => 'Naam',

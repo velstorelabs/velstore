@@ -20,6 +20,7 @@ return [
     'lte' => ':attribute phải nhỏ hơn hoặc bằng :value.',
     'regex' => 'Định dạng của :attribute không hợp lệ.',
     'confirmed' => 'Xác nhận :attribute không khớp.',
+    'incorrect_current_password' => 'Mật khẩu hiện tại không chính xác.',
 
     'password' => [
         'letters' => ':attribute phải chứa ít nhất một chữ cái.',
@@ -47,6 +48,10 @@ return [
     ],
 
     'attributes' => [
+
+        // Admin profile
+        'current_password' => 'Mật khẩu hiện tại',
+        'profile_image' => 'Ảnh hồ sơ',
 
         // Vendor fields
         'name' => 'Tên',

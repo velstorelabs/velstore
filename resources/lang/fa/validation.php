@@ -20,6 +20,7 @@ return [
     'lte' => 'فیلد :attribute باید کمتر یا مساوی :value باشد.',
     'regex' => 'فرمت :attribute معتبر نیست.',
     'confirmed' => 'تأیید :attribute مطابقت ندارد.',
+    'incorrect_current_password' => 'رمز عبور فعلی نادرست است.',
 
     'password' => [
         'letters' => ':attribute باید حداقل شامل یک حرف باشد.',
@@ -47,6 +48,10 @@ return [
     ],
 
     'attributes' => [
+
+        // Admin profile
+        'current_password' => 'رمز عبور فعلی',
+        'profile_image' => 'تصویر پروفایل',
 
         // Vendor fields
         'name' => 'نام',

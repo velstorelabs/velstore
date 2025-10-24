@@ -20,6 +20,7 @@ return [
     'lte' => ':attribute 必须小于或等于 :value。',
     'regex' => ':attribute 格式无效。',
     'confirmed' => ':attribute 确认不匹配。',
+    'incorrect_current_password' => '当前密码不正确。',
 
     'password' => [
         'letters' => ':attribute 必须至少包含一个字母。',
@@ -47,6 +48,10 @@ return [
     ],
 
     'attributes' => [
+
+        // Admin profile
+        'current_password' => '当前密码',
+        'profile_image' => '个人资料图片',
 
         // Vendor fields
         'name' => '姓名',

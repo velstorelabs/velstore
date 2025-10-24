@@ -20,6 +20,7 @@ return [
     'lte' => ':attribute :value के बराबर या उससे कम होना चाहिए।',
     'regex' => ':attribute का प्रारूप अमान्य है।',
     'confirmed' => ':attribute की पुष्टि मेल नहीं खाती।',
+    'incorrect_current_password' => 'वर्तमान पासवर्ड गलत है।',
 
     'password' => [
         'letters' => ':attribute में कम से कम एक अक्षर होना चाहिए।',
@@ -47,6 +48,10 @@ return [
     ],
 
     'attributes' => [
+
+        // Admin profile
+        'current_password' => 'वर्तमान पासवर्ड',
+        'profile_image' => 'प्रोफ़ाइल छवि',
 
         // Vendor fields
         'name' => 'नाम',

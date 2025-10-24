@@ -20,6 +20,7 @@ return [
     'lte' => 'يجب أن يكون :attribute أقل من أو يساوي :value.',
     'regex' => 'تنسيق :attribute غير صالح.',
     'confirmed' => 'تأكيد :attribute غير مطابق.',
+    'incorrect_current_password' => 'كلمة المرور الحالية غير صحيحة.',
 
     'password' => [
         'letters' => 'يجب أن يحتوي :attribute على حرف واحد على الأقل.',
@@ -46,6 +47,10 @@ return [
         ],
     ],
     'attributes' => [
+
+        // Admin profile
+        'current_password' => 'كلمة المرور الحالية',
+        'profile_image' => 'صورة الملف الشخصي',
 
         // Vendor fields
         'name' => 'الاسم',
