@@ -17,13 +17,15 @@
 
                <div class="text-center mb-2">
                 <img id="profilePreview"
-                    src="{{ $admin->profile_image 
-                        ? asset('storage/' . $admin->profile_image) 
+                    src="{{ $admin->profile_image
+                        ? (\Illuminate\Support\Str::startsWith($admin->profile_image, ['http://', 'https://'])
+                            ? $admin->profile_image
+                            : asset('storage/' . $admin->profile_image))
                         : 'https://ui-avatars.com/api/?name=' . urlencode($admin->name) . '&background=0d6efd&color=fff&size=64' }}"
                     alt="Profile"
                     class="rounded-circle shadow-sm mb-1"
                     style="width:80px; height:80px; object-fit:cover; transition:0.3s;">
-
+                    
                 <div class="d-flex justify-content-center">
                     <label for="profile_image" class="btn btn-secondary btn-sm rounded-pill px-3 mt-1">
                        {{ __('cms.profile.choose_file') }}

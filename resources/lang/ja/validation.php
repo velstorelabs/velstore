@@ -20,6 +20,7 @@ return [
     'lte' => ':attribute は :value 以下でなければなりません。',
     'regex' => ':attribute の形式が無効です。',
     'confirmed' => ':attribute の確認が一致しません。',
+    'incorrect_current_password' => '現在のパスワードが正しくありません。',
 
     'password' => [
         'letters' => ':attribute には少なくとも1文字のアルファベットを含める必要があります。',
@@ -47,6 +48,10 @@ return [
     ],
 
     'attributes' => [
+
+        // Admin profile
+        'current_password' => '現在のパスワード',
+        'profile_image' => 'プロフィール画像',
 
         // Vendor fields
         'name' => '名前',

@@ -20,6 +20,7 @@ return [
     'lte' => 'Pole :attribute musi być mniejsze lub równe :value.',
     'regex' => 'Format pola :attribute jest nieprawidłowy.',
     'confirmed' => 'Potwierdzenie pola :attribute nie pasuje.',
+    'incorrect_current_password' => 'Bieżące hasło jest nieprawidłowe.',
 
     'password' => [
         'letters' => ':attribute musi zawierać co najmniej jedną literę.',
@@ -47,6 +48,10 @@ return [
     ],
 
     'attributes' => [
+
+        // Admin profile
+        'current_password' => 'Bieżące hasło',
+        'profile_image' => 'Zdjęcie profilowe',
 
         // Vendor fields
         'name' => 'Nazwa',

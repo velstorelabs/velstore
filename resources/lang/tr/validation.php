@@ -20,6 +20,7 @@ return [
     'lte' => ':attribute :value değerinden küçük veya eşit olmalıdır.',
     'regex' => ':attribute biçimi geçersiz.',
     'confirmed' => ':attribute onayı eşleşmiyor.',
+    'incorrect_current_password' => 'Mevcut şifre yanlış.',
 
     'password' => [
         'letters' => ':attribute en az bir harf içermelidir.',
@@ -47,6 +48,10 @@ return [
     ],
 
     'attributes' => [
+
+        // Admin profile
+        'current_password' => 'Mevcut Şifre',
+        'profile_image' => 'Profil Resmi',
 
         // Vendor fields
         'name' => 'İsim',

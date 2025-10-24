@@ -20,6 +20,7 @@ return [
     'lte' => ':attribute ต้องน้อยกว่าหรือเท่ากับ :value',
     'regex' => 'รูปแบบของ :attribute ไม่ถูกต้อง.',
     'confirmed' => 'การยืนยันของ :attribute ไม่ตรงกัน.',
+    'incorrect_current_password' => 'รหัสผ่านปัจจุบันไม่ถูกต้อง.',
 
     'password' => [
         'letters' => ':attribute ต้องมีตัวอักษรอย่างน้อยหนึ่งตัว.',
@@ -47,6 +48,10 @@ return [
     ],
 
     'attributes' => [
+
+        // Admin profile
+        'current_password' => 'รหัสผ่านปัจจุบัน',
+        'profile_image' => 'รูปโปรไฟล์',
 
         // Vendor fields
         'name' => 'ชื่อ',

@@ -20,6 +20,7 @@ return [
     'lte' => ':attribute 는 :value 이하이어야 합니다.',
     'regex' => ':attribute 형식이 올바르지 않습니다.',
     'confirmed' => ':attribute 확인이 일치하지 않습니다.',
+    'incorrect_current_password' => '현재 비밀번호가 올바르지 않습니다.',
 
     'password' => [
         'letters' => ':attribute에는 최소한 하나의 문자가 포함되어야 합니다.',
@@ -47,6 +48,10 @@ return [
     ],
 
     'attributes' => [
+
+        // Admin profile
+        'current_password' => '현재 비밀번호',
+        'profile_image' => '프로필 이미지',
 
         // Vendor fields
         'name' => '이름',

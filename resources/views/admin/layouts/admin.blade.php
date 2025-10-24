@@ -52,10 +52,16 @@
             </div>
              <div class="dropdown">
                 <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
-                    <img src="{{ auth()->user()->profile_image 
-                        ? asset('storage/' . auth()->user()->profile_image) 
+                   <img src="{{ auth()->user()->profile_image
+                        ? (\Illuminate\Support\Str::startsWith(auth()->user()->profile_image, ['http://', 'https://'])
+                            ? auth()->user()->profile_image
+                            : asset('storage/' . auth()->user()->profile_image))
                         : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()->name) . '&background=0d6efd&color=fff&size=40' }}"
-                        class="rounded-circle" alt="Profile" width="40" height="40" style="object-fit:cover;">
+                        class="rounded-circle"
+                        alt="Profile"
+                        width="40"
+                        height="40"
+                        style="object-fit:cover;">
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 rounded-3">
                     <li>

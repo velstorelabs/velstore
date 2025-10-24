@@ -71,6 +71,7 @@ class DataImport extends Command
                 'email' => 'seller@example.com',
                 'password' => Hash::make('abc123'),
                 'phone' => '+923001234567',
+                'profile_image' => 'https://i.postimg.cc/FHxQs4Br/images-10.jpg',
             ]
         );
 

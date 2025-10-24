@@ -20,6 +20,7 @@ return [
     'lte' => 'The :attribute must be less than or equal to :value.',
     'regex' => 'The :attribute format is invalid.',
     'confirmed' => 'The :attribute confirmation does not match.',
+    'incorrect_current_password' => 'The current password is incorrect.',
 
     'password' => [
         'letters' => 'The :attribute must contain at least one letter.',
@@ -47,6 +48,10 @@ return [
     ],
 
     'attributes' => [
+
+        // existing vendor and other fields ...
+        'current_password' => 'Current Password',
+        'profile_image' => 'Profile Image',
 
         // Vendor fields
         'name' => 'Name',

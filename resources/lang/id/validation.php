@@ -20,6 +20,7 @@ return [
     'lte' => ':attribute harus kurang dari atau sama dengan :value.',
     'regex' => 'Format :attribute tidak valid.',
     'confirmed' => 'Konfirmasi :attribute tidak cocok.',
+    'incorrect_current_password' => 'Kata sandi saat ini salah.',
 
     'password' => [
         'letters' => ':attribute harus berisi setidaknya satu huruf.',
@@ -47,6 +48,10 @@ return [
     ],
 
     'attributes' => [
+
+        // Admin profile
+        'current_password' => 'Kata Sandi Saat Ini',
+        'profile_image' => 'Gambar Profil',
 
         // Vendor fields
         'name' => 'Nama',
