@@ -82,7 +82,7 @@
                         <div class="mb-1">
                             <label class="form-label mb-0 small" style="font-size: 13px;">{{ __('store.profile.new_password') }}</label>
                             <input type="password" name="password" class="form-control form-control-sm p-1" style="font-size:13px;">
-                            @error('New Password')
+                            @error('password')
                                 <div class="text-danger small mt-1">{{ $message }}</div>
                             @enderror
                         </div>
@@ -90,7 +90,7 @@
                         <div class="mb-2">
                             <label class="form-label mb-0 small" style="font-size: 13px;">{{ __('store.profile.confirm_new_password') }}</label>
                             <input type="password" name="password_confirmation" class="form-control form-control-sm p-1" style="font-size:13px;">
-                            @error('Confirm New Password')
+                            @error('password_confirmation')
                                 <div class="text-danger small mt-1">{{ $message }}</div>
                             @enderror
                         </div>
