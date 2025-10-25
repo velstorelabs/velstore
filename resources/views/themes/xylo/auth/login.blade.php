@@ -6,6 +6,7 @@
                 <div class="loginpage">
                     <div class="loginstar">*</div>
                     <div class="logintext">Hello <br>Xylo-Theme! 👋</div>
+                    <div class="logintext">Login Now</div>
                     <div class="loginundertext">
                         <p>To craft an effective marketing message, keep it concise, relevant to your target audience,
                             and include a clear call to action, <br> while also ensuring it aligns with your brand's
@@ -21,7 +22,7 @@
                 <div class="login-foam">
 
                     <div class="logo-login mb-2 mb-md-5">
-                        <img src="assets/images/logo-main.png" width="200px" alt="logo main">
+                        <img src="{{ asset('storage/brands/logo-ready.png') }}" width="200px" alt="logo main">
                     </div>
 
                     <h2>Welcome Back</h2>
