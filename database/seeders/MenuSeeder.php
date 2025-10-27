@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Language;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -13,6 +14,14 @@ class MenuSeeder extends Seeder
      */
     public function run(): void
     {
+        $languages = Language::where('active', 1)->get();
+
+        if ($languages->isEmpty()) {
+            $this->command->warn('⚠️ No active languages found. Skipping menu item translations.');
+
+            return;
+        }
+
         $menuId = DB::table('menus')->insertGetId([
             'title' => 'Main Menu',
             'status' => true,
@@ -39,19 +48,27 @@ class MenuSeeder extends Seeder
 
         $insertedMenuItems = DB::table('menu_items')->where('menu_id', $menuId)->get();
 
-        $translations = [];
-        $languages = [
-            'en' => ['Home', 'About Us', 'Our Services', 'Blog', 'Contact Us'],
+        $defaultTitles = ['Home', 'About Us', 'Our Services', 'Blog', 'Contact Us'];
+
+        $localizedSamples = [
             'fr' => ['Accueil', 'À propos', 'Nos services', 'Blog', 'Contact'],
             'es' => ['Inicio', 'Sobre nosotros', 'Nuestros servicios', 'Blog', 'Contacto'],
         ];
 
+        $translations = [];
+
         foreach ($insertedMenuItems as $index => $menuItem) {
-            foreach ($languages as $code => $titles) {
+            foreach ($languages as $lang) {
+                $code = $lang->code;
+
+                $title = $localizedSamples[$code][$index]
+                    ?? $defaultTitles[$index]
+                    ?? ucfirst($menuItem->slug);
+
                 $translations[] = [
                     'menu_item_id' => $menuItem->id,
                     'language_code' => $code,
-                    'title' => $titles[$index],
+                    'title' => $title,
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ];
@@ -59,5 +76,6 @@ class MenuSeeder extends Seeder
         }
 
         DB::table('menu_item_translations')->insert($translations);
+
     }
 }
