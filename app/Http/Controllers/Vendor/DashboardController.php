@@ -3,23 +3,35 @@
 namespace App\Http\Controllers\Vendor;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
+use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     */
-    public function __construct()
-    {
-        // ✅ Use vendor authentication middleware
-        $this->middleware('auth.vendor');
-    }
-
-    /**
-     * Show the vendor dashboard.
-     */
     public function index()
     {
-        return view('vendor.dashboard'); // ✅ Ensure correct vendor view
+        $vendorId = Auth::guard('vendor')->id();
+
+        $data = [
+            'totalSales' => Order::where('vendor_id', $vendorId)
+                ->where('status', 'completed')
+                ->sum('total_amount'),
+
+            'todaySales' => Order::where('vendor_id', $vendorId)
+                ->where('status', 'completed')
+                ->whereDate('created_at', today())
+                ->sum('total_amount'),
+
+            'totalOrders' => Order::where('vendor_id', $vendorId)->count(),
+
+            'completedOrders' => Order::where('vendor_id', $vendorId)
+                ->where('status', 'completed')
+                ->count(),
+
+            'totalProducts' => Product::where('vendor_id', $vendorId)->count(),
+        ];
+
+        return view('vendor.dashboard.index', compact('data'));
     }
 }

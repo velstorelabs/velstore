@@ -6,26 +6,6 @@
         background-color: #ffffff;
         color: #333333;
     }
-    .login-container {
-        max-width: 400px;
-        margin: 50px auto;
-        background-color: #ffffff;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .form-control:focus {
-        border-color: #66b3ff;
-        box-shadow: 0 0 0 0.2rem rgba(102, 179, 255, 0.25);
-    }
-    .btn-primary {
-        background-color: #66b3ff;
-        border-color: #66b3ff;
-    }
-    .btn-primary:hover {
-        background-color: #559fdc;
-        border-color: #559fdc;
-    }
     .dashboard-item {
         display: flex;
         align-items: center;
@@ -53,9 +33,6 @@
         font-size: 20px;
         color: #555;
     }
-    .text-container {
-        flex-grow: 1;
-    }
     .text-container h6 {
         margin: 0;
         font-size: 16px;
@@ -66,10 +43,6 @@
         margin: 0;
         font-size: 14px;
         color: #6c757d;
-    }
-    .arrow {
-        color: #555;
-        font-size: 16px;
     }
 </style>
 @endsection
@@ -84,7 +57,8 @@
                     </div>
                     <div class="text-container">
                         <h6>Total Sales</h6>
-                        <p>Today: $1,200</p>
+                        <p>Today: ${{ number_format($data['todaySales'], 2) }}</p>
+                        <p>Total: ${{ number_format($data['totalSales'], 2) }}</p>
                     </div>
                 </div>
             </div>
@@ -96,7 +70,8 @@
                     </div>
                     <div class="text-container">
                         <h6>Total Orders</h6>
-                        <p>Completed: 340</p>
+                        <p>Completed: {{ $data['completedOrders'] }}</p>
+                        <p>All Orders: {{ $data['totalOrders'] }}</p>
                     </div>
                 </div>
             </div>
@@ -108,7 +83,7 @@
                     </div>
                     <div class="text-container">
                         <h6>Total Vendors</h6>
-                        <p>Active: 45</p>
+                        <p>Active: {{ $data['totalVendors'] }}</p>
                     </div>
                 </div>
             </div>
@@ -120,7 +95,7 @@
                     </div>
                     <div class="text-container">
                         <h6>Total Customers</h6>
-                        <p>Completed: 340</p>
+                        <p>{{ $data['totalCustomers'] }}</p>
                     </div>
                 </div>
             </div>
