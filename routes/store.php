@@ -6,6 +6,7 @@ use App\Http\Controllers\Store\Auth\LoginController;
 use App\Http\Controllers\Store\Auth\RegisterController;
 use App\Http\Controllers\Store\Auth\ResetPasswordController;
 use App\Http\Controllers\Store\CartController;
+use App\Http\Controllers\Store\CategoryController;
 use App\Http\Controllers\Store\CheckoutController;
 use App\Http\Controllers\Store\CurrencyController;
 use App\Http\Controllers\Store\Customer\ProfileController;
@@ -40,6 +41,9 @@ Route::get('/get-variant-price', [ProductController::class, 'getVariantPrice'])-
 
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
 Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
+
+// Category page
+Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('category.show');
 
 Route::prefix('customer')->name('customer.')->group(function () {
 

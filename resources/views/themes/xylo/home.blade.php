@@ -35,7 +35,7 @@
                 @foreach($categories as $category)
                 <div>
                     <div class="cat-card">
-                        <a href="#">
+                        <a href="{{ route('category.show', $category->slug) }}">
                             <h3>{{ $category->translation->name ?? 'No Translation' }}</h3>
                             <div class="catcard-img">
                                 <img src="{{ Storage::url(optional($category->translation)->image_url ?? 'default.jpg') }}" alt="{{ $category->translation->name ?? 'No Translation' }}">
