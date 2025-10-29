@@ -64,6 +64,7 @@ Route::prefix('customer')->name('customer.')->group(function () {
 
     // Authenticated routes
     Route::middleware('auth.customer')->group(function () {
+        Route::post('/wishlist/toggle', [WishlistController::class, 'toggle'])->name('wishlist.toggle');
         Route::post('logout', [LoginController::class, 'logout'])->name('logout');
         Route::post('/wishlist', [WishlistController::class, 'store'])->name('wishlist.store');
         Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
