@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Store;
 
 use App\Http\Controllers\Controller;
-use App\Models\Product;
 use App\Models\Wishlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,9 +11,9 @@ class WishlistController extends Controller
 {
     public function index()
     {
-        $user = Auth::user();
+        $customer = Auth::guard('customer')->user();
 
-        $products = $user->wishlistProducts()
+        $products = $customer->wishlistProducts()
             ->with(['translation', 'thumbnail', 'primaryVariant', 'reviews'])
             ->withCount('reviews')
             ->orderBy('wishlists.created_at', 'desc')
@@ -23,21 +22,22 @@ class WishlistController extends Controller
         return view('wishlist.index', compact('products'));
     }
 
-    public function store(Request $request)
+    public function toggle(Request $request)
     {
         $request->validate([
             'product_id' => 'required|exists:products,id',
         ]);
 
-        $customer = auth('customer')->user();
+        $customer = Auth::guard('customer')->user();
 
-        // Check if product already in wishlist
-        $exists = Wishlist::where('customer_id', $customer->id)
+        $wishlist = Wishlist::where('customer_id', $customer->id)
             ->where('product_id', $request->product_id)
-            ->exists();
+            ->first();
 
-        if ($exists) {
-            return response()->json(['message' => 'Already in wishlist'], 200);
+        if ($wishlist) {
+            $wishlist->delete();
+
+            return response()->json(['status' => 'removed', 'message' => 'Removed from favorites']);
         }
 
         Wishlist::create([
@@ -45,6 +45,6 @@ class WishlistController extends Controller
             'product_id' => $request->product_id,
         ]);
 
-        return response()->json(['message' => 'Added to wishlist'], 200);
+        return response()->json(['status' => 'added', 'message' => 'Added to favorites']);
     }
 }

@@ -53,7 +53,28 @@
                     @endfor
                     <span class="spanstar"> ({{ $product->reviews_count }} {{ __('store.product_detail.customer_reviews') }})</span>
                 </div>
-                <h1 class="sec-heading">{{ $product->translation->name }}</h1>
+                <div class="d-flex align-items-center mb-3">
+                <h1 class="sec-heading mb-0 me-3">{{ $product->translation->name }}</h1>
+
+                @auth('customer')
+                @php
+                    $isFavorite = auth('customer')->user()
+                        ->wishlistProducts()
+                        ->where('product_id', $product->id)
+                        ->exists();
+                @endphp
+                @else
+                    @php
+                        $isFavorite = false; 
+                    @endphp
+                @endauth
+
+                <button id="test-heart" class="border-0 bg-transparent">
+                    <i class="{{ $isFavorite ? 'fa-solid fa-heart text-danger' : 'fa-regular fa-heart text-secondary' }} fs-4"></i>
+                </button>
+
+            </div>
+
                 <h2><span id="currency-symbol">{{ $currency->symbol }}</span><span  id="variant-price" >{{ $product->primaryVariant->converted_price ?? 'N/A' }}</span></h2>
                 <p>{{ $product->translation->short_description }}</p>
 
@@ -206,6 +227,42 @@
 @endsection
 
 @section('js')
+    <script>
+    $(document).ready(function() {
+        $('#test-heart').on('click', function() {
+            var button = $(this);          
+            var icon = button.find('i');   
+            var productId = {{ $product->id }}; 
+            $.ajax({
+                url: '{{ route("customer.wishlist.toggle") }}',
+                method: 'POST',
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    product_id: productId
+                },
+                success: function(response) {
+                    if(response.status === 'added') {
+                        icon.removeClass('fa-regular text-secondary')
+                            .addClass('fa-solid text-danger');
+                        toastr.success(response.message || 'Added to favorites ❤️');
+                    } else if(response.status === 'removed') {
+                        icon.removeClass('fa-solid text-danger')
+                            .addClass('fa-regular text-secondary');
+                        toastr.info(response.message || 'Removed from favorites 💔');
+                    }
+                },
+                error: function(xhr) {
+                    if(xhr.status === 401){
+                        toastr.warning('Please login to manage your favorites.');
+                    } else {
+                        toastr.error('Something went wrong.');
+                    }
+                }
+            });
+        });
+    });
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>  
     <script>
         $(document).ready(function() {
