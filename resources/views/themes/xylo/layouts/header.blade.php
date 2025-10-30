@@ -70,7 +70,7 @@
                 </form>
 
                 <!-- Wishlist Icon -->
-                <a href="{{ auth()->check() ? route('customer.wishlist.index') : route('customer.login') }}" class="text-dark homepage-icon">
+                <a href="{{ auth('customer')->check() ? route('customer.wishlist.index') : route('customer.login') }}" class="text-dark homepage-icon">
                     <i class="fa-regular fa-heart"></i>
                 </a>
 
