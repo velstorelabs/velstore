@@ -19,7 +19,7 @@ class WishlistController extends Controller
             ->orderBy('wishlists.created_at', 'desc')
             ->get();
 
-        return view('wishlist.index', compact('products'));
+        return view('themes.xylo.wishlist', compact('products'));
     }
 
     public function toggle(Request $request)
