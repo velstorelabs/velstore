@@ -142,4 +142,20 @@ return [
         'success' => '成功',
         'profile_updated' => 'プロフィールが正常に更新されました。',
     ],
+
+    'category' => [
+        'home' => 'ホーム',
+        'min_price' => '最低価格',
+        'max_price' => '最高価格',
+        'sort_by' => '並び替え',
+        'newest' => '最新',
+        'price_low_high' => '価格: 安い順',
+        'price_high_low' => '価格: 高い順',
+        'top_rated' => '高評価',
+        'filter' => 'フィルター',
+        'reviews' => 'レビュー',
+        'product_name_not_available' => '商品名がありません',
+        'no_products_found' => 'このカテゴリには商品がありません。',
+        'add_to_cart_success' => 'カートに追加しました！',
+    ],
 ];

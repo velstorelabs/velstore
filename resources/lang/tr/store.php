@@ -142,4 +142,20 @@ return [
         'success' => 'Başarılı',
         'profile_updated' => 'Profil başarıyla güncellendi.',
     ],
+
+    'category' => [
+        'home' => 'Ana Sayfa',
+        'min_price' => 'Minimum Fiyat',
+        'max_price' => 'Maksimum Fiyat',
+        'sort_by' => 'Sırala',
+        'newest' => 'En Yeni',
+        'price_low_high' => 'Fiyat: Düşükten Yükseğe',
+        'price_high_low' => 'Fiyat: Yüksekten Düşüğe',
+        'top_rated' => 'En Çok Oy Alan',
+        'filter' => 'Filtrele',
+        'reviews' => 'Yorumlar',
+        'product_name_not_available' => 'Ürün adı mevcut değil',
+        'no_products_found' => 'Bu kategoride ürün bulunamadı.',
+        'add_to_cart_success' => 'Başarıyla sepete eklendi!',
+    ],
 ];

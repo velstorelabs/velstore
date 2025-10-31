@@ -142,4 +142,20 @@ return [
         'success' => '성공',
         'profile_updated' => '프로필이 성공적으로 업데이트되었습니다.',
     ],
+
+    'category' => [
+        'home' => '홈',
+        'min_price' => '최소 가격',
+        'max_price' => '최대 가격',
+        'sort_by' => '정렬 기준',
+        'newest' => '최신순',
+        'price_low_high' => '가격: 낮은순',
+        'price_high_low' => '가격: 높은순',
+        'top_rated' => '최고 평점',
+        'filter' => '필터',
+        'reviews' => '리뷰',
+        'product_name_not_available' => '제품 이름을 사용할 수 없습니다',
+        'no_products_found' => '이 카테고리에는 제품이 없습니다.',
+        'add_to_cart_success' => '장바구니에 성공적으로 추가되었습니다!',
+    ],
 ];

@@ -142,4 +142,20 @@ return [
         'success' => 'Succes',
         'profile_updated' => 'Profiel is succesvol bijgewerkt.',
     ],
+
+    'category' => [
+        'home' => 'Home',
+        'min_price' => 'Minimumprijs',
+        'max_price' => 'Maximumprijs',
+        'sort_by' => 'Sorteren op',
+        'newest' => 'Nieuwste',
+        'price_low_high' => 'Prijs: Laag naar Hoog',
+        'price_high_low' => 'Prijs: Hoog naar Laag',
+        'top_rated' => 'Best beoordeeld',
+        'filter' => 'Filter',
+        'reviews' => 'Beoordelingen',
+        'product_name_not_available' => 'Productnaam niet beschikbaar',
+        'no_products_found' => 'Geen producten gevonden in deze categorie.',
+        'add_to_cart_success' => 'Succesvol toegevoegd aan winkelwagen!',
+    ],
 ];

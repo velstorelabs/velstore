@@ -141,4 +141,20 @@ return [
         'success' => 'Sukces',
         'profile_updated' => 'Profil został pomyślnie zaktualizowany.',
     ],
+
+    'category' => [
+        'home' => 'Strona główna',
+        'min_price' => 'Minimalna cena',
+        'max_price' => 'Maksymalna cena',
+        'sort_by' => 'Sortuj według',
+        'newest' => 'Najnowsze',
+        'price_low_high' => 'Cena: od najniższej',
+        'price_high_low' => 'Cena: od najwyższej',
+        'top_rated' => 'Najlepiej oceniane',
+        'filter' => 'Filtruj',
+        'reviews' => 'Opinie',
+        'product_name_not_available' => 'Nazwa produktu niedostępna',
+        'no_products_found' => 'Brak produktów w tej kategorii.',
+        'add_to_cart_success' => 'Pomyślnie dodano do koszyka!',
+    ],
 ];

@@ -142,4 +142,20 @@ return [
         'success' => 'نجاح',
         'profile_updated' => 'تم تحديث الملف الشخصي بنجاح.',
     ],
+
+    'category' => [
+        'home' => 'الرئيسية',
+        'min_price' => 'أقل سعر',
+        'max_price' => 'أعلى سعر',
+        'sort_by' => 'ترتيب حسب',
+        'newest' => 'الأحدث',
+        'price_low_high' => 'السعر: من الأقل إلى الأعلى',
+        'price_high_low' => 'السعر: من الأعلى إلى الأقل',
+        'top_rated' => 'الأعلى تقييماً',
+        'filter' => 'تصفية',
+        'reviews' => 'التقييمات',
+        'product_name_not_available' => 'اسم المنتج غير متوفر',
+        'no_products_found' => 'لا توجد منتجات في هذه الفئة.',
+        'add_to_cart_success' => 'تمت إضافة المنتج إلى السلة بنجاح!',
+    ],
 ];

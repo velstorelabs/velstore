@@ -142,4 +142,20 @@ return [
         'success' => '成功',
         'profile_updated' => '个人资料已成功更新。',
     ],
+
+    'category' => [
+        'home' => '首页',
+        'min_price' => '最低价格',
+        'max_price' => '最高价格',
+        'sort_by' => '排序方式',
+        'newest' => '最新',
+        'price_low_high' => '价格：从低到高',
+        'price_high_low' => '价格：从高到低',
+        'top_rated' => '最高评分',
+        'filter' => '筛选',
+        'reviews' => '评价',
+        'product_name_not_available' => '产品名称不可用',
+        'no_products_found' => '此分类中没有找到产品。',
+        'add_to_cart_success' => '成功加入购物车！',
+    ],
 ];

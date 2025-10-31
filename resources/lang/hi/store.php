@@ -142,4 +142,20 @@ return [
         'success' => 'सफलता',
         'profile_updated' => 'प्रोफ़ाइल सफलतापूर्वक अपडेट की गई।',
     ],
+
+    'category' => [
+        'home' => 'होम',
+        'min_price' => 'न्यूनतम कीमत',
+        'max_price' => 'अधिकतम कीमत',
+        'sort_by' => 'क्रमबद्ध करें',
+        'newest' => 'नवीनतम',
+        'price_low_high' => 'कीमत: कम से अधिक',
+        'price_high_low' => 'कीमत: अधिक से कम',
+        'top_rated' => 'सबसे ज़्यादा रेटेड',
+        'filter' => 'फ़िल्टर',
+        'reviews' => 'समीक्षाएँ',
+        'product_name_not_available' => 'उत्पाद नाम उपलब्ध नहीं है',
+        'no_products_found' => 'इस श्रेणी में कोई उत्पाद नहीं मिला।',
+        'add_to_cart_success' => 'सफलतापूर्वक कार्ट में जोड़ा गया!',
+    ],
 ];

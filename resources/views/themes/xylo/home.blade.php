@@ -11,7 +11,7 @@
                         <h1 class="mt-5"><span>{{ $banner->translation ? $banner->translation->title : $banner->title }}</span>
                         </h1>
                         <p class="mt-3 mb-4">Explore the biggest variety of sneakers, shoes, and streetwear trends.</p>
-                        <button class="btn btn-primary">Shop Now</button>
+                       <a href="{{ route('shop.index') }}" class="btn btn-primary">Shop Now</a>
 
                         <div class="mt-5">
                             <img src="assets/images/slide-smallimages.png" alt="" style="width: 200px;">
@@ -154,7 +154,7 @@
             </div>
 
             <div class="view-button text-center mt-4">
-                <a href="#" class="read-more pe-4 ps-4">VIEW ALL</a>
+                <a href="{{ route('shop.index') }}" class="read-more pe-4 ps-4">VIEW ALL</a>
             </div>
 
         </div>
@@ -170,9 +170,8 @@
                         <div class="feature-icon">
                             <img src="https://i.ibb.co/WNQXhLnP/choose-icon1.png" alt="">
                         </div>
-                        <h3>Fast Delivery</h3>
-                        <p>Diam integer turpis tristique integer cursusw dignissim. Euismod libero pellentesq
-                            suspendisseit</p>
+                        <h3>Fast & Secure Delivery</h3>
+                        <p>We deliver your orders quickly and safely, right to your doorstep.</p>
                     </div>
                 </div>
                 <!-- Feature Box 2 -->
@@ -181,9 +180,8 @@
                         <div class="feature-icon">
                             <img src="https://i.ibb.co/FkmgGPrr/choose-icon2.png" alt="">
                         </div>
-                        <h3>24/7 Online Support</h3>
-                        <p>Diam integer turpis tristique integer cursusw dignissim. Euismod libero pellentesq
-                            suspendisseit</p>
+                        <h3>Customer Support</h3>
+                        <p>Our support team is always here to assist you anytime, anywhere.</p>
                     </div>
                 </div>
                 <!-- Feature Box 3 -->
@@ -192,9 +190,8 @@
                         <div class="feature-icon">
                             <img src="https://i.ibb.co/CffNqX9/choose-icon3.png" alt="">
                         </div>
-                        <h3>4.9 Ratings</h3>
-                        <p>Diam integer turpis tristique integer cursusw dignissim. Euismod libero pellentesq
-                            suspendisseit</p>
+                        <h3>Trusted Worldwide</h3>
+                        <p>Thousands of satisfied customers  excellent reviews & high ratings.</p>
                     </div>
                 </div>
                 <!-- Feature Box 4 -->
@@ -204,8 +201,7 @@
                             <img src="https://i.ibb.co/XPvjQGG/choose-icon4.png" alt="">
                         </div>
                         <h3>10 Years Services</h3>
-                        <p>Diam integer turpis tristique integer cursusw dignissim. Euismod libero pellentesq
-                            suspendisseit</p>
+                        <p>Over 10 years of trusted experience delivering quality and customer satisfaction.</p>
                     </div>
                 </div>
             </div>

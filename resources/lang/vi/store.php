@@ -142,4 +142,20 @@ return [
         'success' => 'Thành công',
         'profile_updated' => 'Hồ sơ đã được cập nhật thành công.',
     ],
+
+    'category' => [
+        'home' => 'Trang chủ',
+        'min_price' => 'Giá thấp nhất',
+        'max_price' => 'Giá cao nhất',
+        'sort_by' => 'Sắp xếp theo',
+        'newest' => 'Mới nhất',
+        'price_low_high' => 'Giá: Thấp đến Cao',
+        'price_high_low' => 'Giá: Cao đến Thấp',
+        'top_rated' => 'Đánh giá cao nhất',
+        'filter' => 'Lọc',
+        'reviews' => 'Đánh giá',
+        'product_name_not_available' => 'Tên sản phẩm không có sẵn',
+        'no_products_found' => 'Không tìm thấy sản phẩm trong danh mục này.',
+        'add_to_cart_success' => 'Thêm vào giỏ hàng thành công!',
+    ],
 ];
