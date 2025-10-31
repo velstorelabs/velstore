@@ -142,4 +142,20 @@ return [
         'success' => 'Berhasil',
         'profile_updated' => 'Profil berhasil diperbarui.',
     ],
+
+    'category' => [
+        'home' => 'Beranda',
+        'min_price' => 'Harga Minimum',
+        'max_price' => 'Harga Maksimum',
+        'sort_by' => 'Urutkan Berdasarkan',
+        'newest' => 'Terbaru',
+        'price_low_high' => 'Harga: Rendah ke Tinggi',
+        'price_high_low' => 'Harga: Tinggi ke Rendah',
+        'top_rated' => 'Paling Direkomendasikan',
+        'filter' => 'Filter',
+        'reviews' => 'Ulasan',
+        'product_name_not_available' => 'Nama produk tidak tersedia',
+        'no_products_found' => 'Tidak ada produk ditemukan dalam kategori ini.',
+        'add_to_cart_success' => 'Berhasil ditambahkan ke keranjang!',
+    ],
 ];

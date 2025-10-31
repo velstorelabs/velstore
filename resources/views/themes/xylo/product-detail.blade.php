@@ -165,7 +165,12 @@
                                 <li>
                                     <!-- Display Customer's Image -->
                                     <div class="review-customer-info">
-                                        <img src="https://i.ibb.co/HTv1bQrD/customer.jpg" alt="Customer Avatar" class="review-customer-avatar" />
+                                        <img src="{{ $review->customer->profile_image
+                                                ? asset('storage/' . $review->customer->profile_image)
+                                                : 'https://ui-avatars.com/api/?name=' . urlencode($review->customer->name) . '&background=0D8ABC&color=fff&size=70' }}"
+                                            alt="{{ $review->customer->name }}" 
+                                            class="review-customer-avatar"
+                                            style="width:45px; height:45px; border-radius:50%; object-fit:cover;"/>  
                                         <strong>{{ ucwords($review->customer->name) }}</strong>
                                     </div>
 

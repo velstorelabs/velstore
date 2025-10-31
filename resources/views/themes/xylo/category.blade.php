@@ -8,7 +8,7 @@
     {{-- Breadcrumbs --}}
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ route('xylo.home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('xylo.home') }}">{{ __('store.category.home') }}</a></li>
             @foreach($breadcrumbs as $crumb)
                 <li class="breadcrumb-item">
                     <a href="{{ route('category.show', $crumb->slug) }}">{{ $crumb->translation->name }}</a>
@@ -21,16 +21,16 @@
 
     {{-- Filters --}}
     <form method="GET" class="mb-4 d-flex gap-2">
-        <input type="number" name="min_price" class="form-control" placeholder="Min Price" value="{{ request('min_price') }}">
-        <input type="number" name="max_price" class="form-control" placeholder="Max Price" value="{{ request('max_price') }}">
+        <input type="number" name="min_price" class="form-control" placeholder="{{ __('store.category.min_price') }}" value="{{ request('min_price') }}">
+        <input type="number" name="max_price" class="form-control" placeholder="{{ __('store.category.max_price') }}" value="{{ request('max_price') }}">
         <select name="sort" class="form-select">
-            <option value="">Sort By</option>
-            <option value="newest" {{ request('sort') == 'newest' ? 'selected' : '' }}>Newest</option>
-            <option value="price_asc" {{ request('sort') == 'price_asc' ? 'selected' : '' }}>Price: Low to High</option>
-            <option value="price_desc" {{ request('sort') == 'price_desc' ? 'selected' : '' }}>Price: High to Low</option>
-            <option value="rating" {{ request('sort') == 'rating' ? 'selected' : '' }}>Top Rated</option>
+            <option value="">{{ __('store.category.sort_by') }}</option>
+            <option value="newest" {{ request('sort') == 'newest' ? 'selected' : '' }}>{{ __('store.category.newest') }}</option>
+            <option value="price_asc" {{ request('sort') == 'price_asc' ? 'selected' : '' }}>{{ __('store.category.price_low_high') }}</option>
+            <option value="price_desc" {{ request('sort') == 'price_desc' ? 'selected' : '' }}>{{ __('store.category.price_high_low') }}</option>
+            <option value="rating" {{ request('sort') == 'rating' ? 'selected' : '' }}>{{ __('store.category.top_rated') }}</option>
         </select>
-        <button type="submit" class="btn btn-primary">Filter</button>
+        <button type="submit" class="btn btn-primary">{{ __('store.category.filter') }}</button>
     </form>
 
     {{-- Products --}}
@@ -50,7 +50,7 @@
                     <div class="product-info mt-4">
                         <div class="top-info">
                             <div class="reviews">
-                                <i class="fa-solid fa-star"></i> ({{ $product->reviews_count }} Reviews)
+                                <i class="fa-solid fa-star"></i> ({{ $product->reviews_count }} {{ __('store.category.reviews') }})
                             </div>
                         </div>
                         <div class="bottom-info">
@@ -80,7 +80,7 @@
                 </div>
             </div>
         @empty
-            <p>No products found in this category.</p>
+            <p>{{ __('store.category.no_products_found') }}</p>
         @endforelse
     </div>
 

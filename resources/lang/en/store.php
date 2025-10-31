@@ -143,4 +143,20 @@ return [
         'success' => 'Success',
         'profile_updated' => 'profile updated successfully.',
     ],
+
+    'category' => [
+        'home' => 'Home',
+        'min_price' => 'Min Price',
+        'max_price' => 'Max Price',
+        'sort_by' => 'Sort By',
+        'newest' => 'Newest',
+        'price_low_high' => 'Price: Low to High',
+        'price_high_low' => 'Price: High to Low',
+        'top_rated' => 'Top Rated',
+        'filter' => 'Filter',
+        'reviews' => 'Reviews',
+        'product_name_not_available' => 'Product Name Not Available',
+        'no_products_found' => 'No products found in this category.',
+        'add_to_cart_success' => 'Added to cart successfully!',
+    ],
 ];

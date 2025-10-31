@@ -142,4 +142,20 @@ return [
         'success' => 'موفقیت',
         'profile_updated' => 'پروفایل با موفقیت به‌روزرسانی شد.',
     ],
+
+    'category' => [
+        'home' => 'خانه',
+        'min_price' => 'حداقل قیمت',
+        'max_price' => 'حداکثر قیمت',
+        'sort_by' => 'مرتب‌سازی بر اساس',
+        'newest' => 'جدیدترین',
+        'price_low_high' => 'قیمت: کم به زیاد',
+        'price_high_low' => 'قیمت: زیاد به کم',
+        'top_rated' => 'بالاترین امتیاز',
+        'filter' => 'فیلتر',
+        'reviews' => 'نظرات',
+        'product_name_not_available' => 'نام محصول موجود نیست',
+        'no_products_found' => 'هیچ محصولی در این دسته یافت نشد.',
+        'add_to_cart_success' => 'محصول با موفقیت به سبد خرید اضافه شد!',
+    ],
 ];

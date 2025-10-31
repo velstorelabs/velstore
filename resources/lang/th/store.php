@@ -142,4 +142,20 @@ return [
         'success' => 'สำเร็จ',
         'profile_updated' => 'อัปเดตโปรไฟล์เรียบร้อยแล้ว',
     ],
+
+    'category' => [
+        'home' => 'หน้าแรก',
+        'min_price' => 'ราคาต่ำสุด',
+        'max_price' => 'ราคาสูงสุด',
+        'sort_by' => 'เรียงตาม',
+        'newest' => 'ใหม่ล่าสุด',
+        'price_low_high' => 'ราคา: ต่ำไปสูง',
+        'price_high_low' => 'ราคา: สูงไปต่ำ',
+        'top_rated' => 'เรตติ้งสูงสุด',
+        'filter' => 'ตัวกรอง',
+        'reviews' => 'รีวิว',
+        'product_name_not_available' => 'ไม่มีชื่อสินค้า',
+        'no_products_found' => 'ไม่พบสินค้าในหมวดหมู่นี้',
+        'add_to_cart_success' => 'เพิ่มสินค้าในตะกร้าเรียบร้อยแล้ว!',
+    ],
 ];
