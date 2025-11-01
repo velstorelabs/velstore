@@ -158,4 +158,11 @@ return [
         'no_products_found' => 'Không tìm thấy sản phẩm trong danh mục này.',
         'add_to_cart_success' => 'Thêm vào giỏ hàng thành công!',
     ],
+
+    'wishlist' => [
+        'title' => 'Danh sách yêu thích của tôi',
+        'empty' => 'Danh sách yêu thích của bạn đang trống.',
+        'reviews' => 'Đánh giá',
+        'add_to_cart' => 'Thêm vào giỏ hàng',
+    ],
 ];

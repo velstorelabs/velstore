@@ -158,4 +158,11 @@ return [
         'no_products_found' => 'このカテゴリには商品がありません。',
         'add_to_cart_success' => 'カートに追加しました！',
     ],
+
+    'wishlist' => [
+        'title' => 'マイウィッシュリスト',
+        'empty' => 'ウィッシュリストは空です。',
+        'reviews' => 'レビュー',
+        'add_to_cart' => 'カートに追加',
+    ],
 ];

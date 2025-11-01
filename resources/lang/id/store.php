@@ -158,4 +158,11 @@ return [
         'no_products_found' => 'Tidak ada produk ditemukan dalam kategori ini.',
         'add_to_cart_success' => 'Berhasil ditambahkan ke keranjang!',
     ],
+
+    'wishlist' => [
+        'title' => 'Daftar Keinginan Saya',
+        'empty' => 'Daftar keinginan Anda kosong.',
+        'reviews' => 'Ulasan',
+        'add_to_cart' => 'Tambah ke Keranjang',
+    ],
 ];

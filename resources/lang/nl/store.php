@@ -158,4 +158,11 @@ return [
         'no_products_found' => 'Geen producten gevonden in deze categorie.',
         'add_to_cart_success' => 'Succesvol toegevoegd aan winkelwagen!',
     ],
+
+    'wishlist' => [
+        'title' => 'Mijn Verlanglijst',
+        'empty' => 'Je verlanglijst is leeg.',
+        'reviews' => 'Beoordelingen',
+        'add_to_cart' => 'Toevoegen aan winkelwagen',
+    ],
 ];

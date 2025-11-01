@@ -159,4 +159,11 @@ return [
         'no_products_found' => 'No products found in this category.',
         'add_to_cart_success' => 'Added to cart successfully!',
     ],
+
+    'wishlist' => [
+        'title' => 'My Wishlist',
+        'empty' => 'Your wishlist is empty.',
+        'reviews' => 'Reviews',
+        'add_to_cart' => 'Add to Cart',
+    ],
 ];

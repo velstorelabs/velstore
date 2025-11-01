@@ -12,6 +12,7 @@ use App\Http\Controllers\Store\CurrencyController;
 use App\Http\Controllers\Store\Customer\ProfileController;
 use App\Http\Controllers\Store\PaymentGateway\StripeController;
 use App\Http\Controllers\Store\ProductController;
+use App\Http\Controllers\Store\ReviewController;
 use App\Http\Controllers\Store\SearchController;
 use App\Http\Controllers\Store\ShopController;
 use App\Http\Controllers\Store\WishlistController;
@@ -44,6 +45,8 @@ Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.s
 
 // Category page
 Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('category.show');
+
+Route::post('/product/review/store', [ReviewController::class, 'store'])->name('review.store');
 
 Route::prefix('customer')->name('customer.')->group(function () {
 

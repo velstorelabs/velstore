@@ -157,4 +157,11 @@ return [
         'no_products_found' => 'Brak produktów w tej kategorii.',
         'add_to_cart_success' => 'Pomyślnie dodano do koszyka!',
     ],
+
+    'wishlist' => [
+        'title' => 'Moja lista życzeń',
+        'empty' => 'Twoja lista życzeń jest pusta.',
+        'reviews' => 'Recenzje',
+        'add_to_cart' => 'Dodaj do koszyka',
+    ],
 ];
