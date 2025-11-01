@@ -158,4 +158,11 @@ return [
         'no_products_found' => '이 카테고리에는 제품이 없습니다.',
         'add_to_cart_success' => '장바구니에 성공적으로 추가되었습니다!',
     ],
+
+    'wishlist' => [
+        'title' => '내 위시리스트',
+        'empty' => '위시리스트가 비어 있습니다.',
+        'reviews' => '리뷰',
+        'add_to_cart' => '장바구니에 담기',
+    ],
 ];

@@ -158,4 +158,11 @@ return [
         'no_products_found' => 'No se encontraron productos en esta categoría.',
         'add_to_cart_success' => '¡Producto añadido al carrito con éxito!',
     ],
+
+    'wishlist' => [
+        'title' => 'Mi lista de deseos',
+        'empty' => 'Tu lista de deseos está vacía.',
+        'reviews' => 'Reseñas',
+        'add_to_cart' => 'Agregar al carrito',
+    ],
 ];

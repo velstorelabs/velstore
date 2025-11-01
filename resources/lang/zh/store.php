@@ -158,4 +158,11 @@ return [
         'no_products_found' => '此分类中没有找到产品。',
         'add_to_cart_success' => '成功加入购物车！',
     ],
+
+    'wishlist' => [
+        'title' => '我的愿望清单',
+        'empty' => '你的愿望清单是空的。',
+        'reviews' => '评价',
+        'add_to_cart' => '加入购物车',
+    ],
 ];

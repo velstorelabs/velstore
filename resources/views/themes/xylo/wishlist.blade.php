@@ -4,10 +4,10 @@
 @php $currency = activeCurrency(); @endphp
 
 <div class="container py-5">
-    <h1 class="sec-heading mb-5">My Wishlist</h1>
+    <h1 class="sec-heading mb-5">{{ __('store.wishlist.title') }}</h1>
 
     @if($products->isEmpty())
-        <div class="alert alert-info">Your wishlist is empty.</div>
+        <div class="alert alert-info">{{ __('store.wishlist.empty') }}</div>
     @else
         <div class="row">
             @foreach ($products as $product)
@@ -28,7 +28,7 @@
                         <div class="product-info mt-4">
                             <div class="top-info">
                                 <div class="reviews">
-                                    <i class="fa-solid fa-star"></i> ({{ $product->reviews_count }} Reviews)
+                                    <i class="fa-solid fa-star"></i> ({{ $product->reviews_count }} {{ __('store.wishlist.reviews') }})
                                 </div>
                             </div>
 
@@ -83,5 +83,27 @@ $(document).on('click', '.wishlist-btn', function () {
         }
     });
 });
+//  Add to Cart
+function addToCart(productId) {
+    $.ajax({
+        url: "{{ route('cart.add') }}",
+        method: "POST",
+        data: {
+            _token: "{{ csrf_token() }}",
+            product_id: productId,
+            quantity: 1
+        },
+        success: function(res) {
+            if (res.status === 'success') {
+                toastr.success(res.message);
+            } else {
+                toastr.success(res.message);
+            }
+        },
+        error: function() {
+            toastr.error("Error adding to cart");
+        }
+    });
+}
 </script>
 @endsection

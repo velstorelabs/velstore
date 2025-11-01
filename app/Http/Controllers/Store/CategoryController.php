@@ -24,6 +24,12 @@ class CategoryController extends Controller
             'reviews',
             'images',
         ])
+            ->withCount(['reviews' => function ($q) {
+                $q->where('is_approved', 1);
+            }])
+            ->withAvg(['reviews' => function ($q) {
+                $q->where('is_approved', 1);
+            }], 'rating')
             ->where('status', 1)
             ->where('category_id', $category->id);
 

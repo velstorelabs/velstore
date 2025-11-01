@@ -158,4 +158,11 @@ return [
         'no_products_found' => 'Bu kategoride ürün bulunamadı.',
         'add_to_cart_success' => 'Başarıyla sepete eklendi!',
     ],
+
+    'wishlist' => [
+        'title' => 'İstek Listem',
+        'empty' => 'İstek listeniz boş.',
+        'reviews' => 'Yorumlar',
+        'add_to_cart' => 'Sepete Ekle',
+    ],
 ];

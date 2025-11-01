@@ -155,7 +155,44 @@
             {!! $product->translation->description !!}
           </div>
           <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-            <div class="product-detail-customer-review">
+           <div class="product-detail-customer-review">
+
+               {{-- Review Form Always Visible Above Review List --}}
+                @auth('customer')
+                <div class="mt-4 mb-4">
+                    <h5>Submit Your Review</h5>
+
+                    <form action="{{ route('review.store') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+                        <input type="hidden" name="rating" id="rating-value" required>
+
+                        {{-- Star Rating --}}
+                        <div id="starWrapper" style="font-size: 1.5rem; line-height: 1; display: inline-block;">
+                            <span class="star" data-value="1" style="color:#ccc; cursor:pointer;">★</span>
+                            <span class="star" data-value="2" style="color:#ccc; cursor:pointer;">★</span>
+                            <span class="star" data-value="3" style="color:#ccc; cursor:pointer;">★</span>
+                            <span class="star" data-value="4" style="color:#ccc; cursor:pointer;">★</span>
+                            <span class="star" data-value="5" style="color:#ccc; cursor:pointer;">★</span>
+                        </div>
+
+                        {{-- Optional Review Text --}}
+                        <div class="mb-3 mt-3">
+                            <label>Review (optional)</label>
+                            <textarea name="review" class="form-control" rows="3"></textarea>
+                        </div>
+
+                        <button class="btn btn-primary">Submit Review</button>
+                    </form>
+                </div>
+
+                {{-- JS for Star Rating --}}
+
+                @else
+                <p class="mt-3">Please <a href="{{ route('customer.login') }}">login</a> to submit a review.</p>
+                @endauth
+
+                {{-- Now Show Review List --}}
                 @if($product->reviews->isEmpty())
                     <p>No reviews for this product yet.</p>
                 @else
@@ -175,9 +212,9 @@
                                     </div>
 
                                     <!-- Display Rating with Stars -->
-                                    <div class="review-rating">
+                                   <div class="review-rating">
                                         @for($i = 1; $i <= 5; $i++)
-                                            <span class="star {{ $i <= $review->rating ? 'filled' : 'unfilled' }}">&#9733;</span>
+                                            <span style="color: {{ $i <= $review->rating ? 'gold' : '#ccc' }}">&#9733;</span>
                                         @endfor
                                         <span class="review-time">
                                             @php
@@ -206,15 +243,14 @@
                             <div class="review-rating">
                                 @for($i = 1; $i <= 5; $i++)
                                     @if($i <= floor($product->reviews_avg_rating))
-                                        <span class="star filled">★</span>
+                                        <span style="color: gold">★</span>
                                     @elseif($i == ceil($product->reviews_avg_rating) && ($product->reviews_avg_rating - floor($product->reviews_avg_rating)) >= 0.5)
-                                        <span class="star half-filled">★</span>
+                                        <span style="color: gold">★</span>
                                     @else
-                                        <span class="star unfilled">★</span>
+                                        <span style="color: #ccc">★</span>
                                     @endif
                                 @endfor
-
-                                {{ number_format($product->reviews_avg_rating, 1) }} <span> Average Rating</span> 
+                                {{ number_format($product->reviews_avg_rating, 1) }} <span>Average Rating</span>
                             </div>
                         </div>
                 @endif
@@ -266,6 +302,47 @@
             });
         });
     });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const stars = document.querySelectorAll('#starWrapper .star');
+        const ratingInput = document.getElementById('rating-value');
+
+        stars.forEach(star => {
+            star.addEventListener('mouseover', function () {
+                const val = parseInt(this.dataset.value);
+                stars.forEach(s => {
+                    s.style.color = (parseInt(s.dataset.value) <= val) ? 'gold' : '#ccc';
+                });
+            });
+
+            star.addEventListener('mouseout', function () {
+                const currentRating = parseInt(ratingInput.value) || 0;
+                stars.forEach(s => {
+                    s.style.color = (parseInt(s.dataset.value) <= currentRating) ? 'gold' : '#ccc';
+                });
+            });
+
+            star.addEventListener('click', function () {
+                const val = parseInt(this.dataset.value);
+                ratingInput.value = val;
+                stars.forEach(s => {
+                    s.style.color = (parseInt(s.dataset.value) <= val) ? 'gold' : '#ccc';
+                });
+            });
+        });
+    });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>  
+    <script>
+    @if(Session::has('success'))
+        toastr.success("{{ session('success') }}");
+    @endif
+
+    @if(Session::has('error'))
+        toastr.error("{{ session('error') }}");
+    @endif
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>  
