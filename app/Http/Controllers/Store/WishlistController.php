@@ -37,7 +37,7 @@ class WishlistController extends Controller
         if ($wishlist) {
             $wishlist->delete();
 
-            return response()->json(['status' => 'removed', 'message' => 'Removed from favorites']);
+            return response()->json(['status' => 'removed', 'message' => __('store.product_detail.removed_from_wishlist')]);
         }
 
         Wishlist::create([
@@ -45,6 +45,6 @@ class WishlistController extends Controller
             'product_id' => $request->product_id,
         ]);
 
-        return response()->json(['status' => 'added', 'message' => 'Added to favorites']);
+        return response()->json(['status' => 'added', 'message' => __('store.product_detail.added_to_wishlist')]);
     }
 }

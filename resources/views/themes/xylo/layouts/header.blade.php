@@ -1,5 +1,13 @@
 <header>
 
+     {{--  Wishlist Count --}}
+    @php
+        $wishlistCount = 0;
+        if (auth('customer')->check()) {
+            $wishlistCount = auth('customer')->user()->wishlistProducts()->count();
+        }
+    @endphp
+
     <div class="top-bar w-100 bg-light py-1 header-top-bar">
         <div class="text-center small">
             {{ __('store.header.top_bar_message') }} 
@@ -70,8 +78,15 @@
                 </form>
 
                 <!-- Wishlist Icon -->
-                <a href="{{ auth('customer')->check() ? route('customer.wishlist.index') : route('customer.login') }}" class="text-dark homepage-icon">
+                 <a href="{{ auth('customer')->check() ? route('customer.wishlist.index') : route('customer.login') }}" class="text-dark position-relative homepage-icon">
                     <i class="fa-regular fa-heart"></i>
+
+                    @if($wishlistCount > 0)
+                        <span id="wishlist-count"
+                              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{ $wishlistCount }}
+                        </span>
+                    @endif
                 </a>
 
                  <!-- Account Icon -->

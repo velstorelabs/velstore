@@ -21,7 +21,7 @@ class ReviewController extends Controller
         if (ProductReview::where('product_id', $request->product_id)
             ->where('customer_id', Auth::guard('customer')->id())
             ->exists()) {
-            return back()->with('error', 'You have already reviewed this product.');
+            return back()->with('error', __('store.product_detail.review_already_submitted'));
         }
 
         ProductReview::create([
@@ -32,6 +32,6 @@ class ReviewController extends Controller
             'is_approved' => 1,
         ]);
 
-        return back()->with('success', 'Thank you! Your review is now live.');
+        return back()->with('success', __('store.product_detail.review_success'));
     }
 }
