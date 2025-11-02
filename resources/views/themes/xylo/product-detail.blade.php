@@ -160,7 +160,7 @@
                {{-- Review Form Always Visible Above Review List --}}
                 @auth('customer')
                 <div class="mt-4 mb-4">
-                    <h5>Submit Your Review</h5>
+                    <h5>{{ __('store.product_detail.submit_review_title') }}</h5>
 
                     <form action="{{ route('review.store') }}" method="POST">
                         @csrf
@@ -178,23 +178,23 @@
 
                         {{-- Optional Review Text --}}
                         <div class="mb-3 mt-3">
-                            <label>Review (optional)</label>
+                            <label>{{ __('store.product_detail.review_optional') }}</label>
                             <textarea name="review" class="form-control" rows="3"></textarea>
                         </div>
 
-                        <button class="btn btn-primary">Submit Review</button>
+                        <button class="btn btn-primary">{{ __('store.product_detail.submit_review_btn') }}</button>
                     </form>
                 </div>
 
                 {{-- JS for Star Rating --}}
 
                 @else
-                <p class="mt-3">Please <a href="{{ route('customer.login') }}">login</a> to submit a review.</p>
+                <p class="mt-3">{{ __('store.product_detail.please') }} <a href="{{ route('customer.login') }}">{{ __('store.product_detail.login') }}</a> {{ __('store.product_detail.submit') }}</p>
                 @endauth
 
                 {{-- Now Show Review List --}}
                 @if($product->reviews->isEmpty())
-                    <p>No reviews for this product yet.</p>
+                    <p>{{ __('store.product_detail.no_reviews_yet') }}</p>
                 @else
                     <ul>
                         @foreach($product->reviews as $review)
@@ -221,7 +221,7 @@
                                                 $created_at = \Carbon\Carbon::parse($review->created_at);
                                                 $diffInDays = $created_at->diffInDays(\Carbon\Carbon::now());
                                             @endphp
-                                            ({{ $diffInDays }} {{ $diffInDays == 1 ? 'day' : 'days' }} ago)
+                                            ({{ $diffInDays }} {{ $diffInDays == 1 ? __('store.product_detail.day') : __('store.product_detail.days')  }} {{ __('store.product_detail.ago') }})
                                         </span>
                                     </div>
 
@@ -229,7 +229,7 @@
                                     @if($review->review)
                                         <p>{{ $review->review }}</p>
                                     @else
-                                        <p>No review written.</p>
+                                        <p>{{ __('store.product_detail.no_review_text') }}</p>
                                     @endif
                                 </li>
                             @endif
@@ -250,7 +250,7 @@
                                         <span style="color: #ccc">★</span>
                                     @endif
                                 @endfor
-                                {{ number_format($product->reviews_avg_rating, 1) }} <span>Average Rating</span>
+                                {{ number_format($product->reviews_avg_rating, 1) }} <span>{{ __('store.product_detail.average_rating') }}</span>
                             </div>
                         </div>
                 @endif
@@ -294,7 +294,7 @@
                 },
                 error: function(xhr) {
                     if(xhr.status === 401){
-                        toastr.warning('Please login to manage your favorites.');
+                        toastr.warning('{{ __('store.product_detail.login_to_wishlist') }}');
                     } else {
                         toastr.error('Something went wrong.');
                     }
