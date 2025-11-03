@@ -61,6 +61,20 @@ return [
         'review_success' => 'ありがとうございます！あなたのレビューが公開されました。',
     ],
 
+    'shop' => [
+        'brands' => 'ブランド',
+        'categories' => 'カテゴリー',
+        'price' => '価格',
+        'colors' => '色',
+        'size' => 'サイズ',
+        'red' => '赤',
+        'black' => '黒',
+        'M' => 'M',
+        'L' => 'L',
+        'price_range' => ':min - :max',
+        'added_to_cart' => '商品がカートに追加されました！',
+    ],
+
     'cart' => [
 
         // Breadcrumb

@@ -9,7 +9,7 @@
         <div class="row">
             <aside class="col-md-3 d-none d-lg-inline">
                 <div class="sidebar" id="filterSidebar">
-                    <h5 class="mb-3">BRANDS</h5>
+                    <h5 class="mb-3">{{ __('store.shop.brands') }}</h5>
                     @foreach($brands as $brand)
                     <div class="form-check mb-3">
                         <input class="form-check-input filter-input" type="checkbox" name="brand[]" value="{{ $brand->id }}">
@@ -18,7 +18,7 @@
                     </div>
                     @endforeach
 
-                    <h5 class="mb-3">CATEGORIES</h5>
+                    <h5 class="mb-3">{{ __('store.shop.categories') }}</h5>
                     @foreach($categories as $category)
                     <div class="form-check mb-3">
                         <input class="form-check-input filter-input" type="checkbox" name="category[]" value="{{ $category->id }}">
@@ -27,7 +27,7 @@
                     </div>
                     @endforeach
 
-                    <h5>PRICE</h5>
+                    <h5>{{ __('store.shop.price') }}</h5>
                     <div class="price-filter mb-3">
                         <p id="priceRange" class="text-center">{{ $currency->symbol }}<span id="minPriceText">0</span> - {{ $currency->symbol }}<span id="maxPriceText">1000</span></p>
                         <div class="range-slider">
@@ -36,7 +36,7 @@
                         </div>
                     </div>
 
-                    <h5 class="mb-3">COLORS</h5>
+                    <h5 class="mb-3">{{ __('store.shop.colors') }}</h5>
                     @foreach(['Red', 'Black'] as $color)
                     <div class="form-check mb-3">
                         <input class="form-check-input filter-input" type="checkbox" name="color[]" value="{{ strtolower($color) }}">
@@ -44,7 +44,7 @@
                     </div>
                     @endforeach
                     
-                    <h5 class="mt-4">SIZE</h5>
+                    <h5 class="mt-4">{{ __('store.shop.size') }}</h5>
                     @foreach(['M' => 'Medium', 'L' => 'Large'] as $key => $size)
                     <div class="form-check">
                         <input class="form-check-input filter-input" type="checkbox" name="size[]" value="{{ $key }}">

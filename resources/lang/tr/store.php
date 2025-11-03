@@ -61,6 +61,20 @@ return [
         'review_success' => 'Teşekkürler! Yorumunuz artık yayında.',
     ],
 
+    'shop' => [
+        'brands' => 'Markalar',
+        'categories' => 'Kategoriler',
+        'price' => 'Fiyat',
+        'colors' => 'Renkler',
+        'size' => 'Beden',
+        'red' => 'Kırmızı',
+        'black' => 'Siyah',
+        'M' => 'Orta',
+        'L' => 'Büyük',
+        'price_range' => ':min - :max',
+        'added_to_cart' => 'Ürün başarıyla sepete eklendi!',
+    ],
+
     'cart' => [
 
         // Breadcrumb

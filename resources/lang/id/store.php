@@ -61,6 +61,20 @@ return [
         'review_success' => 'Terima kasih! Ulasan Anda sudah ditampilkan.',
     ],
 
+    'shop' => [
+        'brands' => 'Merek',
+        'categories' => 'Kategori',
+        'price' => 'Harga',
+        'colors' => 'Warna',
+        'size' => 'Ukuran',
+        'red' => 'Merah',
+        'black' => 'Hitam',
+        'M' => 'Sedang',
+        'L' => 'Besar',
+        'price_range' => ':min - :max',
+        'added_to_cart' => 'Produk berhasil ditambahkan ke keranjang!',
+    ],
+
     'cart' => [
 
         // Breadcrumb

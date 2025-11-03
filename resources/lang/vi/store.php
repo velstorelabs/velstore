@@ -61,6 +61,20 @@ return [
         'review_success' => 'Cảm ơn! Đánh giá của bạn hiện đã hiển thị.',
     ],
 
+    'shop' => [
+        'brands' => 'Thương hiệu',
+        'categories' => 'Danh mục',
+        'price' => 'Giá',
+        'colors' => 'Màu sắc',
+        'size' => 'Kích cỡ',
+        'red' => 'Đỏ',
+        'black' => 'Đen',
+        'M' => 'Trung bình',
+        'L' => 'Lớn',
+        'price_range' => ':min - :max',
+        'added_to_cart' => 'Sản phẩm đã được thêm vào giỏ hàng thành công!',
+    ],
+
     'cart' => [
 
         // Breadcrumb

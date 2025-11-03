@@ -61,6 +61,20 @@ return [
         'review_success' => '감사합니다! 리뷰가 게시되었습니다.',
     ],
 
+    'shop' => [
+        'brands' => '브랜드',
+        'categories' => '카테고리',
+        'price' => '가격',
+        'colors' => '색상',
+        'size' => '사이즈',
+        'red' => '빨강',
+        'black' => '검정',
+        'M' => '중간',
+        'L' => '대형',
+        'price_range' => ':min - :max',
+        'added_to_cart' => '제품이 장바구니에 성공적으로 추가되었습니다!',
+    ],
+
     'cart' => [
 
         // Breadcrumb

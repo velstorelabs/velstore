@@ -61,6 +61,20 @@ return [
         'review_success' => 'Merci ! Votre avis est maintenant visible.',
     ],
 
+    'shop' => [
+        'brands' => 'Marques',
+        'categories' => 'Catégories',
+        'price' => 'Prix',
+        'colors' => 'Couleurs',
+        'size' => 'Taille',
+        'red' => 'Rouge',
+        'black' => 'Noir',
+        'M' => 'Moyenne',
+        'L' => 'Grande',
+        'price_range' => ':min - :max',
+        'added_to_cart' => 'Produit ajouté au panier avec succès !',
+    ],
+
     'cart' => [
 
         // Breadcrumb

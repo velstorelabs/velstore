@@ -61,6 +61,20 @@ return [
         'review_success' => 'شكراً لك! تم نشر تقييمك بنجاح.',
     ],
 
+    'shop' => [
+        'brands' => 'الماركات',
+        'categories' => 'الفئات',
+        'price' => 'السعر',
+        'colors' => 'الألوان',
+        'size' => 'المقاس',
+        'red' => 'أحمر',
+        'black' => 'أسود',
+        'M' => 'متوسط',
+        'L' => 'كبير',
+        'price_range' => 'من :min إلى :max',
+        'added_to_cart' => 'تمت إضافة المنتج إلى السلة بنجاح!',
+    ],
+
     'cart' => [
 
         // Breadcrumb
