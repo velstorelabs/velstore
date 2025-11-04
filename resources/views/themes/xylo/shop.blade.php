@@ -13,7 +13,9 @@
                     @foreach($brands as $brand)
                     <div class="form-check mb-3">
                         <input class="form-check-input filter-input" type="checkbox" name="brand[]" value="{{ $brand->id }}">
-                        <label class="form-check-label">{{ mb_convert_case($brand->translation->title ?? $brand->slug, MB_CASE_TITLE, "UTF-8") }}</label>
+                        <label class="form-check-label">
+                            {{ mb_convert_case($brand->translation->name ?? $brand->slug, MB_CASE_TITLE, "UTF-8") }}
+                        </label>
                         <span class="text-muted">({{ $brand->products_count }})</span>
                     </div>
                     @endforeach
@@ -22,11 +24,13 @@
                     @foreach($categories as $category)
                     <div class="form-check mb-3">
                         <input class="form-check-input filter-input" type="checkbox" name="category[]" value="{{ $category->id }}">
-                        <label class="form-check-label">{{ mb_convert_case($category->translation->title ?? $category->slug, MB_CASE_TITLE, "UTF-8") }}</label>
+                        <label class="form-check-label">
+                            {{ mb_convert_case($category->translation->name ?? $category->slug, MB_CASE_TITLE, "UTF-8") }}
+                        </label>
                         <span class="text-muted">({{ $category->products_count }})</span>
                     </div>
                     @endforeach
-
+                    
                     <h5>{{ __('store.shop.price') }}</h5>
                     <div class="price-filter mb-3">
                         <p id="priceRange" class="text-center">{{ $currency->symbol }}<span id="minPriceText">0</span> - {{ $currency->symbol }}<span id="maxPriceText">1000</span></p>
@@ -37,18 +41,18 @@
                     </div>
 
                     <h5 class="mb-3">{{ __('store.shop.colors') }}</h5>
-                    @foreach(['Red', 'Black'] as $color)
+                    @foreach(['red', 'black'] as $color)
                     <div class="form-check mb-3">
                         <input class="form-check-input filter-input" type="checkbox" name="color[]" value="{{ strtolower($color) }}">
-                        <label class="form-check-label">{{ $color }}</label>
+                        <label class="form-check-label">{{ __('store.shop.' . strtolower($color)) }}</label>
                     </div>
                     @endforeach
-                    
+
                     <h5 class="mt-4">{{ __('store.shop.size') }}</h5>
-                    @foreach(['M' => 'Medium', 'L' => 'Large'] as $key => $size)
+                    @foreach(['M' => 'M', 'L' => 'L'] as $key => $size)
                     <div class="form-check">
                         <input class="form-check-input filter-input" type="checkbox" name="size[]" value="{{ $key }}">
-                        <label class="form-check-label">{{ $size }}</label>
+                        <label class="form-check-label">{{ __('store.shop.' . $key) }}</label>
                     </div>
                     @endforeach
                 </div>
