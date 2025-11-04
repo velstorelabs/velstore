@@ -61,6 +61,20 @@ return [
         'review_success' => '感谢！您的评价已发布。',
     ],
 
+    'shop' => [
+        'brands' => '品牌',
+        'categories' => '类别',
+        'price' => '价格',
+        'colors' => '颜色',
+        'size' => '尺寸',
+        'red' => '红色',
+        'black' => '黑色',
+        'M' => '中号',
+        'L' => '大号',
+        'price_range' => ':min - :max',
+        'added_to_cart' => '商品已成功添加到购物车！',
+    ],
+
     'cart' => [
 
         // Breadcrumb

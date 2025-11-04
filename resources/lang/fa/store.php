@@ -61,6 +61,20 @@ return [
         'review_success' => 'متشکریم! نظر شما ثبت و منتشر شد.',
     ],
 
+    'shop' => [
+        'brands' => 'برندها',
+        'categories' => 'دسته‌بندی‌ها',
+        'price' => 'قیمت',
+        'colors' => 'رنگ‌ها',
+        'size' => 'سایز',
+        'red' => 'قرمز',
+        'black' => 'مشکی',
+        'M' => 'متوسط',
+        'L' => 'بزرگ',
+        'price_range' => ':min - :max',
+        'added_to_cart' => 'محصول با موفقیت به سبد خرید اضافه شد!',
+    ],
+
     'cart' => [
 
         // Breadcrumb

@@ -61,6 +61,20 @@ return [
         'review_success' => 'धन्यवाद! आपकी समीक्षा अब लाइव है।',
     ],
 
+    'shop' => [
+        'brands' => 'ब्रांड',
+        'categories' => 'श्रेणियाँ',
+        'price' => 'कीमत',
+        'colors' => 'रंग',
+        'size' => 'आकार',
+        'red' => 'लाल',
+        'black' => 'काला',
+        'M' => 'मध्यम',
+        'L' => 'बड़ा',
+        'price_range' => ':min - :max',
+        'added_to_cart' => 'उत्पाद को कार्ट में सफलतापूर्वक जोड़ा गया!',
+    ],
+
     'cart' => [
 
         // Breadcrumb

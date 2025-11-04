@@ -61,6 +61,20 @@ return [
         'review_success' => 'Bedankt! Je beoordeling is nu zichtbaar.',
     ],
 
+    'shop' => [
+        'brands' => 'Merken',
+        'categories' => 'Categorieën',
+        'price' => 'Prijs',
+        'colors' => 'Kleuren',
+        'size' => 'Maat',
+        'red' => 'Rood',
+        'black' => 'Zwart',
+        'M' => 'Medium',
+        'L' => 'Groot',
+        'price_range' => ':min - :max',
+        'added_to_cart' => 'Product succesvol toegevoegd aan winkelwagen!',
+    ],
+
     'cart' => [
 
         // Breadcrumb

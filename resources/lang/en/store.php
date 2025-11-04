@@ -62,6 +62,20 @@ return [
         'review_success' => 'Thank you! Your review is now live.',
     ],
 
+    'shop' => [
+        'brands' => 'Brands',
+        'categories' => 'Categories',
+        'price' => 'Price',
+        'colors' => 'Colors',
+        'size' => 'Size',
+        'red' => 'Red',
+        'black' => 'Black',
+        'M' => 'Medium',
+        'L' => 'Large',
+        'price_range' => ':min - :max',
+        'added_to_cart' => 'Product added to cart successfully!',
+    ],
+
     'cart' => [
 
         // Breadcrumb
