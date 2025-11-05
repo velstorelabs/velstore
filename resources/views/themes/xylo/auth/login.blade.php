@@ -13,23 +13,22 @@
 
             {{-- Main Greeting --}}
             <div class="fw-bold display-4 mb-3 lh-sm">
-                Hello <br> Xylo-Theme! 👋
+                {{ __('store.login.hello') }} <br> {{ __('store.login.theme_name') }}
             </div>
 
             {{-- Subheading --}}
             <div class="fs-2 fw-semibold mb-4 text-light">
-                Login Now
+                {{ __('store.login.login_now') }}
             </div>
 
             {{-- Supporting Text --}}
             <p class="text-light mb-5 opacity-75 fs-6">
-                To craft an effective marketing message, keep it concise and relevant to your target audience,
-                include a clear call to action, and ensure it aligns with your brand’s voice and values.
+                {{ __('store.login.login_description') }}
             </p>
 
             {{-- Footer --}}
             <div class="mt-auto text-center w-100 text-secondary small opacity-75 pt-4 border-top border-secondary">
-                © 2025 Xylo-Theme. All rights reserved.
+                 {{ __('store.login.copyright') }}
             </div>
         </div>
 
@@ -42,9 +41,9 @@
             </div>
 
             {{-- Heading --}}
-            <h2 class="fw-semibold mb-2 text-dark">Welcome Back</h2>
+            <h2 class="fw-semibold mb-2 text-dark">{{ __('store.login.welcome_back') }}</h2>
             <p class="text-muted mb-4 text-center px-3">
-                To craft an effective marketing message, keep it concise and relevant to your target audience.
+                {{ __('store.login.form_subtitle') }}
             </p>
 
             {{-- Login Form --}}
@@ -52,27 +51,27 @@
                 @csrf
 
                 <div class="mb-3">
-                    <input type="text" name="email" value="{{ old('email') }}" placeholder="Email" class="form-control rounded-3 p-2">
+                    <input type="text" name="email" value="{{ old('email') }}" placeholder="{{ __('store.login.email') }}" class="form-control rounded-3 p-2">
                     @error('email') <span class="text-danger small">{{ $message }}</span> @enderror
                 </div>
 
                 <div class="mb-4">
-                    <input type="password" name="password" placeholder="Password" class="form-control rounded-3 p-2">
+                    <input type="password" name="password" placeholder="{{ __('store.login.password') }}" class="form-control rounded-3 p-2">
                     @error('password') <span class="text-danger small">{{ $message }}</span> @enderror
                 </div>
 
                 <button type="submit" 
                         class="btn w-100 py-2 rounded-3 fw-semibold text-uppercase text-white border-0"
                         style="background-color: #0e0e0e; transition: all 0.3s ease;">
-                    Login Now
+                    {{ __('store.login.login_btn') }}
                 </button>
             </form>
 
             <p class="mt-4 mb-0 text-muted text-center">
-                Don't have an account?
-                <a href="{{ route('customer.register') }}" class="text-decoration-none fw-semibold">Signup</a>
+                {{ __('store.login.dont_have_account') }}
+                <a href="{{ route('customer.register') }}" class="text-decoration-none fw-semibold">{{ __('store.login.signup') }}</a>
                 <br>
-                <a href="{{ route('customer.password.request') }}" class="text-decoration-none">Forgot Password?</a>
+                <a href="{{ route('customer.password.request') }}" class="text-decoration-none">{{ __('store.login.forgot_password') }}</a>
             </p>
         </div>
     </div>
