@@ -13,23 +13,22 @@
 
             {{-- Main Greeting --}}
             <div class="fw-bold display-4 mb-3 lh-sm">
-                Hello <br> Xylo-Theme! 👋
+                {{ __('store.register.hello') }} <br> {{ __('store.register.theme_name') }}
             </div>
 
             {{-- Sub Heading --}}
             <div class="fs-2 fw-semibold mb-4 text-light">
-                Signup Now
+                {{ __('store.register.signup_now') }}
             </div>
 
             {{-- Description Text --}}
             <p class="text-light mb-5 opacity-75 fs-6">
-                To craft an effective marketing message, keep it concise and relevant to your target audience,
-                include a clear call to action, and ensure it aligns with your brand’s voice and values.
+                {{ __('store.register.signup_description') }}
             </p>
 
             {{-- Footer --}}
             <div class="mt-auto text-center w-100 text-secondary small opacity-75 pt-4 border-top border-secondary">
-                © 2025 Xylo-Theme. All rights reserved.
+                 {{ __('store.register.copyright') }}
             </div>
         </div>
 
@@ -41,43 +40,56 @@
                 <img src="{{ asset('storage/brands/logo-ready.png') }}" width="160" alt="Main Logo">
             </div>
 
-            <h2 class="fw-semibold mb-2 text-dark">Welcome Back</h2>
+            <h2 class="fw-semibold mb-2 text-dark">
+                {{ __('store.register.welcome_back') }}
+            </h2>
+
             <p class="text-muted mb-4 text-center px-3">
-                To craft an effective marketing message, keep it concise and relevant to your target audience.
+                {{ __('store.register.form_subtitle') }}
             </p>
 
             <form class="w-100" method="POST" action="{{ route('customer.register') }}">
                 @csrf
 
                 <div class="mb-3">
-                    <input type="text" name="name" value="{{ old('name') }}" placeholder="Name" class="form-control rounded-3 p-2">
+                    <input type="text" name="name" value="{{ old('name') }}" 
+                           placeholder="{{ __('store.register.name') }}" 
+                           class="form-control rounded-3 p-2">
                     @error('name') <span class="text-danger small">{{ $message }}</span> @enderror
                 </div>
 
                 <div class="mb-3">
-                    <input type="email" name="email" value="{{ old('email') }}" placeholder="Email" required class="form-control rounded-3 p-2">
+                    <input type="email" name="email" value="{{ old('email') }}" 
+                           placeholder="{{ __('store.register.email') }}" 
+                            class="form-control rounded-3 p-2">
                     @error('email') <span class="text-danger small">{{ $message }}</span> @enderror
                 </div>
 
                 <div class="mb-3">
-                    <input type="password" name="password" placeholder="Password" required class="form-control rounded-3 p-2">
+                    <input type="password" name="password" 
+                           placeholder="{{ __('store.register.password') }}" 
+                            class="form-control rounded-3 p-2">
                     @error('password') <span class="text-danger small">{{ $message }}</span> @enderror
                 </div>
 
                 <div class="mb-4">
-                    <input type="password" name="password_confirmation" placeholder="Confirm Password" required class="form-control rounded-3 p-2">
+                    <input type="password" name="password_confirmation" 
+                           placeholder="{{ __('store.register.confirm_password') }}" 
+                            class="form-control rounded-3 p-2">
                 </div>
 
-                 <button type="submit" 
+                <button type="submit" 
                         class="btn w-100 py-2 rounded-3 fw-semibold text-white border-0"
                         style="background-color: #0e0e0e; transition: all 0.3s ease;">
-                    Sign up
+                    {{ __('store.register.signup_btn') }}
                 </button>
             </form>
 
             <p class="mt-4 mb-0 text-muted">
-                Already have an account?
-                <a href="{{ route('customer.login') }}" class="text-decoration-none fw-semibold">Login here</a>
+                {{ __('store.register.already_account') }}
+                <a href="{{ route('customer.login') }}" class="text-decoration-none fw-semibold">
+                    {{ __('store.register.login_here') }}
+                </a>
             </p>
         </div>
     </div>
