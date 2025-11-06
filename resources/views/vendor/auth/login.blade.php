@@ -32,7 +32,7 @@ html, body {
 <div class="container-wrapper">
     <div class="login-container">
         <div class="text-center mb-3">
-            <h1 class="fw-bold">Velstore</h1>
+            <h1 class="fw-bold">{{ cms_translate('auth.velstore') }}</h1>
         </div>
         <h2 class="text-center mb-4">{{ cms_translate('auth.login') }}</h2>
 

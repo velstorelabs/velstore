@@ -101,9 +101,10 @@
                                         value="{{ $value->id }}"
                                         {{ $index === 0 ? 'checked' : '' }}
                                     >
-                                    <label 
+                                   <label 
                                         for="{{ $inputId }}" 
-                                        class="{{ strtolower($values->first()->attribute->name) === 'color' ? 'color-circle ' . strtolower($value->translated_value) : 'size-box' }}"
+                                        class="{{ strtolower($values->first()->attribute->name) === 'color' ? 'color-circle' : 'size-box' }}"
+                                        style="{{ strtolower($values->first()->attribute->name) === 'color' ? 'background-color:' . strtolower($value->value) . ';' : '' }}"
                                     >
                                     @if(strtolower($values->first()->attribute->name) === 'size')
                                         {{ $value->translated_value }}

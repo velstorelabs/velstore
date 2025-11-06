@@ -2,6 +2,7 @@
 
 return [
     'auth' => [
+        'velstore' => 'ベルストア',
         'login' => 'ログイン',
         'email' => 'メールアドレス',
         'password' => 'パスワード',
