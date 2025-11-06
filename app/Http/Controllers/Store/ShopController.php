@@ -24,6 +24,8 @@ class ShopController extends Controller
         ];
 
         $products = Product::with(['translation', 'variants.attributeValues'])
+            ->withCount('reviews')
+            ->withAvg('reviews', 'rating')
             ->when(! empty($filters['category']), function ($query) use ($filters) {
                 $query->whereIn('category_id', $filters['category']);
             })

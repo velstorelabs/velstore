@@ -9,7 +9,9 @@
         </div>
         <div class="product-info mt-4">
             <div class="top-info">
-                <div class="reviews"><i class="fa-solid fa-star"></i>0 Reviews</div>
+               <div class="reviews">
+                    <i class="fa-solid fa-star"></i> ({{ $product->reviews_count }} {{ __('store.category.reviews') }})
+                </div>
             </div>
             <div class="bottom-info">
                 <div class="left">
