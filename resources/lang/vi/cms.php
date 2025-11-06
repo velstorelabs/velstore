@@ -2,6 +2,7 @@
 
 return [
     'auth' => [
+        'velstore' => 'Velstore',
         'login' => 'Đăng nhập',
         'email' => 'Địa chỉ Email',
         'password' => 'Mật khẩu',

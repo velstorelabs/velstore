@@ -2,6 +2,7 @@
 
 return [
     'auth' => [
+        'velstore' => 'Velstore',
         'login' => 'Inloggen',
         'email' => 'E-mailadres',
         'password' => 'Wachtwoord',
