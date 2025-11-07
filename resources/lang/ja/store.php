@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => '色',
+        'size' => 'サイズ',
         'home' => 'ホーム',
         'in_stock' => '在庫あり',
         'out_of_stock' => '在庫切れ',

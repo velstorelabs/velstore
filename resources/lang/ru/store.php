@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => 'Цвет',
+        'size' => 'Размер',
         'home' => 'Главная',
         'in_stock' => 'В НАЛИЧИИ',
         'out_of_stock' => 'НЕТ В НАЛИЧИИ',

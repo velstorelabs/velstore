@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => 'สี',
+        'size' => 'ขนาด',
         'home' => 'หน้าแรก',
         'in_stock' => 'มีสินค้า',
         'out_of_stock' => 'สินค้าหมด',
