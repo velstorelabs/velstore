@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => 'Kleur',
+        'size' => 'Maat',
         'home' => 'Home',
         'in_stock' => 'OP VOORRAAD',
         'out_of_stock' => 'UITVERKOCHT',

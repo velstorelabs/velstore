@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => 'Couleur',
+        'size' => 'Taille',
         'home' => 'Accueil',
         'in_stock' => 'EN STOCK',
         'out_of_stock' => 'RUPTURE DE STOCK',

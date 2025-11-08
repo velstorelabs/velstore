@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => '색상',
+        'size' => '사이즈',
         'home' => '홈',
         'in_stock' => '재고 있음',
         'out_of_stock' => '품절',

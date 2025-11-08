@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => 'Color',
+        'size' => 'Size',
         'home' => 'Home',
         'in_stock' => 'IN STOCK',
         'out_of_stock' => 'OUT OF STOCK',

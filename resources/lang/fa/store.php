@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => 'رنگ',
+        'size' => 'اندازه',
         'home' => 'خانه',
         'in_stock' => 'موجود در انبار',
         'out_of_stock' => 'ناموجود',

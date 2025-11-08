@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => '颜色',
+        'size' => '尺寸',
         'home' => '首页',
         'in_stock' => '有货',
         'out_of_stock' => '缺货',

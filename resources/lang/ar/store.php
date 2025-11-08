@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => 'اللون',
+        'size' => 'المقاس',
         'home' => 'الرئيسية',
         'in_stock' => 'متوفر في المخزون',
         'out_of_stock' => 'غير متوفر في المخزون',

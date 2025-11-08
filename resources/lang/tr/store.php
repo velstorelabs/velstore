@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => 'Renk',
+        'size' => 'Beden',
         'home' => 'Ana Sayfa',
         'in_stock' => 'STOKTA VAR',
         'out_of_stock' => 'STOKTA YOK',

@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => 'Warna',
+        'size' => 'Ukuran',
         'home' => 'Beranda',
         'in_stock' => 'TERSEDIA',
         'out_of_stock' => 'HABIS',

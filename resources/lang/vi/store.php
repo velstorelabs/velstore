@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => 'Màu sắc',
+        'size' => 'Kích thước',
         'home' => 'Trang chủ',
         'in_stock' => 'CÒN HÀNG',
         'out_of_stock' => 'HẾT HÀNG',

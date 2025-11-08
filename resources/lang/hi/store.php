@@ -20,6 +20,8 @@ return [
     ],
 
     'product_detail' => [
+        'color' => 'रंग',
+        'size' => 'आकार',
         'home' => 'होम',
         'in_stock' => 'स्टॉक में उपलब्ध',
         'out_of_stock' => 'स्टॉक खत्म',

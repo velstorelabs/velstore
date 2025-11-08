@@ -88,7 +88,7 @@
 
                     @foreach ($groupedAttributes as $attributeId => $values)
                         <div class="attribute-options mt-3">
-                            <h3>{{ $values->first()->attribute->name }}</h3>
+                            <h3>{{ __('store.product_detail.' . strtolower($values->first()->attribute->name)) }}</h3>
                             <div class="{{ strtolower($values->first()->attribute->name) }}-wrapper">
                                 @foreach ($values as $index => $value)
                                     @php
