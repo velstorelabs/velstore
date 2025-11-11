@@ -19,6 +19,17 @@ return [
         'powered_by' => 'Desenvolvido por Velstore Labs',
     ],
 
+    'home' => [
+        'banner_text' => 'Explore a maior variedade de tênis, sapatos e tendências streetwear.',
+        'shop_now' => 'Compre agora',
+        'explore_popular_categories' => 'Explore categorias populares',
+        'trending_products' => 'Produtos em destaque',
+        'reviews' => 'Avaliações',
+        'product_name_not_available' => 'Nome do produto não disponível',
+        'featured_products' => 'Produtos em destaque',
+        'view_all' => 'Ver todos',
+    ],
+
     'product_detail' => [
         'color' => 'Cor',
         'size' => 'Tamanho',

@@ -19,6 +19,17 @@ return [
         'powered_by' => 'Velstore Labs tarafından sağlanmaktadır',
     ],
 
+    'home' => [
+        'banner_text' => 'En büyük spor ayakkabı, ayakkabı ve sokak giyim trendlerini keşfedin.',
+        'shop_now' => 'Şimdi Alışveriş Yap',
+        'explore_popular_categories' => 'Popüler Kategorileri Keşfedin',
+        'trending_products' => 'Trend Ürünler',
+        'reviews' => 'İncelemeler',
+        'product_name_not_available' => 'Ürün adı mevcut değil',
+        'featured_products' => 'Öne Çıkan Ürünler',
+        'view_all' => 'Tümünü Gör',
+    ],
+
     'product_detail' => [
         'color' => 'Renk',
         'size' => 'Beden',

@@ -19,6 +19,17 @@ return [
         'powered_by' => 'Разработано Velstore Labs',
     ],
 
+    'home' => [
+        'banner_text' => 'Откройте для себя самое большое разнообразие кроссовок, обуви и уличной моды.',
+        'shop_now' => 'Купить сейчас',
+        'explore_popular_categories' => 'Изучите популярные категории',
+        'trending_products' => 'Популярные товары',
+        'reviews' => 'Отзывы',
+        'product_name_not_available' => 'Название продукта недоступно',
+        'featured_products' => 'Рекомендуемые товары',
+        'view_all' => 'Посмотреть все',
+    ],
+
     'product_detail' => [
         'color' => 'Цвет',
         'size' => 'Размер',

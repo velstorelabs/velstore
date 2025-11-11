@@ -19,6 +19,17 @@ return [
         'powered_by' => 'Powered by Velstore Labs',
     ],
 
+    'home' => [
+        'banner_text' => 'Explore the biggest variety of sneakers, shoes, and streetwear trends.',
+        'shop_now' => 'Shop Now',
+        'explore_popular_categories' => 'Explore Popular Categories',
+        'trending_products' => 'Trending Products',
+        'reviews' => 'Reviews',
+        'product_name_not_available' => 'Product Name Not Available',
+        'featured_products' => 'Featured Products',
+        'view_all' => 'View All',
+    ],
+
     'product_detail' => [
         'color' => 'Color',
         'size' => 'Size',

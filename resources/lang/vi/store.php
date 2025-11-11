@@ -19,6 +19,17 @@ return [
         'powered_by' => 'Phát triển bởi Velstore Labs',
     ],
 
+    'home' => [
+        'banner_text' => 'Khám phá đa dạng nhất các loại giày thể thao, giày dép và xu hướng thời trang đường phố.',
+        'shop_now' => 'Mua ngay',
+        'explore_popular_categories' => 'Khám phá các danh mục phổ biến',
+        'trending_products' => 'Sản phẩm thịnh hành',
+        'reviews' => 'Đánh giá',
+        'product_name_not_available' => 'Tên sản phẩm không có sẵn',
+        'featured_products' => 'Sản phẩm nổi bật',
+        'view_all' => 'Xem tất cả',
+    ],
+
     'product_detail' => [
         'color' => 'Màu sắc',
         'size' => 'Kích thước',

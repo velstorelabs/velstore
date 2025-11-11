@@ -10,8 +10,8 @@
                     <div class="col-md-6">
                         <h1 class="mt-5"><span>{{ $banner->translation ? $banner->translation->title : $banner->title }}</span>
                         </h1>
-                        <p class="mt-3 mb-4">Explore the biggest variety of sneakers, shoes, and streetwear trends.</p>
-                       <a href="{{ route('shop.index') }}" class="btn btn-primary">Shop Now</a>
+                        <p class="mt-3 mb-4">{{ __('store.home.banner_text') }}</p>
+                       <a href="{{ route('shop.index') }}" class="btn btn-primary">{{ __('store.home.shop_now') }}</a>
 
                         <div class="mt-5">
                             <img src="assets/images/slide-smallimages.png" alt="" style="width: 200px;">
@@ -30,7 +30,7 @@
     {{-- Banner Section End --}}
     <section class="cat-slider animate-on-scroll">
         <div class="container">
-            <h2 class="text-start pb-5 sec-heading">Explore Popular Categories</h2>
+            <h2 class="text-start pb-5 sec-heading">{{ __('store.home.explore_popular_categories') }}</h2>
             <div class="category-slider">
                 @foreach($categories as $category)
                 <div>
@@ -50,7 +50,7 @@
 
     <section class="trending-products animate-on-scroll">
         <div class="container position-relative">
-            <h1 class="text-start pb-5 sec-heading">Trending Products</h1>
+            <h1 class="text-start pb-5 sec-heading">{{ __('store.home.trending_products') }}</h1>
 
             <div class="product-slider">
                 @foreach ($products as $product)
@@ -65,7 +65,7 @@
                         <div class="product-info mt-4">
                             <div class="top-info">
                                 <div class="reviews">
-                                    <i class="fa-solid fa-star"></i> ({{ $product->reviews_count }} Reviews)
+                                    <i class="fa-solid fa-star"></i> ({{ $product->reviews_count }} {{ __('store.home.reviews') }})
                                 </div>
                             </div>
                             <div class="bottom-info">
@@ -111,7 +111,7 @@
 
     <section class="products-home py-5 animate-on-scroll">
         <div class="container">
-            <h1 class="sec-heading mb-5">Featured Products</h1>
+            <h1 class="sec-heading mb-5">{{ __('store.home.featured_products') }}</h1>
             <div class="row">
                 @foreach ($products as $product)
                 <div class="col-md-3">
@@ -122,7 +122,7 @@
                         </div>
                         <div class="product-info mt-4">
                             <div class="top-info">
-                                <div class="reviews"><i class="fa-solid fa-star"></i>({{ $product->reviews_count }} Reviews)</div>
+                                <div class="reviews"><i class="fa-solid fa-star"></i>({{ $product->reviews_count }} {{ __('store.home.reviews') }})</div>
                             </div>
                             <div class="bottom-info">
                                 <div class="left">
@@ -154,7 +154,7 @@
             </div>
 
             <div class="view-button text-center mt-4">
-                <a href="{{ route('shop.index') }}" class="read-more pe-4 ps-4">VIEW ALL</a>
+                <a href="{{ route('shop.index') }}" class="read-more pe-4 ps-4">{{ __('store.home.view_all') }}</a>
             </div>
 
         </div>

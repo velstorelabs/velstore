@@ -19,6 +19,17 @@ return [
         'powered_by' => 'Desarrollado por Velstore Labs',
     ],
 
+    'home' => [
+        'banner_text' => 'Explora la mayor variedad de zapatillas, zapatos y tendencias de moda urbana.',
+        'shop_now' => 'Comprar ahora',
+        'explore_popular_categories' => 'Explorar categorías populares',
+        'trending_products' => 'Productos de tendencia',
+        'reviews' => 'Reseñas',
+        'product_name_not_available' => 'Nombre del producto no disponible',
+        'featured_products' => 'Productos destacados',
+        'view_all' => 'Ver todo',
+    ],
+
     'product_detail' => [
         'color' => 'Color',
         'size' => 'Talla',
