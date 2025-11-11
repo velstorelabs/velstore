@@ -19,6 +19,17 @@ return [
         'powered_by' => 'Velstore Labsによって提供',
     ],
 
+    'home' => [
+        'banner_text' => 'スニーカー、靴、ストリートウェアの最新トレンドを幅広く探索しましょう。',
+        'shop_now' => '今すぐ購入',
+        'explore_popular_categories' => '人気のカテゴリーを探索',
+        'trending_products' => 'トレンド商品',
+        'reviews' => 'レビュー',
+        'product_name_not_available' => '商品名は利用できません',
+        'featured_products' => 'おすすめ商品',
+        'view_all' => 'すべて見る',
+    ],
+
     'product_detail' => [
         'color' => '色',
         'size' => 'サイズ',

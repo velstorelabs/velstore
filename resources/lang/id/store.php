@@ -19,6 +19,17 @@ return [
         'powered_by' => 'Ditenagai oleh Velstore Labs',
     ],
 
+    'home' => [
+        'banner_text' => 'Jelajahi berbagai macam sepatu kets, sepatu, dan tren streetwear terbesar.',
+        'shop_now' => 'Belanja sekarang',
+        'explore_popular_categories' => 'Jelajahi kategori populer',
+        'trending_products' => 'Produk tren',
+        'reviews' => 'Ulasan',
+        'product_name_not_available' => 'Nama produk tidak tersedia',
+        'featured_products' => 'Produk unggulan',
+        'view_all' => 'Lihat semua',
+    ],
+
     'product_detail' => [
         'color' => 'Warna',
         'size' => 'Ukuran',

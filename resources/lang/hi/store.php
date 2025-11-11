@@ -19,6 +19,17 @@ return [
         'powered_by' => 'पावर बाय वेलस्टोर लैब्स',
     ],
 
+    'home' => [
+        'banner_text' => 'स्नीकर, जूते और स्ट्रीटवियर ट्रेंड्स की सबसे बड़ी विविधता का अन्वेषण करें।',
+        'shop_now' => 'अभी खरीदें',
+        'explore_popular_categories' => 'लोकप्रिय श्रेणियों का अन्वेषण करें',
+        'trending_products' => 'ट्रेंडिंग उत्पाद',
+        'reviews' => 'समीक्षाएँ',
+        'product_name_not_available' => 'उत्पाद का नाम उपलब्ध नहीं है',
+        'featured_products' => 'विशेष उत्पाद',
+        'view_all' => 'सभी देखें',
+    ],
+
     'product_detail' => [
         'color' => 'रंग',
         'size' => 'आकार',

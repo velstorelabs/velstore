@@ -19,6 +19,17 @@ return [
         'powered_by' => 'Aangedreven door Velstore Labs',
     ],
 
+    'home' => [
+        'banner_text' => 'Ontdek de grootste verscheidenheid aan sneakers, schoenen en streetwear-trends.',
+        'shop_now' => 'Nu winkelen',
+        'explore_popular_categories' => 'Ontdek populaire categorieën',
+        'trending_products' => 'Populaire producten',
+        'reviews' => 'Beoordelingen',
+        'product_name_not_available' => 'Productnaam niet beschikbaar',
+        'featured_products' => 'Uitgelichte producten',
+        'view_all' => 'Bekijk alles',
+    ],
+
     'product_detail' => [
         'color' => 'Kleur',
         'size' => 'Maat',

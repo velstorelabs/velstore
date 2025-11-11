@@ -19,6 +19,17 @@ return [
         'powered_by' => 'Zasilane przez Velstore Labs',
     ],
 
+    'home' => [
+        'banner_text' => 'Odkryj największą różnorodność sneakersów, butów i trendów streetwearowych.',
+        'shop_now' => 'Kup teraz',
+        'explore_popular_categories' => 'Odkryj popularne kategorie',
+        'trending_products' => 'Bestsellery',
+        'reviews' => 'Recenzje',
+        'product_name_not_available' => 'Nazwa produktu niedostępna',
+        'featured_products' => 'Polecane produkty',
+        'view_all' => 'Zobacz wszystko',
+    ],
+
     'product_detail' => [
         'color' => 'Kolor',
         'size' => 'Rozmiar',

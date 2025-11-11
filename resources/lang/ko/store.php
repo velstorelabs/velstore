@@ -19,6 +19,17 @@ return [
         'powered_by' => 'Velstore Labs 제공',
     ],
 
+    'home' => [
+        'banner_text' => '스니커즈, 신발 및 스트리트웨어 트렌드를 다양하게 탐험하세요.',
+        'shop_now' => '지금 쇼핑하기',
+        'explore_popular_categories' => '인기 카테고리 탐색',
+        'trending_products' => '인기 상품',
+        'reviews' => '리뷰',
+        'product_name_not_available' => '상품명을 사용할 수 없습니다',
+        'featured_products' => '추천 상품',
+        'view_all' => '전체 보기',
+    ],
+
     'product_detail' => [
         'color' => '색상',
         'size' => '사이즈',

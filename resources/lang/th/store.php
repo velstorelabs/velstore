@@ -19,6 +19,17 @@ return [
         'powered_by' => 'พัฒนาโดย Velstore Labs',
     ],
 
+    'home' => [
+        'banner_text' => 'สำรวจรองเท้าผ้าใบ รองเท้า และแฟชั่นสตรีทแวร์ที่หลากหลายที่สุด',
+        'shop_now' => 'ช้อปตอนนี้',
+        'explore_popular_categories' => 'สำรวจหมวดหมู่ยอดนิยม',
+        'trending_products' => 'สินค้ายอดนิยม',
+        'reviews' => 'รีวิว',
+        'product_name_not_available' => 'ไม่พบชื่อสินค้า',
+        'featured_products' => 'สินค้าที่แนะนำ',
+        'view_all' => 'ดูทั้งหมด',
+    ],
+
     'product_detail' => [
         'color' => 'สี',
         'size' => 'ขนาด',

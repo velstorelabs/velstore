@@ -19,6 +19,17 @@ return [
         'powered_by' => 'بدعم من فيلستور لابز',
     ],
 
+    'home' => [
+        'banner_text' => 'اكتشف أكبر مجموعة من الأحذية الرياضية والأحذية وصيحات أزياء الشوارع.',
+        'shop_now' => 'تسوق الآن',
+        'explore_popular_categories' => 'استكشف الفئات الشائعة',
+        'trending_products' => 'المنتجات الرائجة',
+        'reviews' => 'المراجعات',
+        'product_name_not_available' => 'اسم المنتج غير متاح',
+        'featured_products' => 'المنتجات المميزة',
+        'view_all' => 'عرض الكل',
+    ],
+
     'product_detail' => [
         'color' => 'اللون',
         'size' => 'المقاس',

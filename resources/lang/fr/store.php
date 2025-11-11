@@ -19,6 +19,17 @@ return [
         'powered_by' => 'Propulsé par Velstore Labs',
     ],
 
+    'home' => [
+        'banner_text' => 'Découvrez la plus grande variété de baskets, de chaussures et de tendances streetwear.',
+        'shop_now' => 'Acheter maintenant',
+        'explore_popular_categories' => 'Explorer les catégories populaires',
+        'trending_products' => 'Produits tendance',
+        'reviews' => 'Avis',
+        'product_name_not_available' => 'Nom du produit non disponible',
+        'featured_products' => 'Produits en vedette',
+        'view_all' => 'Voir tout',
+    ],
+
     'product_detail' => [
         'color' => 'Couleur',
         'size' => 'Taille',

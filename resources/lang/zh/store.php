@@ -19,6 +19,17 @@ return [
         'powered_by' => '由 Velstore Labs 提供技术支持',
     ],
 
+    'home' => [
+        'banner_text' => '探索最丰富的运动鞋、鞋类和街头潮流。',
+        'shop_now' => '立即购买',
+        'explore_popular_categories' => '探索热门分类',
+        'trending_products' => '热门产品',
+        'reviews' => '评价',
+        'product_name_not_available' => '产品名称不可用',
+        'featured_products' => '精选产品',
+        'view_all' => '查看全部',
+    ],
+
     'product_detail' => [
         'color' => '颜色',
         'size' => '尺寸',

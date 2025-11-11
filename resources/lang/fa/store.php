@@ -19,6 +19,17 @@ return [
         'powered_by' => 'قدرت گرفته از Velstore Labs',
     ],
 
+    'home' => [
+        'banner_text' => 'بزرگ‌ترین مجموعه از کتانی‌ها، کفش‌ها و ترندهای پوشاک خیابانی را کشف کنید.',
+        'shop_now' => 'اکنون خرید کنید',
+        'explore_popular_categories' => 'دسته‌های محبوب را بررسی کنید',
+        'trending_products' => 'محصولات پرطرفدار',
+        'reviews' => 'نظرات',
+        'product_name_not_available' => 'نام محصول در دسترس نیست',
+        'featured_products' => 'محصولات ویژه',
+        'view_all' => 'مشاهده همه',
+    ],
+
     'product_detail' => [
         'color' => 'رنگ',
         'size' => 'اندازه',
