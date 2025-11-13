@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => 'Product Name Not Available',
         'featured_products' => 'Featured Products',
         'view_all' => 'View All',
+        // Why Choose Us section
+        'why_choose_us' => 'Why Choose Us',
+        'fast_delivery_title' => 'Fast Delivery',
+        'fast_delivery_text' => 'We deliver your orders quickly and safely, right to your doorstep.',
+        'customer_support_title' => 'Customer Support',
+        'customer_support_text' => 'Our support team is always here to assist you anytime, anywhere.',
+        'trusted_worldwide_title' => 'Trusted Worldwide',
+        'trusted_worldwide_text' => 'Thousands of satisfied customers, excellent reviews, and high ratings.',
+        'ten_years_services_title' => '10 Years Services',
+        'ten_years_services_text' => 'Over 10 years of trusted service delivering quality and satisfaction.',
     ],
 
     'product_detail' => [
