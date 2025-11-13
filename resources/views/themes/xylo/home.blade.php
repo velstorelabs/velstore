@@ -162,7 +162,7 @@
 
     <section class="why-choose-us py-5 animate-on-scroll">
         <div class="container">
-            <h1 class="sec-heading text-start mb-5">Why Choose Us</h1>
+            <h1 class="sec-heading text-start mb-5">{{ __('store.home.why_choose_us') }}</h1>
             <div class="row">
                 <!-- Feature Box 1 -->
                 <div class="col-md-3">
@@ -170,8 +170,8 @@
                         <div class="feature-icon">
                             <img src="https://i.ibb.co/WNQXhLnP/choose-icon1.png" alt="">
                         </div>
-                        <h3>Fast & Secure Delivery</h3>
-                        <p>We deliver your orders quickly and safely, right to your doorstep.</p>
+                        <h3>{{ __('store.home.fast_delivery_title') }}</h3>
+                        <p>{{ __('store.home.fast_delivery_text') }}</p>
                     </div>
                 </div>
                 <!-- Feature Box 2 -->
@@ -180,8 +180,8 @@
                         <div class="feature-icon">
                             <img src="https://i.ibb.co/FkmgGPrr/choose-icon2.png" alt="">
                         </div>
-                        <h3>Customer Support</h3>
-                        <p>Our support team is always here to assist you anytime, anywhere.</p>
+                        <h3>{{ __('store.home.customer_support_title') }}</h3>
+                        <p>{{ __('store.home.customer_support_text') }}</p>
                     </div>
                 </div>
                 <!-- Feature Box 3 -->
@@ -190,8 +190,8 @@
                         <div class="feature-icon">
                             <img src="https://i.ibb.co/CffNqX9/choose-icon3.png" alt="">
                         </div>
-                        <h3>Trusted Worldwide</h3>
-                        <p>Thousands of satisfied customers  excellent reviews & high ratings.</p>
+                        <h3>{{ __('store.home.trusted_worldwide_title') }}</h3>
+                        <p>{{ __('store.home.trusted_worldwide_text') }}</p>
                     </div>
                 </div>
                 <!-- Feature Box 4 -->
@@ -200,8 +200,8 @@
                         <div class="feature-icon">
                             <img src="https://i.ibb.co/XPvjQGG/choose-icon4.png" alt="">
                         </div>
-                        <h3>10 Years Services</h3>
-                        <p>Over 10 years of trusted experience delivering quality and customer satisfaction.</p>
+                        <h3>{{ __('store.home.ten_years_services_title') }}</h3>
+                        <p>{{ __('store.home.ten_years_services_text') }}</p>
                     </div>
                 </div>
             </div>
