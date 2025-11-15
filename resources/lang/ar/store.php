@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => 'اسم المنتج غير متاح',
         'featured_products' => 'المنتجات المميزة',
         'view_all' => 'عرض الكل',
+        // Why Choose Us section
+        'why_choose_us' => 'لماذا نحن؟',
+        'fast_delivery_title' => 'توصيل سريع',
+        'fast_delivery_text' => 'نقوم بتسليم طلباتك بسرعة وأمان حتى باب منزلك.',
+        'customer_support_title' => 'دعم العملاء',
+        'customer_support_text' => 'فريق الدعم لدينا متواجد دائمًا لمساعدتك في أي وقت وأي مكان.',
+        'trusted_worldwide_title' => 'موثوق عالميًا',
+        'trusted_worldwide_text' => 'آلاف العملاء الراضين، وتقييمات ممتازة، وتصنيفات عالية.',
+        'ten_years_services_title' => 'خدمة منذ 10 سنوات',
+        'ten_years_services_text' => 'أكثر من 10 سنوات من الخدمة الموثوقة وتقديم الجودة والرضا.',
     ],
 
     'product_detail' => [
