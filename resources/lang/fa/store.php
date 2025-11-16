@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => 'نام محصول در دسترس نیست',
         'featured_products' => 'محصولات ویژه',
         'view_all' => 'مشاهده همه',
+        // Why Choose Us section
+        'why_choose_us' => 'چرا ما؟',
+        'fast_delivery_title' => 'تحویل سریع',
+        'fast_delivery_text' => 'ما سفارش‌های شما را سریع و ایمن تا درب منزل تحویل می‌دهیم.',
+        'customer_support_title' => 'پشتیبانی مشتری',
+        'customer_support_text' => 'تیم پشتیبانی ما همیشه و در هر زمان برای کمک در دسترس است.',
+        'trusted_worldwide_title' => 'مورد اعتماد در سراسر جهان',
+        'trusted_worldwide_text' => 'هزاران مشتری راضی، نظرات عالی و امتیازات بالا.',
+        'ten_years_services_title' => '۱۰ سال خدمات',
+        'ten_years_services_text' => 'بیش از ۱۰ سال خدمات قابل اعتماد همراه با کیفیت و رضایت.',
     ],
 
     'product_detail' => [
