@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => '商品名は利用できません',
         'featured_products' => 'おすすめ商品',
         'view_all' => 'すべて見る',
+        // Why Choose Us section
+        'why_choose_us' => '私たちを選ぶ理由',
+        'fast_delivery_title' => '迅速な配送',
+        'fast_delivery_text' => 'ご注文商品を迅速かつ安全にお客様のご自宅までお届けします。',
+        'customer_support_title' => 'カスタマーサポート',
+        'customer_support_text' => 'サポートチームがいつでもどこでもお客さまのお困りごとを解決いたします。',
+        'trusted_worldwide_title' => '世界中で信頼されています',
+        'trusted_worldwide_text' => '何千人もの満足したお客様、素晴らしいレビュー、高評価をいただいています。',
+        'ten_years_services_title' => '10年の実績',
+        'ten_years_services_text' => '10年以上の信頼できるサービスで、品質と満足をお届けしています。',
     ],
 
     'product_detail' => [
