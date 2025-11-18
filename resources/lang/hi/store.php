@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => 'उत्पाद का नाम उपलब्ध नहीं है',
         'featured_products' => 'विशेष उत्पाद',
         'view_all' => 'सभी देखें',
+        // Why Choose Us section
+        'why_choose_us' => 'हम क्यों चुनें',
+        'fast_delivery_title' => 'तेज़ डिलीवरी',
+        'fast_delivery_text' => 'हम आपके ऑर्डर को जल्दी और सुरक्षित रूप से आपके दरवाजे तक पहुँचाते हैं।',
+        'customer_support_title' => 'ग्राहक सहायता',
+        'customer_support_text' => 'हमारी सपोर्ट टीम किसी भी समय, कहीं भी आपकी मदद के लिए हमेशा उपलब्ध है।',
+        'trusted_worldwide_title' => 'विश्व स्तर पर भरोसेमंद',
+        'trusted_worldwide_text' => 'हजारों संतुष्ट ग्राहक, शानदार रिव्यू और उच्च रेटिंग।',
+        'ten_years_services_title' => '10 वर्षों की सेवाएँ',
+        'ten_years_services_text' => 'गुणवत्ता और संतुष्टि प्रदान करने में 10 वर्षों से अधिक का विश्वसनीय अनुभव।',
     ],
 
     'product_detail' => [

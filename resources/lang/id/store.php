@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => 'Nama produk tidak tersedia',
         'featured_products' => 'Produk unggulan',
         'view_all' => 'Lihat semua',
+        // Why Choose Us section
+        'why_choose_us' => 'Mengapa Memilih Kami',
+        'fast_delivery_title' => 'Pengiriman Cepat',
+        'fast_delivery_text' => 'Kami mengantarkan pesanan Anda dengan cepat dan aman langsung ke pintu rumah Anda.',
+        'customer_support_title' => 'Dukungan Pelanggan',
+        'customer_support_text' => 'Tim dukungan kami selalu siap membantu Anda kapan saja, di mana saja.',
+        'trusted_worldwide_title' => 'Dipercaya di Seluruh Dunia',
+        'trusted_worldwide_text' => 'Ribuan pelanggan puas, ulasan luar biasa, dan rating tinggi.',
+        'ten_years_services_title' => '10 Tahun Layanan',
+        'ten_years_services_text' => 'Lebih dari 10 tahun memberikan layanan terpercaya dengan kualitas dan kepuasan.',
     ],
 
     'product_detail' => [
