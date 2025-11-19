@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => 'Название продукта недоступно',
         'featured_products' => 'Рекомендуемые товары',
         'view_all' => 'Посмотреть все',
+        // Why Choose Us section
+        'why_choose_us' => 'Почему выбирают нас?',
+        'fast_delivery_title' => 'Быстрая доставка',
+        'fast_delivery_text' => 'Мы быстро и безопасно доставляем ваши заказы прямо к вашему порогу.',
+        'customer_support_title' => 'Поддержка клиентов',
+        'customer_support_text' => 'Наша команда поддержки всегда готова помочь вам в любое время и в любом месте.',
+        'trusted_worldwide_title' => 'Доверие по всему миру',
+        'trusted_worldwide_text' => 'Тысячи довольных клиентов, отличные отзывы и высокие рейтинги.',
+        'ten_years_services_title' => '10 лет работы',
+        'ten_years_services_text' => 'Более 10 лет предоставляем надежный сервис, качество и удовлетворение.',
     ],
 
     'product_detail' => [

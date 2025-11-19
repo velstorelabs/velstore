@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => '상품명을 사용할 수 없습니다',
         'featured_products' => '추천 상품',
         'view_all' => '전체 보기',
+        // Why Choose Us section
+        'why_choose_us' => '왜 저희를 선택해야 하나요?',
+        'fast_delivery_title' => '빠른 배송',
+        'fast_delivery_text' => '주문하신 상품을 빠르고 안전하게 집 앞까지 배달해드립니다.',
+        'customer_support_title' => '고객 지원',
+        'customer_support_text' => '언제 어디서나 고객님을 도와드릴 준비가 되어 있습니다.',
+        'trusted_worldwide_title' => '전 세계가 신뢰',
+        'trusted_worldwide_text' => '수천 명의 만족한 고객, 우수한 리뷰, 높은 평점을 자랑합니다.',
+        'ten_years_services_title' => '10년 서비스',
+        'ten_years_services_text' => '10년 넘게 신뢰할 수 있는 품질과 만족을 제공해왔습니다.',
     ],
 
     'product_detail' => [
