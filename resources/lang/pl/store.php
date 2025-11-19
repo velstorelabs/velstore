@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => 'Nazwa produktu niedostępna',
         'featured_products' => 'Polecane produkty',
         'view_all' => 'Zobacz wszystko',
+        // Why Choose Us section
+        'why_choose_us' => 'Dlaczego warto wybrać nas?',
+        'fast_delivery_title' => 'Szybka dostawa',
+        'fast_delivery_text' => 'Dostarczamy Twoje zamówienia szybko i bezpiecznie, prosto pod drzwi.',
+        'customer_support_title' => 'Obsługa klienta',
+        'customer_support_text' => 'Nasz zespół wsparcia jest zawsze gotowy, aby Ci pomóc — w każdym miejscu i o każdej porze.',
+        'trusted_worldwide_title' => 'Zaufanie na całym świecie',
+        'trusted_worldwide_text' => 'Tysiące zadowolonych klientów, doskonałe opinie i wysokie oceny.',
+        'ten_years_services_title' => '10 lat usług',
+        'ten_years_services_text' => 'Ponad 10 lat zaufanej obsługi, dostarczającej jakość i satysfakcję.',
     ],
 
     'product_detail' => [

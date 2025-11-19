@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => 'Productnaam niet beschikbaar',
         'featured_products' => 'Uitgelichte producten',
         'view_all' => 'Bekijk alles',
+        // Why Choose Us section
+        'why_choose_us' => 'Waarom voor ons kiezen?',
+        'fast_delivery_title' => 'Snelle levering',
+        'fast_delivery_text' => 'Wij bezorgen je bestelling snel en veilig bij je thuis.',
+        'customer_support_title' => 'Klantenservice',
+        'customer_support_text' => 'Ons supportteam staat altijd klaar om je overal en altijd te helpen.',
+        'trusted_worldwide_title' => 'Wereldwijd vertrouwd',
+        'trusted_worldwide_text' => 'Duizenden tevreden klanten, uitstekende recensies en hoge beoordelingen.',
+        'ten_years_services_title' => '10 jaar service',
+        'ten_years_services_text' => 'Al meer dan 10 jaar leveren wij betrouwbare kwaliteit en tevredenheid.',
     ],
 
     'product_detail' => [
