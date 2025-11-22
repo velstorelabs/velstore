@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => '产品名称不可用',
         'featured_products' => '精选产品',
         'view_all' => '查看全部',
+        // Why Choose Us section
+        'why_choose_us' => '为什么选择我们？',
+        'fast_delivery_title' => '快速配送',
+        'fast_delivery_text' => '我们快速、安全地将您的订单送到家门口。',
+        'customer_support_title' => '客户支持',
+        'customer_support_text' => '我们的支持团队随时随地为您提供帮助。',
+        'trusted_worldwide_title' => '全球信赖',
+        'trusted_worldwide_text' => '数千名满意客户、优秀评价和高评分。',
+        'ten_years_services_title' => '十年服务',
+        'ten_years_services_text' => '十多年来，我们一直提供值得信赖的高质量服务与满意度。',
     ],
 
     'product_detail' => [
