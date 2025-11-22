@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => 'Ürün adı mevcut değil',
         'featured_products' => 'Öne Çıkan Ürünler',
         'view_all' => 'Tümünü Gör',
+        // Why Choose Us section
+        'why_choose_us' => 'Neden bizi seçmelisiniz?',
+        'fast_delivery_title' => 'Hızlı teslimat',
+        'fast_delivery_text' => 'Siparişlerinizi hızlı ve güvenli bir şekilde kapınıza kadar teslim ediyoruz.',
+        'customer_support_title' => 'Müşteri desteği',
+        'customer_support_text' => 'Destek ekibimiz her zaman, her yerde size yardımcı olmaya hazırdır.',
+        'trusted_worldwide_title' => 'Dünya çapında güvenilir',
+        'trusted_worldwide_text' => 'Binlerce memnun müşteri, mükemmel yorumlar ve yüksek puanlar.',
+        'ten_years_services_title' => '10 yıllık hizmet',
+        'ten_years_services_text' => '10 yılı aşkın süredir kaliteli ve güvenilir hizmet sunuyoruz.',
     ],
 
     'product_detail' => [

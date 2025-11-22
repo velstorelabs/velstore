@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => 'Tên sản phẩm không có sẵn',
         'featured_products' => 'Sản phẩm nổi bật',
         'view_all' => 'Xem tất cả',
+        // Why Choose Us section
+        'why_choose_us' => 'Tại sao chọn chúng tôi?',
+        'fast_delivery_title' => 'Giao hàng nhanh',
+        'fast_delivery_text' => 'Chúng tôi giao đơn hàng của bạn nhanh chóng và an toàn đến tận cửa nhà.',
+        'customer_support_title' => 'Hỗ trợ khách hàng',
+        'customer_support_text' => 'Đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng giúp bạn mọi lúc, mọi nơi.',
+        'trusted_worldwide_title' => 'Được tin cậy trên toàn thế giới',
+        'trusted_worldwide_text' => 'Hàng nghìn khách hàng hài lòng, đánh giá tuyệt vời và xếp hạng cao.',
+        'ten_years_services_title' => '10 năm dịch vụ',
+        'ten_years_services_text' => 'Hơn 10 năm cung cấp dịch vụ uy tín, chất lượng và sự hài lòng.',
     ],
 
     'product_detail' => [

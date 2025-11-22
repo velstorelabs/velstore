@@ -28,6 +28,16 @@ return [
         'product_name_not_available' => 'ไม่พบชื่อสินค้า',
         'featured_products' => 'สินค้าที่แนะนำ',
         'view_all' => 'ดูทั้งหมด',
+        // Why Choose Us section
+        'why_choose_us' => 'ทำไมต้องเลือกเรา?',
+        'fast_delivery_title' => 'จัดส่งรวดเร็ว',
+        'fast_delivery_text' => 'เราจัดส่งคำสั่งซื้อของคุณอย่างรวดเร็วและปลอดภัยถึงหน้าบ้านของคุณ.',
+        'customer_support_title' => 'บริการลูกค้า',
+        'customer_support_text' => 'ทีมสนับสนุนของเราพร้อมช่วยเหลือคุณได้ทุกที่ ทุกเวลา.',
+        'trusted_worldwide_title' => 'เชื่อถือได้ทั่วโลก',
+        'trusted_worldwide_text' => 'ลูกค้าหลายพันคนพึงพอใจ รีวิวดีเยี่ยม และคะแนนสูง.',
+        'ten_years_services_title' => 'บริการกว่า 10 ปี',
+        'ten_years_services_text' => 'มากกว่า 10 ปีที่เรามอบบริการที่เชื่อถือได้ คุณภาพ และความพึงพอใจ.',
     ],
 
     'product_detail' => [
