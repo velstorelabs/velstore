@@ -79,12 +79,13 @@
                     searchable: false,
                     render: function (data, type, row) {
                         return `
-                            <span class="border border-info rounded-3 d-inline-block">
-                                <a href="/vendor/reviews/${row.id}" class="px-2">
+                           <span class="border border-info dt-trash rounded-3 d-inline-block">
+                                <a href="/vendor/reviews/${row.id}">
                                     <i class="bi bi-eye-fill text-info"></i>
                                 </a>
                             </span>
-                            <span class="border border-danger rounded-3 d-inline-block" onclick="deleteReview(${row.id})">
+
+                            <span class="border border-danger dt-trash rounded-3 d-inline-block" onclick="deleteReview(${row.id})">
                                 <i class="bi bi-trash-fill text-danger"></i>
                             </span>
                         `;
