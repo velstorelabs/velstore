@@ -56,9 +56,9 @@
                         <i class="fas fa-dollar-sign"></i>
                     </div>
                     <div class="text-container">
-                        <h6>Total Sales</h6>
-                        <p>Today: ${{ number_format($data['todaySales'], 2) }}</p>
-                        <p>Total: ${{ number_format($data['totalSales'], 2) }}</p>
+                        <h6>{{ __('cms.dashboard.total_sales') }}</h6>
+                        <p>{{ __('cms.dashboard.today') }}: ${{ number_format($data['todaySales'], 2) }}</p>
+                        <p>{{ __('cms.dashboard.total') }}: ${{ number_format($data['totalSales'], 2) }}</p>
                     </div>
                 </div>
             </div>
@@ -69,9 +69,9 @@
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                     <div class="text-container">
-                        <h6>Total Orders</h6>
-                        <p>Completed: {{ $data['completedOrders'] }}</p>
-                        <p>All Orders: {{ $data['totalOrders'] }}</p>
+                        <h6>{{ __('cms.dashboard.total_orders') }}</h6>
+                        <p>{{ __('cms.dashboard.completed') }}: {{ $data['completedOrders'] }}</p>
+                        <p>{{ __('cms.dashboard.all_orders') }}: {{ $data['totalOrders'] }}</p>
                     </div>
                 </div>
             </div>
@@ -82,8 +82,8 @@
                         <i class="fas fa-store"></i>
                     </div>
                     <div class="text-container">
-                        <h6>Total Vendors</h6>
-                        <p>Active: {{ $data['totalVendors'] }}</p>
+                        <h6>{{ __('cms.dashboard.total_vendors') }}</h6>
+                        <p>{{ __('cms.dashboard.active') }}: {{ $data['totalVendors'] }}</p>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <div class="text-container">
-                        <h6>Total Customers</h6>
+                        <h6>{{ __('cms.dashboard.total_customers') }}</h6>
                         <p>{{ $data['totalCustomers'] }}</p>
                     </div>
                 </div>
