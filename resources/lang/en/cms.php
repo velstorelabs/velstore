@@ -16,6 +16,21 @@ return [
         'logout' => 'logout',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'Total Sales',
+        'today' => 'Today',
+        'total' => 'Total',
+
+        'total_orders' => 'Total Orders',
+        'completed' => 'Completed',
+        'all_orders' => 'All Orders',
+
+        'total_vendors' => 'Total Vendors',
+        'active' => 'Active',
+
+        'total_customers' => 'Total Customers',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'Search...',
         'dashboard' => 'Dashboard',
