@@ -15,6 +15,21 @@ return [
         'logout' => 'Uitloggen',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'Totale Verkoop',
+        'today' => 'Vandaag',
+        'total' => 'Totaal',
+
+        'total_orders' => 'Totaal Bestellingen',
+        'completed' => 'Voltooid',
+        'all_orders' => 'Alle Bestellingen',
+
+        'total_vendors' => 'Totaal Verkopers',
+        'active' => 'Actief',
+
+        'total_customers' => 'Totaal Klanten',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'Zoeken...',
         'dashboard' => 'Dashboard',

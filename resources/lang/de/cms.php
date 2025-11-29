@@ -16,6 +16,21 @@ return [
         'logout' => 'Abmelden',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'Gesamtumsatz',
+        'today' => 'Heute',
+        'total' => 'Gesamt',
+
+        'total_orders' => 'Gesamtbestellungen',
+        'completed' => 'Abgeschlossen',
+        'all_orders' => 'Alle Bestellungen',
+
+        'total_vendors' => 'Gesamte Anbieter',
+        'active' => 'Aktiv',
+
+        'total_customers' => 'Gesamte Kunden',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'Suche...',
         'dashboard' => 'Dashboard',

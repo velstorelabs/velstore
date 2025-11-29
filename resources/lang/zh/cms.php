@@ -16,6 +16,21 @@ return [
         'logout' => '登出',
     ],
 
+    'dashboard' => [
+        'total_sales' => '总销售额',
+        'today' => '今天',
+        'total' => '总计',
+
+        'total_orders' => '订单总数',
+        'completed' => '已完成',
+        'all_orders' => '所有订单',
+
+        'total_vendors' => '供应商总数',
+        'active' => '活跃',
+
+        'total_customers' => '客户总数',
+    ],
+
     'sidebar' => [
         'search_placeholder' => '搜索...',
         'dashboard' => '控制面板',

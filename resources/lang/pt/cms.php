@@ -15,6 +15,21 @@ return [
         'logout' => 'Sair',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'Vendas Totais',
+        'today' => 'Hoje',
+        'total' => 'Total',
+
+        'total_orders' => 'Total de Pedidos',
+        'completed' => 'Concluído',
+        'all_orders' => 'Todos os Pedidos',
+
+        'total_vendors' => 'Total de Vendedores',
+        'active' => 'Ativo',
+
+        'total_customers' => 'Total de Clientes',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'Pesquisar...',
         'dashboard' => 'Painel de Controle',

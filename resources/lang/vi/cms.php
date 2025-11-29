@@ -16,6 +16,21 @@ return [
         'logout' => 'Đăng xuất',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'Tổng Doanh Thu',
+        'today' => 'Hôm Nay',
+        'total' => 'Tổng',
+
+        'total_orders' => 'Tổng Đơn Hàng',
+        'completed' => 'Hoàn Thành',
+        'all_orders' => 'Tất Cả Đơn Hàng',
+
+        'total_vendors' => 'Tổng Nhà Cung Cấp',
+        'active' => 'Hoạt Động',
+
+        'total_customers' => 'Tổng Khách Hàng',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'Tìm kiếm...',
         'dashboard' => 'Bảng điều khiển',

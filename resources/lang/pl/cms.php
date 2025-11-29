@@ -16,6 +16,21 @@ return [
         'logout' => 'Wyloguj',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'Łączna Sprzedaż',
+        'today' => 'Dziś',
+        'total' => 'Razem',
+
+        'total_orders' => 'Łączna Liczba Zamówień',
+        'completed' => 'Zakończone',
+        'all_orders' => 'Wszystkie Zamówienia',
+
+        'total_vendors' => 'Łączna Liczba Sprzedawców',
+        'active' => 'Aktywni',
+
+        'total_customers' => 'Łączna Liczba Klientów',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'Szukaj...',
         'dashboard' => 'Panel główny',

@@ -16,6 +16,21 @@ return [
         'logout' => 'Keluar',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'Total Penjualan',
+        'today' => 'Hari Ini',
+        'total' => 'Total',
+
+        'total_orders' => 'Total Pesanan',
+        'completed' => 'Selesai',
+        'all_orders' => 'Semua Pesanan',
+
+        'total_vendors' => 'Total Penjual',
+        'active' => 'Aktif',
+
+        'total_customers' => 'Total Pelanggan',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'Cari...',
         'dashboard' => 'Dasbor',

@@ -16,6 +16,21 @@ return [
         'logout' => 'خروج',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'مجموع فروش',
+        'today' => 'امروز',
+        'total' => 'کل',
+
+        'total_orders' => 'مجموع سفارش‌ها',
+        'completed' => 'تکمیل شده',
+        'all_orders' => 'تمام سفارش‌ها',
+
+        'total_vendors' => 'مجموع فروشندگان',
+        'active' => 'فعال',
+
+        'total_customers' => 'مجموع مشتریان',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'جستجو...',
         'dashboard' => 'داشبورد',

@@ -16,6 +16,21 @@ return [
         'logout' => 'Déconnexion',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'Ventes Totales',
+        'today' => 'Aujourd’hui',
+        'total' => 'Total',
+
+        'total_orders' => 'Total des Commandes',
+        'completed' => 'Terminé',
+        'all_orders' => 'Toutes les Commandes',
+
+        'total_vendors' => 'Total des Vendeurs',
+        'active' => 'Actif',
+
+        'total_customers' => 'Total des Clients',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'Rechercher...',
         'dashboard' => 'Tableau de bord',

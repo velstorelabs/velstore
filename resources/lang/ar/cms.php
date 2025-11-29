@@ -16,6 +16,21 @@ return [
         'logout' => 'تسجيل الخروج',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'إجمالي المبيعات',
+        'today' => 'اليوم',
+        'total' => 'الإجمالي',
+
+        'total_orders' => 'إجمالي الطلبات',
+        'completed' => 'مكتمل',
+        'all_orders' => 'كل الطلبات',
+
+        'total_vendors' => 'إجمالي البائعين',
+        'active' => 'نشط',
+
+        'total_customers' => 'إجمالي العملاء',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'بحث...',
         'dashboard' => 'لوحة التحكم',
