@@ -16,6 +16,21 @@ return [
         'logout' => 'लॉगआउट',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'कुल बिक्री',
+        'today' => 'आज',
+        'total' => 'कुल',
+
+        'total_orders' => 'कुल ऑर्डर',
+        'completed' => 'पूरा हुआ',
+        'all_orders' => 'सभी ऑर्डर',
+
+        'total_vendors' => 'कुल विक्रेता',
+        'active' => 'सक्रिय',
+
+        'total_customers' => 'कुल ग्राहक',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'खोजें...',
         'dashboard' => 'डैशबोर्ड',

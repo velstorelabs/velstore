@@ -16,6 +16,21 @@ return [
         'logout' => 'Çıkış',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'Toplam Satış',
+        'today' => 'Bugün',
+        'total' => 'Toplam',
+
+        'total_orders' => 'Toplam Sipariş',
+        'completed' => 'Tamamlandı',
+        'all_orders' => 'Tüm Siparişler',
+
+        'total_vendors' => 'Toplam Satıcı',
+        'active' => 'Aktif',
+
+        'total_customers' => 'Toplam Müşteri',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'Ara...',
         'dashboard' => 'Kontrol Paneli',

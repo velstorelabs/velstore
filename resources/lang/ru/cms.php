@@ -16,6 +16,21 @@ return [
         'logout' => 'Выйти',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'Общая Продажа',
+        'today' => 'Сегодня',
+        'total' => 'Всего',
+
+        'total_orders' => 'Всего Заказов',
+        'completed' => 'Завершено',
+        'all_orders' => 'Все Заказы',
+
+        'total_vendors' => 'Всего Продавцов',
+        'active' => 'Активные',
+
+        'total_customers' => 'Всего Клиентов',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'Поиск...',
         'dashboard' => 'Панель управления',

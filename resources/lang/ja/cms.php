@@ -16,6 +16,21 @@ return [
         'logout' => 'ログアウト',
     ],
 
+    'dashboard' => [
+        'total_sales' => '総売上',
+        'today' => '今日',
+        'total' => '合計',
+
+        'total_orders' => '総注文数',
+        'completed' => '完了',
+        'all_orders' => 'すべての注文',
+
+        'total_vendors' => '総販売者数',
+        'active' => 'アクティブ',
+
+        'total_customers' => '総顧客数',
+    ],
+
     'sidebar' => [
         'search_placeholder' => '検索...',
         'dashboard' => 'ダッシュボード',

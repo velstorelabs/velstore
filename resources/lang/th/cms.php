@@ -16,6 +16,21 @@ return [
         'logout' => 'ออกจากระบบ',
     ],
 
+    'dashboard' => [
+        'total_sales' => 'ยอดขายรวม',
+        'today' => 'วันนี้',
+        'total' => 'รวม',
+
+        'total_orders' => 'ยอดคำสั่งซื้อทั้งหมด',
+        'completed' => 'เสร็จสิ้น',
+        'all_orders' => 'คำสั่งซื้อทั้งหมด',
+
+        'total_vendors' => 'จำนวนผู้ขายทั้งหมด',
+        'active' => 'ใช้งานอยู่',
+
+        'total_customers' => 'จำนวนลูกค้าทั้งหมด',
+    ],
+
     'sidebar' => [
         'search_placeholder' => 'ค้นหา...',
         'dashboard' => 'แผงควบคุม',

@@ -16,6 +16,21 @@ return [
         'logout' => '로그아웃',
     ],
 
+    'dashboard' => [
+        'total_sales' => '총 판매',
+        'today' => '오늘',
+        'total' => '합계',
+
+        'total_orders' => '총 주문',
+        'completed' => '완료',
+        'all_orders' => '모든 주문',
+
+        'total_vendors' => '총 판매자',
+        'active' => '활성',
+
+        'total_customers' => '총 고객',
+    ],
+
     'sidebar' => [
         'search_placeholder' => '검색...',
         'dashboard' => '대시보드',
