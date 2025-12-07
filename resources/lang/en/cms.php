@@ -29,6 +29,10 @@ return [
         'active' => 'Active',
 
         'total_customers' => 'Total Customers',
+
+        'my_sales' => 'My Sales',
+        'my_orders' => 'My Orders',
+        'my_products' => 'My Products',
     ],
 
     'sidebar' => [
