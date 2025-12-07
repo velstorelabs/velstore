@@ -75,9 +75,9 @@
             <div class="dashboard-item">
                 <div class="icon-box"><i class="fas fa-dollar-sign"></i></div>
                 <div class="text-box">
-                    <h6>My Sales</h6>
-                    <p>Today: ${{ number_format($data['todaySales'], 2) }}</p>
-                    <p>Total: ${{ number_format($data['totalSales'], 2) }}</p>
+                    <h6>{{ __('cms.dashboard.my_sales') }}</h6>
+                    <p>{{ __('cms.dashboard.today') }}: ${{ number_format($data['todaySales'], 2) }}</p>
+                    <p>{{ __('cms.dashboard.total') }}: ${{ number_format($data['totalSales'], 2) }}</p>
                 </div>
             </div>
         </div>
@@ -87,9 +87,9 @@
             <div class="dashboard-item">
                 <div class="icon-box"><i class="fas fa-shopping-bag"></i></div>
                 <div class="text-box">
-                    <h6>My Orders</h6>
-                    <p>Completed: {{ $data['completedOrders'] }}</p>
-                    <p>Total: {{ $data['totalOrders'] }}</p>
+                    <h6>{{ __('cms.dashboard.my_orders') }}</h6>
+                    <p>{{ __('cms.dashboard.completed') }}: {{ $data['completedOrders'] }}</p>
+                    <p>{{ __('cms.dashboard.total') }}: {{ $data['totalOrders'] }}</p>
                 </div>
             </div>
         </div>
@@ -99,8 +99,8 @@
             <div class="dashboard-item">
                 <div class="icon-box"><i class="fas fa-box-open"></i></div>
                 <div class="text-box">
-                    <h6>My Products</h6>
-                    <p>Total: {{ $data['totalProducts'] }}</p>
+                    <h6>{{ __('cms.dashboard.my_products') }}</h6>
+                    <p>{{ __('cms.dashboard.total') }}: {{ $data['totalProducts'] }}</p>
                 </div>
             </div>
         </div>

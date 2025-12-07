@@ -29,6 +29,10 @@ return [
         'active' => 'نشط',
 
         'total_customers' => 'إجمالي العملاء',
+
+        'my_sales' => 'مبيعاتي',
+        'my_orders' => 'طلباتي',
+        'my_products' => 'منتجاتي',
     ],
 
     'sidebar' => [
