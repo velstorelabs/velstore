@@ -29,6 +29,10 @@ return [
         'active' => 'فعال',
 
         'total_customers' => 'مجموع مشتریان',
+
+        'my_sales'    => 'فروش‌های من',
+        'my_orders'   => 'سفارش‌های من',
+        'my_products' => 'محصولات من',
     ],
 
     'sidebar' => [

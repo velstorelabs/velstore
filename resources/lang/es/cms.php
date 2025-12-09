@@ -29,6 +29,10 @@ return [
         'active' => 'Activo',
 
         'total_customers' => 'Total de Clientes',
+
+        'my_sales'    => 'Mis Ventas',
+        'my_orders'   => 'Mis Pedidos',
+        'my_products' => 'Mis Productos',
     ],
 
     'sidebar' => [
