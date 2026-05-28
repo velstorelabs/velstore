@@ -242,7 +242,7 @@ return [
 
     'login' => [
         'hello' => 'خوش آمدید دوباره',
-        'theme_name' => '👋 Xylo-Theme',
+        'theme_name' => 'Velstore',
         'login_now' => 'وارد حساب کاربری خود شوید',
         'login_description' => 'برای مدیریت سفارشات، لیست علاقه‌مندی‌ها و دریافت تجربه خرید شخصی وارد شوید.',
         'copyright' => '© 2025 Xylo-Theme. کلیه حقوق محفوظ است.',

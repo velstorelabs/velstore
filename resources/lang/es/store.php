@@ -242,7 +242,7 @@ return [
 
     'login' => [
         'hello' => 'Bienvenido de nuevo',
-        'theme_name' => 'Xylo-Theme 👋 Plataforma Xylo',
+        'theme_name' => 'Velstore',
         'login_now' => 'Inicia sesión en tu cuenta',
         'login_description' => 'Accede a tu cuenta para gestionar pedidos, guardar favoritos y disfrutar de una experiencia de compra personalizada.',
         'copyright' => '© 2025 Xylo-Theme. Todos los derechos reservados.',

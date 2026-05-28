@@ -242,7 +242,7 @@ return [
 
     'login' => [
         'hello' => 'مرحبًا بعودتك',
-        'theme_name' => 'Xylo-Theme 👋 منصّة زيلو',
+        'theme_name' => 'Velstore',
         'login_now' => 'تسجيل الدخول إلى حسابك',
         'login_description' => 'قم بتسجيل الدخول لإدارة طلباتك، حفظ مفضلاتك، والاستمتاع بتجربة تسوق مخصصة.',
         'copyright' => '© 2025 Xylo-Theme. جميع الحقوق محفوظة.',

@@ -244,7 +244,7 @@ return [
 
     'login' => [
         'hello' => 'Welcome Back',
-        'theme_name' => 'Xylo-Theme 👋',
+        'theme_name' => 'Velstore',
         'login_now' => 'Login to Your Account',
         'login_description' => 'Access your account to manage orders, wishlist, and enjoy personalized shopping.',
         'copyright' => '© 2025 Xylo-Theme. All rights reserved.',
