@@ -41,7 +41,7 @@ Route::get('/login', function () {
     return view('admin.auth.login');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
 
